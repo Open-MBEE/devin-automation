@@ -1,0 +1,33 @@
+name: gh-pages report index
+
+on:
+  push:
+    branches: [main]
+    paths: ['reports/**', 'scripts/build-site.sh', '.github/workflows/pages.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gh-pages
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build site
+        run: scripts/build-site.sh site
+      - name: Publish as a single-commit gh-pages branch (force-pushed on every update)
+        run: |
+          cd site
+          git init -q -b gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Report index for ${GITHUB_SHA}"
+          git push -f "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" gh-pages
+        env:
+          GITHUB_TOKEN: ${{ github.token }}

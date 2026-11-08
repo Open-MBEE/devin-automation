@@ -13,7 +13,7 @@ time, action counts, PRs opened and ACUs.
 | `session-report/body.html` | Interactive HTML report body, compiled with Devin's `html_artifact_compile` over the report JSON. |
 | `session-report/playbook.md` | The playbook a scheduled session follows. |
 | `.github/workflows/release.yml` | Builds the exe on every push/PR and attaches `session-report-linux-x86_64` to the GitHub Release of a `v*` tag. |
-| `reports/` | Example data: one user's reports (Markdown, HTML, YAML tables). |
+| `reports/` | Example data: one user's reports (Markdown, HTML, YAML tables). Published with an index on the `gh-pages` branch by `.github/workflows/pages.yml` (`scripts/build-site.sh`). |
 
 ## What the report contains, and what it cannot
 
@@ -122,3 +122,13 @@ Tag the commit (`git tag v0.2.0 && git push --tags`): the workflow builds the ex
 smoke-tests it against `reports/2026-11-08`, and attaches
 `session-report-linux-x86_64` (+ `.sha256`) to the release. Bump
 `SessionReport.version` in `SessionReport/Main.lean` in the same commit.
+
+## Report index (GitHub Pages)
+
+Every push to `main` that touches `reports/` runs `.github/workflows/pages.yml`: it copies each
+`reports/<slug>/` and writes an `index.html` (kind, period, who, sessions, projects, links to the
+HTML/Markdown and the five YAML tables — read from each `report.yaml`), then force-pushes the
+result as a **single-commit** `gh-pages` branch (no history, the branch is rebuilt each time).
+Enable Pages once (Settings → Pages → Deploy from a branch → `gh-pages` / root); preview locally
+with `scripts/build-site.sh site && xdg-open site/index.html`.
+
