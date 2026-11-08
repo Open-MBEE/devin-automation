@@ -14,6 +14,7 @@ time, action counts, PRs opened and ACUs.
 | `session-report/playbook.md` | The playbook a scheduled session follows. |
 | `.github/workflows/release.yml` | Builds the exe on every push/PR and attaches `session-report-linux-x86_64` to the GitHub Release of a `v*` tag. |
 | `reports/` | Example data: one user's reports (Markdown, HTML, YAML tables). Published with an index on the `gh-pages` branch by `.github/workflows/pages.yml` (`scripts/build-site.sh`). |
+| `scripts/` | `stage-report.sh` (copy a built report into `reports/<slug>/` for the PR a run opens), `build-site.sh` (the Pages index). |
 
 ## What the report contains, and what it cannot
 
@@ -65,8 +66,9 @@ id?" — it is `user-…` in the session's identity block) and your IANA timezon
    > Follow @playbook:playbook-… to produce the DAILY|WEEKLY|MONTHLY Devin session
    > report for <NAME> (user id <USER_ID>, timezone <TZ>). Window: the calendar
    > day | Monday–Sunday week | calendar month that ended at the midnight just before
-   > this run. Compute the dates from the current time in <tz>. Deliver as the
-   > playbook's step 6 says; if the window had no sessions, say so in one line.
+   > this run. Compute the dates from the current time in <tz>. Publish and deliver as the
+   > playbook says (PR adding `reports/<slug>/`, then the message with the PR link and the
+   > attachments); if the window had no sessions, say so in one line and open no PR.
 
    Schedules (RFC 5545, in your timezone):
 
@@ -77,14 +79,17 @@ id?" — it is `user-…` in the session's identity block) and your IANA timezon
    | monthly | `RRULE:FREQ=MONTHLY;BYMONTHDAY=1;BYHOUR=0;BYMINUTE=5` | the month that just ended |
 
    Settings that work: run as *creator* (the report is yours), no MCP servers,
-   network policy `github.com` + `static.devin.ai`, ACU limit 10 / 15 / 25,
+   network policy `github.com`, `api.github.com`, `objects.githubusercontent.com`,
+   `release-assets.githubusercontent.com`, `releases.lean-lang.org`, `static.devin.ai`
+   (clone, release binary or `lake build`, PR), ACU limit 10 / 15 / 25,
    one run at a time, e-mail on dispatch failure. Add a Slack `post_response`
    notification if you want the summary posted to a channel.
 3. Or let a Devin session do steps 1–2: give it this README and say "install the
    session-report automations for me". It will raise one approval card per object.
 
-Each run attaches the `.html`, `.md` and the YAML tables in its own session; the
-automation's run list links to them.
+Each run opens a PR adding `reports/<slug>/` (via `scripts/stage-report.sh`) and attaches the
+`.html`, `.md` and the YAML tables in its own session; merging the PR publishes the report on
+the GitHub Pages index (below). The automation's run list links to the sessions.
 
 ### Run a report by hand (inside a Devin session)
 
@@ -100,6 +105,8 @@ session-report build --kind weekly --start 2026-11-02 --end 2026-11-09 --raw ~/r
 session-report check ~/report/yaml/2026-11-02-week/*.yaml        # re-read the tables against the schema
 session-report yaml ~/report/tables-2026-11-02-week.json ~/export   # re-export them from the tables JSON (same files)
 # 3. HTML — html_artifact_compile body_path=session-report/body.html data_path=~/report/report-2026-11-02-week.json
+# 4. publish: stage reports/<slug>/ (md, html, five YAML tables) and open a PR against main
+git checkout -b report/2026-11-02-week main && scripts/stage-report.sh 2026-11-02-week ~/report && git add reports && git commit -m "report: weekly 2026-11-02-week"
 ```
 
 `session-report --help` documents every option (`--group repo` keeps forks apart;
