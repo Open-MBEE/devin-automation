@@ -7,7 +7,7 @@ time, action counts, PRs opened and ACUs.
 
 | Path | What |
 |---|---|
-| `session-report/collect.py` | Transport: pages the Devin session-search and session-events tools from inside a Devin session (`scripted_tools`) and saves their raw text as `raw.json`, with a completeness flag per listing (an incomplete session search makes `build` refuse to run). No logic. |
+| `SessionReport/Collect.lean` | `session-report collect`: pages the Devin REST API (`/organizations/<org>/sessions` and the session event listings) over leanCurl with `DEVIN_API_KEY` from the environment and writes `raw.json`, with a completeness flag per listing (an incomplete session search makes `build` refuse to run). |
 | `SessionReport/*.lean` | `session-report`, a Lean 4 exe on [nasa-jpl/L4YAML](https://github.com/nasa-jpl/L4YAML): `build` turns `raw.json` into the Markdown report, the report JSON for the HTML, a tables JSON, and the five YAML tables (typed, schema-checked); `yaml` re-exports a tables JSON; `check` re-reads exported tables. |
 | `schemas/session-report/` | The table schemas, human-readable (`SessionReport/Schema.lean` is their executable form). |
 | `session-report/body.html` | Interactive HTML report body, compiled with Devin's `html_artifact_compile` over the report JSON. |
@@ -92,8 +92,8 @@ automation's run list links to them.
 # 0. the exe: release binary (Linux x86-64), or build it (~10 min cold)
 curl -fsSL https://github.com/Open-MBEE/devin-automation/releases/latest/download/session-report-linux-x86_64 -o ~/bin/session-report && chmod +x ~/bin/session-report
 #    fallback: git clone https://github.com/Open-MBEE/devin-automation && cd devin-automation && lake build  → .lake/build/bin/session-report
-# 1. collect — paste session-report/collect.py into scripted_tools after replacing
-#    __START__/__END__ (unix seconds at local midnight), __USER__, __TZ__, __OUT__ (e.g. ~/report/raw.json)
+# 1. collect (DEVIN_API_KEY in the environment; DEVIN_API_BASE defaults to https://api.devin.ai/v3)
+session-report collect --start 2026-11-02 --end 2026-11-09 --tz Europe/Paris --user user-… --org org-… --out ~/report/raw.json
 # 2. build: Markdown + report JSON (for the HTML) + tables JSON + YAML tables, all under --out
 session-report build --kind weekly --start 2026-11-02 --end 2026-11-09 --raw ~/report/raw.json --out ~/report \
     --who "Your Name" --tz Europe/Paris --base-url https://app.devin.ai/sessions/ --owners my-org,my-other-org
@@ -104,8 +104,7 @@ session-report yaml ~/report/tables-2026-11-02-week.json ~/export   # re-export 
 
 `session-report --help` documents every option (`--group repo` keeps forks apart;
 `--owners` lists the GitHub owners whose `owner/repo` mentions in a prompt count as
-the session's project; without it only the session's PRs and `@repos:` tokens name the project). The transport only runs inside a Devin session (it calls
-Devin's own tools); the exe runs anywhere on Linux x86-64, or wherever the Lean
+the session's project; without it only the session's PRs and `@repos:` tokens name the project). The exe runs anywhere on Linux x86-64 with libcurl, or wherever the Lean
 toolchain in `lean-toolchain` builds it. Reading a month of raw data takes 2–3
 minutes.
 
