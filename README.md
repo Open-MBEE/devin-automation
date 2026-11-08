@@ -56,7 +56,7 @@ id?" — it is `user-…` in the session's identity block) and your IANA timezon
    > report for <your name> (user id user-…, timezone <tz>). Window: the calendar
    > day | Monday–Sunday week | calendar month that ended at the midnight just before
    > this run. Compute the dates from the current time in <tz>. Deliver as the
-   > playbook's step 7 says; if the window had no sessions, say so in one line.
+   > playbook's step 6 says; if the window had no sessions, say so in one line.
 
    Schedules (RFC 5545, in your timezone):
 
