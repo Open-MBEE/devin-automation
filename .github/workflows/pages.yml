@@ -8,6 +8,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: gh-pages
@@ -15,12 +17,19 @@ concurrency:
 
 jobs:
   publish:
+    # Only main is ever published: a manual run on another branch would replace newer reports.
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - name: Build site
         run: scripts/build-site.sh site
-      - name: Publish as a single-commit gh-pages branch (force-pushed on every update)
+      - name: Keep gh-pages as a single-commit branch (force-pushed on every update)
         run: |
           cd site
           git init -q -b gh-pages
@@ -31,3 +40,11 @@ jobs:
           git push -f "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" gh-pages
         env:
           GITHUB_TOKEN: ${{ github.token }}
+      # Served site: deployed from the same build through the Pages API, which does not depend
+      # on a push by github.token triggering a Pages build (Settings → Pages → Source: GitHub Actions).
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4

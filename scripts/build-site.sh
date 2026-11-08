@@ -3,6 +3,7 @@
 # (kind, period, who, sessions, projects — read from each report.yaml) newest first.
 # Usage: scripts/build-site.sh <out-dir>   (bash + coreutils only)
 set -euo pipefail
+shopt -s nullglob
 out=${1:?out dir}
 root=$(cd "$(dirname "$0")/.." && pwd)
 rm -rf "$out" && mkdir -p "$out" && touch "$out/.nojekyll"
@@ -11,7 +12,7 @@ field() { sed -n "s/^$2: *//p" "$1" | head -1; }
 esc() { sed -e 's/&/\&amp;/g' -e 's/</\&lt;/g' -e 's/>/\&gt;/g'; }
 
 rows=""
-for dir in $(ls -d "$root"/reports/*/ | sort -r); do
+for dir in $(printf "%s\n" "$root"/reports/*/ | sort -r); do
   slug=$(basename "$dir")
   [ -f "$dir/report.yaml" ] || continue
   cp -r "$dir" "$out/$slug"
@@ -45,4 +46,4 @@ a{color:#0969da;text-decoration:none} a:hover{text-decoration:underline}
 $rows</tbody></table>
 </body></html>
 HTML
-echo "site: $out ($(ls -d "$out"/*/ | wc -l) reports)"
+echo "site: $out ($(find "$out" -mindepth 1 -maxdepth 1 -type d | wc -l) reports)"
