@@ -53,10 +53,11 @@ id?" — it is `user-…` in the session's identity block) and your IANA timezon
    ```sh
    sed -e 's/<USER_ID>/user-…/g' -e 's/<NAME>/Your Name/g' -e 's/<ORG_ID>/org-…/g' -e 's#<TZ>#Europe/Paris#g' \
        -e 's#<API_BASE>#https://api.devin.ai/v3#g' -e 's#<SESSION_URL_PREFIX>#https://app.devin.ai/sessions/#g' \
-       session-report/playbook.md | grep -q '<[A-Z_]*>' && echo 'placeholders left' || echo ok
+       session-report/playbook.md > playbook-filled.md
+   grep -n '<[A-Z_]*>' playbook-filled.md && echo 'placeholders left' || echo ok
    ```
 
-   then paste the result into Devin → Settings → Playbooks → New. Note its id (`playbook-…`).
+   then paste `playbook-filled.md` into Devin → Settings → Playbooks → New. Note its id (`playbook-…`).
    An existing organization playbook can be shared instead of re-created.
 2. Create three automations (Settings → Automations → New), each with one
    `schedule:recurring` trigger and one `start_session` action whose prompt is:
