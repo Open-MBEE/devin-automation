@@ -553,7 +553,7 @@
   created_in_window: true
   acus: 564.894967
   acus_scope: spillsPast
-  working_seconds: 52025
+  working_seconds: 52785
   shell: 1459
   edits: 346
   reads: 171
@@ -749,7 +749,7 @@
   created_in_window: false
   acus: 2712.682540
   acus_scope: older
-  working_seconds: 378142
+  working_seconds: 378902
   shell: 9045
   edits: 844
   reads: 237
@@ -1063,7 +1063,7 @@
   created_in_window: true
   acus: 41.989566
   acus_scope: spillsPast
-  working_seconds: 11026
+  working_seconds: 11786
   shell: 182
   edits: 30
   reads: 44
@@ -1404,7 +1404,7 @@
   created_in_window: true
   acus: 44.227959
   acus_scope: spillsPast
-  working_seconds: 3789
+  working_seconds: 4549
   shell: 70
   edits: 19
   reads: 13
@@ -1989,7 +1989,7 @@
   created_in_window: true
   acus: 49.501933
   acus_scope: spillsPast
-  working_seconds: 15583
+  working_seconds: 16343
   shell: 218
   edits: 28
   reads: 44

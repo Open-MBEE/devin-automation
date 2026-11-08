@@ -4,7 +4,7 @@
   project: OpenSysML
   sessions: 2
   sessions_created: 1
-  working_seconds: 389168
+  working_seconds: 390688
   acus_in_window: 0.000000
   acus_spilling: 41.989566
   acus_older: 2712.682540
@@ -15,7 +15,7 @@
   project: fprime-lean-sysmlv2-example
   sessions: 24
   sessions_created: 24
-  working_seconds: 253209
+  working_seconds: 253969
   acus_in_window: 1239.903950
   acus_spilling: 420.028978
   acus_older: 0.000000
@@ -26,7 +26,7 @@
   project: L4YAML
   sessions: 6
   sessions_created: 3
-  working_seconds: 210962
+  working_seconds: 211722
   acus_in_window: 175.141425
   acus_spilling: 564.894967
   acus_older: 4609.350069
@@ -103,7 +103,7 @@
   project: devin-automation
   sessions: 1
   sessions_created: 1
-  working_seconds: 3789
+  working_seconds: 4549
   acus_in_window: 0.000000
   acus_spilling: 44.227959
   acus_older: 0.000000

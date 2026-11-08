@@ -364,10 +364,40 @@ def Row.toJson (r : Row) : Json :=
     ("prs_created", Json.arr (r.prs.map fun p => Json.mkObj [("ts", p.ts), ("day", p.day), ("url", p.url), ("repo", p.repo), ("num", p.num), ("state", p.state)])),
     ("actions_capped", r.capped)]
 
-def reportJson (ctx : Ctx) (rs : Array Row) : Json :=
+def Acts.toJsonTable (a : Acts) : List (String × Json) :=
+  [("shell", Lean.toJson a.shell), ("edits", Lean.toJson a.edits), ("reads", Lean.toJson a.reads), ("git", Lean.toJson a.git),
+   ("mcp", Lean.toJson a.mcp), ("devin_messages", Lean.toJson a.devinMsgs), ("user_messages", Lean.toJson a.userMsgs), ("web", Lean.toJson a.web)]
+
+/-- The five tables as JSON, field for field what the YAML export writes. -/
+def tablesJson (t : Tables) : Json :=
+  let h := t.report
+  let kind := match h.kind with | .daily => "daily" | .weekly => "weekly" | .monthly => "monthly"
+  let scope := fun | AcusScope.inWindow => "inWindow" | .spillsPast => "spillsPast" | .older => "older"
+  Json.mkObj [
+    ("report", Json.mkObj [("kind", kind), ("label", h.label), ("who", h.who), ("timezone", h.timezone), ("start", h.start),
+      ("end", h.«end»), ("generated", h.generated), ("days", Lean.toJson h.days), ("sessions", h.sessions), ("projects", h.projects)]),
+    ("project_totals", Json.arr (t.project_totals.map fun p => Json.mkObj [("project", p.project), ("sessions", p.sessions),
+      ("sessions_created", p.sessions_created), ("working_seconds", p.working_seconds), ("acus_in_window", Lean.toJson p.acus_in_window),
+      ("acus_spilling", Lean.toJson p.acus_spilling), ("acus_older", Lean.toJson p.acus_older), ("actions", p.actions),
+      ("actions_capped", p.actions_capped), ("prs_opened", p.prs_opened)])),
+    ("working_by_day", Json.arr (t.working_by_day.map fun w => Json.mkObj [("project", w.project), ("day", w.day), ("working_seconds", w.working_seconds)])),
+    ("sessions", Json.arr (t.sessions.map fun s => Json.mkObj (([("session_id", s.session_id), ("url", s.url), ("title", s.title),
+      ("project", s.project), ("repos", Lean.toJson s.repos), ("origin", s.origin), ("parent_session_id", Lean.toJson s.parent_session_id),
+      ("mode", Lean.toJson s.mode), ("status", s.status), ("created", s.created), ("created_in_window", s.created_in_window),
+      ("acus", Lean.toJson s.acus), ("acus_scope", scope s.acus_scope), ("working_seconds", s.working_seconds)] : List (String × Json)) ++
+      Acts.toJsonTable { shell := s.shell, edits := s.edits, reads := s.reads, git := s.git, mcp := s.mcp, devinMsgs := s.devin_messages, userMsgs := s.user_messages, web := s.web } ++
+      [("actions_capped", Lean.toJson s.actions_capped),
+       ("prs_opened", Json.arr (s.prs_opened.map fun p => Json.mkObj [("url", p.url), ("repo", p.repo), ("number", p.number), ("state", p.state), ("day", p.day)]))]))),
+    ("session_days", Json.arr (t.session_days.map fun d => Json.mkObj (([("day", d.day), ("session_id", d.session_id), ("project", d.project),
+      ("working_seconds", d.working_seconds)] : List (String × Json)) ++
+      Acts.toJsonTable { shell := d.shell, edits := d.edits, reads := d.reads, git := d.git, mcp := d.mcp, devinMsgs := d.devin_messages, userMsgs := d.user_messages, web := d.web } ++
+      [("prs_opened", Lean.toJson d.prs_opened)])))]
+
+/-- The report JSON: `rows` for `body.html`, `tables` for `session-report yaml`. -/
+def reportJson (ctx : Ctx) (rs : Array Row) (t : Tables) : Json :=
   Json.mkObj [("kind", match ctx.cfg.kind with | .daily => "daily" | .weekly => "weekly" | .monthly => "monthly"),
     ("label", ctx.label), ("who", ctx.cfg.who), ("tz", ctx.cfg.tz), ("start", ctx.start), ("end", ctx.«end»), ("now", ctx.now),
-    ("days", Lean.toJson ctx.days), ("rows", Json.arr (rs.map Row.toJson))]
+    ("days", Lean.toJson ctx.days), ("rows", Json.arr (rs.map Row.toJson)), ("tables", tablesJson t)]
 
 -- ---------------------------------------------------------------- Markdown
 

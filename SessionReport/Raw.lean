@@ -40,6 +40,8 @@ structure Data where
   user : String
   tz : String
   collected : Int
+  /-- Both session searches returned every page; otherwise sessions are missing and no report must be built. -/
+  search_complete : Bool
   sessions : Array Session
   deriving L4YAML.Schema.FromYaml
 

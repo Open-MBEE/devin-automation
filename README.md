@@ -7,7 +7,7 @@ time, action counts, PRs opened and ACUs.
 
 | Path | What |
 |---|---|
-| `session-report/collect.py` | Transport: pages the Devin session-search and session-events tools from inside a Devin session (`scripted_tools`) and saves their raw text as `raw.json`. No logic. |
+| `session-report/collect.py` | Transport: pages the Devin session-search and session-events tools from inside a Devin session (`scripted_tools`) and saves their raw text as `raw.json`, with a completeness flag per listing (an incomplete session search makes `build` refuse to run). No logic. |
 | `SessionReport/*.lean` | `session-report`, a Lean 4 exe on [nasa-jpl/L4YAML](https://github.com/nasa-jpl/L4YAML): `build` turns `raw.json` into the Markdown report, the report JSON for the HTML, and the five YAML tables (typed, schema-checked); `yaml` re-exports a report JSON; `check` re-reads exported tables. |
 | `schemas/session-report/` | The table schemas, human-readable (`SessionReport/Schema.lean` is their executable form). |
 | `session-report/body.html` | Interactive HTML report body, compiled with Devin's `html_artifact_compile` over the report JSON. |
@@ -89,7 +89,8 @@ curl -fsSL https://github.com/Open-MBEE/devin-automation/releases/latest/downloa
 # 2. build: Markdown + report JSON + YAML tables, all under --out
 session-report build --kind weekly --start 2026-11-02 --end 2026-11-09 --raw ~/report/raw.json --out ~/report \
     --who "Your Name" --tz America/Los_Angeles --base-url https://<your-devin-host>/sessions/ --owners Open-MBEE,nasa-jpl
-session-report check ~/report/yaml/2026-11-02-week/*.yaml
+session-report check ~/report/yaml/2026-11-02-week/*.yaml        # re-read the tables against the schema
+session-report yaml ~/report/report-2026-11-02-week.json ~/export   # re-export them from the report JSON (same files)
 # 3. HTML — html_artifact_compile body_path=session-report/body.html data_path=~/report/report-2026-11-02-week.json
 ```
 

@@ -116,12 +116,15 @@ def buildCmd (args : List String) : IO UInt32 := do
   let data ← match parseAs Raw.Data text with
     | .error e => throw (IO.userError s!"{raw}: not a collector output: {e}")
     | .ok d => pure d
+  unless data.search_complete do
+    throw (IO.userError s!"{raw}: the session search was cut short (failed page or page cap), so sessions are missing; collect again")
   let ctx ← Build.Ctx.make cfg
   let rows := Build.rows ctx data
   IO.FS.createDirAll out
   IO.FS.writeFile (out / s!"devin-report-{ctx.slug}.md") (Build.markdown ctx rows)
-  IO.FS.writeFile (out / s!"report-{ctx.slug}.json") ((Build.reportJson ctx rows).pretty ++ "\n")
-  writeTables (out / "yaml" / ctx.slug) (Build.tables ctx rows)
+  let tables := Build.tables ctx rows
+  IO.FS.writeFile (out / s!"report-{ctx.slug}.json") ((Build.reportJson ctx rows tables).pretty ++ "\n")
+  writeTables (out / "yaml" / ctx.slug) tables
   IO.println s!"wrote {out}/devin-report-{ctx.slug}.md and report-{ctx.slug}.json: {rows.size} sessions"
   return 0
 

@@ -24,12 +24,13 @@ async def pages(tool, cap, **args):
         if n >= cap: return lines, False
         after = m.group(1)
 
-search = {}
+search, search_complete = {}, True
 for f in (dict(created_after=START, created_before=END), dict(updated_after=START, created_before=END)):
-    ls, _ = await pages(tools.devin_session_search, 50, user_ids=[USER], **f)
+    ls, ok = await pages(tools.devin_session_search, 50, user_ids=[USER], **f)
+    search_complete = search_complete and ok
     for l in ls:
         if l.startswith("- "): search[l[2:].split(" | ", 1)[0].strip()] = l
-print("sessions:", len(search))
+print("sessions:", len(search), "search complete:", search_complete)  # the builder refuses an incomplete search
 
 sem = asyncio.Semaphore(8)
 async def fetch(sid):
@@ -48,6 +49,6 @@ async def fetch(sid):
                     prs=dict(lines=prs[0], complete=prs[1]), actions=dict(lines=acts[0], complete=acts[1]))
 res = await asyncio.gather(*[fetch(s) for s in search], return_exceptions=True)
 sessions = [r if isinstance(r, dict) else dict(id=s, search=search[s], error=f"{type(r).__name__}: {r}") for s, r in zip(search, res)]
-json.dump(dict(start=START, end=END, user=USER, tz=TZ, collected=int(time.time()), sessions=sessions), open(OUT, "w"), indent=1, ensure_ascii=False)
+json.dump(dict(start=START, end=END, user=USER, tz=TZ, collected=int(time.time()), search_complete=search_complete, sessions=sessions), open(OUT, "w"), indent=1, ensure_ascii=False)
 print("saved", OUT, "failed:", sum("error" in s for s in sessions),
       "incomplete:", sum(not (s.get("status", {}).get("complete", False) and s.get("prs", {}).get("complete", False) and s.get("actions", {}).get("complete", False)) for s in sessions))
