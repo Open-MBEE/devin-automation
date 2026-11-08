@@ -77,10 +77,19 @@ def checkOne (p : System.FilePath) : IO Bool := do
   | some (.ok _) => IO.println s!"ok   {p}"; return true
   | some (.error e) => IO.eprintln s!"FAIL {p}: {e}"; return false
 
-/-- `api-get <url>`: one authenticated GET against the Devin API (debugging aid; prints status and body). -/
-def apiGetCmd (url : String) : IO UInt32 := do
+/-- The Devin API root, e.g. `https://api.devin.ai/v3` or `https://<host>.devinenterprise.com/api/v3`;
+    `https` only, since `DEVIN_API_KEY` travels with every request. -/
+def apiBase : IO String := do
+  let base := ((← IO.getEnv "DEVIN_API_BASE").getD "https://api.devin.ai/v3").dropRightWhileC (· == '/')
+  unless base.startsWith "https://" do throw (IO.userError s!"DEVIN_API_BASE must be an https URL, got {base}")
+  return base
+
+/-- `api-get <path>`: one authenticated GET of `$DEVIN_API_BASE<path>` (debugging aid; prints status and body).
+    Only a path is accepted, so the key never goes anywhere but the configured API. -/
+def apiGetCmd (path : String) : IO UInt32 := do
   let some key ← IO.getEnv "DEVIN_API_KEY" | throw (IO.userError "DEVIN_API_KEY is not set")
-  let r ← Http.get url #[s!"Authorization: Bearer {key}", "Accept: application/json"]
+  unless path.startsWith "/" do throw (IO.userError s!"api-get takes a path under DEVIN_API_BASE, e.g. /organizations/<org>/sessions?first=1")
+  let r ← Http.get ((← apiBase) ++ path) #[s!"Authorization: Bearer {key}", "Accept: application/json"]
   IO.println s!"HTTP {r.status}"
   IO.println r.body
   return if r.ok then 0 else 1
@@ -151,7 +160,7 @@ public def main (args : List String) : IO UInt32 := do
     | "build" :: rest => buildCmd rest
     | "yaml" :: [input, outDir] => yamlCmd input outDir
     | "check" :: files => checkCmd files
-    | ["api-get", url] => apiGetCmd url
+    | ["api-get", path] => apiGetCmd path
     | _ => IO.eprintln usage; return 2
   catch e =>
     IO.eprintln s!"session-report: {e}"
