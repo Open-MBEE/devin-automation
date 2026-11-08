@@ -4,90 +4,90 @@
   project: OpenSysML
   sessions: 2
   sessions_created: 1
-  working_seconds: 58187
+  working_seconds: 61904
   acus_in_window: 0.000000
-  acus_spilling: 36.731738
-  acus_older: 2689.897299
-  actions: 1776
+  acus_spilling: 41.989566
+  acus_older: 2712.682540
+  actions: 1563
   actions_capped: false
-  prs_opened: 6
+  prs_opened: 8
 -
   project: L4YAML
   sessions: 4
   sessions_created: 0
-  working_seconds: 33489
+  working_seconds: 34286
   acus_in_window: 0.000000
   acus_spilling: 0.000000
-  acus_older: 4734.854359
-  actions: 1713
+  acus_older: 4761.152843
+  actions: 1238
   actions_capped: false
-  prs_opened: 9
+  prs_opened: 10
 -
   project: fprime-lean-sysmlv2-example
   sessions: 3
   sessions_created: 1
-  working_seconds: 17548
+  working_seconds: 19393
   acus_in_window: 0.000000
-  acus_spilling: 37.792833
-  acus_older: 415.882910
-  actions: 578
+  acus_spilling: 49.501933
+  acus_older: 418.903427
+  actions: 465
   actions_capped: false
-  prs_opened: 1
+  prs_opened: 2
 -
   project: mars.lean
   sessions: 4
   sessions_created: 3
-  working_seconds: 15211
-  acus_in_window: 121.094697
+  working_seconds: 15259
+  acus_in_window: 126.353584
   acus_spilling: 0.000000
   acus_older: 3526.159273
-  actions: 872
+  actions: 871
   actions_capped: false
   prs_opened: 9
 -
   project: soil-moisture-model
   sessions: 1
   sessions_created: 0
-  working_seconds: 13561
+  working_seconds: 11461
   acus_in_window: 0.000000
   acus_spilling: 0.000000
-  acus_older: 132.122212
-  actions: 358
+  acus_older: 145.351278
+  actions: 232
+  actions_capped: false
+  prs_opened: 3
+-
+  project: devin-automation
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 3896
+  acus_in_window: 0.000000
+  acus_spilling: 44.227959
+  acus_older: 0.000000
+  actions: 4759
+  actions_capped: false
+  prs_opened: 1
+-
+  project: soil-moisture-dps
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 3676
+  acus_in_window: 56.760657
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 344
   actions_capped: false
   prs_opened: 3
 -
   project: soil-moisture-workflows
   sessions: 2
   sessions_created: 0
-  working_seconds: 4582
+  working_seconds: 3240
   acus_in_window: 0.000000
   acus_spilling: 0.000000
-  acus_older: 408.941204
-  actions: 178
+  acus_older: 451.013637
+  actions: 404
   actions_capped: false
-  prs_opened: 2
--
-  project: soil-moisture-dps
-  sessions: 1
-  sessions_created: 1
-  working_seconds: 3676
-  acus_in_window: 43.091810
-  acus_spilling: 0.000000
-  acus_older: 0.000000
-  actions: 294
-  actions_capped: false
-  prs_opened: 2
--
-  project: (no repository)
-  sessions: 2
-  sessions_created: 2
-  working_seconds: 3584
-  acus_in_window: 0.000000
-  acus_spilling: 9.241683
-  acus_older: 0.000000
-  actions: 543
-  actions_capped: false
-  prs_opened: 0
+  prs_opened: 3
 -
   project: pacti.lean
   sessions: 1
@@ -99,6 +99,17 @@
   actions: 41
   actions_capped: false
   prs_opened: 1
+-
+  project: (no repository)
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 279
+  acus_in_window: 4.960147
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 527
+  actions_capped: false
+  prs_opened: 0
 -
   project: PropertyKindCalculus
   sessions: 1

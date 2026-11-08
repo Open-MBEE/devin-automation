@@ -1,0 +1,42 @@
+name: session-report binary
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+        with:
+          auto-config: false
+          build: true
+          test: false
+          use-github-cache: true
+      - name: Smoke test
+        run: |
+          .lake/build/bin/session-report --version
+          .lake/build/bin/session-report check reports/2026-11-08/*.yaml
+      - name: Package
+        run: |
+          mkdir -p dist
+          cp .lake/build/bin/session-report dist/session-report-linux-x86_64
+          (cd dist && sha256sum session-report-linux-x86_64 > session-report-linux-x86_64.sha256)
+      - uses: actions/upload-artifact@v4
+        with:
+          name: session-report-linux-x86_64
+          path: dist/
+      - name: Release (tags only)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*
+          generate_release_notes: true

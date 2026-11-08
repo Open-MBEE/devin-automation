@@ -118,44 +118,17 @@
   origin: webapp
   parent_session_id: null
   mode: ultra
-  status: running (waiting_for_user)
+  status: suspended (inactivity)
   created: 2026-11-08T12:27:02-08:00
   created_in_window: true
-  acus: 4.928492
-  acus_scope: spillsPast
+  acus: 4.960147
+  acus_scope: inWindow
   working_seconds: 279
   shell: 12
   edits: 0
   reads: 0
   git: 0
   mcp: 513
-  devin_messages: 2
-  user_messages: 1
-  web: 0
-  actions_capped: false
-  prs_opened:
-    []
--
-  session_id: 438880735ee9439eb71a124cbe26cd23
-  url: https://nasa-jpl-demo.devinenterprise.com/sessions/438880735ee9439eb71a124cbe26cd23
-  title: Daily and Weekly Session Reports
-  project: (no repository)
-  repos:
-    []
-  origin: webapp
-  parent_session_id: null
-  mode: ultra
-  status: running (working)
-  created: 2026-11-08T12:39:50-08:00
-  created_in_window: true
-  acus: 4.313191
-  acus_scope: spillsPast
-  working_seconds: 3304
-  shell: 3
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 11
   devin_messages: 2
   user_messages: 1
   web: 0
@@ -231,14 +204,14 @@
   created_in_window: false
   acus: 3356.752919
   acus_scope: older
-  working_seconds: 71440
-  shell: 1315
-  edits: 217
-  reads: 41
-  git: 93
-  mcp: 112
-  devin_messages: 170
-  user_messages: 65
+  working_seconds: 70365
+  shell: 1270
+  edits: 210
+  reads: 39
+  git: 90
+  mcp: 102
+  devin_messages: 163
+  user_messages: 64
   web: 0
   actions_capped: false
   prs_opened:
@@ -407,14 +380,14 @@
   created_in_window: false
   acus: 674.133702
   acus_scope: older
-  working_seconds: 3563
-  shell: 69
+  working_seconds: 3095
+  shell: 68
   edits: 9
   reads: 5
-  git: 22
-  mcp: 214
-  devin_messages: 99
-  user_messages: 24
+  git: 16
+  mcp: 204
+  devin_messages: 93
+  user_messages: 23
   web: 0
   actions_capped: false
   prs_opened:
@@ -434,14 +407,14 @@
   created_in_window: false
   acus: 578.463448
   acus_scope: older
-  working_seconds: 55187
-  shell: 1114
-  edits: 387
-  reads: 309
-  git: 151
+  working_seconds: 54358
+  shell: 854
+  edits: 278
+  reads: 264
+  git: 113
   mcp: 3
-  devin_messages: 153
-  user_messages: 54
+  devin_messages: 113
+  user_messages: 40
   web: 0
   actions_capped: false
   prs_opened:
@@ -578,15 +551,15 @@
   status: running (working)
   created: 2026-11-05T09:31:54-08:00
   created_in_window: true
-  acus: 538.596484
+  acus: 564.894967
   acus_scope: spillsPast
-  working_seconds: 51197
-  shell: 1378
-  edits: 336
-  reads: 170
-  git: 33
-  mcp: 34
-  devin_messages: 87
+  working_seconds: 52025
+  shell: 1459
+  edits: 346
+  reads: 171
+  git: 36
+  mcp: 37
+  devin_messages: 92
   user_messages: 30
   web: 0
   actions_capped: false
@@ -661,6 +634,12 @@
       url: https://github.com/nasa-jpl/L4YAML/pull/267
       repo: nasa-jpl/L4YAML
       number: 267
+      state: merged
+      day: 2026-11-08
+    -
+      url: https://github.com/nasa-jpl/L4YAML/pull/271
+      repo: nasa-jpl/L4YAML
+      number: 271
       state: merged
       day: 2026-11-08
 -
@@ -768,16 +747,16 @@
   status: running (working)
   created: 2026-10-26T12:28:53-07:00
   created_in_window: false
-  acus: 2689.897299
+  acus: 2712.682540
   acus_scope: older
-  working_seconds: 376378
-  shell: 9151
-  edits: 865
-  reads: 238
+  working_seconds: 378142
+  shell: 9045
+  edits: 844
+  reads: 237
   git: 434
   mcp: 68
-  devin_messages: 200
-  user_messages: 54
+  devin_messages: 188
+  user_messages: 48
   web: 0
   actions_capped: false
   prs_opened:
@@ -1063,6 +1042,12 @@
       number: 2063
       state: open
       day: 2026-11-08
+    -
+      url: https://github.com/Open-MBEE/qvts/pull/56
+      repo: Open-MBEE/qvts
+      number: 56
+      state: open
+      day: 2026-11-08
 -
   session_id: 4eac7d670b61499ea2a95a5babd91b78
   url: https://nasa-jpl-demo.devinenterprise.com/sessions/4eac7d670b61499ea2a95a5babd91b78
@@ -1076,16 +1061,16 @@
   status: running (working)
   created: 2026-11-08T11:00:01-08:00
   created_in_window: true
-  acus: 36.731738
+  acus: 41.989566
   acus_scope: spillsPast
-  working_seconds: 9291
-  shell: 167
-  edits: 25
+  working_seconds: 11026
+  shell: 182
+  edits: 30
   reads: 44
-  git: 4
-  mcp: 8
-  devin_messages: 3
-  user_messages: 1
+  git: 11
+  mcp: 13
+  devin_messages: 6
+  user_messages: 2
   web: 0
   actions_capped: false
   prs_opened:
@@ -1093,6 +1078,12 @@
       url: https://github.com/Open-MBEE/OpenSysML/pull/2064
       repo: Open-MBEE/OpenSysML
       number: 2064
+      state: merged
+      day: 2026-11-08
+    -
+      url: https://github.com/Open-MBEE/OpenSysML/pull/2065
+      repo: Open-MBEE/OpenSysML
+      number: 2065
       state: open
       day: 2026-11-08
 -
@@ -1399,6 +1390,38 @@
       state: closed
       day: 2026-11-04
 -
+  session_id: 438880735ee9439eb71a124cbe26cd23
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/438880735ee9439eb71a124cbe26cd23
+  title: Daily and Weekly Session Reports
+  project: devin-automation
+  repos:
+    - Open-MBEE/devin-automation
+  origin: webapp
+  parent_session_id: null
+  mode: ultra
+  status: running (working)
+  created: 2026-11-08T12:39:50-08:00
+  created_in_window: true
+  acus: 44.227959
+  acus_scope: spillsPast
+  working_seconds: 3789
+  shell: 70
+  edits: 19
+  reads: 13
+  git: 2
+  mcp: 4639
+  devin_messages: 16
+  user_messages: 9
+  web: 0
+  actions_capped: false
+  prs_opened:
+    -
+      url: https://github.com/Open-MBEE/devin-automation/pull/1
+      repo: Open-MBEE/devin-automation
+      number: 1
+      state: open
+      day: 2026-11-08
+-
   session_id: 10d212bde0424cf8bd5cfac858d88dd7
   url: https://nasa-jpl-demo.devinenterprise.com/sessions/10d212bde0424cf8bd5cfac858d88dd7
   title: "EFA dashboard: per-level FACE cases in the manifest"
@@ -1590,15 +1613,15 @@
   status: running (waiting_for_user)
   created: 2026-11-02T20:18:15-08:00
   created_in_window: true
-  acus: 367.506528
+  acus: 370.527045
   acus_scope: spillsPast
-  working_seconds: 10209
-  shell: 261
+  working_seconds: 9704
+  shell: 262
   edits: 64
   reads: 80
   git: 43
-  mcp: 123
-  devin_messages: 122
+  mcp: 124
+  devin_messages: 123
   user_messages: 32
   web: 0
   actions_capped: false
@@ -1896,7 +1919,7 @@
   created_in_window: true
   acus: 55.206101
   acus_scope: inWindow
-  working_seconds: 4667
+  working_seconds: 4647
   shell: 171
   edits: 72
   reads: 49
@@ -1952,6 +1975,38 @@
       state: merged
       day: 2026-11-06
 -
+  session_id: 72924cd7c7f94fc7b262db29ed4b1e38
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/72924cd7c7f94fc7b262db29ed4b1e38
+  title: "Realize overflow in full: M1 time refinement r=4"
+  project: fprime-lean-sysmlv2-example
+  repos:
+    - Open-MBEE/fprime-lean-sysmlv2-example
+  origin: api
+  parent_session_id: a8a1adef279a4c009e8e3cd7e4a0a115
+  mode: ultra
+  status: running (working)
+  created: 2026-11-08T09:42:50-08:00
+  created_in_window: true
+  acus: 49.501933
+  acus_scope: spillsPast
+  working_seconds: 15583
+  shell: 218
+  edits: 28
+  reads: 44
+  git: 3
+  mcp: 6
+  devin_messages: 7
+  user_messages: 3
+  web: 0
+  actions_capped: false
+  prs_opened:
+    -
+      url: https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/107
+      repo: Open-MBEE/fprime-lean-sysmlv2-example
+      number: 107
+      state: open
+      day: 2026-11-08
+-
   session_id: 225a0e60d25a402dafedef75ff57f5f6
   url: https://nasa-jpl-demo.devinenterprise.com/sessions/225a0e60d25a402dafedef75ff57f5f6
   title: "Q11: M1 packets = 5, measure time-refinement cost"
@@ -1966,7 +2021,7 @@
   created_in_window: true
   acus: 48.376382
   acus_scope: inWindow
-  working_seconds: 9950
+  working_seconds: 9935
   shell: 216
   edits: 26
   reads: 45
@@ -2047,33 +2102,6 @@
       number: 89
       state: merged
       day: 2026-11-03
--
-  session_id: 72924cd7c7f94fc7b262db29ed4b1e38
-  url: https://nasa-jpl-demo.devinenterprise.com/sessions/72924cd7c7f94fc7b262db29ed4b1e38
-  title: "Realize overflow in full: M1 time refinement r=4"
-  project: fprime-lean-sysmlv2-example
-  repos:
-    - Open-MBEE/fprime-lean-sysmlv2-example
-  origin: api
-  parent_session_id: a8a1adef279a4c009e8e3cd7e4a0a115
-  mode: ultra
-  status: running (working)
-  created: 2026-11-08T09:42:50-08:00
-  created_in_window: true
-  acus: 37.792833
-  acus_scope: spillsPast
-  working_seconds: 13846
-  shell: 154
-  edits: 22
-  reads: 37
-  git: 0
-  mcp: 4
-  devin_messages: 5
-  user_messages: 3
-  web: 0
-  actions_capped: false
-  prs_opened:
-    []
 -
   session_id: 8d5f864c5cdc47f29f88727f2725d0d5
   url: https://nasa-jpl-demo.devinenterprise.com/sessions/8d5f864c5cdc47f29f88727f2725d0d5
@@ -2223,7 +2251,7 @@
   created_in_window: true
   acus: 26.209464
   acus_scope: inWindow
-  working_seconds: 3176
+  working_seconds: 3153
   shell: 96
   edits: 17
   reads: 39
@@ -2428,14 +2456,14 @@
   created_in_window: false
   acus: 649.878890
   acus_scope: older
-  working_seconds: 8795
-  shell: 366
-  edits: 128
-  reads: 101
-  git: 71
-  mcp: 9
-  devin_messages: 88
-  user_messages: 36
+  working_seconds: 8755
+  shell: 324
+  edits: 110
+  reads: 92
+  git: 50
+  mcp: 8
+  devin_messages: 68
+  user_messages: 30
   web: 4
   actions_capped: false
   prs_opened:
@@ -2511,14 +2539,14 @@
   created_in_window: false
   acus: 3526.159273
   acus_scope: older
-  working_seconds: 120864
-  shell: 6547
-  edits: 2366
-  reads: 232
-  git: 340
+  working_seconds: 114926
+  shell: 5881
+  edits: 2142
+  reads: 181
+  git: 278
   mcp: 41
-  devin_messages: 397
-  user_messages: 82
+  devin_messages: 338
+  user_messages: 76
   web: 0
   actions_capped: false
   prs_opened:
@@ -3123,15 +3151,15 @@
   status: suspended (inactivity)
   created: 2026-11-08T10:22:34-08:00
   created_in_window: true
-  acus: 83.449310
+  acus: 88.708196
   acus_scope: inWindow
-  working_seconds: 6591
-  shell: 210
-  edits: 54
+  working_seconds: 6670
+  shell: 214
+  edits: 55
   reads: 38
-  git: 5
-  mcp: 3
-  devin_messages: 13
+  git: 6
+  mcp: 6
+  devin_messages: 14
   user_messages: 8
   web: 0
   actions_capped: false
@@ -3258,15 +3286,15 @@
   status: suspended (inactivity)
   created: 2026-11-08T08:15:48-08:00
   created_in_window: true
-  acus: 43.091810
+  acus: 56.760657
   acus_scope: inWindow
   working_seconds: 3676
-  shell: 182
-  edits: 47
-  reads: 58
-  git: 4
+  shell: 222
+  edits: 52
+  reads: 60
+  git: 6
   mcp: 0
-  devin_messages: 3
+  devin_messages: 4
   user_messages: 1
   web: 0
   actions_capped: false
@@ -3281,6 +3309,12 @@
       url: https://github.com/Open-MBEE/soil-moisture-workflows/pull/39
       repo: Open-MBEE/soil-moisture-workflows
       number: 39
+      state: open
+      day: 2026-11-08
+    -
+      url: https://github.com/Open-MBEE/soil-moisture-dps/pull/11
+      repo: Open-MBEE/soil-moisture-dps
+      number: 11
       state: open
       day: 2026-11-08
 -
@@ -3302,15 +3336,15 @@
   created_in_window: false
   acus: 216.924742
   acus_scope: older
-  working_seconds: 89121
-  shell: 4257
-  edits: 578
-  reads: 1019
-  git: 170
+  working_seconds: 88237
+  shell: 3768
+  edits: 470
+  reads: 832
+  git: 166
   mcp: 18
-  devin_messages: 153
-  user_messages: 90
-  web: 4
+  devin_messages: 149
+  user_messages: 89
+  web: 0
   actions_capped: false
   prs_opened:
     -
@@ -3600,19 +3634,19 @@
   origin: webapp
   parent_session_id: null
   mode: ultra
-  status: running (working)
+  status: suspended (inactivity)
   created: 2026-11-07T10:19:45-08:00
   created_in_window: true
-  acus: 132.122212
-  acus_scope: spillsPast
-  working_seconds: 18632
-  shell: 265
-  edits: 71
+  acus: 145.351278
+  acus_scope: inWindow
+  working_seconds: 16533
+  shell: 278
+  edits: 79
   reads: 21
-  git: 31
-  mcp: 16
-  devin_messages: 39
-  user_messages: 11
+  git: 34
+  mcp: 19
+  devin_messages: 44
+  user_messages: 12
   web: 0
   actions_capped: false
   prs_opened:
@@ -3662,7 +3696,7 @@
       url: https://github.com/Open-MBEE/soil-moisture-model/pull/44
       repo: Open-MBEE/soil-moisture-model
       number: 44
-      state: open
+      state: merged
       day: 2026-11-08
 -
   session_id: b5d9e169d79f4f749afaec2f0edbc76d
@@ -3730,7 +3764,7 @@
   created_in_window: true
   acus: 34.712001
   acus_scope: inWindow
-  working_seconds: 4192
+  working_seconds: 4188
   shell: 114
   edits: 15
   reads: 34
@@ -3828,19 +3862,19 @@
   origin: webapp
   parent_session_id: null
   mode: ultra
-  status: running (working)
+  status: suspended (inactivity)
   created: 2026-11-06T19:48:41-08:00
   created_in_window: true
-  acus: 343.672083
-  acus_scope: spillsPast
-  working_seconds: 29427
-  shell: 1401
-  edits: 357
-  reads: 354
-  git: 30
-  mcp: 41
-  devin_messages: 29
-  user_messages: 9
+  acus: 385.744516
+  acus_scope: inWindow
+  working_seconds: 28086
+  shell: 1531
+  edits: 387
+  reads: 395
+  git: 34
+  mcp: 53
+  devin_messages: 38
+  user_messages: 11
   web: 0
   actions_capped: false
   prs_opened:
@@ -3914,7 +3948,13 @@
       url: https://github.com/Open-MBEE/soil-moisture-workflows/pull/41
       repo: Open-MBEE/soil-moisture-workflows
       number: 41
-      state: "?"
+      state: merged
+      day: 2026-11-08
+    -
+      url: https://github.com/Open-MBEE/soil-moisture-dps/pull/10
+      repo: Open-MBEE/soil-moisture-dps
+      number: 10
+      state: open
       day: 2026-11-08
 -
   session_id: d0c10b32b08144028e87fd0607dbbb1a

@@ -5,25 +5,25 @@
   session_id: 5c64e471e7b64c7b9e38da34e76a1420
   project: (Devin environment)
   working_seconds: 65
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 0
-  devin_messages: 0
-  user_messages: 0
-  web: 0
-  prs_opened: 0
--
-  day: 2026-10-23
-  session_id: 5c64e471e7b64c7b9e38da34e76a1420
-  project: (Devin environment)
-  working_seconds: 0
   shell: 6
   edits: 0
   reads: 0
   git: 0
   mcp: 0
+  devin_messages: 2
+  user_messages: 1
+  web: 0
+  prs_opened: 0
+-
+  day: 2026-10-22
+  session_id: 303b8353dcc645048a3a91cd245b499c
+  project: (Devin housekeeping)
+  working_seconds: 297
+  shell: 19
+  edits: 8
+  reads: 0
+  git: 0
+  mcp: 27
   devin_messages: 2
   user_messages: 1
   web: 0
@@ -57,38 +57,10 @@
   web: 0
   prs_opened: 0
 -
-  day: 2026-10-22
-  session_id: 303b8353dcc645048a3a91cd245b499c
-  project: (Devin housekeeping)
-  working_seconds: 297
-  shell: 19
-  edits: 8
-  reads: 0
-  git: 0
-  mcp: 27
-  devin_messages: 2
-  user_messages: 1
-  web: 0
-  prs_opened: 0
--
   day: 2026-10-19
   session_id: bd765419895d4cb79ffdff5404d82075
   project: (Devin housekeeping)
   working_seconds: 165
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 0
-  devin_messages: 0
-  user_messages: 0
-  web: 0
-  prs_opened: 0
--
-  day: 2026-10-20
-  session_id: bd765419895d4cb79ffdff5404d82075
-  project: (Devin housekeeping)
-  working_seconds: 0
   shell: 15
   edits: 5
   reads: 0
@@ -145,13 +117,13 @@
   session_id: 54c2ec09e72b43d99dcc9ba150ba5a9a
   project: (no repository)
   working_seconds: 3823
-  shell: 9
-  edits: 0
+  shell: 506
+  edits: 133
   reads: 0
   git: 0
   mcp: 0
-  devin_messages: 1
-  user_messages: 0
+  devin_messages: 24
+  user_messages: 10
   web: 0
   prs_opened: 0
 -
@@ -159,20 +131,6 @@
   session_id: 54c2ec09e72b43d99dcc9ba150ba5a9a
   project: (no repository)
   working_seconds: 3488
-  shell: 497
-  edits: 133
-  reads: 0
-  git: 0
-  mcp: 0
-  devin_messages: 23
-  user_messages: 10
-  web: 0
-  prs_opened: 0
--
-  day: 2026-10-20
-  session_id: 54c2ec09e72b43d99dcc9ba150ba5a9a
-  project: (no repository)
-  working_seconds: 0
   shell: 361
   edits: 160
   reads: 0
@@ -186,28 +144,14 @@
   day: 2026-10-22
   session_id: 9144fee0b7f948df90ed8ebd50c68cec
   project: (no repository)
-  working_seconds: 5500
-  shell: 6
-  edits: 1
+  working_seconds: 5461
+  shell: 14
+  edits: 3
   reads: 0
   git: 0
-  mcp: 18
-  devin_messages: 11
-  user_messages: 3
-  web: 0
-  prs_opened: 0
--
-  day: 2026-10-23
-  session_id: 9144fee0b7f948df90ed8ebd50c68cec
-  project: (no repository)
-  working_seconds: 0
-  shell: 8
-  edits: 2
-  reads: 0
-  git: 0
-  mcp: 31
-  devin_messages: 9
-  user_messages: 2
+  mcp: 49
+  devin_messages: 20
+  user_messages: 5
   web: 0
   prs_opened: 0
 -
@@ -285,20 +229,6 @@
   session_id: e272d9e5361d4e78b95cab85f1edd07e
   project: (no repository)
   working_seconds: 96
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 0
-  devin_messages: 0
-  user_messages: 0
-  web: 0
-  prs_opened: 0
--
-  day: 2026-10-23
-  session_id: e272d9e5361d4e78b95cab85f1edd07e
-  project: (no repository)
-  working_seconds: 0
   shell: 8
   edits: 4
   reads: 0
@@ -355,20 +285,6 @@
   session_id: d1863aa8293f44719e3365bf942dc446
   project: (no repository)
   working_seconds: 215
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 0
-  devin_messages: 0
-  user_messages: 0
-  web: 0
-  prs_opened: 0
--
-  day: 2026-10-23
-  session_id: d1863aa8293f44719e3365bf942dc446
-  project: (no repository)
-  working_seconds: 0
   shell: 15
   edits: 2
   reads: 0
@@ -397,27 +313,27 @@
   session_id: 49750a06a48d41b1852199f560a0d9fc
   project: L4YAML
   working_seconds: 32285
-  shell: 396
-  edits: 96
-  reads: 0
-  git: 9
+  shell: 650
+  edits: 172
+  reads: 13
+  git: 26
   mcp: 0
-  devin_messages: 14
-  user_messages: 1
+  devin_messages: 24
+  user_messages: 2
   web: 0
   prs_opened: 7
 -
   day: 2026-10-24
   session_id: 49750a06a48d41b1852199f560a0d9fc
   project: L4YAML
-  working_seconds: 47342
-  shell: 825
-  edits: 255
-  reads: 20
-  git: 50
+  working_seconds: 47340
+  shell: 946
+  edits: 335
+  reads: 31
+  git: 51
   mcp: 0
-  devin_messages: 27
-  user_messages: 3
+  devin_messages: 24
+  user_messages: 2
   web: 0
   prs_opened: 10
 -
@@ -425,13 +341,13 @@
   session_id: 49750a06a48d41b1852199f560a0d9fc
   project: L4YAML
   working_seconds: 43868
-  shell: 1172
-  edits: 321
-  reads: 58
-  git: 48
-  mcp: 0
-  devin_messages: 19
-  user_messages: 0
+  shell: 979
+  edits: 195
+  reads: 47
+  git: 46
+  mcp: 4
+  devin_messages: 18
+  user_messages: 2
   web: 0
   prs_opened: 11
 -
@@ -439,13 +355,13 @@
   session_id: 49750a06a48d41b1852199f560a0d9fc
   project: L4YAML
   working_seconds: 41729
-  shell: 895
-  edits: 167
-  reads: 27
-  git: 46
-  mcp: 27
-  devin_messages: 30
-  user_messages: 5
+  shell: 910
+  edits: 191
+  reads: 14
+  git: 32
+  mcp: 23
+  devin_messages: 25
+  user_messages: 3
   web: 0
   prs_opened: 9
 -
@@ -453,13 +369,13 @@
   session_id: 49750a06a48d41b1852199f560a0d9fc
   project: L4YAML
   working_seconds: 51587
-  shell: 1214
-  edits: 281
-  reads: 24
-  git: 62
-  mcp: 32
-  devin_messages: 101
-  user_messages: 14
+  shell: 1191
+  edits: 279
+  reads: 33
+  git: 72
+  mcp: 62
+  devin_messages: 125
+  user_messages: 19
   web: 0
   prs_opened: 12
 -
@@ -467,13 +383,13 @@
   session_id: 49750a06a48d41b1852199f560a0d9fc
   project: L4YAML
   working_seconds: 48601
-  shell: 633
-  edits: 154
-  reads: 35
-  git: 57
-  mcp: 62
-  devin_messages: 64
-  user_messages: 16
+  shell: 949
+  edits: 237
+  reads: 80
+  git: 61
+  mcp: 41
+  devin_messages: 51
+  user_messages: 13
   web: 0
   prs_opened: 9
 -
@@ -481,13 +397,13 @@
   session_id: 49750a06a48d41b1852199f560a0d9fc
   project: L4YAML
   working_seconds: 56643
-  shell: 1236
-  edits: 293
-  reads: 66
-  git: 59
-  mcp: 52
-  devin_messages: 70
-  user_messages: 17
+  shell: 1087
+  edits: 215
+  reads: 15
+  git: 65
+  mcp: 66
+  devin_messages: 87
+  user_messages: 27
   web: 0
   prs_opened: 13
 -
@@ -495,27 +411,27 @@
   session_id: 49750a06a48d41b1852199f560a0d9fc
   project: L4YAML
   working_seconds: 55136
-  shell: 954
-  edits: 221
+  shell: 943
+  edits: 231
   reads: 7
-  git: 50
-  mcp: 64
-  devin_messages: 76
-  user_messages: 32
+  git: 72
+  mcp: 66
+  devin_messages: 65
+  user_messages: 25
   web: 0
   prs_opened: 10
 -
   day: 2026-10-31
   session_id: 49750a06a48d41b1852199f560a0d9fc
   project: L4YAML
-  working_seconds: 32783
-  shell: 792
-  edits: 141
-  reads: 18
-  git: 54
-  mcp: 42
-  devin_messages: 42
-  user_messages: 16
+  working_seconds: 32778
+  shell: 701
+  edits: 140
+  reads: 16
+  git: 19
+  mcp: 41
+  devin_messages: 38
+  user_messages: 15
   web: 0
   prs_opened: 5
 -
@@ -523,13 +439,13 @@
   session_id: 94ce0934eaca49d19920ab1aba00634b
   project: L4YAML
   working_seconds: 27015
-  shell: 73
-  edits: 44
+  shell: 909
+  edits: 142
   reads: 0
-  git: 0
+  git: 3
   mcp: 0
-  devin_messages: 4
-  user_messages: 2
+  devin_messages: 17
+  user_messages: 5
   web: 0
   prs_opened: 1
 -
@@ -537,41 +453,27 @@
   session_id: 94ce0934eaca49d19920ab1aba00634b
   project: L4YAML
   working_seconds: 28206
-  shell: 1823
-  edits: 265
-  reads: 54
-  git: 21
+  shell: 1119
+  edits: 209
+  reads: 60
+  git: 28
   mcp: 0
-  devin_messages: 48
-  user_messages: 11
+  devin_messages: 41
+  user_messages: 8
   web: 0
   prs_opened: 5
--
-  day: 2026-10-25
-  session_id: 94ce0934eaca49d19920ab1aba00634b
-  project: L4YAML
-  working_seconds: 0
-  shell: 132
-  edits: 42
-  reads: 6
-  git: 10
-  mcp: 0
-  devin_messages: 6
-  user_messages: 0
-  web: 0
-  prs_opened: 0
 -
   day: 2026-10-23
   session_id: 24a21977a04949ee91f5ae4088aa3058
   project: L4YAML
   working_seconds: 28075
-  shell: 394
-  edits: 195
-  reads: 0
-  git: 41
-  mcp: 40
-  devin_messages: 52
-  user_messages: 20
+  shell: 531
+  edits: 259
+  reads: 11
+  git: 60
+  mcp: 67
+  devin_messages: 63
+  user_messages: 21
   web: 0
   prs_opened: 19
 -
@@ -579,48 +481,48 @@
   session_id: 24a21977a04949ee91f5ae4088aa3058
   project: L4YAML
   working_seconds: 209
-  shell: 140
-  edits: 65
-  reads: 11
-  git: 22
-  mcp: 37
-  devin_messages: 13
-  user_messages: 1
+  shell: 3
+  edits: 1
+  reads: 0
+  git: 3
+  mcp: 10
+  devin_messages: 2
+  user_messages: 0
   web: 0
   prs_opened: 0
 -
   day: 2026-10-25
   session_id: 24a21977a04949ee91f5ae4088aa3058
   project: L4YAML
-  working_seconds: 7096
-  shell: 54
-  edits: 9
-  reads: 8
-  git: 7
-  mcp: 22
-  devin_messages: 14
-  user_messages: 4
+  working_seconds: 6929
+  shell: 84
+  edits: 16
+  reads: 10
+  git: 13
+  mcp: 35
+  devin_messages: 23
+  user_messages: 5
   web: 0
   prs_opened: 3
 -
   day: 2026-10-26
   session_id: 24a21977a04949ee91f5ae4088aa3058
   project: L4YAML
-  working_seconds: 1179
-  shell: 48
-  edits: 15
-  reads: 5
-  git: 17
-  mcp: 19
-  devin_messages: 14
-  user_messages: 1
+  working_seconds: 1117
+  shell: 18
+  edits: 8
+  reads: 3
+  git: 11
+  mcp: 6
+  devin_messages: 5
+  user_messages: 0
   web: 0
   prs_opened: 2
 -
   day: 2026-10-28
   session_id: 24a21977a04949ee91f5ae4088aa3058
   project: L4YAML
-  working_seconds: 7066
+  working_seconds: 7007
   shell: 28
   edits: 3
   reads: 1
@@ -634,13 +536,13 @@
   day: 2026-10-29
   session_id: 24a21977a04949ee91f5ae4088aa3058
   project: L4YAML
-  working_seconds: 1747
-  shell: 17
-  edits: 8
+  working_seconds: 1074
+  shell: 24
+  edits: 10
   reads: 1
-  git: 2
-  mcp: 426
-  devin_messages: 9
+  git: 3
+  mcp: 577
+  devin_messages: 15
   user_messages: 1
   web: 0
   prs_opened: 1
@@ -648,13 +550,13 @@
   day: 2026-10-30
   session_id: 24a21977a04949ee91f5ae4088aa3058
   project: L4YAML
-  working_seconds: 962
-  shell: 12
-  edits: 2
+  working_seconds: 674
+  shell: 8
+  edits: 0
   reads: 0
-  git: 12
-  mcp: 227
-  devin_messages: 25
+  git: 14
+  mcp: 117
+  devin_messages: 26
   user_messages: 5
   web: 0
   prs_opened: 0
@@ -662,14 +564,14 @@
   day: 2026-10-31
   session_id: 24a21977a04949ee91f5ae4088aa3058
   project: L4YAML
-  working_seconds: 655
-  shell: 7
+  working_seconds: 548
+  shell: 5
   edits: 0
   reads: 0
-  git: 9
-  mcp: 81
-  devin_messages: 15
-  user_messages: 1
+  git: 10
+  mcp: 51
+  devin_messages: 13
+  user_messages: 2
   web: 0
   prs_opened: 0
 -
@@ -677,13 +579,13 @@
   session_id: 51f8756156e34fdca97c68829cecf339
   project: L4YAML
   working_seconds: 28232
-  shell: 295
-  edits: 144
+  shell: 701
+  edits: 257
   reads: 0
-  git: 45
+  git: 67
   mcp: 0
-  devin_messages: 25
-  user_messages: 7
+  devin_messages: 40
+  user_messages: 12
   web: 0
   prs_opened: 30
 -
@@ -691,13 +593,13 @@
   session_id: 51f8756156e34fdca97c68829cecf339
   project: L4YAML
   working_seconds: 38336
-  shell: 1007
-  edits: 332
+  shell: 810
+  edits: 278
   reads: 0
-  git: 55
+  git: 58
   mcp: 4
-  devin_messages: 50
-  user_messages: 23
+  devin_messages: 51
+  user_messages: 20
   web: 0
   prs_opened: 12
 -
@@ -705,13 +607,13 @@
   session_id: 51f8756156e34fdca97c68829cecf339
   project: L4YAML
   working_seconds: 6558
-  shell: 305
-  edits: 109
+  shell: 96
+  edits: 50
   reads: 0
-  git: 29
+  git: 4
   mcp: 0
-  devin_messages: 26
-  user_messages: 6
+  devin_messages: 10
+  user_messages: 4
   web: 0
   prs_opened: 1
 -
@@ -719,57 +621,29 @@
   session_id: 89e4ef1fc0c3432993c351a0db914be7
   project: L4YAML
   working_seconds: 38325
-  shell: 679
-  edits: 319
-  reads: 0
-  git: 101
+  shell: 784
+  edits: 381
+  reads: 1
+  git: 116
   mcp: 0
-  devin_messages: 29
-  user_messages: 16
+  devin_messages: 40
+  user_messages: 20
   web: 0
   prs_opened: 10
--
-  day: 2026-10-24
-  session_id: 89e4ef1fc0c3432993c351a0db914be7
-  project: L4YAML
-  working_seconds: 0
-  shell: 105
-  edits: 62
-  reads: 1
-  git: 15
-  mcp: 0
-  devin_messages: 11
-  user_messages: 4
-  web: 0
-  prs_opened: 0
 -
   day: 2026-10-28
   session_id: 3ff8198828bb471cb4441b10a6c81129
   project: L4YAML
   working_seconds: 18550
-  shell: 298
-  edits: 121
+  shell: 330
+  edits: 137
   reads: 97
-  git: 13
+  git: 16
   mcp: 4
-  devin_messages: 37
-  user_messages: 20
+  devin_messages: 43
+  user_messages: 22
   web: 0
   prs_opened: 5
--
-  day: 2026-10-29
-  session_id: 3ff8198828bb471cb4441b10a6c81129
-  project: L4YAML
-  working_seconds: 0
-  shell: 32
-  edits: 16
-  reads: 0
-  git: 3
-  mcp: 0
-  devin_messages: 6
-  user_messages: 2
-  web: 0
-  prs_opened: 0
 -
   day: 2026-10-17
   session_id: d3e7d6be71b9455ea7310d34266de854
@@ -789,20 +663,6 @@
   session_id: d3e7d6be71b9455ea7310d34266de854
   project: L4YAML
   working_seconds: 2298
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 0
-  devin_messages: 0
-  user_messages: 0
-  web: 0
-  prs_opened: 0
--
-  day: 2026-10-19
-  session_id: d3e7d6be71b9455ea7310d34266de854
-  project: L4YAML
-  working_seconds: 8616
   shell: 54
   edits: 9
   reads: 0
@@ -811,19 +671,33 @@
   devin_messages: 7
   user_messages: 4
   web: 0
+  prs_opened: 0
+-
+  day: 2026-10-19
+  session_id: d3e7d6be71b9455ea7310d34266de854
+  project: L4YAML
+  working_seconds: 8611
+  shell: 146
+  edits: 81
+  reads: 0
+  git: 18
+  mcp: 0
+  devin_messages: 25
+  user_messages: 8
+  web: 0
   prs_opened: 5
 -
   day: 2026-10-20
   session_id: d3e7d6be71b9455ea7310d34266de854
   project: L4YAML
   working_seconds: 1512
-  shell: 158
-  edits: 87
+  shell: 12
+  edits: 6
   reads: 0
-  git: 23
+  git: 5
   mcp: 0
-  devin_messages: 27
-  user_messages: 8
+  devin_messages: 2
+  user_messages: 0
   web: 0
   prs_opened: 1
 -
@@ -845,41 +719,27 @@
   session_id: 132697ad4d254a5da1df6f9dbb9fb5e3
   project: L4YAML
   working_seconds: 11009
-  shell: 99
-  edits: 44
-  reads: 16
-  git: 0
+  shell: 163
+  edits: 58
+  reads: 28
+  git: 6
   mcp: 0
-  devin_messages: 2
+  devin_messages: 5
   user_messages: 1
   web: 0
   prs_opened: 2
--
-  day: 2026-10-26
-  session_id: 132697ad4d254a5da1df6f9dbb9fb5e3
-  project: L4YAML
-  working_seconds: 0
-  shell: 64
-  edits: 14
-  reads: 12
-  git: 6
-  mcp: 0
-  devin_messages: 3
-  user_messages: 0
-  web: 0
-  prs_opened: 0
 -
   day: 2026-10-17
   session_id: aec3938e07544555853900db4e8b6881
   project: L4YAML
   working_seconds: 7425
-  shell: 139
-  edits: 1
+  shell: 166
+  edits: 2
   reads: 0
   git: 0
-  mcp: 0
-  devin_messages: 4
-  user_messages: 2
+  mcp: 1
+  devin_messages: 11
+  user_messages: 4
   web: 0
   prs_opened: 0
 -
@@ -887,13 +747,13 @@
   session_id: aec3938e07544555853900db4e8b6881
   project: L4YAML
   working_seconds: 58
-  shell: 29
-  edits: 1
+  shell: 2
+  edits: 0
   reads: 0
   git: 0
-  mcp: 1
-  devin_messages: 9
-  user_messages: 3
+  mcp: 0
+  devin_messages: 2
+  user_messages: 1
   web: 0
   prs_opened: 0
 -
@@ -914,7 +774,7 @@
   day: 2026-10-27
   session_id: 44dc37d0a4f0447694774487b2c3735a
   project: L4YAML
-  working_seconds: 144
+  working_seconds: 0
   shell: 6
   edits: 1
   reads: 0
@@ -929,20 +789,6 @@
   session_id: 6957d66b22c848f88352e97a35da2e50
   project: L4YAML
   working_seconds: 8307
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 0
-  devin_messages: 0
-  user_messages: 0
-  web: 0
-  prs_opened: 3
--
-  day: 2026-10-26
-  session_id: 6957d66b22c848f88352e97a35da2e50
-  project: L4YAML
-  working_seconds: 0
   shell: 167
   edits: 42
   reads: 25
@@ -951,16 +797,16 @@
   devin_messages: 11
   user_messages: 2
   web: 0
-  prs_opened: 0
+  prs_opened: 3
 -
   day: 2026-10-20
   session_id: f0605c921d0c480aa3b6fff07bcbbffe
   project: L4YAML
   working_seconds: 34938
-  shell: 47
+  shell: 65
   edits: 17
   reads: 0
-  git: 12
+  git: 33
   mcp: 0
   devin_messages: 2
   user_messages: 1
@@ -971,10 +817,10 @@
   session_id: f0605c921d0c480aa3b6fff07bcbbffe
   project: L4YAML
   working_seconds: 22558
-  shell: 39
+  shell: 21
   edits: 2
   reads: 0
-  git: 37
+  git: 16
   mcp: 0
   devin_messages: 1
   user_messages: 0
@@ -999,29 +845,15 @@
   session_id: eae8a7f2181e4a9895ad142f66d9e414
   project: L4YAML
   working_seconds: 4783
-  shell: 69
-  edits: 66
+  shell: 99
+  edits: 80
   reads: 0
-  git: 3
+  git: 12
   mcp: 0
-  devin_messages: 4
-  user_messages: 2
+  devin_messages: 8
+  user_messages: 3
   web: 0
   prs_opened: 1
--
-  day: 2026-10-24
-  session_id: eae8a7f2181e4a9895ad142f66d9e414
-  project: L4YAML
-  working_seconds: 0
-  shell: 30
-  edits: 14
-  reads: 0
-  git: 9
-  mcp: 0
-  devin_messages: 4
-  user_messages: 1
-  web: 0
-  prs_opened: 0
 -
   day: 2026-10-23
   session_id: 08f9a85b9ee0493ea0c6948042afc1c6
@@ -1152,30 +984,16 @@
   day: 2026-10-21
   session_id: 1cbde90d472e44d7a626f1026cd341d7
   project: L4YAML
-  working_seconds: 2015
-  shell: 47
-  edits: 16
+  working_seconds: 1919
+  shell: 55
+  edits: 18
   reads: 0
   git: 4
-  mcp: 0
-  devin_messages: 5
+  mcp: 4
+  devin_messages: 6
   user_messages: 1
   web: 0
   prs_opened: 1
--
-  day: 2026-10-22
-  session_id: 1cbde90d472e44d7a626f1026cd341d7
-  project: L4YAML
-  working_seconds: 0
-  shell: 8
-  edits: 2
-  reads: 0
-  git: 0
-  mcp: 4
-  devin_messages: 1
-  user_messages: 0
-  web: 0
-  prs_opened: 0
 -
   day: 2026-10-21
   session_id: ccf051426ab44e46b6648d865fd21b98
@@ -1517,13 +1335,13 @@
   session_id: 18ad47adf36f44e9b6824a4472f9678d
   project: OpenSysML
   working_seconds: 13541
-  shell: 88
-  edits: 18
-  reads: 25
-  git: 12
-  mcp: 1
-  devin_messages: 8
-  user_messages: 1
+  shell: 278
+  edits: 94
+  reads: 91
+  git: 54
+  mcp: 11
+  devin_messages: 28
+  user_messages: 6
   web: 0
   prs_opened: 11
 -
@@ -1531,55 +1349,41 @@
   session_id: 18ad47adf36f44e9b6824a4472f9678d
   project: OpenSysML
   working_seconds: 37431
-  shell: 310
-  edits: 111
-  reads: 88
-  git: 110
-  mcp: 55
-  devin_messages: 49
-  user_messages: 15
+  shell: 265
+  edits: 90
+  reads: 57
+  git: 109
+  mcp: 50
+  devin_messages: 47
+  user_messages: 19
   web: 0
   prs_opened: 8
--
-  day: 2026-10-28
-  session_id: 18ad47adf36f44e9b6824a4472f9678d
-  project: OpenSysML
-  working_seconds: 0
-  shell: 145
-  edits: 55
-  reads: 35
-  git: 41
-  mcp: 5
-  devin_messages: 18
-  user_messages: 9
-  web: 0
-  prs_opened: 0
 -
   day: 2026-10-29
   session_id: 18ad47adf36f44e9b6824a4472f9678d
   project: OpenSysML
   working_seconds: 57976
-  shell: 400
-  edits: 116
-  reads: 61
-  git: 116
-  mcp: 0
-  devin_messages: 43
-  user_messages: 18
+  shell: 704
+  edits: 198
+  reads: 96
+  git: 252
+  mcp: 3
+  devin_messages: 70
+  user_messages: 27
   web: 0
   prs_opened: 19
 -
   day: 2026-10-30
   session_id: 18ad47adf36f44e9b6824a4472f9678d
   project: OpenSysML
-  working_seconds: 55115
-  shell: 852
-  edits: 229
-  reads: 123
-  git: 229
-  mcp: 3
-  devin_messages: 93
-  user_messages: 33
+  working_seconds: 55101
+  shell: 857
+  edits: 190
+  reads: 100
+  git: 147
+  mcp: 0
+  devin_messages: 90
+  user_messages: 29
   web: 0
   prs_opened: 18
 -
@@ -1587,41 +1391,41 @@
   session_id: 18ad47adf36f44e9b6824a4472f9678d
   project: OpenSysML
   working_seconds: 86177
-  shell: 1005
-  edits: 151
-  reads: 43
-  git: 149
+  shell: 997
+  edits: 157
+  reads: 95
+  git: 130
   mcp: 0
-  devin_messages: 57
-  user_messages: 15
+  devin_messages: 49
+  user_messages: 11
   web: 0
   prs_opened: 9
 -
   day: 2026-10-24
   session_id: fb0431c82e0f4dbfb588da010e461b90
   project: PropertyKindCalculus
-  working_seconds: 33037
-  shell: 1251
-  edits: 257
-  reads: 379
-  git: 90
+  working_seconds: 33017
+  shell: 1801
+  edits: 368
+  reads: 528
+  git: 140
   mcp: 2
-  devin_messages: 49
-  user_messages: 10
+  devin_messages: 69
+  user_messages: 14
   web: 0
   prs_opened: 32
 -
   day: 2026-10-25
   session_id: fb0431c82e0f4dbfb588da010e461b90
   project: PropertyKindCalculus
-  working_seconds: 15035
-  shell: 722
-  edits: 143
-  reads: 186
-  git: 59
-  mcp: 0
-  devin_messages: 26
-  user_messages: 6
+  working_seconds: 15026
+  shell: 790
+  edits: 253
+  reads: 255
+  git: 46
+  mcp: 1
+  devin_messages: 28
+  user_messages: 9
   web: 0
   prs_opened: 9
 -
@@ -1629,13 +1433,13 @@
   session_id: fb0431c82e0f4dbfb588da010e461b90
   project: PropertyKindCalculus
   working_seconds: 28921
-  shell: 1609
-  edits: 390
-  reads: 525
-  git: 89
-  mcp: 1
-  devin_messages: 60
-  user_messages: 18
+  shell: 1064
+  edits: 177
+  reads: 315
+  git: 55
+  mcp: 0
+  devin_messages: 41
+  user_messages: 11
   web: 0
   prs_opened: 15
 -
@@ -1643,31 +1447,17 @@
   session_id: fb0431c82e0f4dbfb588da010e461b90
   project: PropertyKindCalculus
   working_seconds: 4103
-  shell: 112
-  edits: 13
-  reads: 12
-  git: 9
+  shell: 39
+  edits: 5
+  reads: 4
+  git: 6
   mcp: 4
-  devin_messages: 8
+  devin_messages: 5
   user_messages: 1
   web: 0
   prs_opened: 1
 -
   day: 2026-10-28
-  session_id: fb0431c82e0f4dbfb588da010e461b90
-  project: PropertyKindCalculus
-  working_seconds: 49
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 0
-  devin_messages: 0
-  user_messages: 0
-  web: 0
-  prs_opened: 0
--
-  day: 2026-10-29
   session_id: fb0431c82e0f4dbfb588da010e461b90
   project: PropertyKindCalculus
   working_seconds: 0
@@ -1685,13 +1475,13 @@
   session_id: c808ae1482034f3b8320ae1b3a612737
   project: PropertyKindCalculus
   working_seconds: 7847
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
+  shell: 80
+  edits: 23
+  reads: 27
+  git: 8
   mcp: 0
-  devin_messages: 0
-  user_messages: 0
+  devin_messages: 6
+  user_messages: 3
   web: 0
   prs_opened: 2
 -
@@ -1699,29 +1489,15 @@
   session_id: 6f7d75c7682242aea723d9c8677f46ba
   project: PropertyKindCalculus
   working_seconds: 4880
-  shell: 119
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 0
-  devin_messages: 7
-  user_messages: 4
-  web: 0
-  prs_opened: 4
--
-  day: 2026-10-17
-  session_id: 6f7d75c7682242aea723d9c8677f46ba
-  project: PropertyKindCalculus
-  working_seconds: 0
-  shell: 75
+  shell: 194
   edits: 0
   reads: 0
   git: 21
   mcp: 0
-  devin_messages: 6
-  user_messages: 0
+  devin_messages: 13
+  user_messages: 4
   web: 0
-  prs_opened: 0
+  prs_opened: 4
 -
   day: 2026-10-22
   session_id: ac7e5dcb1c8340f09f1c81339b5455e2
@@ -1755,27 +1531,13 @@
   session_id: e5b2c3b7d0f94b42b8ca6627f7b0683f
   project: PropertyKindCalculus
   working_seconds: 697
-  shell: 8
-  edits: 2
+  shell: 21
+  edits: 6
   reads: 0
   git: 2
-  mcp: 2
-  devin_messages: 4
-  user_messages: 2
-  web: 0
-  prs_opened: 0
--
-  day: 2026-10-23
-  session_id: e5b2c3b7d0f94b42b8ca6627f7b0683f
-  project: PropertyKindCalculus
-  working_seconds: 0
-  shell: 13
-  edits: 4
-  reads: 0
-  git: 0
-  mcp: 14
-  devin_messages: 5
-  user_messages: 2
+  mcp: 16
+  devin_messages: 9
+  user_messages: 4
   web: 0
   prs_opened: 0
 -
@@ -1895,20 +1657,6 @@
   session_id: 8c7c841276bc4ddbb8dc9fb7a7f1a2cf
   project: PropertyKindCalculus
   working_seconds: 2258
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 0
-  devin_messages: 0
-  user_messages: 0
-  web: 0
-  prs_opened: 1
--
-  day: 2026-10-23
-  session_id: 8c7c841276bc4ddbb8dc9fb7a7f1a2cf
-  project: PropertyKindCalculus
-  working_seconds: 0
   shell: 37
   edits: 14
   reads: 0
@@ -1917,7 +1665,7 @@
   devin_messages: 3
   user_messages: 1
   web: 0
-  prs_opened: 0
+  prs_opened: 1
 -
   day: 2026-10-22
   session_id: eaac4b84ed794ac1a9b209c5c3cfd6d8
@@ -2105,20 +1853,6 @@
   session_id: f34b178bbfd3420682118e29dc0b4c15
   project: PropertyKindCalculus
   working_seconds: 507
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 0
-  devin_messages: 0
-  user_messages: 0
-  web: 0
-  prs_opened: 1
--
-  day: 2026-10-23
-  session_id: f34b178bbfd3420682118e29dc0b4c15
-  project: PropertyKindCalculus
-  working_seconds: 0
   shell: 23
   edits: 19
   reads: 0
@@ -2127,26 +1861,12 @@
   devin_messages: 2
   user_messages: 1
   web: 0
-  prs_opened: 0
+  prs_opened: 1
 -
   day: 2026-10-22
   session_id: 4f814e2375644952b25256131a8279ba
   project: PropertyKindCalculus
   working_seconds: 476
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 0
-  devin_messages: 0
-  user_messages: 0
-  web: 0
-  prs_opened: 1
--
-  day: 2026-10-23
-  session_id: 4f814e2375644952b25256131a8279ba
-  project: PropertyKindCalculus
-  working_seconds: 0
   shell: 33
   edits: 16
   reads: 0
@@ -2155,7 +1875,7 @@
   devin_messages: 3
   user_messages: 1
   web: 0
-  prs_opened: 0
+  prs_opened: 1
 -
   day: 2026-10-22
   session_id: c6eb3adcb8cf4bbd947c050360fee735
@@ -2245,20 +1965,6 @@
   session_id: d75fc5c4dba34bad93df23aed74533fa
   project: PropertyKindCalculus
   working_seconds: 500
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 0
-  devin_messages: 0
-  user_messages: 0
-  web: 0
-  prs_opened: 1
--
-  day: 2026-10-23
-  session_id: d75fc5c4dba34bad93df23aed74533fa
-  project: PropertyKindCalculus
-  working_seconds: 0
   shell: 21
   edits: 15
   reads: 0
@@ -2267,26 +1973,12 @@
   devin_messages: 3
   user_messages: 1
   web: 0
-  prs_opened: 0
+  prs_opened: 1
 -
   day: 2026-10-22
   session_id: c09c453800614cadb047ae5186b7babb
   project: PropertyKindCalculus
   working_seconds: 254
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 0
-  devin_messages: 0
-  user_messages: 0
-  web: 0
-  prs_opened: 1
--
-  day: 2026-10-23
-  session_id: c09c453800614cadb047ae5186b7babb
-  project: PropertyKindCalculus
-  working_seconds: 0
   shell: 21
   edits: 12
   reads: 0
@@ -2295,26 +1987,12 @@
   devin_messages: 3
   user_messages: 1
   web: 0
-  prs_opened: 0
+  prs_opened: 1
 -
   day: 2026-10-22
   session_id: acb1c3acd2d641f5b8780d2e214112b3
   project: PropertyKindCalculus
   working_seconds: 261
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 0
-  devin_messages: 0
-  user_messages: 0
-  web: 0
-  prs_opened: 1
--
-  day: 2026-10-23
-  session_id: acb1c3acd2d641f5b8780d2e214112b3
-  project: PropertyKindCalculus
-  working_seconds: 0
   shell: 19
   edits: 8
   reads: 0
@@ -2323,7 +2001,7 @@
   devin_messages: 3
   user_messages: 1
   web: 0
-  prs_opened: 0
+  prs_opened: 1
 -
   day: 2026-10-31
   session_id: ab98bb31356f4988a2789c838eacfaff
@@ -2469,20 +2147,6 @@
   session_id: f11d013a2c09448f8d1cc4e76e656b66
   project: PropertyKindCalculus
   working_seconds: 69
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 0
-  devin_messages: 0
-  user_messages: 0
-  web: 0
-  prs_opened: 0
--
-  day: 2026-10-23
-  session_id: f11d013a2c09448f8d1cc4e76e656b66
-  project: PropertyKindCalculus
-  working_seconds: 0
   shell: 2
   edits: 0
   reads: 0
@@ -2525,20 +2189,6 @@
   session_id: e03698612d5b409d83251baca1a81c46
   project: PropertyKindCalculus
   working_seconds: 15
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 0
-  devin_messages: 0
-  user_messages: 0
-  web: 0
-  prs_opened: 0
--
-  day: 2026-10-23
-  session_id: e03698612d5b409d83251baca1a81c46
-  project: PropertyKindCalculus
-  working_seconds: 0
   shell: 1
   edits: 0
   reads: 0
@@ -2553,20 +2203,6 @@
   session_id: 8f0cc2227eaf49e3a076dfae98545fb7
   project: PropertyKindCalculus
   working_seconds: 15
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 0
-  devin_messages: 0
-  user_messages: 0
-  web: 0
-  prs_opened: 0
--
-  day: 2026-10-23
-  session_id: 8f0cc2227eaf49e3a076dfae98545fb7
-  project: PropertyKindCalculus
-  working_seconds: 0
   shell: 1
   edits: 0
   reads: 0
@@ -2580,14 +2216,14 @@
   day: 2026-10-23
   session_id: 6130c0278b22490f97ac13ac80b69e13
   project: SBVR.lean
-  working_seconds: 15634
-  shell: 258
-  edits: 178
-  reads: 0
-  git: 58
+  working_seconds: 15540
+  shell: 463
+  edits: 304
+  reads: 2
+  git: 113
   mcp: 3
-  devin_messages: 43
-  user_messages: 18
+  devin_messages: 71
+  user_messages: 27
   web: 0
   prs_opened: 27
 -
@@ -2595,13 +2231,13 @@
   session_id: 6130c0278b22490f97ac13ac80b69e13
   project: SBVR.lean
   working_seconds: 17116
-  shell: 242
-  edits: 139
-  reads: 4
-  git: 57
+  shell: 182
+  edits: 76
+  reads: 30
+  git: 33
   mcp: 0
-  devin_messages: 31
-  user_messages: 11
+  devin_messages: 14
+  user_messages: 4
   web: 0
   prs_opened: 9
 -
@@ -2609,41 +2245,27 @@
   session_id: 6130c0278b22490f97ac13ac80b69e13
   project: SBVR.lean
   working_seconds: 10019
-  shell: 191
-  edits: 77
-  reads: 43
-  git: 46
+  shell: 102
+  edits: 33
+  reads: 28
+  git: 41
   mcp: 0
-  devin_messages: 16
-  user_messages: 2
-  web: 0
-  prs_opened: 7
--
-  day: 2026-10-26
-  session_id: 6130c0278b22490f97ac13ac80b69e13
-  project: SBVR.lean
-  working_seconds: 0
-  shell: 56
-  edits: 19
-  reads: 13
-  git: 26
-  mcp: 0
-  devin_messages: 13
+  devin_messages: 18
   user_messages: 5
   web: 0
-  prs_opened: 0
+  prs_opened: 7
 -
   day: 2026-10-28
   session_id: 6130c0278b22490f97ac13ac80b69e13
   project: SBVR.lean
-  working_seconds: 13109
-  shell: 53
-  edits: 18
-  reads: 5
-  git: 10
-  mcp: 0
-  devin_messages: 14
-  user_messages: 6
+  working_seconds: 12988
+  shell: 335
+  edits: 126
+  reads: 49
+  git: 54
+  mcp: 2
+  devin_messages: 76
+  user_messages: 27
   web: 0
   prs_opened: 15
 -
@@ -2651,41 +2273,41 @@
   session_id: 6130c0278b22490f97ac13ac80b69e13
   project: SBVR.lean
   working_seconds: 8803
-  shell: 537
-  edits: 222
-  reads: 88
-  git: 81
-  mcp: 5
-  devin_messages: 133
-  user_messages: 42
+  shell: 278
+  edits: 120
+  reads: 46
+  git: 42
+  mcp: 3
+  devin_messages: 75
+  user_messages: 23
   web: 0
   prs_opened: 11
 -
   day: 2026-10-30
   session_id: 6130c0278b22490f97ac13ac80b69e13
   project: SBVR.lean
-  working_seconds: 19930
-  shell: 563
-  edits: 233
-  reads: 123
-  git: 111
+  working_seconds: 19626
+  shell: 583
+  edits: 242
+  reads: 137
+  git: 120
   mcp: 15
-  devin_messages: 123
-  user_messages: 43
+  devin_messages: 126
+  user_messages: 42
   web: 0
   prs_opened: 29
 -
   day: 2026-10-31
   session_id: 6130c0278b22490f97ac13ac80b69e13
   project: SBVR.lean
-  working_seconds: 14828
-  shell: 233
-  edits: 92
-  reads: 73
-  git: 58
+  working_seconds: 14816
+  shell: 476
+  edits: 173
+  reads: 149
+  git: 109
   mcp: 3
-  devin_messages: 82
-  user_messages: 23
+  devin_messages: 133
+  user_messages: 43
   web: 0
   prs_opened: 25
 -
@@ -2749,20 +2371,6 @@
   session_id: 81ba7eeccc14473f9a2526555e8d8edf
   project: engineering-foundation-architecture
   working_seconds: 35
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 0
-  devin_messages: 0
-  user_messages: 0
-  web: 0
-  prs_opened: 0
--
-  day: 2026-10-26
-  session_id: 81ba7eeccc14473f9a2526555e8d8edf
-  project: engineering-foundation-architecture
-  working_seconds: 0
   shell: 1
   edits: 1
   reads: 0
@@ -2833,13 +2441,13 @@
   session_id: ec753710e4544b37814b2078115e0289
   project: face.lean
   working_seconds: 30529
-  shell: 386
-  edits: 10
+  shell: 885
+  edits: 14
   reads: 0
-  git: 20
+  git: 170
   mcp: 2
-  devin_messages: 23
-  user_messages: 9
+  devin_messages: 54
+  user_messages: 18
   web: 0
   prs_opened: 30
 -
@@ -2847,13 +2455,13 @@
   session_id: ec753710e4544b37814b2078115e0289
   project: face.lean
   working_seconds: 8077
-  shell: 620
-  edits: 6
+  shell: 121
+  edits: 2
   reads: 0
-  git: 232
+  git: 82
   mcp: 0
-  devin_messages: 43
-  user_messages: 12
+  devin_messages: 12
+  user_messages: 3
   web: 0
   prs_opened: 3
 -
@@ -2861,29 +2469,15 @@
   session_id: ec753710e4544b37814b2078115e0289
   project: face.lean
   working_seconds: 9955
-  shell: 74
+  shell: 250
   edits: 0
   reads: 0
-  git: 2
+  git: 21
   mcp: 0
-  devin_messages: 8
-  user_messages: 3
+  devin_messages: 19
+  user_messages: 4
   web: 0
   prs_opened: 7
--
-  day: 2026-10-19
-  session_id: ec753710e4544b37814b2078115e0289
-  project: face.lean
-  working_seconds: 0
-  shell: 176
-  edits: 0
-  reads: 0
-  git: 19
-  mcp: 0
-  devin_messages: 11
-  user_messages: 1
-  web: 0
-  prs_opened: 0
 -
   day: 2026-10-21
   session_id: 22ac5163b92048018878eef112542565
@@ -2903,55 +2497,41 @@
   session_id: 940a29d9f19746a59e0e4d95a36823da
   project: fprime-lean-sysmlv2-example
   working_seconds: 15320
-  shell: 306
-  edits: 109
-  reads: 25
-  git: 64
+  shell: 333
+  edits: 112
+  reads: 26
+  git: 70
   mcp: 2
-  devin_messages: 25
-  user_messages: 3
+  devin_messages: 28
+  user_messages: 4
   web: 0
   prs_opened: 11
--
-  day: 2026-10-27
-  session_id: 940a29d9f19746a59e0e4d95a36823da
-  project: fprime-lean-sysmlv2-example
-  working_seconds: 0
-  shell: 27
-  edits: 3
-  reads: 1
-  git: 6
-  mcp: 0
-  devin_messages: 3
-  user_messages: 1
-  web: 0
-  prs_opened: 0
 -
   day: 2026-10-29
   session_id: 940a29d9f19746a59e0e4d95a36823da
   project: fprime-lean-sysmlv2-example
   working_seconds: 12318
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
+  shell: 304
+  edits: 73
+  reads: 79
+  git: 28
   mcp: 0
-  devin_messages: 0
-  user_messages: 0
+  devin_messages: 14
+  user_messages: 4
   web: 0
   prs_opened: 7
 -
   day: 2026-10-30
   session_id: 940a29d9f19746a59e0e4d95a36823da
   project: fprime-lean-sysmlv2-example
-  working_seconds: 6746
-  shell: 511
-  edits: 164
-  reads: 123
-  git: 75
+  working_seconds: 4850
+  shell: 207
+  edits: 91
+  reads: 44
+  git: 47
   mcp: 4
-  devin_messages: 53
-  user_messages: 18
+  devin_messages: 39
+  user_messages: 14
   web: 0
   prs_opened: 5
 -
@@ -2959,13 +2539,13 @@
   session_id: f2f5f981cea9449b9406434c84f4a2fa
   project: git-remote-sync.lean
   working_seconds: 2101
-  shell: 0
-  edits: 0
+  shell: 90
+  edits: 38
   reads: 0
   git: 0
-  mcp: 0
-  devin_messages: 0
-  user_messages: 0
+  mcp: 2
+  devin_messages: 5
+  user_messages: 3
   web: 0
   prs_opened: 0
 -
@@ -2973,13 +2553,13 @@
   session_id: f2f5f981cea9449b9406434c84f4a2fa
   project: git-remote-sync.lean
   working_seconds: 5174
-  shell: 156
-  edits: 85
+  shell: 66
+  edits: 47
   reads: 0
   git: 25
-  mcp: 2
-  devin_messages: 24
-  user_messages: 11
+  mcp: 0
+  devin_messages: 19
+  user_messages: 8
   web: 0
   prs_opened: 2
 -
@@ -3001,13 +2581,13 @@
   session_id: f2f5f981cea9449b9406434c84f4a2fa
   project: git-remote-sync.lean
   working_seconds: 7885
-  shell: 43
-  edits: 22
-  reads: 10
-  git: 22
+  shell: 99
+  edits: 49
+  reads: 19
+  git: 54
   mcp: 0
-  devin_messages: 8
-  user_messages: 2
+  devin_messages: 29
+  user_messages: 12
   web: 0
   prs_opened: 12
 -
@@ -3015,13 +2595,13 @@
   session_id: f2f5f981cea9449b9406434c84f4a2fa
   project: git-remote-sync.lean
   working_seconds: 6435
-  shell: 173
-  edits: 82
-  reads: 31
-  git: 82
+  shell: 117
+  edits: 55
+  reads: 22
+  git: 50
   mcp: 0
-  devin_messages: 52
-  user_messages: 19
+  devin_messages: 31
+  user_messages: 9
   web: 0
   prs_opened: 11
 -
@@ -3029,13 +2609,13 @@
   session_id: f2f5f981cea9449b9406434c84f4a2fa
   project: git-remote-sync.lean
   working_seconds: 2490
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 0
-  devin_messages: 0
-  user_messages: 0
+  shell: 46
+  edits: 20
+  reads: 9
+  git: 27
+  mcp: 1
+  devin_messages: 20
+  user_messages: 6
   web: 0
   prs_opened: 6
 -
@@ -3043,26 +2623,26 @@
   session_id: f2f5f981cea9449b9406434c84f4a2fa
   project: git-remote-sync.lean
   working_seconds: 3646
-  shell: 194
-  edits: 68
-  reads: 51
-  git: 63
-  mcp: 1
-  devin_messages: 52
-  user_messages: 22
+  shell: 148
+  edits: 48
+  reads: 42
+  git: 36
+  mcp: 0
+  devin_messages: 32
+  user_messages: 16
   web: 0
   prs_opened: 5
 -
   day: 2026-10-29
   session_id: f2f5f981cea9449b9406434c84f4a2fa
   project: git-remote-sync.lean
-  working_seconds: 3466
+  working_seconds: 3420
   shell: 133
   edits: 42
   reads: 38
   git: 35
   mcp: 2
-  devin_messages: 40
+  devin_messages: 41
   user_messages: 11
   web: 0
   prs_opened: 4
@@ -3076,7 +2656,7 @@
   reads: 8
   git: 2
   mcp: 0
-  devin_messages: 6
+  devin_messages: 5
   user_messages: 1
   web: 0
   prs_opened: 1
@@ -3084,7 +2664,7 @@
   day: 2026-10-21
   session_id: c8d96320d6344168ae843ff1bc6fa5e4
   project: git-remote-sync.lean
-  working_seconds: 1834
+  working_seconds: 1803
   shell: 37
   edits: 23
   reads: 0
@@ -3113,125 +2693,111 @@
   session_id: 1fbba99fbf8446d3a9ffe2110715fac4
   project: mars.lean
   working_seconds: 3939
-  shell: 0
-  edits: 0
+  shell: 67
+  edits: 52
   reads: 0
-  git: 0
-  mcp: 0
-  devin_messages: 0
-  user_messages: 0
+  git: 21
+  mcp: 4
+  devin_messages: 12
+  user_messages: 2
   web: 0
   prs_opened: 4
 -
   day: 2026-10-22
   session_id: 1fbba99fbf8446d3a9ffe2110715fac4
   project: mars.lean
-  working_seconds: 5813
-  shell: 174
-  edits: 133
+  working_seconds: 5784
+  shell: 108
+  edits: 82
   reads: 0
-  git: 58
-  mcp: 11
-  devin_messages: 29
-  user_messages: 4
+  git: 38
+  mcp: 7
+  devin_messages: 18
+  user_messages: 2
   web: 0
   prs_opened: 9
--
-  day: 2026-10-23
-  session_id: 1fbba99fbf8446d3a9ffe2110715fac4
-  project: mars.lean
-  working_seconds: 0
-  shell: 1
-  edits: 1
-  reads: 0
-  git: 1
-  mcp: 0
-  devin_messages: 1
-  user_messages: 0
-  web: 0
-  prs_opened: 0
 -
   day: 2026-10-26
   session_id: 1fbba99fbf8446d3a9ffe2110715fac4
   project: mars.lean
   working_seconds: 2879
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 0
-  devin_messages: 0
-  user_messages: 0
+  shell: 78
+  edits: 31
+  reads: 24
+  git: 29
+  mcp: 8
+  devin_messages: 24
+  user_messages: 6
   web: 0
   prs_opened: 6
 -
   day: 2026-10-27
   session_id: 1fbba99fbf8446d3a9ffe2110715fac4
   project: mars.lean
-  working_seconds: 1842
-  shell: 123
-  edits: 51
-  reads: 30
-  git: 35
-  mcp: 19
-  devin_messages: 39
-  user_messages: 11
+  working_seconds: 1829
+  shell: 45
+  edits: 20
+  reads: 6
+  git: 6
+  mcp: 11
+  devin_messages: 15
+  user_messages: 5
   web: 0
   prs_opened: 3
 -
   day: 2026-10-28
   session_id: 1fbba99fbf8446d3a9ffe2110715fac4
   project: mars.lean
-  working_seconds: 8103
-  shell: 37
-  edits: 14
-  reads: 19
-  git: 15
-  mcp: 5
-  devin_messages: 14
-  user_messages: 6
+  working_seconds: 8074
+  shell: 250
+  edits: 132
+  reads: 39
+  git: 37
+  mcp: 12
+  devin_messages: 48
+  user_messages: 11
   web: 0
   prs_opened: 18
 -
   day: 2026-10-29
   session_id: 1fbba99fbf8446d3a9ffe2110715fac4
   project: mars.lean
-  working_seconds: 43037
-  shell: 1193
-  edits: 534
-  reads: 136
-  git: 144
-  mcp: 12
-  devin_messages: 180
-  user_messages: 41
+  working_seconds: 41437
+  shell: 1159
+  edits: 456
+  reads: 118
+  git: 148
+  mcp: 9
+  devin_messages: 170
+  user_messages: 44
   web: 0
   prs_opened: 66
 -
   day: 2026-10-30
   session_id: 1fbba99fbf8446d3a9ffe2110715fac4
   project: mars.lean
-  working_seconds: 26035
-  shell: 611
-  edits: 167
-  reads: 102
-  git: 80
-  mcp: 9
+  working_seconds: 25904
+  shell: 668
+  edits: 228
+  reads: 132
+  git: 83
+  mcp: 5
   devin_messages: 105
-  user_messages: 36
+  user_messages: 34
   web: 0
   prs_opened: 25
 -
   day: 2026-10-31
   session_id: 1fbba99fbf8446d3a9ffe2110715fac4
   project: mars.lean
-  working_seconds: 17507
-  shell: 583
-  edits: 241
-  reads: 68
-  git: 147
+  working_seconds: 17401
+  shell: 548
+  edits: 218
+  reads: 43
+  git: 163
   mcp: 0
-  devin_messages: 119
-  user_messages: 30
+  devin_messages: 145
+  user_messages: 38
   web: 1
   prs_opened: 40
 -
@@ -3253,20 +2819,6 @@
   session_id: 3cdf48b9022a46818edfd94e87726f19
   project: physlib
   working_seconds: 119
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 0
-  devin_messages: 0
-  user_messages: 0
-  web: 0
-  prs_opened: 0
--
-  day: 2026-10-30
-  session_id: 3cdf48b9022a46818edfd94e87726f19
-  project: physlib
-  working_seconds: 0
   shell: 3
   edits: 0
   reads: 1
@@ -3281,27 +2833,27 @@
   session_id: 0e228edc12ad46c1bb7b86faae44b02c
   project: prov.lean
   working_seconds: 1839
-  shell: 0
-  edits: 0
+  shell: 81
+  edits: 28
   reads: 0
   git: 0
   mcp: 0
-  devin_messages: 0
-  user_messages: 0
+  devin_messages: 8
+  user_messages: 2
   web: 0
   prs_opened: 0
 -
   day: 2026-10-20
   session_id: 0e228edc12ad46c1bb7b86faae44b02c
   project: prov.lean
-  working_seconds: 2516
-  shell: 180
-  edits: 98
+  working_seconds: 2511
+  shell: 99
+  edits: 70
   reads: 0
   git: 36
   mcp: 1
-  devin_messages: 26
-  user_messages: 8
+  devin_messages: 18
+  user_messages: 6
   web: 0
   prs_opened: 14
 -
@@ -3350,7 +2902,7 @@
   day: 2026-10-24
   session_id: ef80cad32b544c85a085dde701c237d8
   project: prov.lean
-  working_seconds: 32
+  working_seconds: 0
   shell: 3
   edits: 1
   reads: 0
@@ -3365,13 +2917,13 @@
   session_id: ff906ec875c14d87a95d3e41422ca547
   project: qvts
   working_seconds: 4959
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 0
-  devin_messages: 0
-  user_messages: 0
+  shell: 186
+  edits: 60
+  reads: 68
+  git: 9
+  mcp: 8
+  devin_messages: 12
+  user_messages: 3
   web: 0
   prs_opened: 2
 -
@@ -3379,13 +2931,13 @@
   session_id: ff906ec875c14d87a95d3e41422ca547
   project: qvts
   working_seconds: 20022
-  shell: 2698
-  edits: 733
-  reads: 1045
-  git: 52
-  mcp: 8
-  devin_messages: 39
-  user_messages: 9
+  shell: 2552
+  edits: 679
+  reads: 984
+  git: 46
+  mcp: 0
+  devin_messages: 29
+  user_messages: 7
   web: 0
   prs_opened: 6
 -
@@ -3393,29 +2945,15 @@
   session_id: 5f6bf160b772459097c74c05e1357161
   project: qvts
   working_seconds: 900
-  shell: 12
-  edits: 1
-  reads: 4
-  git: 0
-  mcp: 0
-  devin_messages: 2
-  user_messages: 1
-  web: 0
-  prs_opened: 2
--
-  day: 2026-10-27
-  session_id: 5f6bf160b772459097c74c05e1357161
-  project: qvts
-  working_seconds: 0
-  shell: 25
-  edits: 4
-  reads: 17
+  shell: 37
+  edits: 5
+  reads: 21
   git: 5
   mcp: 0
-  devin_messages: 4
-  user_messages: 1
+  devin_messages: 6
+  user_messages: 2
   web: 0
-  prs_opened: 0
+  prs_opened: 2
 -
   day: 2026-10-27
   session_id: 33eb6084d6924c1ebc9b86d63b4eb323
@@ -3440,52 +2978,24 @@
   reads: 0
   git: 5
   mcp: 0
-  devin_messages: 5
-  user_messages: 1
+  devin_messages: 6
+  user_messages: 2
   web: 0
   prs_opened: 1
--
-  day: 2026-10-22
-  session_id: ab218b53c1f046dda98cb9098bced2ac
-  project: soil-moisture-dps
-  working_seconds: 0
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 0
-  devin_messages: 1
-  user_messages: 1
-  web: 0
-  prs_opened: 0
 -
   day: 2026-10-26
   session_id: ab218b53c1f046dda98cb9098bced2ac
   project: soil-moisture-dps
   working_seconds: 7157
-  shell: 98
-  edits: 34
-  reads: 21
-  git: 7
+  shell: 218
+  edits: 64
+  reads: 43
+  git: 33
   mcp: 0
-  devin_messages: 8
+  devin_messages: 16
   user_messages: 3
   web: 0
   prs_opened: 8
--
-  day: 2026-10-27
-  session_id: ab218b53c1f046dda98cb9098bced2ac
-  project: soil-moisture-dps
-  working_seconds: 0
-  shell: 120
-  edits: 30
-  reads: 22
-  git: 26
-  mcp: 0
-  devin_messages: 8
-  user_messages: 0
-  web: 0
-  prs_opened: 0
 -
   day: 2026-10-16
   session_id: 78edeb2c9bd4430abae9e6014b99fbdd

@@ -12,5 +12,5 @@ lean_lib SessionReport where
   requiresModuleSystem := true
 
 @[default_target]
-lean_exe «session-report-yaml» where
+lean_exe «session-report» where
   root := `SessionReport.Main

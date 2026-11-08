@@ -28,6 +28,33 @@
   prs_opened:
     []
 -
+  session_id: 303b8353dcc645048a3a91cd245b499c
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/303b8353dcc645048a3a91cd245b499c
+  title: Nightly memory refinement
+  project: (Devin housekeeping)
+  repos:
+    []
+  origin: webapp
+  parent_session_id: null
+  mode: normal
+  status: suspended
+  created: 2026-10-22T09:41:47-07:00
+  created_in_window: true
+  acus: 0.000000
+  acus_scope: inWindow
+  working_seconds: 297
+  shell: 19
+  edits: 8
+  reads: 0
+  git: 0
+  mcp: 27
+  devin_messages: 2
+  user_messages: 1
+  web: 0
+  actions_capped: false
+  prs_opened:
+    []
+-
   session_id: d8b88459d5a7492a8b21488fd483752e
   url: https://nasa-jpl-demo.devinenterprise.com/sessions/d8b88459d5a7492a8b21488fd483752e
   title: Nightly memory refinement
@@ -76,33 +103,6 @@
   git: 0
   mcp: 89
   devin_messages: 3
-  user_messages: 1
-  web: 0
-  actions_capped: false
-  prs_opened:
-    []
--
-  session_id: 303b8353dcc645048a3a91cd245b499c
-  url: https://nasa-jpl-demo.devinenterprise.com/sessions/303b8353dcc645048a3a91cd245b499c
-  title: Nightly memory refinement
-  project: (Devin housekeeping)
-  repos:
-    []
-  origin: webapp
-  parent_session_id: null
-  mode: normal
-  status: suspended
-  created: 2026-10-22T09:41:47-07:00
-  created_in_window: true
-  acus: 0.000000
-  acus_scope: inWindow
-  working_seconds: 297
-  shell: 19
-  edits: 8
-  reads: 0
-  git: 0
-  mcp: 27
-  devin_messages: 2
   user_messages: 1
   web: 0
   actions_capped: false
@@ -231,7 +231,7 @@
   created_in_window: true
   acus: 16.741266
   acus_scope: inWindow
-  working_seconds: 5500
+  working_seconds: 5461
   shell: 14
   edits: 3
   reads: 0
@@ -555,14 +555,14 @@
   created_in_window: true
   acus: 3356.752919
   acus_scope: spillsPast
-  working_seconds: 409974
-  shell: 8117
-  edits: 1929
-  reads: 255
-  git: 435
-  mcp: 279
-  devin_messages: 443
-  user_messages: 104
+  working_seconds: 409967
+  shell: 8356
+  edits: 1995
+  reads: 256
+  git: 444
+  mcp: 303
+  devin_messages: 457
+  user_messages: 108
   web: 0
   actions_capped: false
   prs_opened:
@@ -1159,14 +1159,14 @@
   created_in_window: true
   acus: 674.133702
   acus_scope: spillsPast
-  working_seconds: 46989
-  shell: 700
+  working_seconds: 45633
+  shell: 701
   edits: 297
   reads: 26
-  git: 127
-  mcp: 920
-  devin_messages: 165
-  user_messages: 38
+  git: 131
+  mcp: 931
+  devin_messages: 170
+  user_messages: 39
   web: 0
   actions_capped: false
   prs_opened:
@@ -1769,7 +1769,7 @@
   created_in_window: true
   acus: 120.599857
   acus_scope: inWindow
-  working_seconds: 13607
+  working_seconds: 13602
   shell: 250
   edits: 97
   reads: 0
@@ -1928,7 +1928,7 @@
   created_in_window: true
   acus: 56.442539
   acus_scope: inWindow
-  working_seconds: 10637
+  working_seconds: 10493
   shell: 198
   edits: 93
   reads: 0
@@ -2363,7 +2363,7 @@
   created_in_window: true
   acus: 14.429108
   acus_scope: inWindow
-  working_seconds: 2015
+  working_seconds: 1919
   shell: 55
   edits: 18
   reads: 0
@@ -2611,7 +2611,7 @@
   project: L4YAML
   repos:
     - Open-MBEE/L4YAML
-    - open-mbee/l4yaml
+    - Open-MBEE/l4yaml
   origin: webapp
   parent_session_id: null
   mode: ultra
@@ -2821,7 +2821,7 @@
   project: L4YAML
   repos:
     - Open-MBEE/L4YAML
-    - open-mbee/l4yaml
+    - Open-MBEE/l4yaml
   origin: webapp
   parent_session_id: null
   mode: ultra
@@ -3003,16 +3003,16 @@
   status: running (working)
   created: 2026-10-26T12:28:53-07:00
   created_in_window: true
-  acus: 2701.603439
+  acus: 2712.714149
   acus_scope: spillsPast
-  working_seconds: 250240
-  shell: 2800
-  edits: 680
-  reads: 375
-  git: 657
+  working_seconds: 250226
+  shell: 3101
+  edits: 729
+  reads: 439
+  git: 692
   mcp: 64
-  devin_messages: 268
-  user_messages: 91
+  devin_messages: 284
+  user_messages: 92
   web: 0
   actions_capped: false
   prs_opened:
@@ -3423,7 +3423,7 @@
   created_in_window: true
   acus: 205.264925
   acus_scope: spillsPast
-  working_seconds: 81145
+  working_seconds: 81067
   shell: 3696
   edits: 804
   reads: 1103
@@ -3793,13 +3793,13 @@
   acus: 153.015289
   acus_scope: spillsPast
   working_seconds: 7847
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
+  shell: 80
+  edits: 23
+  reads: 27
+  git: 8
   mcp: 0
-  devin_messages: 0
-  user_messages: 0
+  devin_messages: 6
+  user_messages: 3
   web: 0
   actions_capped: false
   prs_opened:
@@ -5448,14 +5448,14 @@
   created_in_window: true
   acus: 1570.906504
   acus_scope: spillsPast
-  working_seconds: 99439
-  shell: 2133
-  edits: 978
-  reads: 349
-  git: 447
+  working_seconds: 98908
+  shell: 2419
+  edits: 1074
+  reads: 441
+  git: 512
   mcp: 26
-  devin_messages: 455
-  user_messages: 150
+  devin_messages: 513
+  user_messages: 171
   web: 0
   actions_capped: false
   prs_opened:
@@ -6755,7 +6755,7 @@
   created_in_window: true
   acus: 347.223080
   acus_scope: spillsPast
-  working_seconds: 34384
+  working_seconds: 32488
   shell: 844
   edits: 276
   reads: 149
@@ -6920,7 +6920,7 @@
   created_in_window: true
   acus: 649.878890
   acus_scope: spillsPast
-  working_seconds: 36009
+  working_seconds: 35963
   shell: 819
   edits: 386
   reads: 138
@@ -7222,7 +7222,7 @@
   created_in_window: true
   acus: 25.485527
   acus_scope: inWindow
-  working_seconds: 1834
+  working_seconds: 1803
   shell: 37
   edits: 23
   reads: 0
@@ -7284,14 +7284,14 @@
   created_in_window: true
   acus: 3526.159273
   acus_scope: spillsPast
-  working_seconds: 109155
-  shell: 2722
-  edits: 1141
-  reads: 355
-  git: 480
+  working_seconds: 107247
+  shell: 2923
+  edits: 1219
+  reads: 362
+  git: 525
   mcp: 56
-  devin_messages: 487
-  user_messages: 128
+  devin_messages: 537
+  user_messages: 142
   web: 1
   actions_capped: false
   prs_opened:
@@ -8363,7 +8363,7 @@
   created_in_window: true
   acus: 73.929223
   acus_scope: inWindow
-  working_seconds: 4512
+  working_seconds: 4507
   shell: 185
   edits: 103
   reads: 0
@@ -8503,7 +8503,6 @@
   project: prov.lean
   repos:
     - Open-MBEE/prov.lean
-    - open-mbee/prov.lean
   origin: webapp
   parent_session_id: null
   mode: ultra
@@ -8512,7 +8511,7 @@
   created_in_window: true
   acus: 10.730861
   acus_scope: inWindow
-  working_seconds: 1020
+  working_seconds: 988
   shell: 21
   edits: 12
   reads: 0
@@ -8545,13 +8544,13 @@
   acus: 83.034110
   acus_scope: spillsPast
   working_seconds: 24981
-  shell: 2698
-  edits: 733
-  reads: 1045
-  git: 52
+  shell: 2738
+  edits: 739
+  reads: 1052
+  git: 55
   mcp: 8
-  devin_messages: 39
-  user_messages: 9
+  devin_messages: 41
+  user_messages: 10
   web: 0
   actions_capped: false
   prs_opened:

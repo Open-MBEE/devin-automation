@@ -115,7 +115,7 @@ structure SessionDay where
   prs_opened : Nat
   deriving Repr, L4YAML.Schema.FromYaml, L4YAML.Schema.ToYaml
 
-/-- The `tables` object that `build.py` writes into `report-<slug>.json`. -/
+/-- The `tables` object inside `report-<slug>.json` (written by `session-report build`). -/
 structure Tables where
   report : Header
   project_totals : Array ProjectTotal

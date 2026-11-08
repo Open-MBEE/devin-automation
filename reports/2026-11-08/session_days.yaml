@@ -16,20 +16,6 @@
   prs_opened: 0
 -
   day: 2026-11-08
-  session_id: 438880735ee9439eb71a124cbe26cd23
-  project: (no repository)
-  working_seconds: 3305
-  shell: 3
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 11
-  devin_messages: 2
-  user_messages: 1
-  web: 0
-  prs_opened: 0
--
-  day: 2026-11-08
   session_id: 49750a06a48d41b1852199f560a0d9fc
   project: L4YAML
   working_seconds: 11251
@@ -46,7 +32,7 @@
   day: 2026-11-08
   session_id: 24a21977a04949ee91f5ae4088aa3058
   project: L4YAML
-  working_seconds: 849
+  working_seconds: 712
   shell: 14
   edits: 3
   reads: 0
@@ -60,16 +46,16 @@
   day: 2026-11-08
   session_id: 6661ae5b28ed42c8aa23bc799e21b980
   project: L4YAML
-  working_seconds: 13778
-  shell: 739
-  edits: 161
-  reads: 87
-  git: 15
-  mcp: 23
-  devin_messages: 51
-  user_messages: 15
+  working_seconds: 14712
+  shell: 422
+  edits: 103
+  reads: 23
+  git: 11
+  mcp: 14
+  devin_messages: 32
+  user_messages: 10
   web: 0
-  prs_opened: 2
+  prs_opened: 3
 -
   day: 2026-11-08
   session_id: 12a32597e3554be1aeeb264f49263290
@@ -78,9 +64,9 @@
   shell: 138
   edits: 20
   reads: 3
-  git: 26
+  git: 23
   mcp: 13
-  devin_messages: 30
+  devin_messages: 29
   user_messages: 12
   web: 0
   prs_opened: 3
@@ -88,30 +74,30 @@
   day: 2026-11-08
   session_id: 18ad47adf36f44e9b6824a4472f9678d
   project: OpenSysML
-  working_seconds: 48896
-  shell: 1237
-  edits: 161
-  reads: 9
-  git: 62
-  mcp: 29
-  devin_messages: 27
-  user_messages: 7
+  working_seconds: 50771
+  shell: 1051
+  edits: 114
+  reads: 5
+  git: 61
+  mcp: 23
+  devin_messages: 23
+  user_messages: 6
   web: 0
-  prs_opened: 5
+  prs_opened: 6
 -
   day: 2026-11-08
   session_id: 4eac7d670b61499ea2a95a5babd91b78
   project: OpenSysML
-  working_seconds: 9292
-  shell: 167
-  edits: 25
+  working_seconds: 11133
+  shell: 182
+  edits: 30
   reads: 44
-  git: 4
-  mcp: 8
-  devin_messages: 3
-  user_messages: 1
+  git: 11
+  mcp: 13
+  devin_messages: 6
+  user_messages: 2
   web: 0
-  prs_opened: 1
+  prs_opened: 2
 -
   day: 2026-11-08
   session_id: 85b1ad601c9c433fa0e50cf98797ca68
@@ -128,71 +114,85 @@
   prs_opened: 0
 -
   day: 2026-11-08
+  session_id: 438880735ee9439eb71a124cbe26cd23
+  project: devin-automation
+  working_seconds: 3896
+  shell: 70
+  edits: 19
+  reads: 13
+  git: 2
+  mcp: 4639
+  devin_messages: 16
+  user_messages: 9
+  web: 0
+  prs_opened: 1
+-
+  day: 2026-11-08
   session_id: a8a1adef279a4c009e8e3cd7e4a0a115
   project: fprime-lean-sysmlv2-example
-  working_seconds: 371
-  shell: 19
-  edits: 3
-  reads: 1
-  git: 2
+  working_seconds: 388
+  shell: 13
+  edits: 2
+  reads: 0
+  git: 1
   mcp: 13
-  devin_messages: 18
-  user_messages: 6
+  devin_messages: 15
+  user_messages: 5
   web: 0
   prs_opened: 0
 -
   day: 2026-11-08
-  session_id: 225a0e60d25a402dafedef75ff57f5f6
+  session_id: 72924cd7c7f94fc7b262db29ed4b1e38
   project: fprime-lean-sysmlv2-example
-  working_seconds: 3330
-  shell: 216
-  edits: 26
-  reads: 45
-  git: 2
-  mcp: 4
+  working_seconds: 15690
+  shell: 218
+  edits: 28
+  reads: 44
+  git: 3
+  mcp: 6
   devin_messages: 7
   user_messages: 3
   web: 0
   prs_opened: 1
 -
   day: 2026-11-08
-  session_id: 72924cd7c7f94fc7b262db29ed4b1e38
+  session_id: 225a0e60d25a402dafedef75ff57f5f6
   project: fprime-lean-sysmlv2-example
-  working_seconds: 13847
-  shell: 154
-  edits: 22
-  reads: 37
-  git: 0
+  working_seconds: 3315
+  shell: 89
+  edits: 8
+  reads: 6
+  git: 2
   mcp: 4
-  devin_messages: 5
-  user_messages: 3
+  devin_messages: 6
+  user_messages: 2
   web: 0
-  prs_opened: 0
+  prs_opened: 1
 -
   day: 2026-11-08
   session_id: 1fbba99fbf8446d3a9ffe2110715fac4
   project: mars.lean
-  working_seconds: 4599
-  shell: 154
+  working_seconds: 4568
+  shell: 149
   edits: 61
-  reads: 20
+  reads: 16
   git: 13
   mcp: 26
-  devin_messages: 34
-  user_messages: 14
+  devin_messages: 32
+  user_messages: 13
   web: 0
   prs_opened: 5
 -
   day: 2026-11-08
   session_id: 42e0d0ccad3644b191264d6da75ee7cc
   project: mars.lean
-  working_seconds: 6591
-  shell: 210
-  edits: 54
+  working_seconds: 6670
+  shell: 214
+  edits: 55
   reads: 38
-  git: 5
-  mcp: 3
-  devin_messages: 13
+  git: 6
+  mcp: 6
+  devin_messages: 14
   user_messages: 8
   web: 0
   prs_opened: 2
@@ -243,43 +243,43 @@
   session_id: dcdd25bdcf3444f1ba742d0266f952c4
   project: soil-moisture-dps
   working_seconds: 3676
-  shell: 182
-  edits: 47
-  reads: 58
-  git: 4
+  shell: 222
+  edits: 52
+  reads: 60
+  git: 6
   mcp: 0
-  devin_messages: 3
+  devin_messages: 4
   user_messages: 1
   web: 0
-  prs_opened: 2
+  prs_opened: 3
 -
   day: 2026-11-08
   session_id: 7a547429b3074d47bc16b7a4d568ef95
   project: soil-moisture-model
-  working_seconds: 13561
-  shell: 227
-  edits: 67
+  working_seconds: 11461
+  shell: 137
+  edits: 52
   reads: 4
-  git: 20
+  git: 12
   mcp: 11
-  devin_messages: 29
-  user_messages: 8
+  devin_messages: 16
+  user_messages: 4
   web: 0
   prs_opened: 3
 -
   day: 2026-11-08
   session_id: 949f5b59507e4e7d99ee2ffd4b56f213
   project: soil-moisture-workflows
-  working_seconds: 3835
-  shell: 73
-  edits: 18
-  reads: 10
-  git: 1
-  mcp: 0
-  devin_messages: 1
-  user_messages: 1
+  working_seconds: 2493
+  shell: 203
+  edits: 48
+  reads: 51
+  git: 5
+  mcp: 12
+  devin_messages: 10
+  user_messages: 3
   web: 0
-  prs_opened: 1
+  prs_opened: 2
 -
   day: 2026-11-08
   session_id: d0c10b32b08144028e87fd0607dbbb1a

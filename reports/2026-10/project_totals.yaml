@@ -4,55 +4,55 @@
   project: L4YAML
   sessions: 44
   sessions_created: 44
-  working_seconds: 830422
+  working_seconds: 828814
   acus_in_window: 2426.666519
   acus_spilling: 4063.154110
   acus_older: 0.000000
-  actions: 24715
+  actions: 25089
   actions_capped: false
   prs_opened: 215
 -
   project: OpenSysML
   sessions: 1
   sessions_created: 1
-  working_seconds: 250240
+  working_seconds: 250226
   acus_in_window: 0.000000
-  acus_spilling: 2701.603439
+  acus_spilling: 2712.714149
   acus_older: 0.000000
-  actions: 4844
+  actions: 5309
   actions_capped: false
   prs_opened: 65
 -
   project: PropertyKindCalculus
   sessions: 54
   sessions_created: 54
-  working_seconds: 170749
+  working_seconds: 170671
   acus_in_window: 352.238053
   acus_spilling: 358.280214
   acus_older: 0.000000
-  actions: 8224
+  actions: 8368
   actions_capped: false
   prs_opened: 100
 -
   project: mars.lean
   sessions: 1
   sessions_created: 1
-  working_seconds: 109155
+  working_seconds: 107247
   acus_in_window: 0.000000
   acus_spilling: 3526.159273
   acus_older: 0.000000
-  actions: 5242
+  actions: 5623
   actions_capped: false
   prs_opened: 171
 -
   project: SBVR.lean
   sessions: 1
   sessions_created: 1
-  working_seconds: 99439
+  working_seconds: 98908
   acus_in_window: 0.000000
   acus_spilling: 1570.906504
   acus_older: 0.000000
-  actions: 4388
+  actions: 4985
   actions_capped: false
   prs_opened: 123
 -
@@ -70,7 +70,7 @@
   project: git-remote-sync.lean
   sessions: 3
   sessions_created: 3
-  working_seconds: 38140
+  working_seconds: 38063
   acus_in_window: 29.886503
   acus_spilling: 649.878890
   acus_older: 0.000000
@@ -81,7 +81,7 @@
   project: fprime-lean-sysmlv2-example
   sessions: 1
   sessions_created: 1
-  working_seconds: 34384
+  working_seconds: 32488
   acus_in_window: 0.000000
   acus_spilling: 347.223080
   acus_older: 0.000000
@@ -92,7 +92,7 @@
   project: (no repository)
   sessions: 15
   sessions_created: 15
-  working_seconds: 29516
+  working_seconds: 29477
   acus_in_window: 226.228994
   acus_spilling: 0.000000
   acus_older: 0.000000
@@ -107,7 +107,7 @@
   acus_in_window: 16.773647
   acus_spilling: 83.034110
   acus_older: 0.000000
-  actions: 4649
+  actions: 4707
   actions_capped: false
   prs_opened: 10
 -
@@ -147,7 +147,7 @@
   project: prov.lean
   sessions: 3
   sessions_created: 3
-  working_seconds: 6467
+  working_seconds: 6430
   acus_in_window: 97.651625
   acus_spilling: 0.000000
   acus_older: 0.000000
