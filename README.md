@@ -47,9 +47,16 @@ Each automation is a Devin Automation with a schedule trigger that starts a sess
 running the playbook. You need your Devin user id (ask a session: "what is my user
 id?" — it is `user-…` in the session's identity block) and your IANA timezone.
 
-1. Create the playbook once: in Devin → Settings → Playbooks → New, paste
-   `session-report/playbook.md`, replacing the `<USER_ID>`, `<NAME>`, `<ORG_ID>`, `<TZ>`,
-   `<API_BASE>` and `<SESSION_URL_PREFIX>` placeholders in its first paragraph with yours. Note its id (`playbook-…`).
+1. Create the playbook once from the template `session-report/playbook.md`: fill every
+   `<…>` placeholder (they occur in the first paragraph *and* in the commands of steps 1 and 4), e.g.
+
+   ```sh
+   sed -e 's/<USER_ID>/user-…/g' -e 's/<NAME>/Your Name/g' -e 's/<ORG_ID>/org-…/g' -e 's#<TZ>#Europe/Paris#g' \
+       -e 's#<API_BASE>#https://api.devin.ai/v3#g' -e 's#<SESSION_URL_PREFIX>#https://app.devin.ai/sessions/#g' \
+       session-report/playbook.md | grep -q '<[A-Z_]*>' && echo 'placeholders left' || echo ok
+   ```
+
+   then paste the result into Devin → Settings → Playbooks → New. Note its id (`playbook-…`).
    An existing organization playbook can be shared instead of re-created.
 2. Create three automations (Settings → Automations → New), each with one
    `schedule:recurring` trigger and one `start_session` action whose prompt is:

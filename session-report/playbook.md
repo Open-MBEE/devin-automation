@@ -1,6 +1,6 @@
 # Devin session report (daily / weekly / monthly)
 
-Produce a report of the requesting user's Devin sessions grouped by project (repository) then session, for one window: a day, a Mon–Sun week, or a calendar month. The report is for <NAME> (user id `<USER_ID>`, organization `<ORG_ID>`, timezone `<TZ>`, Devin API `<API_BASE>` e.g. `https://api.devin.ai/v3` or `https://<host>.devinenterprise.com/api/v3`, session URLs `<SESSION_URL_PREFIX>`) unless the prompt says otherwise. Replace the angle-bracket values when installing this playbook (README.md → Recipes). The tooling lives in the repository `Open-MBEE/devin-automation` (`README.md` there explains the numbers and their caveats).
+Produce a report of the requesting user's Devin sessions grouped by project (repository) then session, for one window: a day, a Mon–Sun week, or a calendar month. The report is for <NAME> (user id `<USER_ID>`, organization `<ORG_ID>`, timezone `<TZ>`, Devin API `<API_BASE>` e.g. `https://api.devin.ai/v3` or `https://<host>.devinenterprise.com/api/v3`, session URLs `<SESSION_URL_PREFIX>`) unless the prompt says otherwise. Every `<…>` placeholder in this file (here and in steps 1 and 4) must be replaced when installing it (README.md → Recipes); a `<` left behind means an unfilled value. The tooling lives in the repository `Open-MBEE/devin-automation` (`README.md` there explains the numbers and their caveats).
 
 ## Procedure
 
