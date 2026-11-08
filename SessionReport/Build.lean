@@ -26,7 +26,8 @@ structure Config where
   tz : String
   baseUrl : String
   byName : Bool := true
-  owners : Array String := #["Open-MBEE", "nasa-jpl", "open-mbee"]
+  /-- GitHub owners whose `owner/repo` mentions in a prompt name the project; empty = none. -/
+  owners : Array String := #[]
   now : Int
 
 /-- Action counters, one per column of the report. -/
@@ -145,7 +146,7 @@ def lookup {α : Type} (m : Array (String × α)) (k : String) (dflt : α) : α 
 def isWordChar (c : Char) : Bool := c.isAlphanum || c == '_'
 
 /-- `owner/repo` mentions in a text, in order of appearance, owner matched case-insensitively and
-    written as configured (`open-mbee/x` → `Open-MBEE/x`). -/
+    written as configured (`acme/x` matches owner `Acme` and is written `Acme/x`). -/
 def repoMentions (owners : Array String) (text : String) : Array String := Id.run do
   let cs := text.toList.toArray
   let canon (o : String) : String := (owners.find? (·.lower == o.lower)).getD o

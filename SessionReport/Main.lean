@@ -1,6 +1,7 @@
 module
 
 public import SessionReport.Build
+public import SessionReport.Http
 public import L4YAML.Schema.Dump
 
 @[expose] public section
@@ -36,8 +37,8 @@ def usage : String :=
   "       session-report check <table.yaml>...          parse exported tables back (schema check)\n" ++
   "       session-report -V | --version | -h | --help\n" ++
   "tables: report project_totals working_by_day sessions session_days\n" ++
-  "defaults: --raw ~/report/raw.json --out ~/report --tz America/Los_Angeles --who $USER --group name\n" ++
-  "          --base-url https://app.devin.ai/sessions/ --owners Open-MBEE,nasa-jpl"
+  "defaults: --raw ~/report/raw.json --out ~/report --tz $TZ (else UTC) --who $USER --group name\n" ++
+  "          --base-url https://app.devin.ai/sessions/ --owners (none: only PRs and @repos: name a project)"
 
 def directives : Array Directive := #[.yaml "1.2"]
 
@@ -76,6 +77,14 @@ def checkOne (p : System.FilePath) : IO Bool := do
   | some (.ok _) => IO.println s!"ok   {p}"; return true
   | some (.error e) => IO.eprintln s!"FAIL {p}: {e}"; return false
 
+/-- `api-get <url>`: one authenticated GET against the Devin API (debugging aid; prints status and body). -/
+def apiGetCmd (url : String) : IO UInt32 := do
+  let some key ← IO.getEnv "DEVIN_API_KEY" | throw (IO.userError "DEVIN_API_KEY is not set")
+  let r ← Http.get url #[s!"Authorization: Bearer {key}", "Accept: application/json"]
+  IO.println s!"HTTP {r.status}"
+  IO.println r.body
+  return if r.ok then 0 else 1
+
 def checkCmd (files : List String) : IO UInt32 := do
   let mut ok := true
   for f in files do
@@ -91,6 +100,7 @@ def opt (args : List String) (key : String) : Option String :=
 def buildCmd (args : List String) : IO UInt32 := do
   let home := (← IO.getEnv "HOME").getD "."
   let user := (← IO.getEnv "USER").getD "me"
+  let tzEnv := (← IO.getEnv "TZ").getD "UTC"
   let kind ← match opt args "--kind" with
     | some "daily" => pure Kind.daily | some "weekly" => pure Kind.weekly | some "monthly" => pure Kind.monthly
     | _ => throw (IO.userError "--kind daily|weekly|monthly is required")
@@ -103,13 +113,13 @@ def buildCmd (args : List String) : IO UInt32 := do
   let byName ← match opt args "--group" with
     | none | some "name" => pure true | some "repo" => pure false
     | some g => throw (IO.userError s!"--group {g}: expected name or repo")
-  let owners := ((opt args "--owners").getD "Open-MBEE,nasa-jpl").splitOn "," |>.map String.trimWs |>.filter (!·.isEmpty) |>.toArray
+  let owners := ((opt args "--owners").getD "").splitOn "," |>.map String.trimWs |>.filter (!·.isEmpty) |>.toArray
   let now := (← IO.monoMsNow) -- placeholder, replaced below
   let nowSecs : Int := ← do
     let out ← IO.Process.output { cmd := "date", args := #["+%s"] }
     pure ((out.stdout.trimWs.toInt?).getD (Int.ofNat (now / 1000)))
   let cfg : Build.Config := {
-    kind, first, last, who := (opt args "--who").getD user, tz := (opt args "--tz").getD "America/Los_Angeles",
+    kind, first, last, who := (opt args "--who").getD user, tz := (opt args "--tz").getD tzEnv,
     baseUrl := (opt args "--base-url").getD "https://app.devin.ai/sessions/", byName, owners, now := nowSecs }
   let raw := (opt args "--raw").getD s!"{home}/report/raw.json"
   let out : System.FilePath := (opt args "--out").getD s!"{home}/report"
@@ -141,6 +151,7 @@ public def main (args : List String) : IO UInt32 := do
     | "build" :: rest => buildCmd rest
     | "yaml" :: [input, outDir] => yamlCmd input outDir
     | "check" :: files => checkCmd files
+    | ["api-get", url] => apiGetCmd url
     | _ => IO.eprintln usage; return 2
   catch e =>
     IO.eprintln s!"session-report: {e}"

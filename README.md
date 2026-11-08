@@ -1,6 +1,6 @@
 # devin-automation
 
-Tooling for Devin Automations used by Open-MBEE members. First automation: the
+Tooling for Devin Automations. Generic: nothing here is tied to a user or organization; `reports/` holds one user's reports as example data. First automation: the
 **Devin session report** — a daily, weekly and monthly report of your own Devin
 sessions, grouped by project (repository) then session, with per-project working
 time, action counts, PRs opened and ACUs.
@@ -13,7 +13,7 @@ time, action counts, PRs opened and ACUs.
 | `session-report/body.html` | Interactive HTML report body, compiled with Devin's `html_artifact_compile` over the report JSON. |
 | `session-report/playbook.md` | The playbook a scheduled session follows. |
 | `.github/workflows/release.yml` | Builds the exe on every push/PR and attaches `session-report-linux-x86_64` to the GitHub Release of a `v*` tag. |
-| `reports/` | Reports produced so far (Markdown, HTML, YAML tables). |
+| `reports/` | Example data: one user's reports (Markdown, HTML, YAML tables). |
 
 ## What the report contains, and what it cannot
 
@@ -48,14 +48,14 @@ running the playbook. You need your Devin user id (ask a session: "what is my us
 id?" — it is `user-…` in the session's identity block) and your IANA timezone.
 
 1. Create the playbook once: in Devin → Settings → Playbooks → New, paste
-   `session-report/playbook.md`, replacing the user id, display name, timezone and
-   session-URL prefix in its first paragraph with yours. Note its id (`playbook-…`).
+   `session-report/playbook.md`, replacing the `<USER_ID>`, `<NAME>`, `<ORG_ID>`, `<TZ>`,
+   `<API_BASE>` and `<SESSION_URL_PREFIX>` placeholders in its first paragraph with yours. Note its id (`playbook-…`).
    An existing organization playbook can be shared instead of re-created.
 2. Create three automations (Settings → Automations → New), each with one
    `schedule:recurring` trigger and one `start_session` action whose prompt is:
 
    > Follow @playbook:playbook-… to produce the DAILY|WEEKLY|MONTHLY Devin session
-   > report for <your name> (user id user-…, timezone <tz>). Window: the calendar
+   > report for <NAME> (user id <USER_ID>, timezone <TZ>). Window: the calendar
    > day | Monday–Sunday week | calendar month that ended at the midnight just before
    > this run. Compute the dates from the current time in <tz>. Deliver as the
    > playbook's step 6 says; if the window had no sessions, say so in one line.
@@ -88,7 +88,7 @@ curl -fsSL https://github.com/Open-MBEE/devin-automation/releases/latest/downloa
 #    __START__/__END__ (unix seconds at local midnight), __USER__, __TZ__, __OUT__ (e.g. ~/report/raw.json)
 # 2. build: Markdown + report JSON (for the HTML) + tables JSON + YAML tables, all under --out
 session-report build --kind weekly --start 2026-11-02 --end 2026-11-09 --raw ~/report/raw.json --out ~/report \
-    --who "Your Name" --tz America/Los_Angeles --base-url https://<your-devin-host>/sessions/ --owners Open-MBEE,nasa-jpl
+    --who "Your Name" --tz Europe/Paris --base-url https://app.devin.ai/sessions/ --owners my-org,my-other-org
 session-report check ~/report/yaml/2026-11-02-week/*.yaml        # re-read the tables against the schema
 session-report yaml ~/report/tables-2026-11-02-week.json ~/export   # re-export them from the tables JSON (same files)
 # 3. HTML — html_artifact_compile body_path=session-report/body.html data_path=~/report/report-2026-11-02-week.json
@@ -96,7 +96,7 @@ session-report yaml ~/report/tables-2026-11-02-week.json ~/export   # re-export 
 
 `session-report --help` documents every option (`--group repo` keeps forks apart;
 `--owners` lists the GitHub owners whose `owner/repo` mentions in a prompt count as
-the session's project). The transport only runs inside a Devin session (it calls
+the session's project; without it only the session's PRs and `@repos:` tokens name the project). The transport only runs inside a Devin session (it calls
 Devin's own tools); the exe runs anywhere on Linux x86-64, or wherever the Lean
 toolchain in `lean-toolchain` builds it. Reading a month of raw data takes 2–3
 minutes.
