@@ -115,7 +115,7 @@ structure SessionDay where
   prs_opened : Nat
   deriving Repr, L4YAML.Schema.FromYaml, L4YAML.Schema.ToYaml
 
-/-- The `tables` object inside `report-<slug>.json` (written by `session-report build`). -/
+/-- The `tables` object inside `tables-<slug>.json` (written by `session-report build`). -/
 structure Tables where
   report : Header
   project_totals : Array ProjectTotal
@@ -124,7 +124,7 @@ structure Tables where
   session_days : Array SessionDay
   deriving Repr, L4YAML.Schema.FromYaml, L4YAML.Schema.ToYaml
 
-/-- The report JSON as a whole; only `tables` is decoded, the rest is passed over. -/
+/-- `tables-<slug>.json` as a whole. -/
 structure ReportFile where
   tables : Tables
   deriving L4YAML.Schema.FromYaml

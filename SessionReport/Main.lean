@@ -11,14 +11,15 @@ public import L4YAML.Schema.Dump
 ```
 session-report build --kind daily|weekly|monthly --start YYYY-MM-DD --end YYYY-MM-DD(exclusive)
                      [--raw FILE] [--out DIR] [--tz ZONE] [--who NAME] [--base-url URL] [--group name|repo] [--owners a,b]
-session-report yaml <report.json> <out-dir>      re-export the tables of a report JSON
+session-report yaml <tables.json> <out-dir>      re-export the five tables of a tables JSON
 session-report check <table.yaml>...             parse exported tables back (schema check)
 session-report --version | --help
 ```
 
 `build` reads the raw collector output (`session-report/collect.py`), writes `<out>/devin-report-<slug>.md`,
-`<out>/report-<slug>.json` (rows + tables, consumed by `session-report/body.html`) and the five YAML tables under
-`<out>/yaml/<slug>/`, each written with the L4YAML dumper from the typed tables of `SessionReport.Schema`.
+`<out>/report-<slug>.json` (the per-session rows, consumed by `session-report/body.html`), `<out>/tables-<slug>.json`
+(the five tables as JSON, the input of `yaml`) and the five YAML tables under `<out>/yaml/<slug>/`, each written with
+the L4YAML dumper from the typed tables of `SessionReport.Schema`.
 -/
 
 open L4YAML L4YAML.Schema L4YAML.Schema.Dump
@@ -31,7 +32,7 @@ def usage : String :=
   "session-report " ++ version ++ "\n" ++
   "usage: session-report build --kind daily|weekly|monthly --start YYYY-MM-DD --end YYYY-MM-DD(exclusive)\n" ++
   "                            [--raw FILE] [--out DIR] [--tz ZONE] [--who NAME] [--base-url URL] [--group name|repo] [--owners a,b]\n" ++
-  "       session-report yaml <report.json> <out-dir>   re-export the five tables of a report JSON as YAML\n" ++
+  "       session-report yaml <tables.json> <out-dir>   re-export the five tables of a tables JSON as YAML\n" ++
   "       session-report check <table.yaml>...          parse exported tables back (schema check)\n" ++
   "       session-report -V | --version | -h | --help\n" ++
   "tables: report project_totals working_by_day sessions session_days\n" ++
@@ -56,7 +57,7 @@ def writeTables (dir : System.FilePath) (t : Tables) : IO Unit := do
 def yamlCmd (input : System.FilePath) (outDir : System.FilePath) : IO UInt32 := do
   let text ← IO.FS.readFile input
   match parseAs ReportFile text with
-  | .error e => IO.eprintln s!"{input}: does not fit the session-report schema: {e}"; return 1
+  | .error e => IO.eprintln s!"{input}: not a tables JSON of the session-report schema: {e}"; return 1
   | .ok file => writeTables outDir file.tables; return 0
 
 def checkOne (p : System.FilePath) : IO Bool := do
@@ -123,9 +124,10 @@ def buildCmd (args : List String) : IO UInt32 := do
   IO.FS.createDirAll out
   IO.FS.writeFile (out / s!"devin-report-{ctx.slug}.md") (Build.markdown ctx rows)
   let tables := Build.tables ctx rows
-  IO.FS.writeFile (out / s!"report-{ctx.slug}.json") ((Build.reportJson ctx rows tables).pretty ++ "\n")
+  IO.FS.writeFile (out / s!"report-{ctx.slug}.json") ((Build.reportJson ctx rows).pretty ++ "\n")
+  IO.FS.writeFile (out / s!"tables-{ctx.slug}.json") ((Build.tablesFileJson tables).pretty ++ "\n")
   writeTables (out / "yaml" / ctx.slug) tables
-  IO.println s!"wrote {out}/devin-report-{ctx.slug}.md and report-{ctx.slug}.json: {rows.size} sessions"
+  IO.println s!"wrote {out}/devin-report-{ctx.slug}.md, report-{ctx.slug}.json and tables-{ctx.slug}.json: {rows.size} sessions"
   return 0
 
 end SessionReport

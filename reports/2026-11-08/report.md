@@ -1,6 +1,6 @@
 # Devin session report — Sunday 2026-11-08
 
-Sessions of Nicolas Rouquette created or active between Sun 2026-11-08 00:00 and Sun 2026-11-08 14:15 (America/Los_Angeles): 21 sessions.
+Sessions of Nicolas Rouquette created or active between Sun 2026-11-08 00:00 and Sun 2026-11-08 14:27 (America/Los_Angeles): 21 sessions.
 
 How to read the numbers:
 
@@ -12,30 +12,30 @@ How to read the numbers:
 
 ## Sunday 2026-11-08
 
-21 sessions across 11 projects, 43h33 of working time, 40 PRs opened.
+21 sessions across 11 projects, 44h32 of working time, 40 PRs opened.
 
-### OpenSysML — 2 sessions, 17h29 working
-
-| Session | Repos | Kind | Mode | Created | Status | Working (day) | ACUs | Actions (day) | PRs opened (day) |
-|---|---|---|---|---|---|---|---|---|---|
-| [Plan SysMLv2 QVTS Language and Workflows](https://nasa-jpl-demo.devinenterprise.com/sessions/18ad47adf36f44e9b6824a4472f9678d) | Open-MBEE/OpenSysML, Open-MBEE/OpenSysML-Extensions-Library, Open-MBEE/engineering-foundation-architecture, Open-MBEE/qvts | webapp | ultra | 10-26 12:28 | running (working) | 14h15 | 2712.7 † | 1051 sh / 114 ed / 5 rd / 61 git / 23 mcp / 23+6 msg | [#2057](https://github.com/Open-MBEE/OpenSysML/pull/2057) merged, [#2059](https://github.com/Open-MBEE/OpenSysML/pull/2059) merged, [#2060](https://github.com/Open-MBEE/OpenSysML/pull/2060) merged, [#2061](https://github.com/Open-MBEE/OpenSysML/pull/2061) merged, [#2063](https://github.com/Open-MBEE/OpenSysML/pull/2063) open, [qvts #56](https://github.com/Open-MBEE/qvts/pull/56) open |
-| [Add comment serialization support in OpenSysML](https://nasa-jpl-demo.devinenterprise.com/sessions/4eac7d670b61499ea2a95a5babd91b78) | Open-MBEE/OpenSysML | webapp | ultra | 11-08 11:00 | running (working) | 3h14 | 42.0 ‡ | 182 sh / 30 ed / 44 rd / 11 git / 13 mcp / 6+2 msg | [#2064](https://github.com/Open-MBEE/OpenSysML/pull/2064) merged, [#2065](https://github.com/Open-MBEE/OpenSysML/pull/2065) open |
-
-### L4YAML — 4 sessions, 9h40 working
+### OpenSysML — 2 sessions, 17h53 working
 
 | Session | Repos | Kind | Mode | Created | Status | Working (day) | ACUs | Actions (day) | PRs opened (day) |
 |---|---|---|---|---|---|---|---|---|---|
-| [Prove S3 scanner-output obligations for parse_iff_grammar](https://nasa-jpl-demo.devinenterprise.com/sessions/6661ae5b28ed42c8aa23bc799e21b980) | nasa-jpl/L4YAML | child of 24a21977 | ultra | 11-05 09:31 | running (working) | 4h14 | 564.9 † | 422 sh / 103 ed / 23 rd / 11 git / 14 mcp / 32+10 msg | [#262](https://github.com/nasa-jpl/L4YAML/pull/262) merged, [#267](https://github.com/nasa-jpl/L4YAML/pull/267) merged, [#271](https://github.com/nasa-jpl/L4YAML/pull/271) merged |
+| [Plan SysMLv2 QVTS Language and Workflows](https://nasa-jpl-demo.devinenterprise.com/sessions/18ad47adf36f44e9b6824a4472f9678d) | Open-MBEE/OpenSysML, Open-MBEE/OpenSysML-Extensions-Library, Open-MBEE/engineering-foundation-architecture, Open-MBEE/qvts | webapp | ultra | 10-26 12:28 | running (working) | 14h27 | 2712.7 † | 1051 sh / 114 ed / 5 rd / 61 git / 23 mcp / 23+6 msg | [#2057](https://github.com/Open-MBEE/OpenSysML/pull/2057) merged, [#2059](https://github.com/Open-MBEE/OpenSysML/pull/2059) merged, [#2060](https://github.com/Open-MBEE/OpenSysML/pull/2060) merged, [#2061](https://github.com/Open-MBEE/OpenSysML/pull/2061) merged, [#2063](https://github.com/Open-MBEE/OpenSysML/pull/2063) open, [qvts #56](https://github.com/Open-MBEE/qvts/pull/56) open |
+| [Add comment serialization support in OpenSysML](https://nasa-jpl-demo.devinenterprise.com/sessions/4eac7d670b61499ea2a95a5babd91b78) | Open-MBEE/OpenSysML | webapp | ultra | 11-08 11:00 | running (working) | 3h26 | 42.0 ‡ | 182 sh / 30 ed / 44 rd / 11 git / 13 mcp / 6+2 msg | [#2064](https://github.com/Open-MBEE/OpenSysML/pull/2064) merged, [#2065](https://github.com/Open-MBEE/OpenSysML/pull/2065) open |
+
+### L4YAML — 4 sessions, 9h52 working
+
+| Session | Repos | Kind | Mode | Created | Status | Working (day) | ACUs | Actions (day) | PRs opened (day) |
+|---|---|---|---|---|---|---|---|---|---|
+| [Prove S3 scanner-output obligations for parse_iff_grammar](https://nasa-jpl-demo.devinenterprise.com/sessions/6661ae5b28ed42c8aa23bc799e21b980) | nasa-jpl/L4YAML | child of 24a21977 | ultra | 11-05 09:31 | running (working) | 4h26 | 564.9 † | 422 sh / 103 ed / 23 rd / 11 git / 14 mcp / 32+10 msg | [#262](https://github.com/nasa-jpl/L4YAML/pull/262) merged, [#267](https://github.com/nasa-jpl/L4YAML/pull/267) merged, [#271](https://github.com/nasa-jpl/L4YAML/pull/271) merged |
 | [L4YAML 7.7 stream R12: Row 12 item 344 flip (then [82], [210]/[211])](https://nasa-jpl-demo.devinenterprise.com/sessions/49750a06a48d41b1852199f560a0d9fc) | nasa-jpl/L4YAML | child of 24a21977 | ultra | 10-23 10:34 | suspended (inactivity) | 3h07 | 3356.8 † | 233 sh / 16 ed / 10 rd / 11 git / 17 mcp / 36+20 msg | [#264](https://github.com/nasa-jpl/L4YAML/pull/264) merged, [#265](https://github.com/nasa-jpl/L4YAML/pull/265) merged, [#268](https://github.com/nasa-jpl/L4YAML/pull/268) merged, [#270](https://github.com/nasa-jpl/L4YAML/pull/270) merged |
 | [Land [211] explicit-only in L4YAML (Row 19)](https://nasa-jpl-demo.devinenterprise.com/sessions/12a32597e3554be1aeeb264f49263290) | nasa-jpl/L4YAML | child of 24a21977 | ultra | 11-06 09:50 | suspended (inactivity) | 2h06 | 165.4 † | 138 sh / 20 ed / 3 rd / 23 git / 13 mcp / 29+12 msg | [#263](https://github.com/nasa-jpl/L4YAML/pull/263) merged, [#266](https://github.com/nasa-jpl/L4YAML/pull/266) merged, [#269](https://github.com/nasa-jpl/L4YAML/pull/269) merged |
 | [Complete parse_iff_grammar proof](https://nasa-jpl-demo.devinenterprise.com/sessions/24a21977a04949ee91f5ae4088aa3058) | nasa-jpl/L4YAML | child of fb0431c8 | ultra | 10-23 08:56 | suspended (inactivity) | 11m | 674.1 † | 14 sh / 3 ed / 0 rd / 4 git / 47 mcp / 16+3 msg |  |
 
-### fprime-lean-sysmlv2-example — 3 sessions, 5h32 working
+### fprime-lean-sysmlv2-example — 3 sessions, 5h44 working
 
 | Session | Repos | Kind | Mode | Created | Status | Working (day) | ACUs | Actions (day) | PRs opened (day) |
 |---|---|---|---|---|---|---|---|---|---|
 | [Plan fprime-lean-sysmlv2-example structure](https://nasa-jpl-demo.devinenterprise.com/sessions/a8a1adef279a4c009e8e3cd7e4a0a115) | Open-MBEE/fprime-lean-sysmlv2-example | webapp | ultra | 11-02 20:18 | running (waiting_for_user) | 6m | 370.5 † | 13 sh / 2 ed / 0 rd / 1 git / 13 mcp / 15+5 msg |  |
-| [Realize overflow in full: M1 time refinement r=4](https://nasa-jpl-demo.devinenterprise.com/sessions/72924cd7c7f94fc7b262db29ed4b1e38) | Open-MBEE/fprime-lean-sysmlv2-example | child of a8a1adef | ultra | 11-08 09:42 | running (working) | 4h30 | 49.5 ‡ | 218 sh / 28 ed / 44 rd / 3 git / 6 mcp / 7+3 msg | [#107](https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/107) open |
+| [Realize overflow in full: M1 time refinement r=4](https://nasa-jpl-demo.devinenterprise.com/sessions/72924cd7c7f94fc7b262db29ed4b1e38) | Open-MBEE/fprime-lean-sysmlv2-example | child of a8a1adef | ultra | 11-08 09:42 | running (working) | 4h42 | 49.5 ‡ | 218 sh / 28 ed / 44 rd / 3 git / 6 mcp / 7+3 msg | [#107](https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/107) open |
 | [Q11: M1 packets = 5, measure time-refinement cost](https://nasa-jpl-demo.devinenterprise.com/sessions/225a0e60d25a402dafedef75ff57f5f6) | Open-MBEE/fprime-lean-sysmlv2-example | child of a8a1adef | ultra | 11-07 22:09 | suspended (inactivity) | 55m | 48.4 † | 89 sh / 8 ed / 6 rd / 2 git / 4 mcp / 6+2 msg | [#106](https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/106) merged |
 
 ### mars.lean — 4 sessions, 4h14 working
@@ -53,11 +53,11 @@ How to read the numbers:
 |---|---|---|---|---|---|---|---|---|---|
 | [Update soil-moisture-model diagrams for workflows changes](https://nasa-jpl-demo.devinenterprise.com/sessions/7a547429b3074d47bc16b7a4d568ef95) | Open-MBEE/soil-moisture-model, nasa-jpl/PropertyKindCalculus | webapp | ultra | 11-07 10:19 | suspended (inactivity) | 3h11 | 145.4 † | 137 sh / 52 ed / 4 rd / 12 git / 11 mcp / 16+4 msg | [#43](https://github.com/Open-MBEE/soil-moisture-model/pull/43) merged, [PropertyKindCalculus #109](https://github.com/nasa-jpl/PropertyKindCalculus/pull/109) merged, [#44](https://github.com/Open-MBEE/soil-moisture-model/pull/44) merged |
 
-### devin-automation — 1 session, 1h14 working
+### devin-automation — 1 session, 1h25 working
 
 | Session | Repos | Kind | Mode | Created | Status | Working (day) | ACUs | Actions (day) | PRs opened (day) |
 |---|---|---|---|---|---|---|---|---|---|
-| [Daily and Weekly Session Reports](https://nasa-jpl-demo.devinenterprise.com/sessions/438880735ee9439eb71a124cbe26cd23) | Open-MBEE/devin-automation | webapp | ultra | 11-08 12:39 | running (working) | 1h14 | 44.2 ‡ | 70 sh / 19 ed / 13 rd / 2 git / 4639 mcp / 16+9 msg | [#1](https://github.com/Open-MBEE/devin-automation/pull/1) open |
+| [Daily and Weekly Session Reports](https://nasa-jpl-demo.devinenterprise.com/sessions/438880735ee9439eb71a124cbe26cd23) | Open-MBEE/devin-automation | webapp | ultra | 11-08 12:39 | running (working) | 1h25 | 44.2 ‡ | 70 sh / 19 ed / 13 rd / 2 git / 4639 mcp / 16+9 msg | [#1](https://github.com/Open-MBEE/devin-automation/pull/1) open |
 
 ### soil-moisture-dps — 1 session, 1h01 working
 

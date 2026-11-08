@@ -393,11 +393,14 @@ def tablesJson (t : Tables) : Json :=
       Acts.toJsonTable { shell := d.shell, edits := d.edits, reads := d.reads, git := d.git, mcp := d.mcp, devinMsgs := d.devin_messages, userMsgs := d.user_messages, web := d.web } ++
       [("prs_opened", Lean.toJson d.prs_opened)])))]
 
-/-- The report JSON: `rows` for `body.html`, `tables` for `session-report yaml`. -/
-def reportJson (ctx : Ctx) (rs : Array Row) (t : Tables) : Json :=
+/-- `report-<slug>.json`: the window and the per-session `rows`, for `body.html`. -/
+def reportJson (ctx : Ctx) (rs : Array Row) : Json :=
   Json.mkObj [("kind", match ctx.cfg.kind with | .daily => "daily" | .weekly => "weekly" | .monthly => "monthly"),
     ("label", ctx.label), ("who", ctx.cfg.who), ("tz", ctx.cfg.tz), ("start", ctx.start), ("end", ctx.«end»), ("now", ctx.now),
-    ("days", Lean.toJson ctx.days), ("rows", Json.arr (rs.map Row.toJson)), ("tables", tablesJson t)]
+    ("days", Lean.toJson ctx.days), ("rows", Json.arr (rs.map Row.toJson))]
+
+/-- `tables-<slug>.json`: the five tables, the input of `session-report yaml`. -/
+def tablesFileJson (t : Tables) : Json := Json.mkObj [("tables", tablesJson t)]
 
 -- ---------------------------------------------------------------- Markdown
 

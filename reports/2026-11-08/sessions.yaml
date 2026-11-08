@@ -119,7 +119,7 @@
   created_in_window: false
   acus: 564.894967
   acus_scope: older
-  working_seconds: 15259
+  working_seconds: 15970
   shell: 422
   edits: 103
   reads: 23
@@ -210,7 +210,7 @@
   created_in_window: false
   acus: 2712.682540
   acus_scope: older
-  working_seconds: 51318
+  working_seconds: 52029
   shell: 1051
   edits: 114
   reads: 5
@@ -272,7 +272,7 @@
   created_in_window: true
   acus: 41.989566
   acus_scope: spillsPast
-  working_seconds: 11680
+  working_seconds: 12391
   shell: 182
   edits: 30
   reads: 44
@@ -337,7 +337,7 @@
   created_in_window: true
   acus: 44.227959
   acus_scope: spillsPast
-  working_seconds: 4443
+  working_seconds: 5154
   shell: 70
   edits: 19
   reads: 13
@@ -396,7 +396,7 @@
   created_in_window: true
   acus: 49.501933
   acus_scope: spillsPast
-  working_seconds: 16237
+  working_seconds: 16948
   shell: 218
   edits: 28
   reads: 44
