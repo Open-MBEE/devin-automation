@@ -1,0 +1,16 @@
+# Devin session report (daily / weekly / monthly)
+
+Produce a report of the requesting user's Devin sessions grouped by project (repository) then session, for one window: a day, a Mon–Sun week, or a calendar month. The report is for Nicolas Rouquette (user id `user-949478cfacab4d699a4535f534afaf70`, timezone `America/Los_Angeles`) unless the prompt says otherwise. The tooling lives in the repository `Open-MBEE/devin-automation` (`README.md` there explains the numbers and their caveats).
+
+## Procedure
+
+1. Work out the window from the prompt (kind = `daily` | `weekly` | `monthly`; `--start` = first day, `--end` = the day AFTER the last day, both `YYYY-MM-DD` in the user's timezone). Convert both to unix seconds at local midnight:
+   `python3 -c "import datetime as dt; from zoneinfo import ZoneInfo; TZ=ZoneInfo('America/Los_Angeles'); print(int(dt.datetime(Y,M,D,tzinfo=TZ).timestamp()))"`.
+2. `git clone https://github.com/Open-MBEE/devin-automation ~/repos/devin-automation` (or `git -C ~/repos/devin-automation pull` if it is already there) and start `lake build` in that directory in the background now (`setsid nohup bash -c 'cd ~/repos/devin-automation && lake build > /tmp/da-build.log 2>&1; echo exit=$? >> /tmp/da-build.log' &`) — it takes ~10 minutes cold and overlaps with the collection.
+3. Collect: read `~/repos/devin-automation/session-report/collect.py`, replace `__START__`, `__END__` with the unix seconds, `__USER__` with the user id and `__OUT__` with `/home/ubuntu/report/data.json`, and run the result as the `script` of the `scripted_tools` tool with `timeout_secs` 7200 (it pages the Devin session-search and session-events APIs; a week takes ~5 minutes, a month ~30). The script body must be inline — do not `exec(open(...))` it.
+4. Build: `mkdir -p ~/report && python3 ~/repos/devin-automation/session-report/build.py --kind <kind> --start <start> --end <end>` → `~/report/devin-report-<slug>.md` and `~/report/report-<slug>.json`.
+5. YAML tables: wait for `exit=0` in `/tmp/da-build.log`, then `~/repos/devin-automation/.lake/build/bin/session-report-yaml ~/report/report-<slug>.json ~/report/yaml/<slug>` followed by `session-report-yaml --check ~/report/yaml/<slug>/*.yaml`; both must exit 0 (a non-zero exit means the data does not fit the schema — report it, do not hand-edit). Then `cd ~/report/yaml && zip -r ../devin-report-<slug>-yaml.zip <slug>`.
+6. HTML: invoke the `devin-artifact` skill, then `html_artifact_compile` with `body_path=~/repos/devin-automation/session-report/body.html`, `data_path=~/report/report-<slug>.json`, `output_path=~/report/devin-report-<slug>.html`, `screenshot=false`.
+7. Deliver with `message_user`, attaching the `.html`, the `.md` and the YAML zip (pin them), with a 3–5 line summary: sessions, projects, working time, PRs opened, the top 3 projects by working time, and the standing caveats (ACUs are session-lifetime totals: † = created before the window, ‡ = created in it but still active after it, so only unmarked sessions' ACUs belong to the window alone; working time is the status-working proxy for VM time; the API exposes no VM size). Do not restate the tables in the message.
+
+Never quote a dollar figure: ACUs only (the per-ACU rate is in the account's contract). Do not write to the repository.

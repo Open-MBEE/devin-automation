@@ -1,0 +1,177 @@
+<div id="root"></div>
+<script type="text/jsx">
+const rows = data.rows;
+const DAYS = data.days;
+const KIND = data.kind || "weekly";
+const TODAY = DAYS[DAYS.length - 1];
+const TZ = data.tz || "America/Los_Angeles";
+const PERIOD = KIND === "monthly" ? "month" : KIND === "weekly" ? "week" : "day";
+const fmtTime = (t) => new Date(t * 1000).toLocaleString("en-US", { timeZone: TZ, month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false });
+const hms = (s) => { const m = Math.round(s / 60); const h = Math.floor(m / 60); return h ? `${h}h${String(m % 60).padStart(2, "0")}` : `${m}m`; };
+const hrs = (s) => Math.round(s / 360) / 10;
+const dayLabel = (iso) => new Date(iso + "T12:00:00Z").toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", timeZone: "UTC" });
+const sum = (xs) => xs.reduce((a, b) => a + b, 0);
+const wsum = (r) => sum(Object.values(r.working));
+const actsIn = (r, day) => { const out = { shell: 0, edits: 0, reads: 0, git: 0, mcp: 0, devin_msgs: 0, user_msgs: 0, web: 0 }; for (const [d, a] of Object.entries(r.actions_by_day)) { if (!day || d === day) for (const k in out) out[k] += a[k] || 0; } return out; };
+const actsTotal = (a) => a.shell + a.edits + a.reads + a.git + a.mcp + a.devin_msgs + a.web;
+const actsStr = (a) => `${a.shell} sh · ${a.edits} ed · ${a.reads} rd · ${a.git} git · ${a.mcp} mcp · ${a.devin_msgs}+${a.user_msgs} msg`;
+const kind = (r) => (r.parent ? `child of ${r.parent.slice(0, 8)}` : r.origin);
+const groupBy = (rs, f) => { const m = new Map(); for (const r of rs) { const k = f(r); if (!m.has(k)) m.set(k, []); m.get(k).push(r); } return m; };
+const prState = (s) => s === "merged" ? "success" : s === "open" ? "blue" : "default";
+
+const projects = [...groupBy(rows, (r) => r.project).entries()]
+  .map(([p, rs]) => ({ project: p, rows: rs, working: sum(rs.map(wsum)), acusNew: sum(rs.filter((r) => r.acus_scope === "in").map((r) => r.acus)), acusSpill: sum(rs.filter((r) => r.acus_scope === "spills").map((r) => r.acus)), acusOld: sum(rs.filter((r) => r.acus_scope === "older").map((r) => r.acus)), prs: sum(rs.map((r) => r.prs_created.length)), actions: sum(rs.map((r) => actsTotal(actsIn(r)))), capped: rs.some((r) => r.actions_capped) }))
+  .sort((a, b) => b.working - a.working);
+const topProjects = projects.filter((p) => p.working > 1800).slice(0, 8).map((p) => p.project);
+const shortDay = (iso) => new Date(iso + "T12:00:00Z").toLocaleDateString("en-US", KIND === "monthly" ? { day: "numeric", timeZone: "UTC" } : { weekday: "short", month: "short", day: "numeric", timeZone: "UTC" });
+const series = Object.fromEntries(topProjects.map((p, i) => [p, { label: p.replace(/^(Open-MBEE|nasa-jpl)\//, ""), color: chartColors[i % chartColors.length] }]));
+series.other = { label: "Other", color: chartColors[8] };
+const chartRows = DAYS.map((d) => { const o = { day: shortDay(d), other: 0 }; for (const p of projects) { const h = hrs(sum(p.rows.map((r) => r.working[d] || 0))); if (topProjects.includes(p.project)) o[p.project] = h; else o.other += h; } o.other = Math.round(o.other * 10) / 10; return o; });
+
+function PrLinks({ prs, project }) {
+  if (!prs.length) return <Text size={12} className="text-secondary">—</Text>;
+  return <div className="flex flex-wrap gap-1">{prs.map((p) => (
+    <ExternalLink key={p.url} href={p.url}><Badge variant={prState(p.state)} size="sm">{p.repo === project ? "" : p.repo.split("/")[1] + " "}#{p.num} {p.state}</Badge></ExternalLink>
+  ))}</div>;
+}
+
+function SessionRow({ r, day, project }) {
+  const a = actsIn(r, day);
+  const prs = day ? r.prs_created.filter((p) => p.day === day) : r.prs_created;
+  const w = day ? (r.working[day] || 0) : wsum(r);
+  return (
+    <TableRow>
+      <TableCell><div className="flex flex-col gap-0.5"><ExternalLink href={r.url}>{r.title}</ExternalLink><Text size={11} className="text-secondary">{kind(r)} · {r.mode} · {r.status} · created {fmtTime(r.created)}{r.repos && r.repos.length ? " · " + r.repos.join(", ") : ""}</Text></div></TableCell>
+      <TableCell className="whitespace-nowrap">{hms(w)}</TableCell>
+      <TableCell className="whitespace-nowrap">{r.acus.toFixed(1)}{r.acus_scope === "older" ? " †" : r.acus_scope === "spills" ? " ‡" : ""}</TableCell>
+      <TableCell className="min-w-[260px]"><Text size={11} className="font-mono">{r.actions_capped ? "≥ " : ""}{actsStr(a)}</Text></TableCell>
+      <TableCell className="min-w-[300px]"><PrLinks prs={prs} project={project} /></TableCell>
+    </TableRow>
+  );
+}
+
+function ProjectTable({ project, rs, day }) {
+  const sorted = [...rs].sort((x, y) => ((day ? (y.working[day] || 0) : wsum(y)) - (day ? (x.working[day] || 0) : wsum(x))));
+  return (
+    <Table>
+      <TableHeader><TableRow><TableHead>Session</TableHead><TableHead>Working</TableHead><TableHead>ACUs</TableHead><TableHead>Actions ({day ? "day" : PERIOD})</TableHead><TableHead>PRs opened ({day ? "day" : PERIOD})</TableHead></TableRow></TableHeader>
+      <TableBody>{sorted.map((r) => <SessionRow key={r.id} r={r} day={day} project={project} />)}</TableBody>
+    </Table>
+  );
+}
+
+function ProjectSection({ project, rs, day, defaultOpen }) {
+  const [open, setOpen] = useState(defaultOpen);
+  const w = sum(rs.map((r) => (day ? (r.working[day] || 0) : wsum(r))));
+  const prs = sum(rs.map((r) => (day ? r.prs_created.filter((p) => p.day === day) : r.prs_created).length));
+  return (
+    <CollapsibleRoot open={open} onOpenChange={setOpen}>
+      <CardContent>
+        <CardBody>
+          <CollapsibleTrigger className="w-full" caretPosition="left">
+            <div className="flex items-center justify-between gap-3 cursor-pointer">
+              <Text size={14} weight="semibold">{project}</Text>
+              <Text size={12} className="text-secondary">{rs.length} session{rs.length === 1 ? "" : "s"} · {hms(w)} working · {prs} PR{prs === 1 ? "" : "s"}</Text>
+            </div>
+          </CollapsibleTrigger>
+          <CollapsiblePanel><div className="mt-3"><ProjectTable project={project} rs={rs} day={day} /></div></CollapsiblePanel>
+        </CardBody>
+      </CardContent>
+    </CollapsibleRoot>
+  );
+}
+
+function Daily() {
+  const [day, setDay] = useState(TODAY);
+  const rs = rows.filter((r) => (r.working[day] || 0) >= 60 || actsTotal(actsIn(r, day)) > 0 || r.prs_created.some((p) => p.day === day));
+  const groups = [...groupBy(rs, (r) => r.project).entries()].sort((a, b) => sum(b[1].map((r) => r.working[day] || 0)) - sum(a[1].map((r) => r.working[day] || 0)));
+  const w = sum(rs.map((r) => r.working[day] || 0));
+  const prs = sum(rs.map((r) => r.prs_created.filter((p) => p.day === day).length));
+  return (
+    <div className="flex flex-col gap-4">
+      {DAYS.length > 1 && <div className="flex items-center gap-3"><Text size={12} className="text-secondary">Day</Text><SimpleSelect options={DAYS.map((d) => ({ value: d, label: dayLabel(d) }))} value={day} onValueChange={setDay} /></div>}
+      <StatsRow>
+        <StatCard label="Sessions active"><StatCardValue>{rs.length}</StatCardValue></StatCard>
+        <StatCard label="Projects"><StatCardValue>{groups.length}</StatCardValue></StatCard>
+        <StatCard label="Working time"><StatCardValue>{hms(w)}</StatCardValue></StatCard>
+        <StatCard label="PRs opened"><StatCardValue>{prs}</StatCardValue></StatCard>
+      </StatsRow>
+      {groups.length === 0 && <Text size={13} className="text-secondary">No session activity on this day.</Text>}
+      {groups.map(([p, g]) => <ProjectSection key={p + day} project={p} rs={g} day={day} defaultOpen={true} />)}
+    </div>
+  );
+}
+
+function Weekly() {
+  const [sortKey, setSortKey] = useState("working");
+  const sorted = [...projects].sort((a, b) => b[sortKey] - a[sortKey]);
+  return (
+    <div className="flex flex-col gap-4">
+      <StatsRow>
+        <StatCard label="Sessions active"><StatCardValue>{rows.length}</StatCardValue><StatCardCaption>{rows.filter((r) => r.created_in_window).length} created this {PERIOD}</StatCardCaption></StatCard>
+        <StatCard label="Projects"><StatCardValue>{projects.length}</StatCardValue></StatCard>
+        <StatCard label="Working time"><StatCardValue>{hms(sum(rows.map(wsum)))}</StatCardValue><StatCardCaption>VM time while Devin was running</StatCardCaption></StatCard>
+        <StatCard label="PRs opened"><StatCardValue>{sum(rows.map((r) => r.prs_created.length))}</StatCardValue></StatCard>
+        <StatCard label={`ACUs, sessions fully in this ${PERIOD}`}><StatCardValue>{Math.round(sum(rows.filter((r) => r.acus_scope === "in").map((r) => r.acus)))}</StatCardValue><StatCardCaption>{Math.round(sum(rows.filter((r) => r.acus_scope !== "in").map((r) => r.acus)))} more in sessions that span the boundary (†/‡)</StatCardCaption></StatCard>
+      </StatsRow>
+      <Text size={14} weight="semibold">Working hours per day, by project</Text>
+      <ChartContainer config={series} style={{ height: 280, width: "100%" }}>
+        <BarChart data={chartRows}>
+          <ChartGrid />
+          <ChartXAxis dataKey="day" />
+          <ChartYAxis title="hours" />
+          <ChartTooltip content={<ChartTooltipContent />} />
+          <ChartLegend content={<ChartLegendContent />} />
+          {topProjects.map((p, i) => <ChartBar key={p} dataKey={p} stackId="a" radius={0} />)}
+          <ChartBar dataKey="other" stackId="a" />
+        </BarChart>
+      </ChartContainer>
+      <Text size={14} weight="semibold">Per-project totals</Text>
+      <Table>
+        <TableHeader><TableRow>
+          <TableHead>Project</TableHead>
+          <TableHead>Sessions (new)</TableHead>
+          <SortableTableHead sort={sortKey === "working" ? "desc" : undefined} onSort={() => setSortKey("working")}>Working</SortableTableHead>
+          <SortableTableHead sort={sortKey === "acusNew" ? "desc" : undefined} onSort={() => setSortKey("acusNew")}>ACUs (fully in window)</SortableTableHead>
+          <SortableTableHead sort={sortKey === "acusSpill" ? "desc" : undefined} onSort={() => setSortKey("acusSpill")}>ACUs ‡ (spill past window)</SortableTableHead>
+          <SortableTableHead sort={sortKey === "acusOld" ? "desc" : undefined} onSort={() => setSortKey("acusOld")}>ACUs † (older sessions)</SortableTableHead>
+          <SortableTableHead sort={sortKey === "actions" ? "desc" : undefined} onSort={() => setSortKey("actions")}>Actions</SortableTableHead>
+          <SortableTableHead sort={sortKey === "prs" ? "desc" : undefined} onSort={() => setSortKey("prs")}>PRs opened</SortableTableHead>
+        </TableRow></TableHeader>
+        <TableBody>{sorted.map((p) => (
+          <TableRow key={p.project}>
+            <TableCell><Text size={13} weight="medium">{p.project}</Text></TableCell>
+            <TableCell>{p.rows.length} ({p.rows.filter((r) => r.created_in_window).length})</TableCell>
+            <TableCell>{hms(p.working)}</TableCell>
+            <TableCell>{p.acusNew ? p.acusNew.toFixed(1) : "—"}</TableCell>
+            <TableCell>{p.acusSpill ? p.acusSpill.toFixed(1) : "—"}</TableCell>
+            <TableCell>{p.acusOld ? p.acusOld.toFixed(1) : "—"}</TableCell>
+            <TableCell>{p.capped ? "≥ " : ""}{p.actions.toLocaleString()}</TableCell>
+            <TableCell>{p.prs}</TableCell>
+          </TableRow>
+        ))}</TableBody>
+      </Table>
+      <Text size={14} weight="semibold">Sessions by project</Text>
+      {projects.map((p, i) => <ProjectSection key={p.project} project={p.project} rs={p.rows} day={null} defaultOpen={i < 3} />)}
+    </div>
+  );
+}
+
+function Report() {
+  const start = new Date(data.start * 1000).toLocaleString("en-US", { timeZone: TZ, weekday: "short", month: "short", day: "numeric" });
+  const end = new Date(data.now * 1000).toLocaleString("en-US", { timeZone: TZ, weekday: "short", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit", hour12: false });
+  return (
+    <PageLayout title={`Devin sessions by project — ${data.label}`} subtitle={`${data.who}'s sessions, ${start} – ${end} (${TZ}).`} themeToggle>
+      <TabsRoot defaultValue={KIND === "daily" ? "daily" : "period"}>
+        <TabsList><Tab value="period">{KIND === "daily" ? "Day" : KIND === "weekly" ? "Week" : "Month"}</Tab>{KIND !== "daily" && <Tab value="daily">Day by day</Tab>}</TabsList>
+        <TabsPanel value="period"><div className="pt-4">{KIND === "daily" ? <Daily /> : <Weekly />}</div></TabsPanel>
+        {KIND !== "daily" && <TabsPanel value="daily"><div className="pt-4"><Daily /></div></TabsPanel>}
+      </TabsRoot>
+      <Footnote>
+        Source: Devin session API (session search + per-session event timeline), read on {end} PT. Working time = intervals from a "status: working" event to the next blocked/finished/suspended event, clipped to the window and split at local midnight; it excludes time the session slept or waited for you. Actions = event counts (sh shell commands, ed file-edit batches, rd file-read batches, git PR/CI operations, mcp MCP/Devin-API calls, msg Devin+user messages), bucketed by UTC day. ACUs are session-lifetime totals from the API (no per-day breakdown exists): † marks sessions created before the window and ‡ sessions created in it but still active after it; neither is attributable to the window alone. Projects group forks/mirrors of a repository under its name; each session lists the repositories it touched. The API does not expose VM size or performance class; "mode" is the agent mode.
+      </Footnote>
+    </PageLayout>
+  );
+}
+render(<Report />);
+</script>

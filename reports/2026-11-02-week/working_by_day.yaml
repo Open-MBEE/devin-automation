@@ -1,0 +1,254 @@
+%YAML 1.2
+---
+-
+  project: (Devin environment)
+  day: 2026-11-03
+  working_seconds: 1853
+-
+  project: (Devin housekeeping)
+  day: 2026-11-04
+  working_seconds: 545
+-
+  project: (no repository)
+  day: 2026-11-03
+  working_seconds: 280
+-
+  project: (no repository)
+  day: 2026-11-04
+  working_seconds: 127
+-
+  project: (no repository)
+  day: 2026-11-05
+  working_seconds: 241
+-
+  project: (no repository)
+  day: 2026-11-08
+  working_seconds: 3583
+-
+  project: L4YAML
+  day: 2026-11-02
+  working_seconds: 30537
+-
+  project: L4YAML
+  day: 2026-11-03
+  working_seconds: 23135
+-
+  project: L4YAML
+  day: 2026-11-04
+  working_seconds: 25219
+-
+  project: L4YAML
+  day: 2026-11-05
+  working_seconds: 9590
+-
+  project: L4YAML
+  day: 2026-11-06
+  working_seconds: 47674
+-
+  project: L4YAML
+  day: 2026-11-07
+  working_seconds: 42863
+-
+  project: L4YAML
+  day: 2026-11-08
+  working_seconds: 33488
+-
+  project: OpenSysML
+  day: 2026-11-02
+  working_seconds: 64986
+-
+  project: OpenSysML
+  day: 2026-11-03
+  working_seconds: 41489
+-
+  project: OpenSysML
+  day: 2026-11-04
+  working_seconds: 55102
+-
+  project: OpenSysML
+  day: 2026-11-05
+  working_seconds: 38897
+-
+  project: OpenSysML
+  day: 2026-11-06
+  working_seconds: 66135
+-
+  project: OpenSysML
+  day: 2026-11-07
+  working_seconds: 60874
+-
+  project: OpenSysML
+  day: 2026-11-08
+  working_seconds: 58187
+-
+  project: PropertyKindCalculus
+  day: 2026-11-02
+  working_seconds: 26
+-
+  project: PropertyKindCalculus
+  day: 2026-11-03
+  working_seconds: 31
+-
+  project: PropertyKindCalculus
+  day: 2026-11-04
+  working_seconds: 26
+-
+  project: PropertyKindCalculus
+  day: 2026-11-05
+  working_seconds: 26
+-
+  project: PropertyKindCalculus
+  day: 2026-11-06
+  working_seconds: 4629
+-
+  project: PropertyKindCalculus
+  day: 2026-11-07
+  working_seconds: 21
+-
+  project: PropertyKindCalculus
+  day: 2026-11-08
+  working_seconds: 22
+-
+  project: calm
+  day: 2026-11-06
+  working_seconds: 557
+-
+  project: certified-learned-surrogates
+  day: 2026-11-02
+  working_seconds: 330
+-
+  project: certified-learned-surrogates
+  day: 2026-11-04
+  working_seconds: 243
+-
+  project: engineering-foundation-architecture
+  day: 2026-11-03
+  working_seconds: 4319
+-
+  project: engineering-foundation-architecture
+  day: 2026-11-04
+  working_seconds: 2471
+-
+  project: fcheck
+  day: 2026-11-03
+  working_seconds: 363
+-
+  project: fprime-lean-sysmlv2-example
+  day: 2026-11-02
+  working_seconds: 10799
+-
+  project: fprime-lean-sysmlv2-example
+  day: 2026-11-03
+  working_seconds: 81127
+-
+  project: fprime-lean-sysmlv2-example
+  day: 2026-11-04
+  working_seconds: 57422
+-
+  project: fprime-lean-sysmlv2-example
+  day: 2026-11-05
+  working_seconds: 18154
+-
+  project: fprime-lean-sysmlv2-example
+  day: 2026-11-06
+  working_seconds: 53939
+-
+  project: fprime-lean-sysmlv2-example
+  day: 2026-11-07
+  working_seconds: 13047
+-
+  project: fprime-lean-sysmlv2-example
+  day: 2026-11-08
+  working_seconds: 17547
+-
+  project: git-remote-sync.lean
+  day: 2026-11-02
+  working_seconds: 8790
+-
+  project: git-remote-sync.lean
+  day: 2026-11-03
+  working_seconds: 5
+-
+  project: mars.lean
+  day: 2026-11-02
+  working_seconds: 24445
+-
+  project: mars.lean
+  day: 2026-11-03
+  working_seconds: 29634
+-
+  project: mars.lean
+  day: 2026-11-04
+  working_seconds: 42049
+-
+  project: mars.lean
+  day: 2026-11-05
+  working_seconds: 413
+-
+  project: mars.lean
+  day: 2026-11-06
+  working_seconds: 18607
+-
+  project: mars.lean
+  day: 2026-11-07
+  working_seconds: 1117
+-
+  project: mars.lean
+  day: 2026-11-08
+  working_seconds: 15211
+-
+  project: pacti.lean
+  day: 2026-11-08
+  working_seconds: 649
+-
+  project: soil-moisture-dps
+  day: 2026-11-08
+  working_seconds: 3676
+-
+  project: soil-moisture-model
+  day: 2026-11-02
+  working_seconds: 13963
+-
+  project: soil-moisture-model
+  day: 2026-11-03
+  working_seconds: 5
+-
+  project: soil-moisture-model
+  day: 2026-11-04
+  working_seconds: 49018
+-
+  project: soil-moisture-model
+  day: 2026-11-05
+  working_seconds: 11159
+-
+  project: soil-moisture-model
+  day: 2026-11-06
+  working_seconds: 30239
+-
+  project: soil-moisture-model
+  day: 2026-11-07
+  working_seconds: 5503
+-
+  project: soil-moisture-model
+  day: 2026-11-08
+  working_seconds: 13560
+-
+  project: soil-moisture-workflows
+  day: 2026-11-02
+  working_seconds: 263
+-
+  project: soil-moisture-workflows
+  day: 2026-11-03
+  working_seconds: 11
+-
+  project: soil-moisture-workflows
+  day: 2026-11-06
+  working_seconds: 20111
+-
+  project: soil-moisture-workflows
+  day: 2026-11-07
+  working_seconds: 13163
+-
+  project: soil-moisture-workflows
+  day: 2026-11-08
+  working_seconds: 4581

@@ -1,0 +1,37 @@
+%YAML 1.2
+---
+table: sessions
+description: One row per session active in the window (created in it, or with working time, actions or PRs in it).
+row:
+  session_id:        { type: "!!str", description: Devin session id without the devin- prefix. }
+  url:               { type: "!!str", description: Session URL in the Devin web app. }
+  title:             { type: "!!str" }
+  project:           { type: "!!str", description: Project the session is grouped under (see project_totals). }
+  repos:             { type: "!!seq", items: { type: "!!str" }, description: owner/repo of every repository the session touched. }
+  origin:            { type: "!!str", description: webapp, api (child session), automation, slack, ... }
+  parent_session_id: { type: ["!!str", "!!null"], description: Parent session id for a child session. }
+  mode:              { type: ["!!str", "!!null"], description: Agent mode (ultra, normal, fusion, fast). Not the VM size, which the API does not expose. }
+  status:            { type: "!!str", description: Status at collection time, e.g. "suspended (inactivity)". }
+  created:           { type: "!!str", format: iso-8601 }
+  created_in_window: { type: "!!bool" }
+  acus:              { type: "!!float", description: Session-lifetime ACU total from the API. }
+  acus_scope:        { type: "!!str", enum: [inWindow, spillsPast, older], description: How acus relates to the window (see project_totals). }
+  working_seconds:   { type: "!!int" }
+  shell:             { type: "!!int", description: Shell commands started. }
+  edits:             { type: "!!int", description: File-edit batches. }
+  reads:             { type: "!!int", description: File-read batches. }
+  git:               { type: "!!int", description: PR created / CI checks / PR comments / PR views / PR updates. }
+  mcp:               { type: "!!int", description: MCP and Devin-API tool calls. }
+  devin_messages:    { type: "!!int" }
+  user_messages:     { type: "!!int" }
+  web:               { type: "!!int", description: Web searches, page fetches, computer use. }
+  actions_capped:    { type: "!!bool", description: Counts are lower bounds when true. }
+  prs_opened:
+    type: "!!seq"
+    description: Pull requests opened by the session inside the window.
+    items:
+      url:    { type: "!!str" }
+      repo:   { type: "!!str", description: owner/repo }
+      number: { type: "!!int" }
+      state:  { type: "!!str", description: open, merged, closed, or "?" when unknown. }
+      day:    { type: "!!str", format: date }

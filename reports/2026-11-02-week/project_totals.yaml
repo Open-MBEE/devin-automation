@@ -1,0 +1,189 @@
+%YAML 1.2
+---
+-
+  project: OpenSysML
+  sessions: 2
+  sessions_created: 1
+  working_seconds: 385670
+  acus_in_window: 0.000000
+  acus_spilling: 36.731738
+  acus_older: 2689.897299
+  actions: 11207
+  actions_capped: false
+  prs_opened: 48
+-
+  project: fprime-lean-sysmlv2-example
+  sessions: 24
+  sessions_created: 24
+  working_seconds: 252035
+  acus_in_window: 1239.903950
+  acus_spilling: 405.299361
+  acus_older: 0.000000
+  actions: 7304
+  actions_capped: false
+  prs_opened: 35
+-
+  project: L4YAML
+  sessions: 6
+  sessions_created: 3
+  working_seconds: 212506
+  acus_in_window: 175.141425
+  acus_spilling: 538.596484
+  acus_older: 4609.350069
+  actions: 7093
+  actions_capped: false
+  prs_opened: 63
+-
+  project: mars.lean
+  sessions: 4
+  sessions_created: 3
+  working_seconds: 131476
+  acus_in_window: 121.094697
+  acus_spilling: 0.000000
+  acus_older: 3526.159273
+  actions: 10487
+  actions_capped: false
+  prs_opened: 102
+-
+  project: soil-moisture-model
+  sessions: 6
+  sessions_created: 5
+  working_seconds: 123447
+  acus_in_window: 124.478399
+  acus_spilling: 132.122212
+  acus_older: 216.924742
+  actions: 7318
+  actions_capped: false
+  prs_opened: 62
+-
+  project: soil-moisture-workflows
+  sessions: 5
+  sessions_created: 5
+  working_seconds: 38129
+  acus_in_window: 140.330350
+  acus_spilling: 343.672083
+  acus_older: 0.000000
+  actions: 2811
+  actions_capped: false
+  prs_opened: 21
+-
+  project: git-remote-sync.lean
+  sessions: 1
+  sessions_created: 0
+  working_seconds: 8795
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 649.878890
+  actions: 767
+  actions_capped: false
+  prs_opened: 9
+-
+  project: engineering-foundation-architecture
+  sessions: 4
+  sessions_created: 4
+  working_seconds: 6790
+  acus_in_window: 81.745877
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 360
+  actions_capped: false
+  prs_opened: 7
+-
+  project: PropertyKindCalculus
+  sessions: 8
+  sessions_created: 8
+  working_seconds: 4781
+  acus_in_window: 21.548724
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 91
+  actions_capped: false
+  prs_opened: 1
+-
+  project: (no repository)
+  sessions: 5
+  sessions_created: 5
+  working_seconds: 4231
+  acus_in_window: 14.281900
+  acus_spilling: 9.241683
+  acus_older: 0.000000
+  actions: 596
+  actions_capped: false
+  prs_opened: 0
+-
+  project: soil-moisture-dps
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 3676
+  acus_in_window: 43.091810
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 294
+  actions_capped: false
+  prs_opened: 2
+-
+  project: (Devin environment)
+  sessions: 2
+  sessions_created: 2
+  working_seconds: 1853
+  acus_in_window: 16.710507
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 77
+  actions_capped: false
+  prs_opened: 0
+-
+  project: pacti.lean
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 649
+  acus_in_window: 10.127633
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 41
+  actions_capped: false
+  prs_opened: 1
+-
+  project: certified-learned-surrogates
+  sessions: 1
+  sessions_created: 0
+  working_seconds: 573
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 20.298012
+  actions: 97
+  actions_capped: false
+  prs_opened: 4
+-
+  project: calm
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 557
+  acus_in_window: 9.027172
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 86
+  actions_capped: false
+  prs_opened: 1
+-
+  project: (Devin housekeeping)
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 545
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 153
+  actions_capped: false
+  prs_opened: 0
+-
+  project: fcheck
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 363
+  acus_in_window: 4.421631
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 29
+  actions_capped: false
+  prs_opened: 1

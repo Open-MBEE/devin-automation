@@ -1,0 +1,1231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content="Devin artifact kit" />
+    <title>Artifact</title>
+    <script>
+      // A network that blocks the kit's host (or hands back a block page for it) leaves the page blank; say so instead. Styled like the
+      // ds error alert card (ChatAlertCard variant="error", no bar), values hardcoded: the kit CSS is what failed.
+      function artifactKitFailed() {
+        function show() {
+          if (document.getElementById("artifact-kit-notice")) return;
+          document.documentElement.style.colorScheme = "light";
+          var notice = document.createElement("div");
+          notice.id = "artifact-kit-notice";
+          notice.setAttribute("role", "alert");
+          notice.style.cssText =
+            "box-sizing:border-box;display:flex;align-items:flex-start;gap:6px;max-width:960px;margin:0 auto;padding:32px 24px 0;" +
+            "font:13px/18px Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:-0.005em;color:rgb(25 25 25)";
+          var ns = "http://www.w3.org/2000/svg";
+          var icon = document.createElementNS(ns, "svg");
+          icon.setAttribute("viewBox", "0 0 24 24");
+          icon.setAttribute("fill", "rgb(245 59 58)");
+          icon.setAttribute("aria-hidden", "true");
+          icon.style.cssText = "width:14px;height:14px;flex-shrink:0;margin-top:2px";
+          var path = document.createElementNS(ns, "path");
+          path.setAttribute("fill-rule", "evenodd");
+          path.setAttribute("clip-rule", "evenodd");
+          path.setAttribute(
+            "d",
+            "M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15ZM12 7C11.5858 7 11.25 7.33579 11.25 7.75V12.25C11.25 12.6642 11.5858 13 12 13C12.4142 13 12.75 12.6642 12.75 12.25V7.75C12.75 7.33579 12.4142 7 12 7Z"
+          );
+          icon.appendChild(path);
+          var text = document.createElement("span");
+          text.textContent = "This page could not load Devin's artifact kit.";
+          notice.appendChild(icon);
+          notice.appendChild(text);
+          document.body.prepend(notice);
+        }
+        if (document.body) show();
+        else document.addEventListener("DOMContentLoaded", show);
+      }
+    </script>
+    <link rel="stylesheet" href="https://static.devin.ai/artifact-kit/7088248ad1842d99/ds-kit.css" onerror="artifactKitFailed()" />
+    <style>
+    .mt-3 {
+        margin-top: 0.75rem
+    }
+    .flex {
+        display: flex
+    }
+    .w-full {
+        width: 100%
+    }
+    .min-w-\[260px\] {
+        min-width: 260px
+    }
+    .min-w-\[300px\] {
+        min-width: 300px
+    }
+    .cursor-pointer {
+        cursor: pointer
+    }
+    .flex-col {
+        flex-direction: column
+    }
+    .flex-wrap {
+        flex-wrap: wrap
+    }
+    .items-center {
+        align-items: center
+    }
+    .justify-between {
+        justify-content: space-between
+    }
+    .gap-0\.5 {
+        gap: 0.125rem
+    }
+    .gap-1 {
+        gap: 0.25rem
+    }
+    .gap-3 {
+        gap: 0.75rem
+    }
+    .gap-4 {
+        gap: 1rem
+    }
+    .whitespace-nowrap {
+        white-space: nowrap
+    }
+    .pt-4 {
+        padding-top: 1rem
+    }
+    .font-mono {
+        font-family: var(--font-code, Devin Mono), SF Mono, Roboto Mono, ui-monospace, monospace
+    }
+    .text-secondary {
+        color: rgb(var(--text-secondary))
+    }
+    .filter {
+        filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+    }
+    @keyframes enter {
+        from {
+            opacity: var(--tw-enter-opacity, 1);
+            transform: translate3d(var(--tw-enter-translate-x, 0), var(--tw-enter-translate-y, 0), 0) scale3d(var(--tw-enter-scale, 1), var(--tw-enter-scale, 1), var(--tw-enter-scale, 1)) rotate(var(--tw-enter-rotate, 0))
+        }
+    }
+    @keyframes exit {
+        to {
+            opacity: var(--tw-exit-opacity, 1);
+            transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0) scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0))
+        }
+    }
+    .running {
+        animation-play-state: running
+    }
+    </style>
+  </head>
+  <body>
+    <script src="https://static.devin.ai/artifact-kit/7088248ad1842d99/ds-kit.js" onerror="artifactKitFailed()"></script>
+    <script>
+      if (!window.DS) artifactKitFailed();
+    </script>
+    <main data-artifact-shell class="mx-auto flex max-w-[960px] flex-col gap-6 px-6 py-8">
+<script type="application/json" id="artifact-data">{
+ "kind": "daily",
+ "label": "Sunday 2026-11-08",
+ "who": "Nicolas Rouquette",
+ "tz": "America/Los_Angeles",
+ "start": 1794124800.0,
+ "end": 1794211200.0,
+ "now": 1794172223.893082,
+ "days": [
+  "2026-11-08"
+ ],
+ "rows": [
+  {
+   "id": "4510463cea924ec4b35fdbbc8381594c",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/4510463cea924ec4b35fdbbc8381594c",
+   "title": "Find inflection-point session link",
+   "project": "(no repository)",
+   "pr_repos": [],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "running (waiting_for_user)",
+   "parent": null,
+   "category": null,
+   "created": 1794169622.0,
+   "created_in_window": true,
+   "acus": 4.928492098139506,
+   "working": {
+    "2026-11-08": 279.0
+   },
+   "acus_scope": "spills",
+   "repos": [],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 12,
+     "edits": 0,
+     "reads": 0,
+     "git": 0,
+     "mcp": 513,
+     "devin_msgs": 2,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [],
+   "actions_capped": false
+  },
+  {
+   "id": "438880735ee9439eb71a124cbe26cd23",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/438880735ee9439eb71a124cbe26cd23",
+   "title": "Daily and Weekly Session Reports",
+   "project": "(no repository)",
+   "pr_repos": [],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "running (working)",
+   "parent": null,
+   "category": null,
+   "created": 1794170390.0,
+   "created_in_window": true,
+   "acus": 4.313191083251852,
+   "working": {
+    "2026-11-08": 1832.8930819034576
+   },
+   "acus_scope": "spills",
+   "repos": [],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 3,
+     "edits": 0,
+     "reads": 0,
+     "git": 0,
+     "mcp": 11,
+     "devin_msgs": 2,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [],
+   "actions_capped": false
+  },
+  {
+   "id": "49750a06a48d41b1852199f560a0d9fc",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/49750a06a48d41b1852199f560a0d9fc",
+   "title": "L4YAML 7.7 stream R12: Row 12 item 344 flip (then [82], [210]/[211])",
+   "project": "L4YAML",
+   "pr_repos": [
+    "nasa-jpl/L4YAML"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "24a21977a04949ee91f5ae4088aa3058",
+   "category": "unit_test_generation",
+   "created": 1792776896.0,
+   "created_in_window": false,
+   "acus": 3356.7529186664615,
+   "working": {
+    "2026-11-08": 11251.0
+   },
+   "acus_scope": "older",
+   "repos": [
+    "nasa-jpl/L4YAML"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 233,
+     "edits": 16,
+     "reads": 10,
+     "git": 11,
+     "mcp": 17,
+     "devin_msgs": 36,
+     "user_msgs": 20,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794155758.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/264",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "264",
+     "state": "merged"
+    },
+    {
+     "ts": 1794159795.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/265",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "265",
+     "state": "merged"
+    },
+    {
+     "ts": 1794164111.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/268",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "268",
+     "state": "merged"
+    },
+    {
+     "ts": 1794167626.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/270",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "270",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "24a21977a04949ee91f5ae4088aa3058",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/24a21977a04949ee91f5ae4088aa3058",
+   "title": "Complete parse_iff_grammar proof",
+   "project": "L4YAML",
+   "pr_repos": [
+    "nasa-jpl/L4YAML"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "fb0431c82e0f4dbfb588da010e461b90",
+   "category": "feature_development",
+   "created": 1792770982.0,
+   "created_in_window": false,
+   "acus": 674.1337020683418,
+   "working": {
+    "2026-11-08": 849.0
+   },
+   "acus_scope": "older",
+   "repos": [
+    "nasa-jpl/L4YAML"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 14,
+     "edits": 3,
+     "reads": 0,
+     "git": 4,
+     "mcp": 47,
+     "devin_msgs": 16,
+     "user_msgs": 3,
+     "web": 0
+    }
+   },
+   "prs_created": [],
+   "actions_capped": false
+  },
+  {
+   "id": "6661ae5b28ed42c8aa23bc799e21b980",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/6661ae5b28ed42c8aa23bc799e21b980",
+   "title": "Prove S3 scanner-output obligations for parse_iff_grammar",
+   "project": "L4YAML",
+   "pr_repos": [
+    "nasa-jpl/L4YAML"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "running (working)",
+   "parent": "24a21977a04949ee91f5ae4088aa3058",
+   "category": "feature_development",
+   "created": 1793899914.0,
+   "created_in_window": false,
+   "acus": 538.5964835579313,
+   "working": {
+    "2026-11-08": 12305.893081903458
+   },
+   "acus_scope": "older",
+   "repos": [
+    "nasa-jpl/L4YAML"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 739,
+     "edits": 161,
+     "reads": 87,
+     "git": 15,
+     "mcp": 23,
+     "devin_msgs": 51,
+     "user_msgs": 15,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794155090.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/262",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "262",
+     "state": "merged"
+    },
+    {
+     "ts": 1794162768.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/267",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "267",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "12a32597e3554be1aeeb264f49263290",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/12a32597e3554be1aeeb264f49263290",
+   "title": "Land [211] explicit-only in L4YAML (Row 19)",
+   "project": "L4YAML",
+   "pr_repos": [
+    "nasa-jpl/L4YAML"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "24a21977a04949ee91f5ae4088aa3058",
+   "category": "research_and_exploration",
+   "created": 1793987430.0,
+   "created_in_window": false,
+   "acus": 165.37125501204073,
+   "working": {
+    "2026-11-08": 7611.0
+   },
+   "acus_scope": "older",
+   "repos": [
+    "nasa-jpl/L4YAML"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 138,
+     "edits": 20,
+     "reads": 3,
+     "git": 26,
+     "mcp": 13,
+     "devin_msgs": 30,
+     "user_msgs": 12,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794155502.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/263",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "263",
+     "state": "merged"
+    },
+    {
+     "ts": 1794160630.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/266",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "266",
+     "state": "merged"
+    },
+    {
+     "ts": 1794164366.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/269",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "269",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "18ad47adf36f44e9b6824a4472f9678d",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/18ad47adf36f44e9b6824a4472f9678d",
+   "title": "Plan SysMLv2 QVTS Language and Workflows",
+   "project": "OpenSysML",
+   "pr_repos": [
+    "Open-MBEE/qvts",
+    "Open-MBEE/OpenSysML",
+    "Open-MBEE/OpenSysML-Extensions-Library",
+    "Open-MBEE/engineering-foundation-architecture"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "running (working)",
+   "parent": null,
+   "category": "bug_fixing",
+   "created": 1793042933.0,
+   "created_in_window": false,
+   "acus": 2689.8972991141495,
+   "working": {
+    "2026-11-08": 47423.89308190346
+   },
+   "acus_scope": "older",
+   "repos": [
+    "Open-MBEE/OpenSysML",
+    "Open-MBEE/OpenSysML-Extensions-Library",
+    "Open-MBEE/engineering-foundation-architecture",
+    "Open-MBEE/qvts"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 1237,
+     "edits": 161,
+     "reads": 9,
+     "git": 62,
+     "mcp": 29,
+     "devin_msgs": 27,
+     "user_msgs": 7,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794130315.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/2057",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "2057",
+     "state": "merged"
+    },
+    {
+     "ts": 1794139252.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/2059",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "2059",
+     "state": "merged"
+    },
+    {
+     "ts": 1794149750.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/2060",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "2060",
+     "state": "merged"
+    },
+    {
+     "ts": 1794151448.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/2061",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "2061",
+     "state": "merged"
+    },
+    {
+     "ts": 1794167030.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/2063",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "2063",
+     "state": "open"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "4eac7d670b61499ea2a95a5babd91b78",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/4eac7d670b61499ea2a95a5babd91b78",
+   "title": "Add comment serialization support in OpenSysML",
+   "project": "OpenSysML",
+   "pr_repos": [
+    "Open-MBEE/OpenSysML"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "running (working)",
+   "parent": null,
+   "category": null,
+   "created": 1794164401.0,
+   "created_in_window": true,
+   "acus": 36.73173830718848,
+   "working": {
+    "2026-11-08": 7819.893081903458
+   },
+   "acus_scope": "spills",
+   "repos": [
+    "Open-MBEE/OpenSysML"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 167,
+     "edits": 25,
+     "reads": 44,
+     "git": 4,
+     "mcp": 8,
+     "devin_msgs": 3,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794169647.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/2064",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "2064",
+     "state": "open"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "85b1ad601c9c433fa0e50cf98797ca68",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/85b1ad601c9c433fa0e50cf98797ca68",
+   "title": "Remediate PropertyKindCalculus scan findings",
+   "project": "PropertyKindCalculus",
+   "pr_repos": [],
+   "origin": "automation",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "code_review",
+   "created": 1794146503.0,
+   "created_in_window": true,
+   "acus": 1.0775323882304526,
+   "working": {
+    "2026-11-08": 22.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "nasa-jpl/PropertyKindCalculus"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 0,
+     "edits": 0,
+     "reads": 0,
+     "git": 0,
+     "mcp": 1,
+     "devin_msgs": 2,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [],
+   "actions_capped": false
+  },
+  {
+   "id": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/a8a1adef279a4c009e8e3cd7e4a0a115",
+   "title": "Plan fprime-lean-sysmlv2-example structure",
+   "project": "fprime-lean-sysmlv2-example",
+   "pr_repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "running (waiting_for_user)",
+   "parent": null,
+   "category": "feature_development",
+   "created": 1793679495.0,
+   "created_in_window": false,
+   "acus": 367.50652802888806,
+   "working": {
+    "2026-11-08": 371.0
+   },
+   "acus_scope": "older",
+   "repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 19,
+     "edits": 3,
+     "reads": 1,
+     "git": 2,
+     "mcp": 13,
+     "devin_msgs": 18,
+     "user_msgs": 6,
+     "web": 0
+    }
+   },
+   "prs_created": [],
+   "actions_capped": false
+  },
+  {
+   "id": "225a0e60d25a402dafedef75ff57f5f6",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/225a0e60d25a402dafedef75ff57f5f6",
+   "title": "Q11: M1 packets = 5, measure time-refinement cost",
+   "project": "fprime-lean-sysmlv2-example",
+   "pr_repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "category": "feature_development",
+   "created": 1794118180.0,
+   "created_in_window": false,
+   "acus": 48.37638182499712,
+   "working": {
+    "2026-11-08": 3330.0
+   },
+   "acus_scope": "older",
+   "repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 216,
+     "edits": 26,
+     "reads": 45,
+     "git": 2,
+     "mcp": 4,
+     "devin_msgs": 7,
+     "user_msgs": 3,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794126608.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/106",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "106",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "72924cd7c7f94fc7b262db29ed4b1e38",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/72924cd7c7f94fc7b262db29ed4b1e38",
+   "title": "Realize overflow in full: M1 time refinement r=4",
+   "project": "fprime-lean-sysmlv2-example",
+   "pr_repos": [],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "running (working)",
+   "parent": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "category": null,
+   "created": 1794159770.0,
+   "created_in_window": true,
+   "acus": 37.792833202157205,
+   "working": {
+    "2026-11-08": 12374.893081903458
+   },
+   "acus_scope": "spills",
+   "repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 154,
+     "edits": 22,
+     "reads": 37,
+     "git": 0,
+     "mcp": 4,
+     "devin_msgs": 5,
+     "user_msgs": 3,
+     "web": 0
+    }
+   },
+   "prs_created": [],
+   "actions_capped": false
+  },
+  {
+   "id": "1fbba99fbf8446d3a9ffe2110715fac4",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/1fbba99fbf8446d3a9ffe2110715fac4",
+   "title": "Formalize Mars Model in Lean",
+   "project": "mars.lean",
+   "pr_repos": [
+    "Open-MBEE/mars.lean",
+    "nasa-jpl/PropertyKindCalculus",
+    "Open-MBEE/pacti.lean"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "feature_development",
+   "created": 1792638399.0,
+   "created_in_window": false,
+   "acus": 3526.159273266071,
+   "working": {
+    "2026-11-08": 4599.0
+   },
+   "acus_scope": "older",
+   "repos": [
+    "Open-MBEE/mars",
+    "Open-MBEE/mars.lean",
+    "Open-MBEE/pacti.lean",
+    "nasa-jpl/PropertyKindCalculus"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 154,
+     "edits": 61,
+     "reads": 20,
+     "git": 13,
+     "mcp": 26,
+     "devin_msgs": 34,
+     "user_msgs": 14,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794152636.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/nasa-jpl/PropertyKindCalculus/pull/108",
+     "repo": "nasa-jpl/PropertyKindCalculus",
+     "num": "108",
+     "state": "merged"
+    },
+    {
+     "ts": 1794152711.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/321",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "321",
+     "state": "merged"
+    },
+    {
+     "ts": 1794154272.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/322",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "322",
+     "state": "merged"
+    },
+    {
+     "ts": 1794155510.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/323",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "323",
+     "state": "merged"
+    },
+    {
+     "ts": 1794160321.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/324",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "324",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "42e0d0ccad3644b191264d6da75ee7cc",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/42e0d0ccad3644b191264d6da75ee7cc",
+   "title": "Read OpenSysML api-json back into the SysML Doc",
+   "project": "mars.lean",
+   "pr_repos": [
+    "Open-MBEE/mars.lean"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "1fbba99fbf8446d3a9ffe2110715fac4",
+   "category": "feature_development",
+   "created": 1794162154.0,
+   "created_in_window": true,
+   "acus": 83.44930954407654,
+   "working": {
+    "2026-11-08": 6591.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/mars.lean"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 210,
+     "edits": 54,
+     "reads": 38,
+     "git": 5,
+     "mcp": 3,
+     "devin_msgs": 13,
+     "user_msgs": 8,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794163563.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/326",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "326",
+     "state": "merged"
+    },
+    {
+     "ts": 1794169201.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/328",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "328",
+     "state": "open"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "6580a307e0154b1193ffa4022d7f40ff",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/6580a307e0154b1193ffa4022d7f40ff",
+   "title": "Map OpenTelemetry causal-event logs onto MARS traces",
+   "project": "mars.lean",
+   "pr_repos": [
+    "Open-MBEE/mars.lean"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "1fbba99fbf8446d3a9ffe2110715fac4",
+   "category": "feature_development",
+   "created": 1794162155.0,
+   "created_in_window": true,
+   "acus": 24.369961222358437,
+   "working": {
+    "2026-11-08": 1614.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/mars.lean"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 71,
+     "edits": 28,
+     "reads": 21,
+     "git": 3,
+     "mcp": 6,
+     "devin_msgs": 6,
+     "user_msgs": 2,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794163323.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/325",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "325",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "179399d47385472b9993bb5615abaac5",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/179399d47385472b9993bb5615abaac5",
+   "title": "Prove netH pivot agreement and back Refines by RetimedSim",
+   "project": "mars.lean",
+   "pr_repos": [
+    "Open-MBEE/mars.lean"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "1fbba99fbf8446d3a9ffe2110715fac4",
+   "category": "feature_development",
+   "created": 1794162154.0,
+   "created_in_window": true,
+   "acus": 13.275426084439506,
+   "working": {
+    "2026-11-08": 2407.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/mars.lean"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 72,
+     "edits": 7,
+     "reads": 20,
+     "git": 3,
+     "mcp": 0,
+     "devin_msgs": 4,
+     "user_msgs": 2,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794164438.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/327",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "327",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "e9ff3fd767d04034858f645f63773867",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/e9ff3fd767d04034858f645f63773867",
+   "title": "Add exact LP oracle for Farkas certificates in pacti.lean",
+   "project": "pacti.lean",
+   "pr_repos": [
+    "Open-MBEE/pacti.lean"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "1fbba99fbf8446d3a9ffe2110715fac4",
+   "category": "feature_development",
+   "created": 1794162153.0,
+   "created_in_window": true,
+   "acus": 10.12763331015144,
+   "working": {
+    "2026-11-08": 649.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/pacti.lean"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 25,
+     "edits": 9,
+     "reads": 3,
+     "git": 1,
+     "mcp": 0,
+     "devin_msgs": 3,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794162758.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/pacti.lean/pull/5",
+     "repo": "Open-MBEE/pacti.lean",
+     "num": "5",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "dcdd25bdcf3444f1ba742d0266f952c4",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/dcdd25bdcf3444f1ba742d0266f952c4",
+   "title": "Switch sm-dps wrappers to sm_dps/sm_bridge and sweep workflows docs",
+   "project": "soil-moisture-dps",
+   "pr_repos": [
+    "Open-MBEE/soil-moisture-workflows",
+    "Open-MBEE/soil-moisture-dps"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "7a547429b3074d47bc16b7a4d568ef95",
+   "category": "migrations_and_upgrades",
+   "created": 1794154548.0,
+   "created_in_window": true,
+   "acus": 43.09181011173704,
+   "working": {
+    "2026-11-08": 3676.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/soil-moisture-dps",
+    "Open-MBEE/soil-moisture-workflows"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 182,
+     "edits": 47,
+     "reads": 58,
+     "git": 4,
+     "mcp": 0,
+     "devin_msgs": 3,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794158089.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/soil-moisture-dps/pull/9",
+     "repo": "Open-MBEE/soil-moisture-dps",
+     "num": "9",
+     "state": "merged"
+    },
+    {
+     "ts": 1794158125.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/39",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "39",
+     "state": "open"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "7a547429b3074d47bc16b7a4d568ef95",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/7a547429b3074d47bc16b7a4d568ef95",
+   "title": "Update soil-moisture-model diagrams for workflows changes",
+   "project": "soil-moisture-model",
+   "pr_repos": [
+    "Open-MBEE/soil-moisture-model",
+    "nasa-jpl/PropertyKindCalculus"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "running (working)",
+   "parent": null,
+   "category": "documentation_and_content",
+   "created": 1794075585.0,
+   "created_in_window": false,
+   "acus": 132.1222122603687,
+   "working": {
+    "2026-11-08": 12088.893081903458
+   },
+   "acus_scope": "older",
+   "repos": [
+    "Open-MBEE/soil-moisture-model",
+    "nasa-jpl/PropertyKindCalculus"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 227,
+     "edits": 67,
+     "reads": 4,
+     "git": 20,
+     "mcp": 11,
+     "devin_msgs": 29,
+     "user_msgs": 8,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794155312.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/43",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "43",
+     "state": "merged"
+    },
+    {
+     "ts": 1794163958.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/nasa-jpl/PropertyKindCalculus/pull/109",
+     "repo": "nasa-jpl/PropertyKindCalculus",
+     "num": "109",
+     "state": "merged"
+    },
+    {
+     "ts": 1794168908.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/44",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "44",
+     "state": "open"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "949f5b59507e4e7d99ee2ffd4b56f213",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/949f5b59507e4e7d99ee2ffd4b56f213",
+   "title": "Continue soil-moisture-dps work",
+   "project": "soil-moisture-workflows",
+   "pr_repos": [
+    "Open-MBEE/soil-moisture-workflows"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "running (working)",
+   "parent": null,
+   "category": "migrations_and_upgrades",
+   "created": 1794023321.0,
+   "created_in_window": false,
+   "acus": 343.67208272573953,
+   "working": {
+    "2026-11-08": 2362.8930819034576
+   },
+   "acus_scope": "older",
+   "repos": [
+    "Open-MBEE/soil-moisture-dps",
+    "Open-MBEE/soil-moisture-workflows"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 73,
+     "edits": 18,
+     "reads": 10,
+     "git": 1,
+     "mcp": 0,
+     "devin_msgs": 1,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794170559.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/41",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "41",
+     "state": "?"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "d0c10b32b08144028e87fd0607dbbb1a",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/d0c10b32b08144028e87fd0607dbbb1a",
+   "title": "Modularize leanCurl for a PR",
+   "project": "soil-moisture-workflows",
+   "pr_repos": [
+    "Open-MBEE/soil-moisture-workflows",
+    "Open-MBEE/soil-moisture-dps",
+    "Open-MBEE/leanCurl"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "migrations_and_upgrades",
+   "created": 1794024414.0,
+   "created_in_window": false,
+   "acus": 65.26912136965844,
+   "working": {
+    "2026-11-08": 747.0
+   },
+   "acus_scope": "older",
+   "repos": [
+    "Open-MBEE/leanCurl",
+    "Open-MBEE/soil-moisture-dps",
+    "Open-MBEE/soil-moisture-workflows"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 36,
+     "edits": 8,
+     "reads": 6,
+     "git": 4,
+     "mcp": 6,
+     "devin_msgs": 15,
+     "user_msgs": 4,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794165613.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/40",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "40",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  }
+ ]
+}</script>
+<script>var data = JSON.parse(document.getElementById("artifact-data").textContent);</script>
+<div id="root"></div>
+<script>DSRun("\nconst rows = data.rows;\nconst DAYS = data.days;\nconst KIND = data.kind || \"weekly\";\nconst TODAY = DAYS[DAYS.length - 1];\nconst TZ = data.tz || \"America/Los_Angeles\";\nconst PERIOD = KIND === \"monthly\" ? \"month\" : KIND === \"weekly\" ? \"week\" : \"day\";\nconst fmtTime = (t) => new Date(t * 1000).toLocaleString(\"en-US\", { timeZone: TZ, month: \"2-digit\", day: \"2-digit\", hour: \"2-digit\", minute: \"2-digit\", hour12: false });\nconst hms = (s) => { const m = Math.round(s / 60); const h = Math.floor(m / 60); return h ? `${h}h${String(m % 60).padStart(2, \"0\")}` : `${m}m`; };\nconst hrs = (s) => Math.round(s / 360) / 10;\nconst dayLabel = (iso) => new Date(iso + \"T12:00:00Z\").toLocaleDateString(\"en-US\", { weekday: \"short\", month: \"short\", day: \"numeric\", timeZone: \"UTC\" });\nconst sum = (xs) => xs.reduce((a, b) => a + b, 0);\nconst wsum = (r) => sum(Object.values(r.working));\nconst actsIn = (r, day) => { const out = { shell: 0, edits: 0, reads: 0, git: 0, mcp: 0, devin_msgs: 0, user_msgs: 0, web: 0 }; for (const [d, a] of Object.entries(r.actions_by_day)) { if (!day || d === day) for (const k in out) out[k] += a[k] || 0; } return out; };\nconst actsTotal = (a) => a.shell + a.edits + a.reads + a.git + a.mcp + a.devin_msgs + a.web;\nconst actsStr = (a) => `${a.shell} sh · ${a.edits} ed · ${a.reads} rd · ${a.git} git · ${a.mcp} mcp · ${a.devin_msgs}+${a.user_msgs} msg`;\nconst kind = (r) => (r.parent ? `child of ${r.parent.slice(0, 8)}` : r.origin);\nconst groupBy = (rs, f) => { const m = new Map(); for (const r of rs) { const k = f(r); if (!m.has(k)) m.set(k, []); m.get(k).push(r); } return m; };\nconst prState = (s) => s === \"merged\" ? \"success\" : s === \"open\" ? \"blue\" : \"default\";\n\nconst projects = [...groupBy(rows, (r) => r.project).entries()]\n  .map(([p, rs]) => ({ project: p, rows: rs, working: sum(rs.map(wsum)), acusNew: sum(rs.filter((r) => r.acus_scope === \"in\").map((r) => r.acus)), acusSpill: sum(rs.filter((r) => r.acus_scope === \"spills\").map((r) => r.acus)), acusOld: sum(rs.filter((r) => r.acus_scope === \"older\").map((r) => r.acus)), prs: sum(rs.map((r) => r.prs_created.length)), actions: sum(rs.map((r) => actsTotal(actsIn(r)))), capped: rs.some((r) => r.actions_capped) }))\n  .sort((a, b) => b.working - a.working);\nconst topProjects = projects.filter((p) => p.working > 1800).slice(0, 8).map((p) => p.project);\nconst shortDay = (iso) => new Date(iso + \"T12:00:00Z\").toLocaleDateString(\"en-US\", KIND === \"monthly\" ? { day: \"numeric\", timeZone: \"UTC\" } : { weekday: \"short\", month: \"short\", day: \"numeric\", timeZone: \"UTC\" });\nconst series = Object.fromEntries(topProjects.map((p, i) => [p, { label: p.replace(/^(Open-MBEE|nasa-jpl)\\//, \"\"), color: chartColors[i % chartColors.length] }]));\nseries.other = { label: \"Other\", color: chartColors[8] };\nconst chartRows = DAYS.map((d) => { const o = { day: shortDay(d), other: 0 }; for (const p of projects) { const h = hrs(sum(p.rows.map((r) => r.working[d] || 0))); if (topProjects.includes(p.project)) o[p.project] = h; else o.other += h; } o.other = Math.round(o.other * 10) / 10; return o; });\n\nfunction PrLinks({ prs, project }) {\n  if (!prs.length) return React.createElement(Text, { size: 12, className: \"text-secondary\",}, \"—\");\n  return React.createElement('div', { className: \"flex flex-wrap gap-1\"  ,}, prs.map((p) => (\n    React.createElement(ExternalLink, { key: p.url, href: p.url,}, React.createElement(Badge, { variant: prState(p.state), size: \"sm\",}, p.repo === project ? \"\" : p.repo.split(\"/\")[1] + \" \", \"#\", p.num, \" \" , p.state))\n  )));\n}\n\nfunction SessionRow({ r, day, project }) {\n  const a = actsIn(r, day);\n  const prs = day ? r.prs_created.filter((p) => p.day === day) : r.prs_created;\n  const w = day ? (r.working[day] || 0) : wsum(r);\n  return (\n    React.createElement(TableRow, null\n      , React.createElement(TableCell, null, React.createElement('div', { className: \"flex flex-col gap-0.5\"  ,}, React.createElement(ExternalLink, { href: r.url,}, r.title), React.createElement(Text, { size: 11, className: \"text-secondary\",}, kind(r), \" · \"  , r.mode, \" · \"  , r.status, \" · created \"   , fmtTime(r.created), r.repos && r.repos.length ? \" · \" + r.repos.join(\", \") : \"\")))\n      , React.createElement(TableCell, { className: \"whitespace-nowrap\",}, hms(w))\n      , React.createElement(TableCell, { className: \"whitespace-nowrap\",}, r.acus.toFixed(1), r.acus_scope === \"older\" ? \" †\" : r.acus_scope === \"spills\" ? \" ‡\" : \"\")\n      , React.createElement(TableCell, { className: \"min-w-[260px]\",}, React.createElement(Text, { size: 11, className: \"font-mono\",}, r.actions_capped ? \"≥ \" : \"\", actsStr(a)))\n      , React.createElement(TableCell, { className: \"min-w-[300px]\",}, React.createElement(PrLinks, { prs: prs, project: project,} ))\n    )\n  );\n}\n\nfunction ProjectTable({ project, rs, day }) {\n  const sorted = [...rs].sort((x, y) => ((day ? (y.working[day] || 0) : wsum(y)) - (day ? (x.working[day] || 0) : wsum(x))));\n  return (\n    React.createElement(Table, null\n      , React.createElement(TableHeader, null, React.createElement(TableRow, null, React.createElement(TableHead, null, \"Session\"), React.createElement(TableHead, null, \"Working\"), React.createElement(TableHead, null, \"ACUs\"), React.createElement(TableHead, null, \"Actions (\" , day ? \"day\" : PERIOD, \")\"), React.createElement(TableHead, null, \"PRs opened (\"  , day ? \"day\" : PERIOD, \")\")))\n      , React.createElement(TableBody, null, sorted.map((r) => React.createElement(SessionRow, { key: r.id, r: r, day: day, project: project,} )))\n    )\n  );\n}\n\nfunction ProjectSection({ project, rs, day, defaultOpen }) {\n  const [open, setOpen] = useState(defaultOpen);\n  const w = sum(rs.map((r) => (day ? (r.working[day] || 0) : wsum(r))));\n  const prs = sum(rs.map((r) => (day ? r.prs_created.filter((p) => p.day === day) : r.prs_created).length));\n  return (\n    React.createElement(CollapsibleRoot, { open: open, onOpenChange: setOpen,}\n      , React.createElement(CardContent, null\n        , React.createElement(CardBody, null\n          , React.createElement(CollapsibleTrigger, { className: \"w-full\", caretPosition: \"left\",}\n            , React.createElement('div', { className: \"flex items-center justify-between gap-3 cursor-pointer\"    ,}\n              , React.createElement(Text, { size: 14, weight: \"semibold\",}, project)\n              , React.createElement(Text, { size: 12, className: \"text-secondary\",}, rs.length, \" session\" , rs.length === 1 ? \"\" : \"s\", \" · \"  , hms(w), \" working · \"   , prs, \" PR\" , prs === 1 ? \"\" : \"s\")\n            )\n          )\n          , React.createElement(CollapsiblePanel, null, React.createElement('div', { className: \"mt-3\",}, React.createElement(ProjectTable, { project: project, rs: rs, day: day,} )))\n        )\n      )\n    )\n  );\n}\n\nfunction Daily() {\n  const [day, setDay] = useState(TODAY);\n  const rs = rows.filter((r) => (r.working[day] || 0) >= 60 || actsTotal(actsIn(r, day)) > 0 || r.prs_created.some((p) => p.day === day));\n  const groups = [...groupBy(rs, (r) => r.project).entries()].sort((a, b) => sum(b[1].map((r) => r.working[day] || 0)) - sum(a[1].map((r) => r.working[day] || 0)));\n  const w = sum(rs.map((r) => r.working[day] || 0));\n  const prs = sum(rs.map((r) => r.prs_created.filter((p) => p.day === day).length));\n  return (\n    React.createElement('div', { className: \"flex flex-col gap-4\"  ,}\n      , DAYS.length > 1 && React.createElement('div', { className: \"flex items-center gap-3\"  ,}, React.createElement(Text, { size: 12, className: \"text-secondary\",}, \"Day\"), React.createElement(SimpleSelect, { options: DAYS.map((d) => ({ value: d, label: dayLabel(d) })), value: day, onValueChange: setDay,} ))\n      , React.createElement(StatsRow, null\n        , React.createElement(StatCard, { label: \"Sessions active\" ,}, React.createElement(StatCardValue, null, rs.length))\n        , React.createElement(StatCard, { label: \"Projects\",}, React.createElement(StatCardValue, null, groups.length))\n        , React.createElement(StatCard, { label: \"Working time\" ,}, React.createElement(StatCardValue, null, hms(w)))\n        , React.createElement(StatCard, { label: \"PRs opened\" ,}, React.createElement(StatCardValue, null, prs))\n      )\n      , groups.length === 0 && React.createElement(Text, { size: 13, className: \"text-secondary\",}, \"No session activity on this day.\"     )\n      , groups.map(([p, g]) => React.createElement(ProjectSection, { key: p + day, project: p, rs: g, day: day, defaultOpen: true,} ))\n    )\n  );\n}\n\nfunction Weekly() {\n  const [sortKey, setSortKey] = useState(\"working\");\n  const sorted = [...projects].sort((a, b) => b[sortKey] - a[sortKey]);\n  return (\n    React.createElement('div', { className: \"flex flex-col gap-4\"  ,}\n      , React.createElement(StatsRow, null\n        , React.createElement(StatCard, { label: \"Sessions active\" ,}, React.createElement(StatCardValue, null, rows.length), React.createElement(StatCardCaption, null, rows.filter((r) => r.created_in_window).length, \" created this \"   , PERIOD))\n        , React.createElement(StatCard, { label: \"Projects\",}, React.createElement(StatCardValue, null, projects.length))\n        , React.createElement(StatCard, { label: \"Working time\" ,}, React.createElement(StatCardValue, null, hms(sum(rows.map(wsum)))), React.createElement(StatCardCaption, null, \"VM time while Devin was running\"     ))\n        , React.createElement(StatCard, { label: \"PRs opened\" ,}, React.createElement(StatCardValue, null, sum(rows.map((r) => r.prs_created.length))))\n        , React.createElement(StatCard, { label: `ACUs, sessions fully in this ${PERIOD}`,}, React.createElement(StatCardValue, null, Math.round(sum(rows.filter((r) => r.acus_scope === \"in\").map((r) => r.acus)))), React.createElement(StatCardCaption, null, Math.round(sum(rows.filter((r) => r.acus_scope !== \"in\").map((r) => r.acus))), \" more in sessions that span the boundary (†/‡)\"        ))\n      )\n      , React.createElement(Text, { size: 14, weight: \"semibold\",}, \"Working hours per day, by project\"     )\n      , React.createElement(ChartContainer, { config: series, style: { height: 280, width: \"100%\" },}\n        , React.createElement(BarChart, { data: chartRows,}\n          , React.createElement(ChartGrid, null )\n          , React.createElement(ChartXAxis, { dataKey: \"day\",} )\n          , React.createElement(ChartYAxis, { title: \"hours\",} )\n          , React.createElement(ChartTooltip, { content: React.createElement(ChartTooltipContent, null ),} )\n          , React.createElement(ChartLegend, { content: React.createElement(ChartLegendContent, null ),} )\n          , topProjects.map((p, i) => React.createElement(ChartBar, { key: p, dataKey: p, stackId: \"a\", radius: 0,} ))\n          , React.createElement(ChartBar, { dataKey: \"other\", stackId: \"a\",} )\n        )\n      )\n      , React.createElement(Text, { size: 14, weight: \"semibold\",}, \"Per-project totals\" )\n      , React.createElement(Table, null\n        , React.createElement(TableHeader, null, React.createElement(TableRow, null\n          , React.createElement(TableHead, null, \"Project\")\n          , React.createElement(TableHead, null, \"Sessions (new)\" )\n          , React.createElement(SortableTableHead, { sort: sortKey === \"working\" ? \"desc\" : undefined, onSort: () => setSortKey(\"working\"),}, \"Working\")\n          , React.createElement(SortableTableHead, { sort: sortKey === \"acusNew\" ? \"desc\" : undefined, onSort: () => setSortKey(\"acusNew\"),}, \"ACUs (fully in window)\"   )\n          , React.createElement(SortableTableHead, { sort: sortKey === \"acusSpill\" ? \"desc\" : undefined, onSort: () => setSortKey(\"acusSpill\"),}, \"ACUs ‡ (spill past window)\"    )\n          , React.createElement(SortableTableHead, { sort: sortKey === \"acusOld\" ? \"desc\" : undefined, onSort: () => setSortKey(\"acusOld\"),}, \"ACUs † (older sessions)\"   )\n          , React.createElement(SortableTableHead, { sort: sortKey === \"actions\" ? \"desc\" : undefined, onSort: () => setSortKey(\"actions\"),}, \"Actions\")\n          , React.createElement(SortableTableHead, { sort: sortKey === \"prs\" ? \"desc\" : undefined, onSort: () => setSortKey(\"prs\"),}, \"PRs opened\" )\n        ))\n        , React.createElement(TableBody, null, sorted.map((p) => (\n          React.createElement(TableRow, { key: p.project,}\n            , React.createElement(TableCell, null, React.createElement(Text, { size: 13, weight: \"medium\",}, p.project))\n            , React.createElement(TableCell, null, p.rows.length, \" (\" , p.rows.filter((r) => r.created_in_window).length, \")\")\n            , React.createElement(TableCell, null, hms(p.working))\n            , React.createElement(TableCell, null, p.acusNew ? p.acusNew.toFixed(1) : \"—\")\n            , React.createElement(TableCell, null, p.acusSpill ? p.acusSpill.toFixed(1) : \"—\")\n            , React.createElement(TableCell, null, p.acusOld ? p.acusOld.toFixed(1) : \"—\")\n            , React.createElement(TableCell, null, p.capped ? \"≥ \" : \"\", p.actions.toLocaleString())\n            , React.createElement(TableCell, null, p.prs)\n          )\n        )))\n      )\n      , React.createElement(Text, { size: 14, weight: \"semibold\",}, \"Sessions by project\"  )\n      , projects.map((p, i) => React.createElement(ProjectSection, { key: p.project, project: p.project, rs: p.rows, day: null, defaultOpen: i < 3,} ))\n    )\n  );\n}\n\nfunction Report() {\n  const start = new Date(data.start * 1000).toLocaleString(\"en-US\", { timeZone: TZ, weekday: \"short\", month: \"short\", day: \"numeric\" });\n  const end = new Date(data.now * 1000).toLocaleString(\"en-US\", { timeZone: TZ, weekday: \"short\", month: \"short\", day: \"numeric\", hour: \"2-digit\", minute: \"2-digit\", hour12: false });\n  return (\n    React.createElement(PageLayout, { title: `Devin sessions by project — ${data.label}`, subtitle: `${data.who}'s sessions, ${start} – ${end} (${TZ}).`, themeToggle: true,}\n      , React.createElement(TabsRoot, { defaultValue: KIND === \"daily\" ? \"daily\" : \"period\",}\n        , React.createElement(TabsList, null, React.createElement(Tab, { value: \"period\",}, KIND === \"daily\" ? \"Day\" : KIND === \"weekly\" ? \"Week\" : \"Month\"), KIND !== \"daily\" && React.createElement(Tab, { value: \"daily\",}, \"Day by day\"  ))\n        , React.createElement(TabsPanel, { value: \"period\",}, React.createElement('div', { className: \"pt-4\",}, KIND === \"daily\" ? React.createElement(Daily, null ) : React.createElement(Weekly, null )))\n        , KIND !== \"daily\" && React.createElement(TabsPanel, { value: \"daily\",}, React.createElement('div', { className: \"pt-4\",}, React.createElement(Daily, null )))\n      )\n      , React.createElement(Footnote, null, \"Source: Devin session API (session search + per-session event timeline), read on \"\n                    , end, \" PT. Working time = intervals from a \\\"status: working\\\" event to the next blocked/finished/suspended event, clipped to the window and split at local midnight; it excludes time the session slept or waited for you. Actions = event counts (sh shell commands, ed file-edit batches, rd file-read batches, git PR/CI operations, mcp MCP/Devin-API calls, msg Devin+user messages), bucketed by UTC day. ACUs are session-lifetime totals from the API (no per-day breakdown exists): † marks sessions created before the window and ‡ sessions created in it but still active after it; neither is attributable to the window alone. Projects group forks/mirrors of a repository under its name; each session lists the repositories it touched. The API does not expose VM size or performance class; \\\"mode\\\" is the agent mode.\"\n      )\n    )\n  );\n}\nrender(React.createElement(Report, null ));\n")</script>
+    </main>
+  </body>
+</html>

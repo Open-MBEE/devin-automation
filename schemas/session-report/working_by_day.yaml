@@ -1,0 +1,8 @@
+%YAML 1.2
+---
+table: working_by_day
+description: One row per (project, day) that had at least one second of working time.
+row:
+  project:         { type: "!!str" }
+  day:             { type: "!!str", format: date }
+  working_seconds: { type: "!!int", description: Working time of the project's sessions on that local day. }

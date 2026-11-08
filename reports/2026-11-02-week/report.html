@@ -1,0 +1,6490 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content="Devin artifact kit" />
+    <title>Artifact</title>
+    <script>
+      // A network that blocks the kit's host (or hands back a block page for it) leaves the page blank; say so instead. Styled like the
+      // ds error alert card (ChatAlertCard variant="error", no bar), values hardcoded: the kit CSS is what failed.
+      function artifactKitFailed() {
+        function show() {
+          if (document.getElementById("artifact-kit-notice")) return;
+          document.documentElement.style.colorScheme = "light";
+          var notice = document.createElement("div");
+          notice.id = "artifact-kit-notice";
+          notice.setAttribute("role", "alert");
+          notice.style.cssText =
+            "box-sizing:border-box;display:flex;align-items:flex-start;gap:6px;max-width:960px;margin:0 auto;padding:32px 24px 0;" +
+            "font:13px/18px Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:-0.005em;color:rgb(25 25 25)";
+          var ns = "http://www.w3.org/2000/svg";
+          var icon = document.createElementNS(ns, "svg");
+          icon.setAttribute("viewBox", "0 0 24 24");
+          icon.setAttribute("fill", "rgb(245 59 58)");
+          icon.setAttribute("aria-hidden", "true");
+          icon.style.cssText = "width:14px;height:14px;flex-shrink:0;margin-top:2px";
+          var path = document.createElementNS(ns, "path");
+          path.setAttribute("fill-rule", "evenodd");
+          path.setAttribute("clip-rule", "evenodd");
+          path.setAttribute(
+            "d",
+            "M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15ZM12 7C11.5858 7 11.25 7.33579 11.25 7.75V12.25C11.25 12.6642 11.5858 13 12 13C12.4142 13 12.75 12.6642 12.75 12.25V7.75C12.75 7.33579 12.4142 7 12 7Z"
+          );
+          icon.appendChild(path);
+          var text = document.createElement("span");
+          text.textContent = "This page could not load Devin's artifact kit.";
+          notice.appendChild(icon);
+          notice.appendChild(text);
+          document.body.prepend(notice);
+        }
+        if (document.body) show();
+        else document.addEventListener("DOMContentLoaded", show);
+      }
+    </script>
+    <link rel="stylesheet" href="https://static.devin.ai/artifact-kit/7088248ad1842d99/ds-kit.css" onerror="artifactKitFailed()" />
+    <style>
+    .mt-3 {
+        margin-top: 0.75rem
+    }
+    .flex {
+        display: flex
+    }
+    .w-full {
+        width: 100%
+    }
+    .min-w-\[260px\] {
+        min-width: 260px
+    }
+    .min-w-\[300px\] {
+        min-width: 300px
+    }
+    .cursor-pointer {
+        cursor: pointer
+    }
+    .flex-col {
+        flex-direction: column
+    }
+    .flex-wrap {
+        flex-wrap: wrap
+    }
+    .items-center {
+        align-items: center
+    }
+    .justify-between {
+        justify-content: space-between
+    }
+    .gap-0\.5 {
+        gap: 0.125rem
+    }
+    .gap-1 {
+        gap: 0.25rem
+    }
+    .gap-3 {
+        gap: 0.75rem
+    }
+    .gap-4 {
+        gap: 1rem
+    }
+    .whitespace-nowrap {
+        white-space: nowrap
+    }
+    .pt-4 {
+        padding-top: 1rem
+    }
+    .font-mono {
+        font-family: var(--font-code, Devin Mono), SF Mono, Roboto Mono, ui-monospace, monospace
+    }
+    .text-secondary {
+        color: rgb(var(--text-secondary))
+    }
+    .filter {
+        filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+    }
+    @keyframes enter {
+        from {
+            opacity: var(--tw-enter-opacity, 1);
+            transform: translate3d(var(--tw-enter-translate-x, 0), var(--tw-enter-translate-y, 0), 0) scale3d(var(--tw-enter-scale, 1), var(--tw-enter-scale, 1), var(--tw-enter-scale, 1)) rotate(var(--tw-enter-rotate, 0))
+        }
+    }
+    @keyframes exit {
+        to {
+            opacity: var(--tw-exit-opacity, 1);
+            transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0) scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0))
+        }
+    }
+    .running {
+        animation-play-state: running
+    }
+    </style>
+  </head>
+  <body>
+    <script src="https://static.devin.ai/artifact-kit/7088248ad1842d99/ds-kit.js" onerror="artifactKitFailed()"></script>
+    <script>
+      if (!window.DS) artifactKitFailed();
+    </script>
+    <main data-artifact-shell class="mx-auto flex max-w-[960px] flex-col gap-6 px-6 py-8">
+<script type="application/json" id="artifact-data">{
+ "kind": "weekly",
+ "label": "week 2026-11-02 \u2192 2026-11-08",
+ "who": "Nicolas Rouquette",
+ "tz": "America/Los_Angeles",
+ "start": 1793606400.0,
+ "end": 1794211200.0,
+ "now": 1794172223.75405,
+ "days": [
+  "2026-11-02",
+  "2026-11-03",
+  "2026-11-04",
+  "2026-11-05",
+  "2026-11-06",
+  "2026-11-07",
+  "2026-11-08"
+ ],
+ "rows": [
+  {
+   "id": "3dda3bde690d4ca6923c03331fb82e28",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/3dda3bde690d4ca6923c03331fb82e28",
+   "title": "Diagnose Blueprint Snapshot Failures",
+   "project": "(Devin environment)",
+   "pr_repos": [],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "ci_cd_and_devops",
+   "created": 1793736788.0,
+   "created_in_window": true,
+   "acus": 10.335535909263374,
+   "working": {
+    "2026-11-03": 1289.0
+   },
+   "acus_scope": "in",
+   "repos": [],
+   "actions_by_day": {
+    "2026-11-03": {
+     "shell": 34,
+     "edits": 2,
+     "reads": 5,
+     "git": 0,
+     "mcp": 0,
+     "devin_msgs": 3,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [],
+   "actions_capped": false
+  },
+  {
+   "id": "c9171c3398ab459b85605a6cc3020bb7",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/c9171c3398ab459b85605a6cc3020bb7",
+   "title": "Fix Open-MBEE blueprint failures",
+   "project": "(Devin environment)",
+   "pr_repos": [],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "ci_cd_and_devops",
+   "created": 1793739053.0,
+   "created_in_window": true,
+   "acus": 6.374970856595062,
+   "working": {
+    "2026-11-03": 564.0
+   },
+   "acus_scope": "in",
+   "repos": [],
+   "actions_by_day": {
+    "2026-11-03": {
+     "shell": 22,
+     "edits": 1,
+     "reads": 8,
+     "git": 0,
+     "mcp": 0,
+     "devin_msgs": 2,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [],
+   "actions_capped": false
+  },
+  {
+   "id": "08fcc9e0d2fb48c8966630c93df2f060",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/08fcc9e0d2fb48c8966630c93df2f060",
+   "title": "Nightly memory refinement",
+   "project": "(Devin housekeeping)",
+   "pr_repos": [],
+   "origin": "webapp",
+   "mode": "normal",
+   "status": "suspended",
+   "parent": null,
+   "category": "other",
+   "created": 1793806321.0,
+   "created_in_window": true,
+   "acus": 0.0,
+   "working": {
+    "2026-11-04": 545.0
+   },
+   "acus_scope": "in",
+   "repos": [],
+   "actions_by_day": {
+    "2026-11-04": {
+     "shell": 64,
+     "edits": 15,
+     "reads": 8,
+     "git": 0,
+     "mcp": 62,
+     "devin_msgs": 4,
+     "user_msgs": 2,
+     "web": 0
+    }
+   },
+   "prs_created": [],
+   "actions_capped": false
+  },
+  {
+   "id": "dc4f7902f00f4772859b88cffb38546b",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/dc4f7902f00f4772859b88cffb38546b",
+   "title": "Draft Strategic Lessons-Learned Message",
+   "project": "(no repository)",
+   "pr_repos": [],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "documentation_and_content",
+   "created": 1793917808.0,
+   "created_in_window": true,
+   "acus": 7.978299202896708,
+   "working": {
+    "2026-11-05": 241.0
+   },
+   "acus_scope": "in",
+   "repos": [],
+   "actions_by_day": {
+    "2026-11-05": {
+     "shell": 10,
+     "edits": 0,
+     "reads": 3,
+     "git": 0,
+     "mcp": 0,
+     "devin_msgs": 11,
+     "user_msgs": 9,
+     "web": 0
+    }
+   },
+   "prs_created": [],
+   "actions_capped": false
+  },
+  {
+   "id": "4510463cea924ec4b35fdbbc8381594c",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/4510463cea924ec4b35fdbbc8381594c",
+   "title": "Find inflection-point session link",
+   "project": "(no repository)",
+   "pr_repos": [],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "running (waiting_for_user)",
+   "parent": null,
+   "category": null,
+   "created": 1794169622.0,
+   "created_in_window": true,
+   "acus": 4.928492098139506,
+   "working": {
+    "2026-11-08": 279.0
+   },
+   "acus_scope": "spills",
+   "repos": [],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 12,
+     "edits": 0,
+     "reads": 0,
+     "git": 0,
+     "mcp": 513,
+     "devin_msgs": 2,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [],
+   "actions_capped": false
+  },
+  {
+   "id": "438880735ee9439eb71a124cbe26cd23",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/438880735ee9439eb71a124cbe26cd23",
+   "title": "Daily and Weekly Session Reports",
+   "project": "(no repository)",
+   "pr_repos": [],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "running (working)",
+   "parent": null,
+   "category": null,
+   "created": 1794170390.0,
+   "created_in_window": true,
+   "acus": 4.313191083251852,
+   "working": {
+    "2026-11-08": 1832.7540500164032
+   },
+   "acus_scope": "spills",
+   "repos": [],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 3,
+     "edits": 0,
+     "reads": 0,
+     "git": 0,
+     "mcp": 11,
+     "devin_msgs": 2,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [],
+   "actions_capped": false
+  },
+  {
+   "id": "63ade6c5b93a48fe94b3f1ace4ca592a",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/63ade6c5b93a48fe94b3f1ace4ca592a",
+   "title": "Fix inconsistent timestamp matching in truncate_images",
+   "project": "(no repository)",
+   "pr_repos": [],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "bug_fixing",
+   "created": 1793756543.0,
+   "created_in_window": true,
+   "acus": 3.424169389044856,
+   "working": {
+    "2026-11-03": 280.0
+   },
+   "acus_scope": "in",
+   "repos": [],
+   "actions_by_day": {
+    "2026-11-04": {
+     "shell": 10,
+     "edits": 0,
+     "reads": 6,
+     "git": 0,
+     "mcp": 0,
+     "devin_msgs": 4,
+     "user_msgs": 2,
+     "web": 0
+    }
+   },
+   "prs_created": [],
+   "actions_capped": false
+  },
+  {
+   "id": "106ba97b6b28429ca31c8f94e25f83dc",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/106ba97b6b28429ca31c8f94e25f83dc",
+   "title": "Debug tlr_sbs.py initial value",
+   "project": "(no repository)",
+   "pr_repos": [],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "code_review",
+   "created": 1793813957.0,
+   "created_in_window": true,
+   "acus": 2.879431221455967,
+   "working": {
+    "2026-11-04": 127.0
+   },
+   "acus_scope": "in",
+   "repos": [],
+   "actions_by_day": {
+    "2026-11-04": {
+     "shell": 5,
+     "edits": 0,
+     "reads": 2,
+     "git": 0,
+     "mcp": 0,
+     "devin_msgs": 2,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [],
+   "actions_capped": false
+  },
+  {
+   "id": "49750a06a48d41b1852199f560a0d9fc",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/49750a06a48d41b1852199f560a0d9fc",
+   "title": "L4YAML 7.7 stream R12: Row 12 item 344 flip (then [82], [210]/[211])",
+   "project": "L4YAML",
+   "pr_repos": [
+    "nasa-jpl/L4YAML"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "24a21977a04949ee91f5ae4088aa3058",
+   "category": "unit_test_generation",
+   "created": 1792776896.0,
+   "created_in_window": false,
+   "acus": 3356.7529186664615,
+   "working": {
+    "2026-11-02": 6155.0,
+    "2026-11-03": 9858.0,
+    "2026-11-04": 9311.0,
+    "2026-11-05": 2078.0,
+    "2026-11-06": 31382.0,
+    "2026-11-07": 1405.0,
+    "2026-11-08": 11251.0
+   },
+   "acus_scope": "older",
+   "repos": [
+    "nasa-jpl/L4YAML"
+   ],
+   "actions_by_day": {
+    "2026-11-02": {
+     "shell": 166,
+     "edits": 37,
+     "reads": 3,
+     "git": 7,
+     "mcp": 19,
+     "devin_msgs": 16,
+     "user_msgs": 4,
+     "web": 0
+    },
+    "2026-11-03": {
+     "shell": 95,
+     "edits": 10,
+     "reads": 5,
+     "git": 13,
+     "mcp": 19,
+     "devin_msgs": 16,
+     "user_msgs": 6,
+     "web": 0
+    },
+    "2026-11-04": {
+     "shell": 262,
+     "edits": 41,
+     "reads": 4,
+     "git": 20,
+     "mcp": 14,
+     "devin_msgs": 46,
+     "user_msgs": 15,
+     "web": 0
+    },
+    "2026-11-05": {
+     "shell": 91,
+     "edits": 19,
+     "reads": 4,
+     "git": 10,
+     "mcp": 13,
+     "devin_msgs": 17,
+     "user_msgs": 7,
+     "web": 0
+    },
+    "2026-11-06": {
+     "shell": 425,
+     "edits": 89,
+     "reads": 14,
+     "git": 25,
+     "mcp": 21,
+     "devin_msgs": 27,
+     "user_msgs": 7,
+     "web": 0
+    },
+    "2026-11-07": {
+     "shell": 43,
+     "edits": 5,
+     "reads": 1,
+     "git": 7,
+     "mcp": 9,
+     "devin_msgs": 12,
+     "user_msgs": 6,
+     "web": 0
+    },
+    "2026-11-08": {
+     "shell": 233,
+     "edits": 16,
+     "reads": 10,
+     "git": 11,
+     "mcp": 17,
+     "devin_msgs": 36,
+     "user_msgs": 20,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793633754.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/207",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "207",
+     "state": "merged"
+    },
+    {
+     "ts": 1793714010.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/215",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "215",
+     "state": "merged"
+    },
+    {
+     "ts": 1793714882.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/216",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "216",
+     "state": "merged"
+    },
+    {
+     "ts": 1793729210.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/218",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "218",
+     "state": "merged"
+    },
+    {
+     "ts": 1793739588.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/223",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "223",
+     "state": "merged"
+    },
+    {
+     "ts": 1793769260.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/225",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "225",
+     "state": "merged"
+    },
+    {
+     "ts": 1793773772.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/227",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "227",
+     "state": "merged"
+    },
+    {
+     "ts": 1793804583.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/229",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "229",
+     "state": "merged"
+    },
+    {
+     "ts": 1793809001.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/231",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "231",
+     "state": "merged"
+    },
+    {
+     "ts": 1793811737.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/233",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "233",
+     "state": "merged"
+    },
+    {
+     "ts": 1793812802.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/234",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "234",
+     "state": "merged"
+    },
+    {
+     "ts": 1793814401.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/236",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "236",
+     "state": "merged"
+    },
+    {
+     "ts": 1793814830.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/237",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "237",
+     "state": "merged"
+    },
+    {
+     "ts": 1793857061.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/239",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "239",
+     "state": "merged"
+    },
+    {
+     "ts": 1793900593.0,
+     "day": "2026-11-05",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/240",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "240",
+     "state": "merged"
+    },
+    {
+     "ts": 1793972171.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/244",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "244",
+     "state": "merged"
+    },
+    {
+     "ts": 1793980862.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/246",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "246",
+     "state": "merged"
+    },
+    {
+     "ts": 1793984355.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/247",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "247",
+     "state": "merged"
+    },
+    {
+     "ts": 1793997672.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/249",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "249",
+     "state": "merged"
+    },
+    {
+     "ts": 1794000344.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/250",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "250",
+     "state": "merged"
+    },
+    {
+     "ts": 1794026543.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/251",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "251",
+     "state": "merged"
+    },
+    {
+     "ts": 1794155758.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/264",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "264",
+     "state": "merged"
+    },
+    {
+     "ts": 1794159795.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/265",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "265",
+     "state": "merged"
+    },
+    {
+     "ts": 1794164111.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/268",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "268",
+     "state": "merged"
+    },
+    {
+     "ts": 1794167626.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/270",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "270",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "24a21977a04949ee91f5ae4088aa3058",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/24a21977a04949ee91f5ae4088aa3058",
+   "title": "Complete parse_iff_grammar proof",
+   "project": "L4YAML",
+   "pr_repos": [
+    "nasa-jpl/L4YAML"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "fb0431c82e0f4dbfb588da010e461b90",
+   "category": "feature_development",
+   "created": 1792770982.0,
+   "created_in_window": false,
+   "acus": 674.1337020683418,
+   "working": {
+    "2026-11-03": 716.0,
+    "2026-11-04": 495.0,
+    "2026-11-05": 303.0,
+    "2026-11-06": 1200.0,
+    "2026-11-08": 849.0
+   },
+   "acus_scope": "older",
+   "repos": [
+    "nasa-jpl/L4YAML"
+   ],
+   "actions_by_day": {
+    "2026-11-02": {
+     "shell": 1,
+     "edits": 0,
+     "reads": 0,
+     "git": 6,
+     "mcp": 10,
+     "devin_msgs": 6,
+     "user_msgs": 1,
+     "web": 0
+    },
+    "2026-11-03": {
+     "shell": 4,
+     "edits": 0,
+     "reads": 0,
+     "git": 6,
+     "mcp": 35,
+     "devin_msgs": 15,
+     "user_msgs": 4,
+     "web": 0
+    },
+    "2026-11-04": {
+     "shell": 13,
+     "edits": 0,
+     "reads": 0,
+     "git": 1,
+     "mcp": 50,
+     "devin_msgs": 28,
+     "user_msgs": 6,
+     "web": 0
+    },
+    "2026-11-05": {
+     "shell": 14,
+     "edits": 2,
+     "reads": 4,
+     "git": 0,
+     "mcp": 13,
+     "devin_msgs": 10,
+     "user_msgs": 3,
+     "web": 0
+    },
+    "2026-11-06": {
+     "shell": 15,
+     "edits": 2,
+     "reads": 0,
+     "git": 4,
+     "mcp": 27,
+     "devin_msgs": 13,
+     "user_msgs": 4,
+     "web": 0
+    },
+    "2026-11-07": {
+     "shell": 8,
+     "edits": 2,
+     "reads": 1,
+     "git": 1,
+     "mcp": 32,
+     "devin_msgs": 11,
+     "user_msgs": 3,
+     "web": 0
+    },
+    "2026-11-08": {
+     "shell": 14,
+     "edits": 3,
+     "reads": 0,
+     "git": 4,
+     "mcp": 47,
+     "devin_msgs": 16,
+     "user_msgs": 3,
+     "web": 0
+    }
+   },
+   "prs_created": [],
+   "actions_capped": false
+  },
+  {
+   "id": "f72df23f71f14b68831ef6d191062662",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/f72df23f71f14b68831ef6d191062662",
+   "title": "L4YAML S9: Rule 9 scripts-in-Lean \u2014 phase 0 gate, flip_census/repin, flip library",
+   "project": "L4YAML",
+   "pr_repos": [
+    "nasa-jpl/L4YAML"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "24a21977a04949ee91f5ae4088aa3058",
+   "category": "migrations_and_upgrades",
+   "created": 1793570934.0,
+   "created_in_window": false,
+   "acus": 578.4634479765926,
+   "working": {
+    "2026-11-02": 24382.0,
+    "2026-11-03": 12561.0,
+    "2026-11-04": 14754.0,
+    "2026-11-05": 1960.0,
+    "2026-11-06": 1222.0,
+    "2026-11-07": 308.0
+   },
+   "acus_scope": "older",
+   "repos": [
+    "nasa-jpl/L4YAML"
+   ],
+   "actions_by_day": {
+    "2026-11-02": {
+     "shell": 439,
+     "edits": 182,
+     "reads": 101,
+     "git": 66,
+     "mcp": 0,
+     "devin_msgs": 63,
+     "user_msgs": 22,
+     "web": 0
+    },
+    "2026-11-03": {
+     "shell": 287,
+     "edits": 87,
+     "reads": 78,
+     "git": 49,
+     "mcp": 1,
+     "devin_msgs": 44,
+     "user_msgs": 16,
+     "web": 0
+    },
+    "2026-11-04": {
+     "shell": 284,
+     "edits": 81,
+     "reads": 93,
+     "git": 24,
+     "mcp": 0,
+     "devin_msgs": 27,
+     "user_msgs": 10,
+     "web": 0
+    },
+    "2026-11-05": {
+     "shell": 62,
+     "edits": 29,
+     "reads": 22,
+     "git": 6,
+     "mcp": 0,
+     "devin_msgs": 10,
+     "user_msgs": 2,
+     "web": 0
+    },
+    "2026-11-06": {
+     "shell": 42,
+     "edits": 8,
+     "reads": 15,
+     "git": 6,
+     "mcp": 2,
+     "devin_msgs": 9,
+     "user_msgs": 4,
+     "web": 0
+    },
+    "2026-11-08": {
+     "shell": 0,
+     "edits": 0,
+     "reads": 0,
+     "git": 0,
+     "mcp": 0,
+     "devin_msgs": 0,
+     "user_msgs": 0,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793647634.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/208",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "208",
+     "state": "merged"
+    },
+    {
+     "ts": 1793653677.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/209",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "209",
+     "state": "merged"
+    },
+    {
+     "ts": 1793655986.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/210",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "210",
+     "state": "merged"
+    },
+    {
+     "ts": 1793658511.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/211",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "211",
+     "state": "merged"
+    },
+    {
+     "ts": 1793660111.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/212",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "212",
+     "state": "merged"
+    },
+    {
+     "ts": 1793670021.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/213",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "213",
+     "state": "merged"
+    },
+    {
+     "ts": 1793680810.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/214",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "214",
+     "state": "merged"
+    },
+    {
+     "ts": 1793722954.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/217",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "217",
+     "state": "merged"
+    },
+    {
+     "ts": 1793729600.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/219",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "219",
+     "state": "merged"
+    },
+    {
+     "ts": 1793732503.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/220",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "220",
+     "state": "merged"
+    },
+    {
+     "ts": 1793735540.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/221",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "221",
+     "state": "merged"
+    },
+    {
+     "ts": 1793736917.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/222",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "222",
+     "state": "merged"
+    },
+    {
+     "ts": 1793740456.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/224",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "224",
+     "state": "merged"
+    },
+    {
+     "ts": 1793771151.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/226",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "226",
+     "state": "merged"
+    },
+    {
+     "ts": 1793802941.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/228",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "228",
+     "state": "merged"
+    },
+    {
+     "ts": 1793807477.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/230",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "230",
+     "state": "merged"
+    },
+    {
+     "ts": 1793813680.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/235",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "235",
+     "state": "merged"
+    },
+    {
+     "ts": 1793816142.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/238",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "238",
+     "state": "merged"
+    },
+    {
+     "ts": 1793901194.0,
+     "day": "2026-11-05",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/241",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "241",
+     "state": "merged"
+    },
+    {
+     "ts": 1793914634.0,
+     "day": "2026-11-05",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/243",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "243",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "6661ae5b28ed42c8aa23bc799e21b980",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/6661ae5b28ed42c8aa23bc799e21b980",
+   "title": "Prove S3 scanner-output obligations for parse_iff_grammar",
+   "project": "L4YAML",
+   "pr_repos": [
+    "nasa-jpl/L4YAML"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "running (working)",
+   "parent": "24a21977a04949ee91f5ae4088aa3058",
+   "category": "feature_development",
+   "created": 1793899914.0,
+   "created_in_window": true,
+   "acus": 538.5964835579313,
+   "working": {
+    "2026-11-05": 5249.0,
+    "2026-11-06": 7702.0,
+    "2026-11-07": 24469.0,
+    "2026-11-08": 12305.754050016403
+   },
+   "acus_scope": "spills",
+   "repos": [
+    "nasa-jpl/L4YAML"
+   ],
+   "actions_by_day": {
+    "2026-11-05": {
+     "shell": 158,
+     "edits": 43,
+     "reads": 34,
+     "git": 1,
+     "mcp": 0,
+     "devin_msgs": 2,
+     "user_msgs": 1,
+     "web": 0
+    },
+    "2026-11-06": {
+     "shell": 79,
+     "edits": 22,
+     "reads": 5,
+     "git": 7,
+     "mcp": 0,
+     "devin_msgs": 8,
+     "user_msgs": 4,
+     "web": 0
+    },
+    "2026-11-07": {
+     "shell": 402,
+     "edits": 110,
+     "reads": 44,
+     "git": 10,
+     "mcp": 11,
+     "devin_msgs": 26,
+     "user_msgs": 10,
+     "web": 0
+    },
+    "2026-11-08": {
+     "shell": 739,
+     "edits": 161,
+     "reads": 87,
+     "git": 15,
+     "mcp": 23,
+     "devin_msgs": 51,
+     "user_msgs": 15,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793905119.0,
+     "day": "2026-11-05",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/242",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "242",
+     "state": "merged"
+    },
+    {
+     "ts": 1793974349.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/245",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "245",
+     "state": "merged"
+    },
+    {
+     "ts": 1794027983.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/253",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "253",
+     "state": "merged"
+    },
+    {
+     "ts": 1794073386.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/254",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "254",
+     "state": "merged"
+    },
+    {
+     "ts": 1794076096.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/255",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "255",
+     "state": "merged"
+    },
+    {
+     "ts": 1794091589.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/257",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "257",
+     "state": "merged"
+    },
+    {
+     "ts": 1794105385.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/258",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "258",
+     "state": "merged"
+    },
+    {
+     "ts": 1794107389.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/259",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "259",
+     "state": "merged"
+    },
+    {
+     "ts": 1794112984.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/260",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "260",
+     "state": "merged"
+    },
+    {
+     "ts": 1794124678.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/261",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "261",
+     "state": "merged"
+    },
+    {
+     "ts": 1794155090.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/262",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "262",
+     "state": "merged"
+    },
+    {
+     "ts": 1794162768.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/267",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "267",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "12a32597e3554be1aeeb264f49263290",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/12a32597e3554be1aeeb264f49263290",
+   "title": "Land [211] explicit-only in L4YAML (Row 19)",
+   "project": "L4YAML",
+   "pr_repos": [
+    "nasa-jpl/L4YAML"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "24a21977a04949ee91f5ae4088aa3058",
+   "category": "research_and_exploration",
+   "created": 1793987430.0,
+   "created_in_window": true,
+   "acus": 165.37125501204073,
+   "working": {
+    "2026-11-06": 5514.0,
+    "2026-11-07": 16681.0,
+    "2026-11-08": 7611.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "nasa-jpl/L4YAML"
+   ],
+   "actions_by_day": {
+    "2026-11-06": {
+     "shell": 76,
+     "edits": 3,
+     "reads": 7,
+     "git": 4,
+     "mcp": 0,
+     "devin_msgs": 6,
+     "user_msgs": 3,
+     "web": 0
+    },
+    "2026-11-07": {
+     "shell": 152,
+     "edits": 20,
+     "reads": 3,
+     "git": 13,
+     "mcp": 3,
+     "devin_msgs": 15,
+     "user_msgs": 4,
+     "web": 0
+    },
+    "2026-11-08": {
+     "shell": 138,
+     "edits": 20,
+     "reads": 3,
+     "git": 26,
+     "mcp": 13,
+     "devin_msgs": 30,
+     "user_msgs": 12,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793990843.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/248",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "248",
+     "state": "merged"
+    },
+    {
+     "ts": 1794027428.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/252",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "252",
+     "state": "merged"
+    },
+    {
+     "ts": 1794088899.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/256",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "256",
+     "state": "merged"
+    },
+    {
+     "ts": 1794155502.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/263",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "263",
+     "state": "merged"
+    },
+    {
+     "ts": 1794160630.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/266",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "266",
+     "state": "merged"
+    },
+    {
+     "ts": 1794164366.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/nasa-jpl/L4YAML/pull/269",
+     "repo": "nasa-jpl/L4YAML",
+     "num": "269",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "92bd1b953ac248de8df35275701e4c80",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/92bd1b953ac248de8df35275701e4c80",
+   "title": "Review L4YAML PR 232",
+   "project": "L4YAML",
+   "pr_repos": [],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "code_review",
+   "created": 1793831725.0,
+   "created_in_window": true,
+   "acus": 9.770170151975309,
+   "working": {
+    "2026-11-04": 659.0,
+    "2026-11-06": 654.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "nasa-jpl/L4YAML"
+   ],
+   "actions_by_day": {
+    "2026-11-04": {
+     "shell": 20,
+     "edits": 0,
+     "reads": 5,
+     "git": 3,
+     "mcp": 0,
+     "devin_msgs": 2,
+     "user_msgs": 1,
+     "web": 0
+    },
+    "2026-11-06": {
+     "shell": 6,
+     "edits": 0,
+     "reads": 0,
+     "git": 2,
+     "mcp": 0,
+     "devin_msgs": 2,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [],
+   "actions_capped": false
+  },
+  {
+   "id": "18ad47adf36f44e9b6824a4472f9678d",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/18ad47adf36f44e9b6824a4472f9678d",
+   "title": "Plan SysMLv2 QVTS Language and Workflows",
+   "project": "OpenSysML",
+   "pr_repos": [
+    "Open-MBEE/qvts",
+    "Open-MBEE/OpenSysML",
+    "Open-MBEE/OpenSysML-Extensions-Library",
+    "Open-MBEE/engineering-foundation-architecture"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "running (working)",
+   "parent": null,
+   "category": "bug_fixing",
+   "created": 1793042933.0,
+   "created_in_window": false,
+   "acus": 2689.8972991141495,
+   "working": {
+    "2026-11-02": 64986.0,
+    "2026-11-03": 41489.0,
+    "2026-11-04": 55102.0,
+    "2026-11-05": 38897.0,
+    "2026-11-06": 66135.0,
+    "2026-11-07": 60874.0,
+    "2026-11-08": 47423.7540500164
+   },
+   "acus_scope": "older",
+   "repos": [
+    "Open-MBEE/OpenSysML",
+    "Open-MBEE/OpenSysML-Extensions-Library",
+    "Open-MBEE/engineering-foundation-architecture",
+    "Open-MBEE/qvts"
+   ],
+   "actions_by_day": {
+    "2026-11-02": {
+     "shell": 997,
+     "edits": 159,
+     "reads": 117,
+     "git": 81,
+     "mcp": 0,
+     "devin_msgs": 36,
+     "user_msgs": 9,
+     "web": 0
+    },
+    "2026-11-03": {
+     "shell": 2028,
+     "edits": 177,
+     "reads": 55,
+     "git": 109,
+     "mcp": 4,
+     "devin_msgs": 50,
+     "user_msgs": 14,
+     "web": 0
+    },
+    "2026-11-04": {
+     "shell": 1021,
+     "edits": 84,
+     "reads": 12,
+     "git": 36,
+     "mcp": 2,
+     "devin_msgs": 16,
+     "user_msgs": 5,
+     "web": 0
+    },
+    "2026-11-05": {
+     "shell": 724,
+     "edits": 70,
+     "reads": 6,
+     "git": 77,
+     "mcp": 0,
+     "devin_msgs": 21,
+     "user_msgs": 6,
+     "web": 0
+    },
+    "2026-11-06": {
+     "shell": 1685,
+     "edits": 135,
+     "reads": 15,
+     "git": 33,
+     "mcp": 0,
+     "devin_msgs": 21,
+     "user_msgs": 5,
+     "web": 0
+    },
+    "2026-11-07": {
+     "shell": 1459,
+     "edits": 79,
+     "reads": 24,
+     "git": 36,
+     "mcp": 33,
+     "devin_msgs": 29,
+     "user_msgs": 8,
+     "web": 0
+    },
+    "2026-11-08": {
+     "shell": 1237,
+     "edits": 161,
+     "reads": 9,
+     "git": 62,
+     "mcp": 29,
+     "devin_msgs": 27,
+     "user_msgs": 7,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793625515.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/qvts/pull/40",
+     "repo": "Open-MBEE/qvts",
+     "num": "40",
+     "state": "merged"
+    },
+    {
+     "ts": 1793628989.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/qvts/pull/41",
+     "repo": "Open-MBEE/qvts",
+     "num": "41",
+     "state": "merged"
+    },
+    {
+     "ts": 1793631598.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/1849",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "1849",
+     "state": "merged"
+    },
+    {
+     "ts": 1793640758.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/1855",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "1855",
+     "state": "merged"
+    },
+    {
+     "ts": 1793653239.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/qvts/pull/42",
+     "repo": "Open-MBEE/qvts",
+     "num": "42",
+     "state": "merged"
+    },
+    {
+     "ts": 1793656604.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/1862",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "1862",
+     "state": "merged"
+    },
+    {
+     "ts": 1793661909.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/1865",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "1865",
+     "state": "merged"
+    },
+    {
+     "ts": 1793675216.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/1873",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "1873",
+     "state": "merged"
+    },
+    {
+     "ts": 1793675241.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/1874",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "1874",
+     "state": "merged"
+    },
+    {
+     "ts": 1793675958.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/1876",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "1876",
+     "state": "merged"
+    },
+    {
+     "ts": 1793686666.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/1881",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "1881",
+     "state": "merged"
+    },
+    {
+     "ts": 1793690599.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/1882",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "1882",
+     "state": "merged"
+    },
+    {
+     "ts": 1793691248.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/qvts/pull/43",
+     "repo": "Open-MBEE/qvts",
+     "num": "43",
+     "state": "merged"
+    },
+    {
+     "ts": 1793692199.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/1883",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "1883",
+     "state": "merged"
+    },
+    {
+     "ts": 1793724067.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/qvts/pull/44",
+     "repo": "Open-MBEE/qvts",
+     "num": "44",
+     "state": "merged"
+    },
+    {
+     "ts": 1793728595.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/OpenSysML-Extensions-Library/pull/19",
+     "repo": "Open-MBEE/OpenSysML-Extensions-Library",
+     "num": "19",
+     "state": "merged"
+    },
+    {
+     "ts": 1793731916.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/1889",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "1889",
+     "state": "merged"
+    },
+    {
+     "ts": 1793738431.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/qvts/pull/45",
+     "repo": "Open-MBEE/qvts",
+     "num": "45",
+     "state": "merged"
+    },
+    {
+     "ts": 1793738514.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/1892",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "1892",
+     "state": "merged"
+    },
+    {
+     "ts": 1793749460.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/qvts/pull/46",
+     "repo": "Open-MBEE/qvts",
+     "num": "46",
+     "state": "merged"
+    },
+    {
+     "ts": 1793800876.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/qvts/pull/47",
+     "repo": "Open-MBEE/qvts",
+     "num": "47",
+     "state": "merged"
+    },
+    {
+     "ts": 1793814013.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/1930",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "1930",
+     "state": "merged"
+    },
+    {
+     "ts": 1793831006.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/qvts/pull/48",
+     "repo": "Open-MBEE/qvts",
+     "num": "48",
+     "state": "merged"
+    },
+    {
+     "ts": 1793836746.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/1942",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "1942",
+     "state": "merged"
+    },
+    {
+     "ts": 1793841700.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/1943",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "1943",
+     "state": "merged"
+    },
+    {
+     "ts": 1793847500.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/1946",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "1946",
+     "state": "merged"
+    },
+    {
+     "ts": 1793857057.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/qvts/pull/49",
+     "repo": "Open-MBEE/qvts",
+     "num": "49",
+     "state": "merged"
+    },
+    {
+     "ts": 1793901681.0,
+     "day": "2026-11-05",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/1973",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "1973",
+     "state": "merged"
+    },
+    {
+     "ts": 1793925803.0,
+     "day": "2026-11-05",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/1990",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "1990",
+     "state": "merged"
+    },
+    {
+     "ts": 1793972765.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/qvts/pull/50",
+     "repo": "Open-MBEE/qvts",
+     "num": "50",
+     "state": "merged"
+    },
+    {
+     "ts": 1793987860.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/2016",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "2016",
+     "state": "merged"
+    },
+    {
+     "ts": 1793991119.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/qvts/pull/51",
+     "repo": "Open-MBEE/qvts",
+     "num": "51",
+     "state": "merged"
+    },
+    {
+     "ts": 1793994639.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/2017",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "2017",
+     "state": "merged"
+    },
+    {
+     "ts": 1794001415.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/qvts/pull/52",
+     "repo": "Open-MBEE/qvts",
+     "num": "52",
+     "state": "merged"
+    },
+    {
+     "ts": 1794013338.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/2019",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "2019",
+     "state": "merged"
+    },
+    {
+     "ts": 1794044427.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/2031",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "2031",
+     "state": "merged"
+    },
+    {
+     "ts": 1794046749.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/Open-MBEE/qvts/pull/53",
+     "repo": "Open-MBEE/qvts",
+     "num": "53",
+     "state": "merged"
+    },
+    {
+     "ts": 1794077787.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/2037",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "2037",
+     "state": "merged"
+    },
+    {
+     "ts": 1794080759.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/2045",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "2045",
+     "state": "merged"
+    },
+    {
+     "ts": 1794094778.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/Open-MBEE/qvts/pull/54",
+     "repo": "Open-MBEE/qvts",
+     "num": "54",
+     "state": "merged"
+    },
+    {
+     "ts": 1794105372.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/2054",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "2054",
+     "state": "merged"
+    },
+    {
+     "ts": 1794123748.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/Open-MBEE/qvts/pull/55",
+     "repo": "Open-MBEE/qvts",
+     "num": "55",
+     "state": "merged"
+    },
+    {
+     "ts": 1794130315.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/2057",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "2057",
+     "state": "merged"
+    },
+    {
+     "ts": 1794139252.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/2059",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "2059",
+     "state": "merged"
+    },
+    {
+     "ts": 1794149750.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/2060",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "2060",
+     "state": "merged"
+    },
+    {
+     "ts": 1794151448.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/2061",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "2061",
+     "state": "merged"
+    },
+    {
+     "ts": 1794167030.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/2063",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "2063",
+     "state": "open"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "4eac7d670b61499ea2a95a5babd91b78",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/4eac7d670b61499ea2a95a5babd91b78",
+   "title": "Add comment serialization support in OpenSysML",
+   "project": "OpenSysML",
+   "pr_repos": [
+    "Open-MBEE/OpenSysML"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "running (working)",
+   "parent": null,
+   "category": null,
+   "created": 1794164401.0,
+   "created_in_window": true,
+   "acus": 36.73173830718848,
+   "working": {
+    "2026-11-08": 7819.754050016403
+   },
+   "acus_scope": "spills",
+   "repos": [
+    "Open-MBEE/OpenSysML"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 167,
+     "edits": 25,
+     "reads": 44,
+     "git": 4,
+     "mcp": 8,
+     "devin_msgs": 3,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794169647.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/OpenSysML/pull/2064",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": "2064",
+     "state": "open"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "0355d4ab7b1b4730a122d4ed3901731e",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/0355d4ab7b1b4730a122d4ed3901731e",
+   "title": "Fix PropertyKindCalculus Errors and Warnings",
+   "project": "PropertyKindCalculus",
+   "pr_repos": [
+    "nasa-jpl/PropertyKindCalculus"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "suspended (user_request) [archived]",
+   "parent": null,
+   "category": "migrations_and_upgrades",
+   "created": 1793980918.0,
+   "created_in_window": true,
+   "acus": 12.478133240190123,
+   "working": {
+    "2026-11-06": 4610.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "nasa-jpl/PropertyKindCalculus"
+   ],
+   "actions_by_day": {
+    "2026-11-06": {
+     "shell": 43,
+     "edits": 6,
+     "reads": 9,
+     "git": 4,
+     "mcp": 0,
+     "devin_msgs": 3,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793983265.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/nasa-jpl/PropertyKindCalculus/pull/106",
+     "repo": "nasa-jpl/PropertyKindCalculus",
+     "num": "106",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "02b9ba2534ec43adb82a7a12f9fdae67",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/02b9ba2534ec43adb82a7a12f9fdae67",
+   "title": "Remediate PropertyKindCalculus Findings",
+   "project": "PropertyKindCalculus",
+   "pr_repos": [],
+   "origin": "automation",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "code_review",
+   "created": 1793800908.0,
+   "created_in_window": true,
+   "acus": 1.4692402390320989,
+   "working": {
+    "2026-11-04": 26.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "nasa-jpl/PropertyKindCalculus"
+   ],
+   "actions_by_day": {
+    "2026-11-04": {
+     "shell": 0,
+     "edits": 0,
+     "reads": 0,
+     "git": 0,
+     "mcp": 2,
+     "devin_msgs": 2,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [],
+   "actions_capped": false
+  },
+  {
+   "id": "54e653be46324440b1fe73c07fc27198",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/54e653be46324440b1fe73c07fc27198",
+   "title": "Remediate PropertyKindCalculus Scan Findings",
+   "project": "PropertyKindCalculus",
+   "pr_repos": [],
+   "origin": "automation",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "code_review",
+   "created": 1793714500.0,
+   "created_in_window": true,
+   "acus": 1.3831121015074075,
+   "working": {
+    "2026-11-03": 31.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "nasa-jpl/PropertyKindCalculus"
+   ],
+   "actions_by_day": {
+    "2026-11-03": {
+     "shell": 0,
+     "edits": 0,
+     "reads": 0,
+     "git": 0,
+     "mcp": 2,
+     "devin_msgs": 2,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [],
+   "actions_capped": false
+  },
+  {
+   "id": "02ac1c1f6af5404a927639bad3182191",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/02ac1c1f6af5404a927639bad3182191",
+   "title": "Remediate PropertyKindCalculus Findings",
+   "project": "PropertyKindCalculus",
+   "pr_repos": [],
+   "origin": "automation",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": null,
+   "created": 1793628103.0,
+   "created_in_window": true,
+   "acus": 1.3507017873547327,
+   "working": {
+    "2026-11-02": 26.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "nasa-jpl/PropertyKindCalculus"
+   ],
+   "actions_by_day": {
+    "2026-11-02": {
+     "shell": 0,
+     "edits": 0,
+     "reads": 0,
+     "git": 0,
+     "mcp": 2,
+     "devin_msgs": 2,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [],
+   "actions_capped": false
+  },
+  {
+   "id": "f371196f62954d02803e61912eb2a8c7",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/f371196f62954d02803e61912eb2a8c7",
+   "title": "Remediate PropertyKindCalculus Findings",
+   "project": "PropertyKindCalculus",
+   "pr_repos": [],
+   "origin": "automation",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "code_review",
+   "created": 1793887307.0,
+   "created_in_window": true,
+   "acus": 1.3278874307427984,
+   "working": {
+    "2026-11-05": 26.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "nasa-jpl/PropertyKindCalculus"
+   ],
+   "actions_by_day": {
+    "2026-11-05": {
+     "shell": 0,
+     "edits": 0,
+     "reads": 0,
+     "git": 0,
+     "mcp": 2,
+     "devin_msgs": 2,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [],
+   "actions_capped": false
+  },
+  {
+   "id": "70040b2df480453f90c4e2e8f87bacc5",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/70040b2df480453f90c4e2e8f87bacc5",
+   "title": "Remediate PropertyKindCalculus Findings",
+   "project": "PropertyKindCalculus",
+   "pr_repos": [],
+   "origin": "automation",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "code_review",
+   "created": 1793973702.0,
+   "created_in_window": true,
+   "acus": 1.2609495169436213,
+   "working": {
+    "2026-11-06": 19.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "nasa-jpl/PropertyKindCalculus"
+   ],
+   "actions_by_day": {
+    "2026-11-06": {
+     "shell": 0,
+     "edits": 0,
+     "reads": 0,
+     "git": 0,
+     "mcp": 2,
+     "devin_msgs": 2,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [],
+   "actions_capped": false
+  },
+  {
+   "id": "667f2029c4d1433193fe6d47ec605751",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/667f2029c4d1433193fe6d47ec605751",
+   "title": "Remediate PropertyKindCalculus Findings",
+   "project": "PropertyKindCalculus",
+   "pr_repos": [],
+   "origin": "automation",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "code_review",
+   "created": 1794060098.0,
+   "created_in_window": true,
+   "acus": 1.2011676180246913,
+   "working": {
+    "2026-11-07": 21.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "nasa-jpl/PropertyKindCalculus"
+   ],
+   "actions_by_day": {
+    "2026-11-07": {
+     "shell": 0,
+     "edits": 0,
+     "reads": 0,
+     "git": 0,
+     "mcp": 1,
+     "devin_msgs": 2,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [],
+   "actions_capped": false
+  },
+  {
+   "id": "85b1ad601c9c433fa0e50cf98797ca68",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/85b1ad601c9c433fa0e50cf98797ca68",
+   "title": "Remediate PropertyKindCalculus scan findings",
+   "project": "PropertyKindCalculus",
+   "pr_repos": [],
+   "origin": "automation",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "code_review",
+   "created": 1794146503.0,
+   "created_in_window": true,
+   "acus": 1.0775323882304526,
+   "working": {
+    "2026-11-08": 22.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "nasa-jpl/PropertyKindCalculus"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 0,
+     "edits": 0,
+     "reads": 0,
+     "git": 0,
+     "mcp": 1,
+     "devin_msgs": 2,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [],
+   "actions_capped": false
+  },
+  {
+   "id": "085325f0a0a249ba8c7a59b8514d1fae",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/085325f0a0a249ba8c7a59b8514d1fae",
+   "title": "Read valid modes from config.yaml",
+   "project": "calm",
+   "pr_repos": [
+    "Open-MBEE/calm"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "feature_development",
+   "created": 1794009570.0,
+   "created_in_window": true,
+   "acus": 9.027171533623045,
+   "working": {
+    "2026-11-06": 557.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/calm"
+   ],
+   "actions_by_day": {
+    "2026-11-06": {
+     "shell": 5,
+     "edits": 0,
+     "reads": 9,
+     "git": 0,
+     "mcp": 0,
+     "devin_msgs": 1,
+     "user_msgs": 1,
+     "web": 0
+    },
+    "2026-11-07": {
+     "shell": 27,
+     "edits": 11,
+     "reads": 26,
+     "git": 2,
+     "mcp": 0,
+     "devin_msgs": 5,
+     "user_msgs": 3,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794009989.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/calm/pull/2",
+     "repo": "Open-MBEE/calm",
+     "num": "2",
+     "state": "open"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "78a813cdaac24cb88eef3215ac6c655a",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/78a813cdaac24cb88eef3215ac6c655a",
+   "title": "Gauge Amina\u2019s Proposal Interest",
+   "project": "certified-learned-surrogates",
+   "pr_repos": [
+    "Open-MBEE/certified-learned-surrogates"
+   ],
+   "origin": "webapp",
+   "mode": "fusion",
+   "status": "suspended (inactivity) [archived]",
+   "parent": null,
+   "category": "documentation_and_content",
+   "created": 1793398429.0,
+   "created_in_window": false,
+   "acus": 20.29801247443342,
+   "working": {
+    "2026-11-02": 330.0,
+    "2026-11-04": 243.0
+   },
+   "acus_scope": "older",
+   "repos": [
+    "Open-MBEE/certified-learned-surrogates"
+   ],
+   "actions_by_day": {
+    "2026-11-02": {
+     "shell": 36,
+     "edits": 5,
+     "reads": 12,
+     "git": 2,
+     "mcp": 3,
+     "devin_msgs": 6,
+     "user_msgs": 3,
+     "web": 0
+    },
+    "2026-11-04": {
+     "shell": 15,
+     "edits": 4,
+     "reads": 4,
+     "git": 3,
+     "mcp": 0,
+     "devin_msgs": 7,
+     "user_msgs": 3,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793634914.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/certified-learned-surrogates/pull/2",
+     "repo": "Open-MBEE/certified-learned-surrogates",
+     "num": "2",
+     "state": "merged"
+    },
+    {
+     "ts": 1793635587.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/certified-learned-surrogates/pull/3",
+     "repo": "Open-MBEE/certified-learned-surrogates",
+     "num": "3",
+     "state": "merged"
+    },
+    {
+     "ts": 1793831214.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/certified-learned-surrogates/pull/4",
+     "repo": "Open-MBEE/certified-learned-surrogates",
+     "num": "4",
+     "state": "closed"
+    },
+    {
+     "ts": 1793836510.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/certified-learned-surrogates/pull/5",
+     "repo": "Open-MBEE/certified-learned-surrogates",
+     "num": "5",
+     "state": "closed"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "10d212bde0424cf8bd5cfac858d88dd7",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/10d212bde0424cf8bd5cfac858d88dd7",
+   "title": "EFA dashboard: per-level FACE cases in the manifest",
+   "project": "engineering-foundation-architecture",
+   "pr_repos": [
+    "Open-MBEE/engineering-foundation-architecture"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "category": "migrations_and_upgrades",
+   "created": 1793732329.0,
+   "created_in_window": true,
+   "acus": 48.8076305949177,
+   "working": {
+    "2026-11-03": 3418.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/engineering-foundation-architecture"
+   ],
+   "actions_by_day": {
+    "2026-11-03": {
+     "shell": 119,
+     "edits": 37,
+     "reads": 33,
+     "git": 20,
+     "mcp": 0,
+     "devin_msgs": 15,
+     "user_msgs": 2,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793733083.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/engineering-foundation-architecture/pull/65",
+     "repo": "Open-MBEE/engineering-foundation-architecture",
+     "num": "65",
+     "state": "merged"
+    },
+    {
+     "ts": 1793734978.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/engineering-foundation-architecture/pull/66",
+     "repo": "Open-MBEE/engineering-foundation-architecture",
+     "num": "66",
+     "state": "merged"
+    },
+    {
+     "ts": 1793737763.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/engineering-foundation-architecture/pull/68",
+     "repo": "Open-MBEE/engineering-foundation-architecture",
+     "num": "68",
+     "state": "merged"
+    },
+    {
+     "ts": 1793738354.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/engineering-foundation-architecture/pull/69",
+     "repo": "Open-MBEE/engineering-foundation-architecture",
+     "num": "69",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "e12802b453a94c36bb631524727acd43",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/e12802b453a94c36bb631524727acd43",
+   "title": "Map SBVR Commands to Gaps",
+   "project": "engineering-foundation-architecture",
+   "pr_repos": [
+    "Open-MBEE/engineering-foundation-architecture"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "documentation_and_content",
+   "created": 1793724567.0,
+   "created_in_window": true,
+   "acus": 15.14699795890823,
+   "working": {
+    "2026-11-03": 204.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/engineering-foundation-architecture"
+   ],
+   "actions_by_day": {
+    "2026-11-03": {
+     "shell": 14,
+     "edits": 2,
+     "reads": 5,
+     "git": 3,
+     "mcp": 0,
+     "devin_msgs": 3,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793724700.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/engineering-foundation-architecture/pull/64",
+     "repo": "Open-MBEE/engineering-foundation-architecture",
+     "num": "64",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "bbe86616453249d8a0677d78203a76d3",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/bbe86616453249d8a0677d78203a76d3",
+   "title": "Plan SysMLv2 SBVR Tooling",
+   "project": "engineering-foundation-architecture",
+   "pr_repos": [
+    "Open-MBEE/engineering-foundation-architecture"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "research_and_exploration",
+   "created": 1793736397.0,
+   "created_in_window": true,
+   "acus": 9.11598748838642,
+   "working": {
+    "2026-11-03": 697.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/SBVR.lean",
+    "Open-MBEE/engineering-foundation-architecture"
+   ],
+   "actions_by_day": {
+    "2026-11-03": {
+     "shell": 33,
+     "edits": 5,
+     "reads": 11,
+     "git": 2,
+     "mcp": 0,
+     "devin_msgs": 5,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793737021.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/engineering-foundation-architecture/pull/67",
+     "repo": "Open-MBEE/engineering-foundation-architecture",
+     "num": "67",
+     "state": "open"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "b88b65241237426e8beef79f60a1ea33",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/b88b65241237426e8beef79f60a1ea33",
+   "title": "Fix assurance-dashboard verdictFields doc-comment parsing",
+   "project": "engineering-foundation-architecture",
+   "pr_repos": [
+    "Open-MBEE/engineering-foundation-architecture"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "category": "bug_fixing",
+   "created": 1793827174.0,
+   "created_in_window": true,
+   "acus": 8.675260650023457,
+   "working": {
+    "2026-11-04": 2471.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/engineering-foundation-architecture"
+   ],
+   "actions_by_day": {
+    "2026-11-04": {
+     "shell": 28,
+     "edits": 5,
+     "reads": 6,
+     "git": 5,
+     "mcp": 5,
+     "devin_msgs": 4,
+     "user_msgs": 1,
+     "web": 0
+    },
+    "2026-11-05": {
+     "shell": 0,
+     "edits": 0,
+     "reads": 0,
+     "git": 0,
+     "mcp": 0,
+     "devin_msgs": 0,
+     "user_msgs": 0,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793827818.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/engineering-foundation-architecture/pull/70",
+     "repo": "Open-MBEE/engineering-foundation-architecture",
+     "num": "70",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "969fa9d7c75745bd898d55a089d2ebda",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/969fa9d7c75745bd898d55a089d2ebda",
+   "title": "Document F' Lean4 Verification",
+   "project": "fcheck",
+   "pr_repos": [
+    "Open-MBEE/fcheck"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "documentation_and_content",
+   "created": 1793742122.0,
+   "created_in_window": true,
+   "acus": 4.4216311380654325,
+   "working": {
+    "2026-11-03": 363.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/fcheck"
+   ],
+   "actions_by_day": {
+    "2026-11-03": {
+     "shell": 22,
+     "edits": 2,
+     "reads": 1,
+     "git": 1,
+     "mcp": 0,
+     "devin_msgs": 3,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793742469.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/fcheck/pull/1",
+     "repo": "Open-MBEE/fcheck",
+     "num": "1",
+     "state": "closed"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/a8a1adef279a4c009e8e3cd7e4a0a115",
+   "title": "Plan fprime-lean-sysmlv2-example structure",
+   "project": "fprime-lean-sysmlv2-example",
+   "pr_repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "running (waiting_for_user)",
+   "parent": null,
+   "category": "feature_development",
+   "created": 1793679495.0,
+   "created_in_window": true,
+   "acus": 367.50652802888806,
+   "working": {
+    "2026-11-02": 2727.0,
+    "2026-11-03": 4458.0,
+    "2026-11-04": 1283.0,
+    "2026-11-05": 83.0,
+    "2026-11-06": 1139.0,
+    "2026-11-07": 148.0,
+    "2026-11-08": 371.0
+   },
+   "acus_scope": "spills",
+   "repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "actions_by_day": {
+    "2026-11-03": {
+     "shell": 142,
+     "edits": 38,
+     "reads": 66,
+     "git": 29,
+     "mcp": 37,
+     "devin_msgs": 53,
+     "user_msgs": 16,
+     "web": 0
+    },
+    "2026-11-04": {
+     "shell": 43,
+     "edits": 12,
+     "reads": 7,
+     "git": 7,
+     "mcp": 48,
+     "devin_msgs": 28,
+     "user_msgs": 4,
+     "web": 0
+    },
+    "2026-11-05": {
+     "shell": 5,
+     "edits": 4,
+     "reads": 0,
+     "git": 1,
+     "mcp": 14,
+     "devin_msgs": 8,
+     "user_msgs": 2,
+     "web": 0
+    },
+    "2026-11-06": {
+     "shell": 21,
+     "edits": 4,
+     "reads": 6,
+     "git": 4,
+     "mcp": 3,
+     "devin_msgs": 9,
+     "user_msgs": 3,
+     "web": 0
+    },
+    "2026-11-07": {
+     "shell": 31,
+     "edits": 3,
+     "reads": 0,
+     "git": 0,
+     "mcp": 8,
+     "devin_msgs": 6,
+     "user_msgs": 1,
+     "web": 0
+    },
+    "2026-11-08": {
+     "shell": 19,
+     "edits": 3,
+     "reads": 1,
+     "git": 2,
+     "mcp": 13,
+     "devin_msgs": 18,
+     "user_msgs": 6,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793679856.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/71",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "71",
+     "state": "closed"
+    },
+    {
+     "ts": 1793682627.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/73",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "73",
+     "state": "merged"
+    },
+    {
+     "ts": 1793741747.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/85",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "85",
+     "state": "merged"
+    },
+    {
+     "ts": 1793742417.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/86",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "86",
+     "state": "merged"
+    },
+    {
+     "ts": 1793744544.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/87",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "87",
+     "state": "merged"
+    },
+    {
+     "ts": 1793744786.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/88",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "88",
+     "state": "merged"
+    },
+    {
+     "ts": 1793981798.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/100",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "100",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "968089eb086c474c98f74435031494cf",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/968089eb086c474c98f74435031494cf",
+   "title": "ECR-001: refused return is a lost packet, K4 sentence, record",
+   "project": "fprime-lean-sysmlv2-example",
+   "pr_repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "category": "feature_development",
+   "created": 1793996706.0,
+   "created_in_window": true,
+   "acus": 183.26561263465803,
+   "working": {
+    "2026-11-06": 37345.0,
+    "2026-11-07": 2998.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "actions_by_day": {
+    "2026-11-06": {
+     "shell": 346,
+     "edits": 57,
+     "reads": 64,
+     "git": 0,
+     "mcp": 0,
+     "devin_msgs": 2,
+     "user_msgs": 1,
+     "web": 0
+    },
+    "2026-11-07": {
+     "shell": 600,
+     "edits": 112,
+     "reads": 81,
+     "git": 5,
+     "mcp": 4,
+     "devin_msgs": 16,
+     "user_msgs": 5,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794014968.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/103",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "103",
+     "state": "merged"
+    },
+    {
+     "ts": 1794034379.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/104",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "104",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "2fff7fe2690f45478145383e1b054d5e",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/2fff7fe2690f45478145383e1b054d5e",
+   "title": "Add F\u00b4 retransmit, non-waiting SendFile, M1 file capacity (F5)",
+   "project": "fprime-lean-sysmlv2-example",
+   "pr_repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "category": "feature_development",
+   "created": 1793827173.0,
+   "created_in_window": true,
+   "acus": 170.70308531014692,
+   "working": {
+    "2026-11-04": 21257.0,
+    "2026-11-05": 8888.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "actions_by_day": {
+    "2026-11-04": {
+     "shell": 156,
+     "edits": 39,
+     "reads": 65,
+     "git": 0,
+     "mcp": 0,
+     "devin_msgs": 2,
+     "user_msgs": 1,
+     "web": 0
+    },
+    "2026-11-05": {
+     "shell": 203,
+     "edits": 45,
+     "reads": 11,
+     "git": 15,
+     "mcp": 0,
+     "devin_msgs": 14,
+     "user_msgs": 5,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793838927.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/97",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "97",
+     "state": "merged"
+    },
+    {
+     "ts": 1793864000.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/98",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "98",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "8f816cb2dcec4d0ea5ad04e938d81571",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/8f816cb2dcec4d0ea5ad04e938d81571",
+   "title": "Add M1 SBVR, transfer theorems, FACE refinement, views (F4)",
+   "project": "fprime-lean-sysmlv2-example",
+   "pr_repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "category": "feature_development",
+   "created": 1793803688.0,
+   "created_in_window": true,
+   "acus": 110.05895187695268,
+   "working": {
+    "2026-11-04": 21328.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "actions_by_day": {
+    "2026-11-04": {
+     "shell": 324,
+     "edits": 65,
+     "reads": 35,
+     "git": 13,
+     "mcp": 0,
+     "devin_msgs": 14,
+     "user_msgs": 6,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793818109.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/96",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "96",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "1802fd673bdf4c728ae31c366c5b5c67",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/1802fd673bdf4c728ae31c366c5b5c67",
+   "title": "Add M1 channel depth, backfill, overflow scenarios (F3)",
+   "project": "fprime-lean-sysmlv2-example",
+   "pr_repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "category": "feature_development",
+   "created": 1793745139.0,
+   "created_in_window": true,
+   "acus": 93.53266198906378,
+   "working": {
+    "2026-11-03": 19679.0,
+    "2026-11-04": 3223.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "actions_by_day": {
+    "2026-11-03": {
+     "shell": 89,
+     "edits": 16,
+     "reads": 34,
+     "git": 0,
+     "mcp": 0,
+     "devin_msgs": 1,
+     "user_msgs": 1,
+     "web": 0
+    },
+    "2026-11-04": {
+     "shell": 144,
+     "edits": 29,
+     "reads": 14,
+     "git": 5,
+     "mcp": 0,
+     "devin_msgs": 13,
+     "user_msgs": 4,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793758556.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/90",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "90",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "7250126e396340ce9ab48178e85b20f0",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/7250126e396340ce9ab48178e85b20f0",
+   "title": "Add M0 SBVR + FACE for capacity, queueing, retransmit (F2)",
+   "project": "fprime-lean-sysmlv2-example",
+   "pr_repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "category": "feature_development",
+   "created": 1793769540.0,
+   "created_in_window": true,
+   "acus": 68.13629411294033,
+   "working": {
+    "2026-11-03": 9660.0,
+    "2026-11-04": 1717.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "actions_by_day": {
+    "2026-11-04": {
+     "shell": 146,
+     "edits": 35,
+     "reads": 37,
+     "git": 4,
+     "mcp": 5,
+     "devin_msgs": 3,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793778840.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/91",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "91",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "a1a889ee01544f3eb5126cefd11e7e7c",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/a1a889ee01544f3eb5126cefd11e7e7c",
+   "title": "Model F\u00b4 file-queue rule: K3 counts waiting files (Q9)",
+   "project": "fprime-lean-sysmlv2-example",
+   "pr_repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "category": "feature_development",
+   "created": 1793864440.0,
+   "created_in_window": true,
+   "acus": 63.546533349716874,
+   "working": {
+    "2026-11-04": 1159.0,
+    "2026-11-05": 9183.0,
+    "2026-11-06": 65.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "actions_by_day": {
+    "2026-11-05": {
+     "shell": 238,
+     "edits": 56,
+     "reads": 56,
+     "git": 13,
+     "mcp": 0,
+     "devin_msgs": 9,
+     "user_msgs": 3,
+     "web": 0
+    },
+    "2026-11-06": {
+     "shell": 1,
+     "edits": 1,
+     "reads": 0,
+     "git": 0,
+     "mcp": 0,
+     "devin_msgs": 1,
+     "user_msgs": 0,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793873216.0,
+     "day": "2026-11-05",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/99",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "99",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "aaef36dba3cc427ab7710e7b60080909",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/aaef36dba3cc427ab7710e7b60080909",
+   "title": "Add Downlink/M1/sbvr requirements refining M0 (L4b)",
+   "project": "fprime-lean-sysmlv2-example",
+   "pr_repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "category": "feature_development",
+   "created": 1793732328.0,
+   "created_in_window": true,
+   "acus": 58.72917652612016,
+   "working": {
+    "2026-11-03": 6607.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "actions_by_day": {
+    "2026-11-03": {
+     "shell": 193,
+     "edits": 28,
+     "reads": 46,
+     "git": 8,
+     "mcp": 0,
+     "devin_msgs": 7,
+     "user_msgs": 3,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793737500.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/83",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "83",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "c2949a419ed04408b2068beb2e2ddf9d",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/c2949a419ed04408b2068beb2e2ddf9d",
+   "title": "Add Downlink/M0/sbvr requirements and correspondence (L3b)",
+   "project": "fprime-lean-sysmlv2-example",
+   "pr_repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "category": "bug_fixing",
+   "created": 1793714346.0,
+   "created_in_window": true,
+   "acus": 55.2061009904679,
+   "working": {
+    "2026-11-03": 4667.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "actions_by_day": {
+    "2026-11-03": {
+     "shell": 171,
+     "edits": 72,
+     "reads": 49,
+     "git": 10,
+     "mcp": 0,
+     "devin_msgs": 9,
+     "user_msgs": 4,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793716827.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/78",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "78",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "a8ea6924994943ce84a29543845128cf",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/a8ea6924994943ce84a29543845128cf",
+   "title": "F6: M1 sender C5 per packet, F\u00b4 Repeater refusal, overflow realized",
+   "project": "fprime-lean-sysmlv2-example",
+   "pr_repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "category": "feature_development",
+   "created": 1793981731.0,
+   "created_in_window": true,
+   "acus": 54.943356972295064,
+   "working": {
+    "2026-11-06": 11592.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "actions_by_day": {
+    "2026-11-06": {
+     "shell": 152,
+     "edits": 29,
+     "reads": 56,
+     "git": 4,
+     "mcp": 0,
+     "devin_msgs": 5,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793991096.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/101",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "101",
+     "state": "merged"
+    },
+    {
+     "ts": 1793993243.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/102",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "102",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "225a0e60d25a402dafedef75ff57f5f6",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/225a0e60d25a402dafedef75ff57f5f6",
+   "title": "Q11: M1 packets = 5, measure time-refinement cost",
+   "project": "fprime-lean-sysmlv2-example",
+   "pr_repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "category": "feature_development",
+   "created": 1794118180.0,
+   "created_in_window": true,
+   "acus": 48.37638182499712,
+   "working": {
+    "2026-11-07": 6620.0,
+    "2026-11-08": 3330.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 216,
+     "edits": 26,
+     "reads": 45,
+     "git": 2,
+     "mcp": 4,
+     "devin_msgs": 7,
+     "user_msgs": 3,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794126608.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/106",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "106",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "c8241a619f50465fa8e5ef4a3e3d42ce",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/c8241a619f50465fa8e5ef4a3e3d42ce",
+   "title": "Create Downlink/M1/architecture, Downlink/docs, Downlink/tools (L6)",
+   "project": "fprime-lean-sysmlv2-example",
+   "pr_repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "category": "refactoring_and_optimization",
+   "created": 1793732328.0,
+   "created_in_window": true,
+   "acus": 42.03693544295309,
+   "working": {
+    "2026-11-03": 8495.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "actions_by_day": {
+    "2026-11-03": {
+     "shell": 139,
+     "edits": 20,
+     "reads": 29,
+     "git": 4,
+     "mcp": 0,
+     "devin_msgs": 7,
+     "user_msgs": 2,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793740171.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/84",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "84",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "28a18b43a9314f7a9458824324ff447c",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/28a18b43a9314f7a9458824324ff447c",
+   "title": "Add M0 capacity, queueing, throughput, retransmit (F1)",
+   "project": "fprime-lean-sysmlv2-example",
+   "pr_repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "category": "feature_development",
+   "created": 1793745137.0,
+   "created_in_window": true,
+   "acus": 41.273393377142796,
+   "working": {
+    "2026-11-03": 3076.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "actions_by_day": {
+    "2026-11-03": {
+     "shell": 68,
+     "edits": 28,
+     "reads": 27,
+     "git": 6,
+     "mcp": 0,
+     "devin_msgs": 4,
+     "user_msgs": 2,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793747387.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/89",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "89",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "72924cd7c7f94fc7b262db29ed4b1e38",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/72924cd7c7f94fc7b262db29ed4b1e38",
+   "title": "Realize overflow in full: M1 time refinement r=4",
+   "project": "fprime-lean-sysmlv2-example",
+   "pr_repos": [],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "running (working)",
+   "parent": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "category": null,
+   "created": 1794159770.0,
+   "created_in_window": true,
+   "acus": 37.792833202157205,
+   "working": {
+    "2026-11-08": 12374.754050016403
+   },
+   "acus_scope": "spills",
+   "repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 154,
+     "edits": 22,
+     "reads": 37,
+     "git": 0,
+     "mcp": 4,
+     "devin_msgs": 5,
+     "user_msgs": 3,
+     "web": 0
+    }
+   },
+   "prs_created": [],
+   "actions_capped": false
+  },
+  {
+   "id": "8d5f864c5cdc47f29f88727f2725d0d5",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/8d5f864c5cdc47f29f88727f2725d0d5",
+   "title": "Create Downlink/M1/face refining the M0 case (L5)",
+   "project": "fprime-lean-sysmlv2-example",
+   "pr_repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "category": "feature_development",
+   "created": 1793733344.0,
+   "created_in_window": true,
+   "acus": 35.81894190161235,
+   "working": {
+    "2026-11-03": 5222.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "actions_by_day": {
+    "2026-11-03": {
+     "shell": 169,
+     "edits": 47,
+     "reads": 48,
+     "git": 14,
+     "mcp": 0,
+     "devin_msgs": 9,
+     "user_msgs": 3,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793735739.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/81",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "81",
+     "state": "merged"
+    },
+    {
+     "ts": 1793736925.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/82",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "82",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "145eb99d994048ecab540718b9d9bc7e",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/145eb99d994048ecab540718b9d9bc7e",
+   "title": "Move F\u00b4 root to common/fprime, Downlink components (L7)",
+   "project": "fprime-lean-sysmlv2-example",
+   "pr_repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "category": "refactoring_and_optimization",
+   "created": 1793809866.0,
+   "created_in_window": true,
+   "acus": 31.028020172260906,
+   "working": {
+    "2026-11-04": 3187.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "actions_by_day": {
+    "2026-11-04": {
+     "shell": 119,
+     "edits": 27,
+     "reads": 30,
+     "git": 7,
+     "mcp": 5,
+     "devin_msgs": 9,
+     "user_msgs": 3,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793811931.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/93",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "93",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "c0ac59f0c41049c5aa85b8a8c38a271b",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/c0ac59f0c41049c5aa85b8a8c38a271b",
+   "title": "Mechanise ECR-001 status coverage check in Lean",
+   "project": "fprime-lean-sysmlv2-example",
+   "pr_repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "category": "feature_development",
+   "created": 1794034589.0,
+   "created_in_window": true,
+   "acus": 30.178071401624692,
+   "working": {
+    "2026-11-06": 3798.0,
+    "2026-11-07": 3281.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "actions_by_day": {
+    "2026-11-07": {
+     "shell": 138,
+     "edits": 25,
+     "reads": 18,
+     "git": 3,
+     "mcp": 5,
+     "devin_msgs": 4,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794041540.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/105",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "105",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "0cd17b5d4c4f4645bbc7cb644ce91d5b",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/0cd17b5d4c4f4645bbc7cb644ce91d5b",
+   "title": "Move mars/lean to Downlink/M1/mars as Downlink.M1 (L4a)",
+   "project": "fprime-lean-sysmlv2-example",
+   "pr_repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "category": "refactoring_and_optimization",
+   "created": 1793714348.0,
+   "created_in_window": true,
+   "acus": 29.618308257730042,
+   "working": {
+    "2026-11-03": 11565.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "actions_by_day": {
+    "2026-11-03": {
+     "shell": 138,
+     "edits": 27,
+     "reads": 57,
+     "git": 3,
+     "mcp": 0,
+     "devin_msgs": 8,
+     "user_msgs": 3,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793725754.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/80",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "80",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "13ae34276ee74e1aad2fb532b47dbafa",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/13ae34276ee74e1aad2fb532b47dbafa",
+   "title": "Add Downlink/M0/face requirement-level case (L3c)",
+   "project": "fprime-lean-sysmlv2-example",
+   "pr_repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "category": "feature_development",
+   "created": 1793714347.0,
+   "created_in_window": true,
+   "acus": 26.209463786773252,
+   "working": {
+    "2026-11-03": 3176.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "actions_by_day": {
+    "2026-11-03": {
+     "shell": 96,
+     "edits": 17,
+     "reads": 39,
+     "git": 6,
+     "mcp": 0,
+     "devin_msgs": 9,
+     "user_msgs": 3,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793716191.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/77",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "77",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "931e8ec34bf544218e29613de866b430",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/931e8ec34bf544218e29613de866b430",
+   "title": "Create Downlink/M0/mars from mars/lean (L3a)",
+   "project": "fprime-lean-sysmlv2-example",
+   "pr_repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "category": "refactoring_and_optimization",
+   "created": 1793682539.0,
+   "created_in_window": true,
+   "acus": 25.925781236790122,
+   "working": {
+    "2026-11-02": 4743.0,
+    "2026-11-03": 4339.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "actions_by_day": {
+    "2026-11-03": {
+     "shell": 96,
+     "edits": 25,
+     "reads": 22,
+     "git": 5,
+     "mcp": 0,
+     "devin_msgs": 7,
+     "user_msgs": 3,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793687017.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/76",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "76",
+     "state": "merged"
+    },
+    {
+     "ts": 1793718079.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/79",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "79",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "83174c8f0c5c4c91804d1a760bc1947c",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/83174c8f0c5c4c91804d1a760bc1947c",
+   "title": "Split theory and CLI out of lean/ (L2)",
+   "project": "fprime-lean-sysmlv2-example",
+   "pr_repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "category": "feature_development",
+   "created": 1793682539.0,
+   "created_in_window": true,
+   "acus": 25.051039384295883,
+   "working": {
+    "2026-11-02": 2684.0,
+    "2026-11-03": 183.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "actions_by_day": {
+    "2026-11-03": {
+     "shell": 90,
+     "edits": 17,
+     "reads": 22,
+     "git": 7,
+     "mcp": 1,
+     "devin_msgs": 6,
+     "user_msgs": 3,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793684808.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/75",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "75",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "7910b336d6864261864dcd3f2dc77975",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/7910b336d6864261864dcd3f2dc77975",
+   "title": "Move JobSystem under JobSystem/ (L8)",
+   "project": "fprime-lean-sysmlv2-example",
+   "pr_repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "category": "refactoring_and_optimization",
+   "created": 1793809867.0,
+   "created_in_window": true,
+   "acus": 23.159323140448148,
+   "working": {
+    "2026-11-04": 2361.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "actions_by_day": {
+    "2026-11-04": {
+     "shell": 90,
+     "edits": 19,
+     "reads": 22,
+     "git": 6,
+     "mcp": 0,
+     "devin_msgs": 7,
+     "user_msgs": 3,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793810276.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/92",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "92",
+     "state": "merged"
+    },
+    {
+     "ts": 1793814194.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/94",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "94",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "4acc09a5855645a8b68bce9087dfd88d",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/4acc09a5855645a8b68bce9087dfd88d",
+   "title": "Finish layout: README pass and LAYOUT.md record (L9)",
+   "project": "fprime-lean-sysmlv2-example",
+   "pr_repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "category": "documentation_and_content",
+   "created": 1793816770.0,
+   "created_in_window": true,
+   "acus": 12.542767544030042,
+   "working": {
+    "2026-11-04": 1907.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "actions_by_day": {
+    "2026-11-04": {
+     "shell": 51,
+     "edits": 9,
+     "reads": 15,
+     "git": 4,
+     "mcp": 4,
+     "devin_msgs": 4,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793817612.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/95",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "95",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "75685d1af13a4f34a27d333c6d75e250",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/75685d1af13a4f34a27d333c6d75e250",
+   "title": "Move Downlink runs to Downlink/M1/tests/runs (L1)",
+   "project": "fprime-lean-sysmlv2-example",
+   "pr_repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "a8a1adef279a4c009e8e3cd7e4a0a115",
+   "category": "refactoring_and_optimization",
+   "created": 1793682538.0,
+   "created_in_window": true,
+   "acus": 10.563748284167078,
+   "working": {
+    "2026-11-02": 645.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/fprime-lean-sysmlv2-example"
+   ],
+   "actions_by_day": {
+    "2026-11-03": {
+     "shell": 41,
+     "edits": 8,
+     "reads": 15,
+     "git": 4,
+     "mcp": 0,
+     "devin_msgs": 6,
+     "user_msgs": 2,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793682838.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/74",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": "74",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "f2f5f981cea9449b9406434c84f4a2fa",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/f2f5f981cea9449b9406434c84f4a2fa",
+   "title": "Synchronize Repositories Across Remotes",
+   "project": "git-remote-sync.lean",
+   "pr_repos": [
+    "Open-MBEE/git-remote-sync.lean",
+    "Open-MBEE/integration"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "feature_development",
+   "created": 1792472690.0,
+   "created_in_window": false,
+   "acus": 649.8788898471834,
+   "working": {
+    "2026-11-02": 8790.0,
+    "2026-11-03": 5.0
+   },
+   "acus_scope": "older",
+   "repos": [
+    "Open-MBEE/git-remote-sync.lean",
+    "Open-MBEE/integration"
+   ],
+   "actions_by_day": {
+    "2026-11-02": {
+     "shell": 283,
+     "edits": 103,
+     "reads": 68,
+     "git": 60,
+     "mcp": 9,
+     "devin_msgs": 73,
+     "user_msgs": 31,
+     "web": 4
+    },
+    "2026-11-03": {
+     "shell": 83,
+     "edits": 25,
+     "reads": 33,
+     "git": 11,
+     "mcp": 0,
+     "devin_msgs": 15,
+     "user_msgs": 5,
+     "web": 0
+    },
+    "2026-11-04": {
+     "shell": 0,
+     "edits": 0,
+     "reads": 0,
+     "git": 0,
+     "mcp": 0,
+     "devin_msgs": 0,
+     "user_msgs": 0,
+     "web": 0
+    },
+    "2026-11-05": {
+     "shell": 0,
+     "edits": 0,
+     "reads": 0,
+     "git": 0,
+     "mcp": 0,
+     "devin_msgs": 0,
+     "user_msgs": 0,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793645896.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/git-remote-sync.lean/pull/51",
+     "repo": "Open-MBEE/git-remote-sync.lean",
+     "num": "51",
+     "state": "merged"
+    },
+    {
+     "ts": 1793649884.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/git-remote-sync.lean/pull/52",
+     "repo": "Open-MBEE/git-remote-sync.lean",
+     "num": "52",
+     "state": "merged"
+    },
+    {
+     "ts": 1793650323.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/git-remote-sync.lean/pull/53",
+     "repo": "Open-MBEE/git-remote-sync.lean",
+     "num": "53",
+     "state": "merged"
+    },
+    {
+     "ts": 1793650357.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/git-remote-sync.lean/pull/54",
+     "repo": "Open-MBEE/git-remote-sync.lean",
+     "num": "54",
+     "state": "merged"
+    },
+    {
+     "ts": 1793650629.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/git-remote-sync.lean/pull/55",
+     "repo": "Open-MBEE/git-remote-sync.lean",
+     "num": "55",
+     "state": "merged"
+    },
+    {
+     "ts": 1793653102.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/git-remote-sync.lean/pull/56",
+     "repo": "Open-MBEE/git-remote-sync.lean",
+     "num": "56",
+     "state": "merged"
+    },
+    {
+     "ts": 1793659449.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/git-remote-sync.lean/pull/57",
+     "repo": "Open-MBEE/git-remote-sync.lean",
+     "num": "57",
+     "state": "merged"
+    },
+    {
+     "ts": 1793669910.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/git-remote-sync.lean/pull/58",
+     "repo": "Open-MBEE/git-remote-sync.lean",
+     "num": "58",
+     "state": "merged"
+    },
+    {
+     "ts": 1793678661.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/git-remote-sync.lean/pull/59",
+     "repo": "Open-MBEE/git-remote-sync.lean",
+     "num": "59",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "1fbba99fbf8446d3a9ffe2110715fac4",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/1fbba99fbf8446d3a9ffe2110715fac4",
+   "title": "Formalize Mars Model in Lean",
+   "project": "mars.lean",
+   "pr_repos": [
+    "Open-MBEE/mars.lean",
+    "nasa-jpl/PropertyKindCalculus",
+    "Open-MBEE/pacti.lean"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "feature_development",
+   "created": 1792638399.0,
+   "created_in_window": false,
+   "acus": 3526.159273266071,
+   "working": {
+    "2026-11-02": 24445.0,
+    "2026-11-03": 29634.0,
+    "2026-11-04": 42049.0,
+    "2026-11-05": 413.0,
+    "2026-11-06": 18607.0,
+    "2026-11-07": 1117.0,
+    "2026-11-08": 4599.0
+   },
+   "acus_scope": "older",
+   "repos": [
+    "Open-MBEE/mars",
+    "Open-MBEE/mars.lean",
+    "Open-MBEE/pacti.lean",
+    "nasa-jpl/PropertyKindCalculus"
+   ],
+   "actions_by_day": {
+    "2026-11-02": {
+     "shell": 1822,
+     "edits": 690,
+     "reads": 59,
+     "git": 136,
+     "mcp": 2,
+     "devin_msgs": 129,
+     "user_msgs": 23,
+     "web": 0
+    },
+    "2026-11-03": {
+     "shell": 1589,
+     "edits": 632,
+     "reads": 13,
+     "git": 82,
+     "mcp": 0,
+     "devin_msgs": 78,
+     "user_msgs": 9,
+     "web": 0
+    },
+    "2026-11-04": {
+     "shell": 1937,
+     "edits": 585,
+     "reads": 4,
+     "git": 44,
+     "mcp": 7,
+     "devin_msgs": 82,
+     "user_msgs": 19,
+     "web": 0
+    },
+    "2026-11-05": {
+     "shell": 442,
+     "edits": 172,
+     "reads": 8,
+     "git": 21,
+     "mcp": 0,
+     "devin_msgs": 25,
+     "user_msgs": 5,
+     "web": 0
+    },
+    "2026-11-06": {
+     "shell": 553,
+     "edits": 203,
+     "reads": 118,
+     "git": 41,
+     "mcp": 0,
+     "devin_msgs": 37,
+     "user_msgs": 8,
+     "web": 0
+    },
+    "2026-11-07": {
+     "shell": 50,
+     "edits": 23,
+     "reads": 10,
+     "git": 3,
+     "mcp": 6,
+     "devin_msgs": 12,
+     "user_msgs": 4,
+     "web": 0
+    },
+    "2026-11-08": {
+     "shell": 154,
+     "edits": 61,
+     "reads": 20,
+     "git": 13,
+     "mcp": 26,
+     "devin_msgs": 34,
+     "user_msgs": 14,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793626775.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/232",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "232",
+     "state": "merged"
+    },
+    {
+     "ts": 1793628664.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/233",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "233",
+     "state": "merged"
+    },
+    {
+     "ts": 1793629845.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/234",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "234",
+     "state": "merged"
+    },
+    {
+     "ts": 1793632589.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/235",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "235",
+     "state": "merged"
+    },
+    {
+     "ts": 1793633446.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/236",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "236",
+     "state": "merged"
+    },
+    {
+     "ts": 1793635246.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/237",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "237",
+     "state": "merged"
+    },
+    {
+     "ts": 1793635377.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/238",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "238",
+     "state": "merged"
+    },
+    {
+     "ts": 1793635702.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/239",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "239",
+     "state": "merged"
+    },
+    {
+     "ts": 1793636074.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/240",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "240",
+     "state": "merged"
+    },
+    {
+     "ts": 1793646968.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/241",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "241",
+     "state": "merged"
+    },
+    {
+     "ts": 1793647599.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/242",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "242",
+     "state": "merged"
+    },
+    {
+     "ts": 1793648833.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/243",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "243",
+     "state": "merged"
+    },
+    {
+     "ts": 1793651342.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/244",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "244",
+     "state": "merged"
+    },
+    {
+     "ts": 1793652586.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/245",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "245",
+     "state": "merged"
+    },
+    {
+     "ts": 1793652892.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/246",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "246",
+     "state": "merged"
+    },
+    {
+     "ts": 1793653320.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/247",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "247",
+     "state": "merged"
+    },
+    {
+     "ts": 1793653685.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/248",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "248",
+     "state": "merged"
+    },
+    {
+     "ts": 1793654438.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/249",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "249",
+     "state": "merged"
+    },
+    {
+     "ts": 1793655505.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/250",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "250",
+     "state": "merged"
+    },
+    {
+     "ts": 1793658038.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/251",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "251",
+     "state": "merged"
+    },
+    {
+     "ts": 1793658171.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/252",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "252",
+     "state": "merged"
+    },
+    {
+     "ts": 1793658616.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/253",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "253",
+     "state": "merged"
+    },
+    {
+     "ts": 1793658995.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/254",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "254",
+     "state": "merged"
+    },
+    {
+     "ts": 1793659479.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/255",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "255",
+     "state": "merged"
+    },
+    {
+     "ts": 1793659660.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/256",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "256",
+     "state": "merged"
+    },
+    {
+     "ts": 1793659922.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/257",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "257",
+     "state": "merged"
+    },
+    {
+     "ts": 1793664431.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/258",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "258",
+     "state": "merged"
+    },
+    {
+     "ts": 1793665713.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/259",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "259",
+     "state": "merged"
+    },
+    {
+     "ts": 1793665807.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/260",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "260",
+     "state": "merged"
+    },
+    {
+     "ts": 1793713526.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/261",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "261",
+     "state": "merged"
+    },
+    {
+     "ts": 1793714328.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/262",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "262",
+     "state": "merged"
+    },
+    {
+     "ts": 1793714654.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/263",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "263",
+     "state": "merged"
+    },
+    {
+     "ts": 1793720407.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/264",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "264",
+     "state": "merged"
+    },
+    {
+     "ts": 1793720713.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/265",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "265",
+     "state": "merged"
+    },
+    {
+     "ts": 1793721157.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/266",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "266",
+     "state": "merged"
+    },
+    {
+     "ts": 1793721372.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/267",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "267",
+     "state": "merged"
+    },
+    {
+     "ts": 1793722790.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/268",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "268",
+     "state": "merged"
+    },
+    {
+     "ts": 1793723373.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/269",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "269",
+     "state": "merged"
+    },
+    {
+     "ts": 1793724630.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/270",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "270",
+     "state": "merged"
+    },
+    {
+     "ts": 1793726311.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/271",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "271",
+     "state": "merged"
+    },
+    {
+     "ts": 1793728296.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/272",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "272",
+     "state": "merged"
+    },
+    {
+     "ts": 1793728769.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/273",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "273",
+     "state": "merged"
+    },
+    {
+     "ts": 1793729005.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/274",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "274",
+     "state": "merged"
+    },
+    {
+     "ts": 1793729901.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/275",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "275",
+     "state": "merged"
+    },
+    {
+     "ts": 1793730364.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/276",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "276",
+     "state": "merged"
+    },
+    {
+     "ts": 1793730557.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/277",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "277",
+     "state": "merged"
+    },
+    {
+     "ts": 1793730994.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/278",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "278",
+     "state": "merged"
+    },
+    {
+     "ts": 1793731113.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/279",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "279",
+     "state": "merged"
+    },
+    {
+     "ts": 1793734155.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/280",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "280",
+     "state": "merged"
+    },
+    {
+     "ts": 1793735086.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/281",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "281",
+     "state": "merged"
+    },
+    {
+     "ts": 1793735780.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/282",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "282",
+     "state": "merged"
+    },
+    {
+     "ts": 1793735965.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/283",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "283",
+     "state": "merged"
+    },
+    {
+     "ts": 1793736363.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/284",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "284",
+     "state": "merged"
+    },
+    {
+     "ts": 1793737142.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/285",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "285",
+     "state": "merged"
+    },
+    {
+     "ts": 1793739210.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/286",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "286",
+     "state": "merged"
+    },
+    {
+     "ts": 1793740074.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/287",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "287",
+     "state": "merged"
+    },
+    {
+     "ts": 1793742457.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/288",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "288",
+     "state": "merged"
+    },
+    {
+     "ts": 1793769929.0,
+     "day": "2026-11-03",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/289",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "289",
+     "state": "merged"
+    },
+    {
+     "ts": 1793802149.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/290",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "290",
+     "state": "merged"
+    },
+    {
+     "ts": 1793803223.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/291",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "291",
+     "state": "merged"
+    },
+    {
+     "ts": 1793804454.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/292",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "292",
+     "state": "merged"
+    },
+    {
+     "ts": 1793805139.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/293",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "293",
+     "state": "merged"
+    },
+    {
+     "ts": 1793808846.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/294",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "294",
+     "state": "merged"
+    },
+    {
+     "ts": 1793809113.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/295",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "295",
+     "state": "merged"
+    },
+    {
+     "ts": 1793809703.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/296",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "296",
+     "state": "merged"
+    },
+    {
+     "ts": 1793810579.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/297",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "297",
+     "state": "merged"
+    },
+    {
+     "ts": 1793812578.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/298",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "298",
+     "state": "merged"
+    },
+    {
+     "ts": 1793813356.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/299",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "299",
+     "state": "merged"
+    },
+    {
+     "ts": 1793814327.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/300",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "300",
+     "state": "merged"
+    },
+    {
+     "ts": 1793815586.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/301",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "301",
+     "state": "merged"
+    },
+    {
+     "ts": 1793816463.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/302",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "302",
+     "state": "merged"
+    },
+    {
+     "ts": 1793817093.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/303",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "303",
+     "state": "merged"
+    },
+    {
+     "ts": 1793817381.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/304",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "304",
+     "state": "merged"
+    },
+    {
+     "ts": 1793818451.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/305",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "305",
+     "state": "merged"
+    },
+    {
+     "ts": 1793836714.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/306",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "306",
+     "state": "merged"
+    },
+    {
+     "ts": 1793857091.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/307",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "307",
+     "state": "merged"
+    },
+    {
+     "ts": 1793857662.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/308",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "308",
+     "state": "merged"
+    },
+    {
+     "ts": 1793894212.0,
+     "day": "2026-11-05",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/309",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "309",
+     "state": "merged"
+    },
+    {
+     "ts": 1793896790.0,
+     "day": "2026-11-05",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/310",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "310",
+     "state": "merged"
+    },
+    {
+     "ts": 1793899649.0,
+     "day": "2026-11-05",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/311",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "311",
+     "state": "merged"
+    },
+    {
+     "ts": 1793972845.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/312",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "312",
+     "state": "merged"
+    },
+    {
+     "ts": 1793982941.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/313",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "313",
+     "state": "merged"
+    },
+    {
+     "ts": 1793991703.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/314",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "314",
+     "state": "merged"
+    },
+    {
+     "ts": 1793994009.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/315",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "315",
+     "state": "merged"
+    },
+    {
+     "ts": 1793994340.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/316",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "316",
+     "state": "merged"
+    },
+    {
+     "ts": 1793996927.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/pacti.lean/pull/1",
+     "repo": "Open-MBEE/pacti.lean",
+     "num": "1",
+     "state": "merged"
+    },
+    {
+     "ts": 1793998215.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/317",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "317",
+     "state": "merged"
+    },
+    {
+     "ts": 1793998242.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/pacti.lean/pull/2",
+     "repo": "Open-MBEE/pacti.lean",
+     "num": "2",
+     "state": "merged"
+    },
+    {
+     "ts": 1793998862.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/pacti.lean/pull/3",
+     "repo": "Open-MBEE/pacti.lean",
+     "num": "3",
+     "state": "merged"
+    },
+    {
+     "ts": 1793999676.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/318",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "318",
+     "state": "merged"
+    },
+    {
+     "ts": 1794074574.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/Open-MBEE/pacti.lean/pull/4",
+     "repo": "Open-MBEE/pacti.lean",
+     "num": "4",
+     "state": "merged"
+    },
+    {
+     "ts": 1794074709.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/319",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "319",
+     "state": "merged"
+    },
+    {
+     "ts": 1794075083.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/320",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "320",
+     "state": "merged"
+    },
+    {
+     "ts": 1794152636.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/nasa-jpl/PropertyKindCalculus/pull/108",
+     "repo": "nasa-jpl/PropertyKindCalculus",
+     "num": "108",
+     "state": "merged"
+    },
+    {
+     "ts": 1794152711.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/321",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "321",
+     "state": "merged"
+    },
+    {
+     "ts": 1794154272.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/322",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "322",
+     "state": "merged"
+    },
+    {
+     "ts": 1794155510.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/323",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "323",
+     "state": "merged"
+    },
+    {
+     "ts": 1794160321.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/324",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "324",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "42e0d0ccad3644b191264d6da75ee7cc",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/42e0d0ccad3644b191264d6da75ee7cc",
+   "title": "Read OpenSysML api-json back into the SysML Doc",
+   "project": "mars.lean",
+   "pr_repos": [
+    "Open-MBEE/mars.lean"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "1fbba99fbf8446d3a9ffe2110715fac4",
+   "category": "feature_development",
+   "created": 1794162154.0,
+   "created_in_window": true,
+   "acus": 83.44930954407654,
+   "working": {
+    "2026-11-08": 6591.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/mars.lean"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 210,
+     "edits": 54,
+     "reads": 38,
+     "git": 5,
+     "mcp": 3,
+     "devin_msgs": 13,
+     "user_msgs": 8,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794163563.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/326",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "326",
+     "state": "merged"
+    },
+    {
+     "ts": 1794169201.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/328",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "328",
+     "state": "open"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "6580a307e0154b1193ffa4022d7f40ff",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/6580a307e0154b1193ffa4022d7f40ff",
+   "title": "Map OpenTelemetry causal-event logs onto MARS traces",
+   "project": "mars.lean",
+   "pr_repos": [
+    "Open-MBEE/mars.lean"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "1fbba99fbf8446d3a9ffe2110715fac4",
+   "category": "feature_development",
+   "created": 1794162155.0,
+   "created_in_window": true,
+   "acus": 24.369961222358437,
+   "working": {
+    "2026-11-08": 1614.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/mars.lean"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 71,
+     "edits": 28,
+     "reads": 21,
+     "git": 3,
+     "mcp": 6,
+     "devin_msgs": 6,
+     "user_msgs": 2,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794163323.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/325",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "325",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "179399d47385472b9993bb5615abaac5",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/179399d47385472b9993bb5615abaac5",
+   "title": "Prove netH pivot agreement and back Refines by RetimedSim",
+   "project": "mars.lean",
+   "pr_repos": [
+    "Open-MBEE/mars.lean"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "1fbba99fbf8446d3a9ffe2110715fac4",
+   "category": "feature_development",
+   "created": 1794162154.0,
+   "created_in_window": true,
+   "acus": 13.275426084439506,
+   "working": {
+    "2026-11-08": 2407.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/mars.lean"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 72,
+     "edits": 7,
+     "reads": 20,
+     "git": 3,
+     "mcp": 0,
+     "devin_msgs": 4,
+     "user_msgs": 2,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794164438.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/mars.lean/pull/327",
+     "repo": "Open-MBEE/mars.lean",
+     "num": "327",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "e9ff3fd767d04034858f645f63773867",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/e9ff3fd767d04034858f645f63773867",
+   "title": "Add exact LP oracle for Farkas certificates in pacti.lean",
+   "project": "pacti.lean",
+   "pr_repos": [
+    "Open-MBEE/pacti.lean"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "1fbba99fbf8446d3a9ffe2110715fac4",
+   "category": "feature_development",
+   "created": 1794162153.0,
+   "created_in_window": true,
+   "acus": 10.12763331015144,
+   "working": {
+    "2026-11-08": 649.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/pacti.lean"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 25,
+     "edits": 9,
+     "reads": 3,
+     "git": 1,
+     "mcp": 0,
+     "devin_msgs": 3,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794162758.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/pacti.lean/pull/5",
+     "repo": "Open-MBEE/pacti.lean",
+     "num": "5",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "dcdd25bdcf3444f1ba742d0266f952c4",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/dcdd25bdcf3444f1ba742d0266f952c4",
+   "title": "Switch sm-dps wrappers to sm_dps/sm_bridge and sweep workflows docs",
+   "project": "soil-moisture-dps",
+   "pr_repos": [
+    "Open-MBEE/soil-moisture-workflows",
+    "Open-MBEE/soil-moisture-dps"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "7a547429b3074d47bc16b7a4d568ef95",
+   "category": "migrations_and_upgrades",
+   "created": 1794154548.0,
+   "created_in_window": true,
+   "acus": 43.09181011173704,
+   "working": {
+    "2026-11-08": 3676.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/soil-moisture-dps",
+    "Open-MBEE/soil-moisture-workflows"
+   ],
+   "actions_by_day": {
+    "2026-11-08": {
+     "shell": 182,
+     "edits": 47,
+     "reads": 58,
+     "git": 4,
+     "mcp": 0,
+     "devin_msgs": 3,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794158089.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/soil-moisture-dps/pull/9",
+     "repo": "Open-MBEE/soil-moisture-dps",
+     "num": "9",
+     "state": "merged"
+    },
+    {
+     "ts": 1794158125.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/39",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "39",
+     "state": "open"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "dcdff6db65d44f4386c0402429c625fe",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/dcdff6db65d44f4386c0402429c625fe",
+   "title": "Document Soil Moisture Algorithm Modules",
+   "project": "soil-moisture-model",
+   "pr_repos": [
+    "Open-MBEE/soil-moisture-workflows",
+    "Open-MBEE/soil-moisture-model",
+    "Open-MBEE/soil-moisture-dps",
+    "nasa-jpl/PropertyKindCalculus"
+   ],
+   "origin": "webapp",
+   "mode": "fusion",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "feature_development",
+   "created": 1793596179.0,
+   "created_in_window": false,
+   "acus": 216.92474179188133,
+   "working": {
+    "2026-11-02": 10669.0,
+    "2026-11-03": 5.0,
+    "2026-11-04": 49018.0,
+    "2026-11-05": 11159.0,
+    "2026-11-06": 18270.0
+   },
+   "acus_scope": "older",
+   "repos": [
+    "Open-MBEE/sm-smap-nisar-demo",
+    "Open-MBEE/soil-moisture-dps",
+    "Open-MBEE/soil-moisture-model",
+    "Open-MBEE/soil-moisture-workflows",
+    "nasa-jpl/PropertyKindCalculus"
+   ],
+   "actions_by_day": {
+    "2026-11-02": {
+     "shell": 1290,
+     "edits": 249,
+     "reads": 361,
+     "git": 46,
+     "mcp": 8,
+     "devin_msgs": 33,
+     "user_msgs": 21,
+     "web": 4
+    },
+    "2026-11-03": {
+     "shell": 68,
+     "edits": 3,
+     "reads": 12,
+     "git": 1,
+     "mcp": 0,
+     "devin_msgs": 3,
+     "user_msgs": 0,
+     "web": 0
+    },
+    "2026-11-04": {
+     "shell": 1429,
+     "edits": 146,
+     "reads": 447,
+     "git": 48,
+     "mcp": 0,
+     "devin_msgs": 38,
+     "user_msgs": 30,
+     "web": 0
+    },
+    "2026-11-05": {
+     "shell": 1065,
+     "edits": 129,
+     "reads": 145,
+     "git": 60,
+     "mcp": 0,
+     "devin_msgs": 56,
+     "user_msgs": 31,
+     "web": 0
+    },
+    "2026-11-06": {
+     "shell": 358,
+     "edits": 46,
+     "reads": 48,
+     "git": 13,
+     "mcp": 10,
+     "devin_msgs": 17,
+     "user_msgs": 6,
+     "web": 0
+    },
+    "2026-11-07": {
+     "shell": 47,
+     "edits": 5,
+     "reads": 6,
+     "git": 2,
+     "mcp": 0,
+     "devin_msgs": 6,
+     "user_msgs": 2,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793634493.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/soil-moisture-dps/pull/7",
+     "repo": "Open-MBEE/soil-moisture-dps",
+     "num": "7",
+     "state": "merged"
+    },
+    {
+     "ts": 1793638033.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/3",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "3",
+     "state": "merged"
+    },
+    {
+     "ts": 1793646848.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/4",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "4",
+     "state": "merged"
+    },
+    {
+     "ts": 1793670365.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/6",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "6",
+     "state": "merged"
+    },
+    {
+     "ts": 1793814944.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/7",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "7",
+     "state": "closed"
+    },
+    {
+     "ts": 1793814949.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/7",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "7",
+     "state": "closed"
+    },
+    {
+     "ts": 1793826565.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/8",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "8",
+     "state": "merged"
+    },
+    {
+     "ts": 1793826567.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/9",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "9",
+     "state": "merged"
+    },
+    {
+     "ts": 1793826570.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/10",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "10",
+     "state": "merged"
+    },
+    {
+     "ts": 1793826573.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/11",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "11",
+     "state": "merged"
+    },
+    {
+     "ts": 1793826577.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/12",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "12",
+     "state": "merged"
+    },
+    {
+     "ts": 1793826582.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/13",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "13",
+     "state": "merged"
+    },
+    {
+     "ts": 1793826585.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/14",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "14",
+     "state": "merged"
+    },
+    {
+     "ts": 1793826587.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/15",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "15",
+     "state": "merged"
+    },
+    {
+     "ts": 1793826590.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/16",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "16",
+     "state": "merged"
+    },
+    {
+     "ts": 1793826593.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/17",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "17",
+     "state": "merged"
+    },
+    {
+     "ts": 1793826596.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/18",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "18",
+     "state": "merged"
+    },
+    {
+     "ts": 1793826600.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/19",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "19",
+     "state": "merged"
+    },
+    {
+     "ts": 1793826603.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/20",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "20",
+     "state": "merged"
+    },
+    {
+     "ts": 1793826605.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/21",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "21",
+     "state": "merged"
+    },
+    {
+     "ts": 1793826608.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/22",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "22",
+     "state": "merged"
+    },
+    {
+     "ts": 1793826613.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/23",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "23",
+     "state": "merged"
+    },
+    {
+     "ts": 1793829792.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/8",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "8",
+     "state": "merged"
+    },
+    {
+     "ts": 1793829795.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/9",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "9",
+     "state": "merged"
+    },
+    {
+     "ts": 1793829798.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/10",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "10",
+     "state": "merged"
+    },
+    {
+     "ts": 1793829802.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/11",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "11",
+     "state": "merged"
+    },
+    {
+     "ts": 1793829805.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/12",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "12",
+     "state": "merged"
+    },
+    {
+     "ts": 1793829808.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/13",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "13",
+     "state": "merged"
+    },
+    {
+     "ts": 1793829811.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/14",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "14",
+     "state": "merged"
+    },
+    {
+     "ts": 1793829814.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/15",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "15",
+     "state": "merged"
+    },
+    {
+     "ts": 1793829817.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/16",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "16",
+     "state": "merged"
+    },
+    {
+     "ts": 1793829821.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/17",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "17",
+     "state": "merged"
+    },
+    {
+     "ts": 1793829880.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/18",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "18",
+     "state": "merged"
+    },
+    {
+     "ts": 1793833130.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/24",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "24",
+     "state": "merged"
+    },
+    {
+     "ts": 1793833133.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/25",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "25",
+     "state": "merged"
+    },
+    {
+     "ts": 1793833647.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/26",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "26",
+     "state": "merged"
+    },
+    {
+     "ts": 1793837395.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/27",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "27",
+     "state": "merged"
+    },
+    {
+     "ts": 1793837398.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/19",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "19",
+     "state": "merged"
+    },
+    {
+     "ts": 1793837401.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/nasa-jpl/PropertyKindCalculus/pull/105",
+     "repo": "nasa-jpl/PropertyKindCalculus",
+     "num": "105",
+     "state": "merged"
+    },
+    {
+     "ts": 1793837417.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/28",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "28",
+     "state": "merged"
+    },
+    {
+     "ts": 1793837419.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/29",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "29",
+     "state": "merged"
+    },
+    {
+     "ts": 1793860969.0,
+     "day": "2026-11-04",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/30",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "30",
+     "state": "merged"
+    },
+    {
+     "ts": 1793986673.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/20",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "20",
+     "state": "merged"
+    },
+    {
+     "ts": 1793986676.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/31",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "31",
+     "state": "merged"
+    },
+    {
+     "ts": 1793993839.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/35",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "35",
+     "state": "merged"
+    },
+    {
+     "ts": 1794010993.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/soil-moisture-dps/pull/8",
+     "repo": "Open-MBEE/soil-moisture-dps",
+     "num": "8",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "7a547429b3074d47bc16b7a4d568ef95",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/7a547429b3074d47bc16b7a4d568ef95",
+   "title": "Update soil-moisture-model diagrams for workflows changes",
+   "project": "soil-moisture-model",
+   "pr_repos": [
+    "Open-MBEE/soil-moisture-model",
+    "nasa-jpl/PropertyKindCalculus"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "running (working)",
+   "parent": null,
+   "category": "documentation_and_content",
+   "created": 1794075585.0,
+   "created_in_window": true,
+   "acus": 132.1222122603687,
+   "working": {
+    "2026-11-07": 5072.0,
+    "2026-11-08": 12088.754050016403
+   },
+   "acus_scope": "spills",
+   "repos": [
+    "Open-MBEE/soil-moisture-model",
+    "nasa-jpl/PropertyKindCalculus"
+   ],
+   "actions_by_day": {
+    "2026-11-07": {
+     "shell": 38,
+     "edits": 4,
+     "reads": 17,
+     "git": 11,
+     "mcp": 5,
+     "devin_msgs": 10,
+     "user_msgs": 3,
+     "web": 0
+    },
+    "2026-11-08": {
+     "shell": 227,
+     "edits": 67,
+     "reads": 4,
+     "git": 20,
+     "mcp": 11,
+     "devin_msgs": 29,
+     "user_msgs": 8,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794076018.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/39",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "39",
+     "state": "merged"
+    },
+    {
+     "ts": 1794104856.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/40",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "40",
+     "state": "merged"
+    },
+    {
+     "ts": 1794106505.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/41",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "41",
+     "state": "merged"
+    },
+    {
+     "ts": 1794108142.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/nasa-jpl/PropertyKindCalculus/pull/107",
+     "repo": "nasa-jpl/PropertyKindCalculus",
+     "num": "107",
+     "state": "merged"
+    },
+    {
+     "ts": 1794109348.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/42",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "42",
+     "state": "merged"
+    },
+    {
+     "ts": 1794155312.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/43",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "43",
+     "state": "merged"
+    },
+    {
+     "ts": 1794163958.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/nasa-jpl/PropertyKindCalculus/pull/109",
+     "repo": "nasa-jpl/PropertyKindCalculus",
+     "num": "109",
+     "state": "merged"
+    },
+    {
+     "ts": 1794168908.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/44",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "44",
+     "state": "open"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "b5d9e169d79f4f749afaec2f0edbc76d",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/b5d9e169d79f4f749afaec2f0edbc76d",
+   "title": "Formalize PKC Quantities and Contracts",
+   "project": "soil-moisture-model",
+   "pr_repos": [
+    "Open-MBEE/soil-moisture-model",
+    "Open-MBEE/soil-moisture-workflows"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "refactoring_and_optimization",
+   "created": 1793988175.0,
+   "created_in_window": true,
+   "acus": 53.363049063974486,
+   "working": {
+    "2026-11-06": 3668.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/soil-moisture-model",
+    "Open-MBEE/soil-moisture-workflows"
+   ],
+   "actions_by_day": {
+    "2026-11-06": {
+     "shell": 117,
+     "edits": 31,
+     "reads": 56,
+     "git": 19,
+     "mcp": 0,
+     "devin_msgs": 18,
+     "user_msgs": 7,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793989609.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/32",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "32",
+     "state": "merged"
+    },
+    {
+     "ts": 1793989638.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/33",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "33",
+     "state": "merged"
+    },
+    {
+     "ts": 1793990726.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/34",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "34",
+     "state": "merged"
+    },
+    {
+     "ts": 1793998588.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/23",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "23",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "b08e0a3ae5364a43bdc2d513b8e1a01a",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/b08e0a3ae5364a43bdc2d513b8e1a01a",
+   "title": "Fix Open-MBEE soil moisture model warnings and errors",
+   "project": "soil-moisture-model",
+   "pr_repos": [
+    "Open-MBEE/soil-moisture-model"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "documentation_and_content",
+   "created": 1794003677.0,
+   "created_in_window": true,
+   "acus": 34.712001128992185,
+   "working": {
+    "2026-11-06": 3761.0,
+    "2026-11-07": 431.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/soil-moisture-model"
+   ],
+   "actions_by_day": {
+    "2026-11-06": {
+     "shell": 95,
+     "edits": 11,
+     "reads": 30,
+     "git": 3,
+     "mcp": 0,
+     "devin_msgs": 4,
+     "user_msgs": 1,
+     "web": 0
+    },
+    "2026-11-07": {
+     "shell": 19,
+     "edits": 4,
+     "reads": 4,
+     "git": 1,
+     "mcp": 0,
+     "devin_msgs": 7,
+     "user_msgs": 2,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794006927.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/36",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "36",
+     "state": "merged"
+    },
+    {
+     "ts": 1794069478.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/38",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "38",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "3c5e2f846e614ae3aebcc9ebb3dad9e6",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/3c5e2f846e614ae3aebcc9ebb3dad9e6",
+   "title": "Fix soil-moisture-model CI pages error",
+   "project": "soil-moisture-model",
+   "pr_repos": [
+    "Open-MBEE/soil-moisture-model"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "bug_fixing",
+   "created": 1793651376.0,
+   "created_in_window": true,
+   "acus": 19.095496538566668,
+   "working": {
+    "2026-11-02": 3294.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/soil-moisture-model"
+   ],
+   "actions_by_day": {
+    "2026-11-02": {
+     "shell": 86,
+     "edits": 11,
+     "reads": 20,
+     "git": 2,
+     "mcp": 0,
+     "devin_msgs": 6,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793654586.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/6",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "6",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "bd861de0d6924c3bbb6f6108621605a6",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/bd861de0d6924c3bbb6f6108621605a6",
+   "title": "Document the Modular Workflow Blueprint",
+   "project": "soil-moisture-model",
+   "pr_repos": [
+    "Open-MBEE/soil-moisture-model"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "documentation_and_content",
+   "created": 1794023883.0,
+   "created_in_window": true,
+   "acus": 17.307851882828807,
+   "working": {
+    "2026-11-06": 4540.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/soil-moisture-model"
+   ],
+   "actions_by_day": {
+    "2026-11-07": {
+     "shell": 77,
+     "edits": 15,
+     "reads": 34,
+     "git": 2,
+     "mcp": 0,
+     "devin_msgs": 4,
+     "user_msgs": 2,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794028173.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/soil-moisture-model/pull/37",
+     "repo": "Open-MBEE/soil-moisture-model",
+     "num": "37",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "949f5b59507e4e7d99ee2ffd4b56f213",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/949f5b59507e4e7d99ee2ffd4b56f213",
+   "title": "Continue soil-moisture-dps work",
+   "project": "soil-moisture-workflows",
+   "pr_repos": [
+    "Open-MBEE/soil-moisture-workflows"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "running (working)",
+   "parent": null,
+   "category": "migrations_and_upgrades",
+   "created": 1794023321.0,
+   "created_in_window": true,
+   "acus": 343.67208272573953,
+   "working": {
+    "2026-11-06": 15078.0,
+    "2026-11-07": 10515.0,
+    "2026-11-08": 2362.754050016403
+   },
+   "acus_scope": "spills",
+   "repos": [
+    "Open-MBEE/soil-moisture-dps",
+    "Open-MBEE/soil-moisture-workflows"
+   ],
+   "actions_by_day": {
+    "2026-11-07": {
+     "shell": 1328,
+     "edits": 339,
+     "reads": 344,
+     "git": 29,
+     "mcp": 41,
+     "devin_msgs": 28,
+     "user_msgs": 8,
+     "web": 0
+    },
+    "2026-11-08": {
+     "shell": 73,
+     "edits": 18,
+     "reads": 10,
+     "git": 1,
+     "mcp": 0,
+     "devin_msgs": 1,
+     "user_msgs": 1,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794024806.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/27",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "27",
+     "state": "merged"
+    },
+    {
+     "ts": 1794025619.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/28",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "28",
+     "state": "merged"
+    },
+    {
+     "ts": 1794028185.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/29",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "29",
+     "state": "merged"
+    },
+    {
+     "ts": 1794031381.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/30",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "30",
+     "state": "merged"
+    },
+    {
+     "ts": 1794033937.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/31",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "31",
+     "state": "merged"
+    },
+    {
+     "ts": 1794037967.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/32",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "32",
+     "state": "merged"
+    },
+    {
+     "ts": 1794039336.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/33",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "33",
+     "state": "merged"
+    },
+    {
+     "ts": 1794042338.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/34",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "34",
+     "state": "merged"
+    },
+    {
+     "ts": 1794044975.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/35",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "35",
+     "state": "merged"
+    },
+    {
+     "ts": 1794045116.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/36",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "36",
+     "state": "merged"
+    },
+    {
+     "ts": 1794074219.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/37",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "37",
+     "state": "merged"
+    },
+    {
+     "ts": 1794170559.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/41",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "41",
+     "state": "?"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "d0c10b32b08144028e87fd0607dbbb1a",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/d0c10b32b08144028e87fd0607dbbb1a",
+   "title": "Modularize leanCurl for a PR",
+   "project": "soil-moisture-workflows",
+   "pr_repos": [
+    "Open-MBEE/soil-moisture-workflows",
+    "Open-MBEE/soil-moisture-dps",
+    "Open-MBEE/leanCurl"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "migrations_and_upgrades",
+   "created": 1794024414.0,
+   "created_in_window": true,
+   "acus": 65.26912136965844,
+   "working": {
+    "2026-11-06": 2099.0,
+    "2026-11-08": 747.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/leanCurl",
+    "Open-MBEE/soil-moisture-dps",
+    "Open-MBEE/soil-moisture-workflows"
+   ],
+   "actions_by_day": {
+    "2026-11-07": {
+     "shell": 89,
+     "edits": 25,
+     "reads": 17,
+     "git": 22,
+     "mcp": 15,
+     "devin_msgs": 18,
+     "user_msgs": 7,
+     "web": 0
+    },
+    "2026-11-08": {
+     "shell": 36,
+     "edits": 8,
+     "reads": 6,
+     "git": 4,
+     "mcp": 6,
+     "devin_msgs": 15,
+     "user_msgs": 4,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794025137.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/leanCurl/pull/1",
+     "repo": "Open-MBEE/leanCurl",
+     "num": "1",
+     "state": "merged"
+    },
+    {
+     "ts": 1794165613.0,
+     "day": "2026-11-08",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/40",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "40",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "eaa0ba4c69844113a5fa6a571bb2720b",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/eaa0ba4c69844113a5fa6a571bb2720b",
+   "title": "Fix Warnings and Errors in soil-moisture-workflows",
+   "project": "soil-moisture-workflows",
+   "pr_repos": [
+    "Open-MBEE/soil-moisture-workflows"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "ci_cd_and_devops",
+   "created": 1793992029.0,
+   "created_in_window": true,
+   "acus": 50.90429496226378,
+   "working": {
+    "2026-11-06": 2934.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/soil-moisture-workflows"
+   ],
+   "actions_by_day": {
+    "2026-11-06": {
+     "shell": 71,
+     "edits": 9,
+     "reads": 10,
+     "git": 5,
+     "mcp": 0,
+     "devin_msgs": 6,
+     "user_msgs": 2,
+     "web": 0
+    },
+    "2026-11-07": {
+     "shell": 49,
+     "edits": 12,
+     "reads": 6,
+     "git": 4,
+     "mcp": 6,
+     "devin_msgs": 14,
+     "user_msgs": 6,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793993458.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/21",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "21",
+     "state": "merged"
+    },
+    {
+     "ts": 1793996959.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/22",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "22",
+     "state": "merged"
+    },
+    {
+     "ts": 1794011336.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/24",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "24",
+     "state": "merged"
+    },
+    {
+     "ts": 1794021512.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/25",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "25",
+     "state": "merged"
+    },
+    {
+     "ts": 1794021564.0,
+     "day": "2026-11-06",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/26",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "26",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "8bf54e0e3af44f8994d80df8f1c06719",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/8bf54e0e3af44f8994d80df8f1c06719",
+   "title": "Update sm-workflows blueprint for the Lean migration",
+   "project": "soil-moisture-workflows",
+   "pr_repos": [
+    "Open-MBEE/soil-moisture-workflows"
+   ],
+   "origin": "api",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": "7a547429b3074d47bc16b7a4d568ef95",
+   "category": "documentation_and_content",
+   "created": 1794075861.0,
+   "created_in_window": true,
+   "acus": 18.44575492808107,
+   "working": {
+    "2026-11-07": 2648.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/soil-moisture-workflows"
+   ],
+   "actions_by_day": {
+    "2026-11-07": {
+     "shell": 61,
+     "edits": 13,
+     "reads": 27,
+     "git": 5,
+     "mcp": 0,
+     "devin_msgs": 10,
+     "user_msgs": 3,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1794078082.0,
+     "day": "2026-11-07",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/38",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "38",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  },
+  {
+   "id": "724cdd4cc442457ca2b79fd5d647957c",
+   "url": "https://nasa-jpl-demo.devinenterprise.com/sessions/724cdd4cc442457ca2b79fd5d647957c",
+   "title": "Fix soil-moisture-workflows CI",
+   "project": "soil-moisture-workflows",
+   "pr_repos": [
+    "Open-MBEE/soil-moisture-workflows"
+   ],
+   "origin": "webapp",
+   "mode": "ultra",
+   "status": "suspended (inactivity)",
+   "parent": null,
+   "category": "ci_cd_and_devops",
+   "created": 1793659791.0,
+   "created_in_window": true,
+   "acus": 5.711178524551029,
+   "working": {
+    "2026-11-02": 263.0,
+    "2026-11-03": 11.0
+   },
+   "acus_scope": "in",
+   "repos": [
+    "Open-MBEE/soil-moisture-workflows"
+   ],
+   "actions_by_day": {
+    "2026-11-02": {
+     "shell": 15,
+     "edits": 3,
+     "reads": 8,
+     "git": 1,
+     "mcp": 0,
+     "devin_msgs": 2,
+     "user_msgs": 1,
+     "web": 0
+    },
+    "2026-11-03": {
+     "shell": 1,
+     "edits": 0,
+     "reads": 0,
+     "git": 0,
+     "mcp": 0,
+     "devin_msgs": 0,
+     "user_msgs": 0,
+     "web": 0
+    }
+   },
+   "prs_created": [
+    {
+     "ts": 1793660026.0,
+     "day": "2026-11-02",
+     "url": "https://github.com/Open-MBEE/soil-moisture-workflows/pull/5",
+     "repo": "Open-MBEE/soil-moisture-workflows",
+     "num": "5",
+     "state": "merged"
+    }
+   ],
+   "actions_capped": false
+  }
+ ]
+}</script>
+<script>var data = JSON.parse(document.getElementById("artifact-data").textContent);</script>
+<div id="root"></div>
+<script>DSRun("\nconst rows = data.rows;\nconst DAYS = data.days;\nconst KIND = data.kind || \"weekly\";\nconst TODAY = DAYS[DAYS.length - 1];\nconst TZ = data.tz || \"America/Los_Angeles\";\nconst PERIOD = KIND === \"monthly\" ? \"month\" : KIND === \"weekly\" ? \"week\" : \"day\";\nconst fmtTime = (t) => new Date(t * 1000).toLocaleString(\"en-US\", { timeZone: TZ, month: \"2-digit\", day: \"2-digit\", hour: \"2-digit\", minute: \"2-digit\", hour12: false });\nconst hms = (s) => { const m = Math.round(s / 60); const h = Math.floor(m / 60); return h ? `${h}h${String(m % 60).padStart(2, \"0\")}` : `${m}m`; };\nconst hrs = (s) => Math.round(s / 360) / 10;\nconst dayLabel = (iso) => new Date(iso + \"T12:00:00Z\").toLocaleDateString(\"en-US\", { weekday: \"short\", month: \"short\", day: \"numeric\", timeZone: \"UTC\" });\nconst sum = (xs) => xs.reduce((a, b) => a + b, 0);\nconst wsum = (r) => sum(Object.values(r.working));\nconst actsIn = (r, day) => { const out = { shell: 0, edits: 0, reads: 0, git: 0, mcp: 0, devin_msgs: 0, user_msgs: 0, web: 0 }; for (const [d, a] of Object.entries(r.actions_by_day)) { if (!day || d === day) for (const k in out) out[k] += a[k] || 0; } return out; };\nconst actsTotal = (a) => a.shell + a.edits + a.reads + a.git + a.mcp + a.devin_msgs + a.web;\nconst actsStr = (a) => `${a.shell} sh · ${a.edits} ed · ${a.reads} rd · ${a.git} git · ${a.mcp} mcp · ${a.devin_msgs}+${a.user_msgs} msg`;\nconst kind = (r) => (r.parent ? `child of ${r.parent.slice(0, 8)}` : r.origin);\nconst groupBy = (rs, f) => { const m = new Map(); for (const r of rs) { const k = f(r); if (!m.has(k)) m.set(k, []); m.get(k).push(r); } return m; };\nconst prState = (s) => s === \"merged\" ? \"success\" : s === \"open\" ? \"blue\" : \"default\";\n\nconst projects = [...groupBy(rows, (r) => r.project).entries()]\n  .map(([p, rs]) => ({ project: p, rows: rs, working: sum(rs.map(wsum)), acusNew: sum(rs.filter((r) => r.acus_scope === \"in\").map((r) => r.acus)), acusSpill: sum(rs.filter((r) => r.acus_scope === \"spills\").map((r) => r.acus)), acusOld: sum(rs.filter((r) => r.acus_scope === \"older\").map((r) => r.acus)), prs: sum(rs.map((r) => r.prs_created.length)), actions: sum(rs.map((r) => actsTotal(actsIn(r)))), capped: rs.some((r) => r.actions_capped) }))\n  .sort((a, b) => b.working - a.working);\nconst topProjects = projects.filter((p) => p.working > 1800).slice(0, 8).map((p) => p.project);\nconst shortDay = (iso) => new Date(iso + \"T12:00:00Z\").toLocaleDateString(\"en-US\", KIND === \"monthly\" ? { day: \"numeric\", timeZone: \"UTC\" } : { weekday: \"short\", month: \"short\", day: \"numeric\", timeZone: \"UTC\" });\nconst series = Object.fromEntries(topProjects.map((p, i) => [p, { label: p.replace(/^(Open-MBEE|nasa-jpl)\\//, \"\"), color: chartColors[i % chartColors.length] }]));\nseries.other = { label: \"Other\", color: chartColors[8] };\nconst chartRows = DAYS.map((d) => { const o = { day: shortDay(d), other: 0 }; for (const p of projects) { const h = hrs(sum(p.rows.map((r) => r.working[d] || 0))); if (topProjects.includes(p.project)) o[p.project] = h; else o.other += h; } o.other = Math.round(o.other * 10) / 10; return o; });\n\nfunction PrLinks({ prs, project }) {\n  if (!prs.length) return React.createElement(Text, { size: 12, className: \"text-secondary\",}, \"—\");\n  return React.createElement('div', { className: \"flex flex-wrap gap-1\"  ,}, prs.map((p) => (\n    React.createElement(ExternalLink, { key: p.url, href: p.url,}, React.createElement(Badge, { variant: prState(p.state), size: \"sm\",}, p.repo === project ? \"\" : p.repo.split(\"/\")[1] + \" \", \"#\", p.num, \" \" , p.state))\n  )));\n}\n\nfunction SessionRow({ r, day, project }) {\n  const a = actsIn(r, day);\n  const prs = day ? r.prs_created.filter((p) => p.day === day) : r.prs_created;\n  const w = day ? (r.working[day] || 0) : wsum(r);\n  return (\n    React.createElement(TableRow, null\n      , React.createElement(TableCell, null, React.createElement('div', { className: \"flex flex-col gap-0.5\"  ,}, React.createElement(ExternalLink, { href: r.url,}, r.title), React.createElement(Text, { size: 11, className: \"text-secondary\",}, kind(r), \" · \"  , r.mode, \" · \"  , r.status, \" · created \"   , fmtTime(r.created), r.repos && r.repos.length ? \" · \" + r.repos.join(\", \") : \"\")))\n      , React.createElement(TableCell, { className: \"whitespace-nowrap\",}, hms(w))\n      , React.createElement(TableCell, { className: \"whitespace-nowrap\",}, r.acus.toFixed(1), r.acus_scope === \"older\" ? \" †\" : r.acus_scope === \"spills\" ? \" ‡\" : \"\")\n      , React.createElement(TableCell, { className: \"min-w-[260px]\",}, React.createElement(Text, { size: 11, className: \"font-mono\",}, r.actions_capped ? \"≥ \" : \"\", actsStr(a)))\n      , React.createElement(TableCell, { className: \"min-w-[300px]\",}, React.createElement(PrLinks, { prs: prs, project: project,} ))\n    )\n  );\n}\n\nfunction ProjectTable({ project, rs, day }) {\n  const sorted = [...rs].sort((x, y) => ((day ? (y.working[day] || 0) : wsum(y)) - (day ? (x.working[day] || 0) : wsum(x))));\n  return (\n    React.createElement(Table, null\n      , React.createElement(TableHeader, null, React.createElement(TableRow, null, React.createElement(TableHead, null, \"Session\"), React.createElement(TableHead, null, \"Working\"), React.createElement(TableHead, null, \"ACUs\"), React.createElement(TableHead, null, \"Actions (\" , day ? \"day\" : PERIOD, \")\"), React.createElement(TableHead, null, \"PRs opened (\"  , day ? \"day\" : PERIOD, \")\")))\n      , React.createElement(TableBody, null, sorted.map((r) => React.createElement(SessionRow, { key: r.id, r: r, day: day, project: project,} )))\n    )\n  );\n}\n\nfunction ProjectSection({ project, rs, day, defaultOpen }) {\n  const [open, setOpen] = useState(defaultOpen);\n  const w = sum(rs.map((r) => (day ? (r.working[day] || 0) : wsum(r))));\n  const prs = sum(rs.map((r) => (day ? r.prs_created.filter((p) => p.day === day) : r.prs_created).length));\n  return (\n    React.createElement(CollapsibleRoot, { open: open, onOpenChange: setOpen,}\n      , React.createElement(CardContent, null\n        , React.createElement(CardBody, null\n          , React.createElement(CollapsibleTrigger, { className: \"w-full\", caretPosition: \"left\",}\n            , React.createElement('div', { className: \"flex items-center justify-between gap-3 cursor-pointer\"    ,}\n              , React.createElement(Text, { size: 14, weight: \"semibold\",}, project)\n              , React.createElement(Text, { size: 12, className: \"text-secondary\",}, rs.length, \" session\" , rs.length === 1 ? \"\" : \"s\", \" · \"  , hms(w), \" working · \"   , prs, \" PR\" , prs === 1 ? \"\" : \"s\")\n            )\n          )\n          , React.createElement(CollapsiblePanel, null, React.createElement('div', { className: \"mt-3\",}, React.createElement(ProjectTable, { project: project, rs: rs, day: day,} )))\n        )\n      )\n    )\n  );\n}\n\nfunction Daily() {\n  const [day, setDay] = useState(TODAY);\n  const rs = rows.filter((r) => (r.working[day] || 0) >= 60 || actsTotal(actsIn(r, day)) > 0 || r.prs_created.some((p) => p.day === day));\n  const groups = [...groupBy(rs, (r) => r.project).entries()].sort((a, b) => sum(b[1].map((r) => r.working[day] || 0)) - sum(a[1].map((r) => r.working[day] || 0)));\n  const w = sum(rs.map((r) => r.working[day] || 0));\n  const prs = sum(rs.map((r) => r.prs_created.filter((p) => p.day === day).length));\n  return (\n    React.createElement('div', { className: \"flex flex-col gap-4\"  ,}\n      , DAYS.length > 1 && React.createElement('div', { className: \"flex items-center gap-3\"  ,}, React.createElement(Text, { size: 12, className: \"text-secondary\",}, \"Day\"), React.createElement(SimpleSelect, { options: DAYS.map((d) => ({ value: d, label: dayLabel(d) })), value: day, onValueChange: setDay,} ))\n      , React.createElement(StatsRow, null\n        , React.createElement(StatCard, { label: \"Sessions active\" ,}, React.createElement(StatCardValue, null, rs.length))\n        , React.createElement(StatCard, { label: \"Projects\",}, React.createElement(StatCardValue, null, groups.length))\n        , React.createElement(StatCard, { label: \"Working time\" ,}, React.createElement(StatCardValue, null, hms(w)))\n        , React.createElement(StatCard, { label: \"PRs opened\" ,}, React.createElement(StatCardValue, null, prs))\n      )\n      , groups.length === 0 && React.createElement(Text, { size: 13, className: \"text-secondary\",}, \"No session activity on this day.\"     )\n      , groups.map(([p, g]) => React.createElement(ProjectSection, { key: p + day, project: p, rs: g, day: day, defaultOpen: true,} ))\n    )\n  );\n}\n\nfunction Weekly() {\n  const [sortKey, setSortKey] = useState(\"working\");\n  const sorted = [...projects].sort((a, b) => b[sortKey] - a[sortKey]);\n  return (\n    React.createElement('div', { className: \"flex flex-col gap-4\"  ,}\n      , React.createElement(StatsRow, null\n        , React.createElement(StatCard, { label: \"Sessions active\" ,}, React.createElement(StatCardValue, null, rows.length), React.createElement(StatCardCaption, null, rows.filter((r) => r.created_in_window).length, \" created this \"   , PERIOD))\n        , React.createElement(StatCard, { label: \"Projects\",}, React.createElement(StatCardValue, null, projects.length))\n        , React.createElement(StatCard, { label: \"Working time\" ,}, React.createElement(StatCardValue, null, hms(sum(rows.map(wsum)))), React.createElement(StatCardCaption, null, \"VM time while Devin was running\"     ))\n        , React.createElement(StatCard, { label: \"PRs opened\" ,}, React.createElement(StatCardValue, null, sum(rows.map((r) => r.prs_created.length))))\n        , React.createElement(StatCard, { label: `ACUs, sessions fully in this ${PERIOD}`,}, React.createElement(StatCardValue, null, Math.round(sum(rows.filter((r) => r.acus_scope === \"in\").map((r) => r.acus)))), React.createElement(StatCardCaption, null, Math.round(sum(rows.filter((r) => r.acus_scope !== \"in\").map((r) => r.acus))), \" more in sessions that span the boundary (†/‡)\"        ))\n      )\n      , React.createElement(Text, { size: 14, weight: \"semibold\",}, \"Working hours per day, by project\"     )\n      , React.createElement(ChartContainer, { config: series, style: { height: 280, width: \"100%\" },}\n        , React.createElement(BarChart, { data: chartRows,}\n          , React.createElement(ChartGrid, null )\n          , React.createElement(ChartXAxis, { dataKey: \"day\",} )\n          , React.createElement(ChartYAxis, { title: \"hours\",} )\n          , React.createElement(ChartTooltip, { content: React.createElement(ChartTooltipContent, null ),} )\n          , React.createElement(ChartLegend, { content: React.createElement(ChartLegendContent, null ),} )\n          , topProjects.map((p, i) => React.createElement(ChartBar, { key: p, dataKey: p, stackId: \"a\", radius: 0,} ))\n          , React.createElement(ChartBar, { dataKey: \"other\", stackId: \"a\",} )\n        )\n      )\n      , React.createElement(Text, { size: 14, weight: \"semibold\",}, \"Per-project totals\" )\n      , React.createElement(Table, null\n        , React.createElement(TableHeader, null, React.createElement(TableRow, null\n          , React.createElement(TableHead, null, \"Project\")\n          , React.createElement(TableHead, null, \"Sessions (new)\" )\n          , React.createElement(SortableTableHead, { sort: sortKey === \"working\" ? \"desc\" : undefined, onSort: () => setSortKey(\"working\"),}, \"Working\")\n          , React.createElement(SortableTableHead, { sort: sortKey === \"acusNew\" ? \"desc\" : undefined, onSort: () => setSortKey(\"acusNew\"),}, \"ACUs (fully in window)\"   )\n          , React.createElement(SortableTableHead, { sort: sortKey === \"acusSpill\" ? \"desc\" : undefined, onSort: () => setSortKey(\"acusSpill\"),}, \"ACUs ‡ (spill past window)\"    )\n          , React.createElement(SortableTableHead, { sort: sortKey === \"acusOld\" ? \"desc\" : undefined, onSort: () => setSortKey(\"acusOld\"),}, \"ACUs † (older sessions)\"   )\n          , React.createElement(SortableTableHead, { sort: sortKey === \"actions\" ? \"desc\" : undefined, onSort: () => setSortKey(\"actions\"),}, \"Actions\")\n          , React.createElement(SortableTableHead, { sort: sortKey === \"prs\" ? \"desc\" : undefined, onSort: () => setSortKey(\"prs\"),}, \"PRs opened\" )\n        ))\n        , React.createElement(TableBody, null, sorted.map((p) => (\n          React.createElement(TableRow, { key: p.project,}\n            , React.createElement(TableCell, null, React.createElement(Text, { size: 13, weight: \"medium\",}, p.project))\n            , React.createElement(TableCell, null, p.rows.length, \" (\" , p.rows.filter((r) => r.created_in_window).length, \")\")\n            , React.createElement(TableCell, null, hms(p.working))\n            , React.createElement(TableCell, null, p.acusNew ? p.acusNew.toFixed(1) : \"—\")\n            , React.createElement(TableCell, null, p.acusSpill ? p.acusSpill.toFixed(1) : \"—\")\n            , React.createElement(TableCell, null, p.acusOld ? p.acusOld.toFixed(1) : \"—\")\n            , React.createElement(TableCell, null, p.capped ? \"≥ \" : \"\", p.actions.toLocaleString())\n            , React.createElement(TableCell, null, p.prs)\n          )\n        )))\n      )\n      , React.createElement(Text, { size: 14, weight: \"semibold\",}, \"Sessions by project\"  )\n      , projects.map((p, i) => React.createElement(ProjectSection, { key: p.project, project: p.project, rs: p.rows, day: null, defaultOpen: i < 3,} ))\n    )\n  );\n}\n\nfunction Report() {\n  const start = new Date(data.start * 1000).toLocaleString(\"en-US\", { timeZone: TZ, weekday: \"short\", month: \"short\", day: \"numeric\" });\n  const end = new Date(data.now * 1000).toLocaleString(\"en-US\", { timeZone: TZ, weekday: \"short\", month: \"short\", day: \"numeric\", hour: \"2-digit\", minute: \"2-digit\", hour12: false });\n  return (\n    React.createElement(PageLayout, { title: `Devin sessions by project — ${data.label}`, subtitle: `${data.who}'s sessions, ${start} – ${end} (${TZ}).`, themeToggle: true,}\n      , React.createElement(TabsRoot, { defaultValue: KIND === \"daily\" ? \"daily\" : \"period\",}\n        , React.createElement(TabsList, null, React.createElement(Tab, { value: \"period\",}, KIND === \"daily\" ? \"Day\" : KIND === \"weekly\" ? \"Week\" : \"Month\"), KIND !== \"daily\" && React.createElement(Tab, { value: \"daily\",}, \"Day by day\"  ))\n        , React.createElement(TabsPanel, { value: \"period\",}, React.createElement('div', { className: \"pt-4\",}, KIND === \"daily\" ? React.createElement(Daily, null ) : React.createElement(Weekly, null )))\n        , KIND !== \"daily\" && React.createElement(TabsPanel, { value: \"daily\",}, React.createElement('div', { className: \"pt-4\",}, React.createElement(Daily, null )))\n      )\n      , React.createElement(Footnote, null, \"Source: Devin session API (session search + per-session event timeline), read on \"\n                    , end, \" PT. Working time = intervals from a \\\"status: working\\\" event to the next blocked/finished/suspended event, clipped to the window and split at local midnight; it excludes time the session slept or waited for you. Actions = event counts (sh shell commands, ed file-edit batches, rd file-read batches, git PR/CI operations, mcp MCP/Devin-API calls, msg Devin+user messages), bucketed by UTC day. ACUs are session-lifetime totals from the API (no per-day breakdown exists): † marks sessions created before the window and ‡ sessions created in it but still active after it; neither is attributable to the window alone. Projects group forks/mirrors of a repository under its name; each session lists the repositories it touched. The API does not expose VM size or performance class; \\\"mode\\\" is the agent mode.\"\n      )\n    )\n  );\n}\nrender(React.createElement(Report, null ));\n")</script>
+    </main>
+  </body>
+</html>
