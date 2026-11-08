@@ -1,0 +1,15 @@
+%YAML 1.2
+---
+table: report
+description: The window the report covers and its provenance. One mapping (not a sequence).
+fields:
+  kind:       { type: "!!str", enum: [daily, weekly, monthly], description: Window kind. }
+  label:      { type: "!!str", description: Human label of the window, e.g. "week 2026-11-02 → 2026-11-08". }
+  who:        { type: "!!str", description: Display name of the user whose sessions are reported. }
+  timezone:   { type: "!!str", description: IANA timezone the days and timestamps are expressed in. }
+  start:      { type: "!!str", format: iso-8601, description: Inclusive start of the window (local midnight). }
+  end:        { type: "!!str", format: iso-8601, description: Exclusive end of the window (local midnight). }
+  generated:  { type: "!!str", format: iso-8601, description: When the data was read from the Devin API. }
+  days:       { type: "!!seq", items: { type: "!!str", format: date }, description: Every day of the window. }
+  sessions:   { type: "!!int", description: Number of sessions active in the window. }
+  projects:   { type: "!!int", description: Number of distinct projects. }

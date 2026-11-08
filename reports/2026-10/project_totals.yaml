@@ -1,0 +1,222 @@
+%YAML 1.2
+---
+-
+  project: L4YAML
+  sessions: 44
+  sessions_created: 44
+  working_seconds: 828814
+  acus_in_window: 2426.666519
+  acus_spilling: 4063.154110
+  acus_older: 0.000000
+  actions: 25089
+  actions_capped: false
+  prs_opened: 215
+-
+  project: OpenSysML
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 250226
+  acus_in_window: 0.000000
+  acus_spilling: 2712.714149
+  acus_older: 0.000000
+  actions: 5309
+  actions_capped: false
+  prs_opened: 65
+-
+  project: PropertyKindCalculus
+  sessions: 54
+  sessions_created: 54
+  working_seconds: 170671
+  acus_in_window: 352.238053
+  acus_spilling: 358.280214
+  acus_older: 0.000000
+  actions: 8368
+  actions_capped: false
+  prs_opened: 100
+-
+  project: mars.lean
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 107247
+  acus_in_window: 0.000000
+  acus_spilling: 3526.159273
+  acus_older: 0.000000
+  actions: 5623
+  actions_capped: false
+  prs_opened: 171
+-
+  project: SBVR.lean
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 98908
+  acus_in_window: 0.000000
+  acus_spilling: 1570.906504
+  acus_older: 0.000000
+  actions: 4985
+  actions_capped: false
+  prs_opened: 123
+-
+  project: face.lean
+  sessions: 2
+  sessions_created: 2
+  working_seconds: 48924
+  acus_in_window: 540.444801
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 1663
+  actions_capped: false
+  prs_opened: 40
+-
+  project: git-remote-sync.lean
+  sessions: 3
+  sessions_created: 3
+  working_seconds: 38063
+  acus_in_window: 29.886503
+  acus_spilling: 649.878890
+  acus_older: 0.000000
+  actions: 1925
+  actions_capped: false
+  prs_opened: 47
+-
+  project: fprime-lean-sysmlv2-example
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 32488
+  acus_in_window: 0.000000
+  acus_spilling: 347.223080
+  acus_older: 0.000000
+  actions: 1501
+  actions_capped: false
+  prs_opened: 23
+-
+  project: (no repository)
+  sessions: 15
+  sessions_created: 15
+  working_seconds: 29477
+  acus_in_window: 226.228994
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 2156
+  actions_capped: false
+  prs_opened: 0
+-
+  project: qvts
+  sessions: 2
+  sessions_created: 2
+  working_seconds: 25881
+  acus_in_window: 16.773647
+  acus_spilling: 83.034110
+  acus_older: 0.000000
+  actions: 4707
+  actions_capped: false
+  prs_opened: 10
+-
+  project: soil-moisture-dps
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 7927
+  acus_in_window: 0.000000
+  acus_spilling: 139.448809
+  acus_older: 0.000000
+  actions: 430
+  actions_capped: false
+  prs_opened: 9
+-
+  project: engineering-foundation-architecture
+  sessions: 4
+  sessions_created: 4
+  working_seconds: 7841
+  acus_in_window: 98.637132
+  acus_spilling: 15.662675
+  acus_older: 0.000000
+  actions: 516
+  actions_capped: false
+  prs_opened: 13
+-
+  project: sysmlv2-opentelemetry-protocol
+  sessions: 2
+  sessions_created: 2
+  working_seconds: 7665
+  acus_in_window: 103.460269
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 392
+  actions_capped: false
+  prs_opened: 5
+-
+  project: prov.lean
+  sessions: 3
+  sessions_created: 3
+  working_seconds: 6430
+  acus_in_window: 97.651625
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 529
+  actions_capped: false
+  prs_opened: 17
+-
+  project: (Devin housekeeping)
+  sessions: 4
+  sessions_created: 4
+  working_seconds: 1858
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 408
+  actions_capped: false
+  prs_opened: 0
+-
+  project: physlib
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 846
+  acus_in_window: 0.000000
+  acus_spilling: 19.649491
+  acus_older: 0.000000
+  actions: 77
+  actions_capped: false
+  prs_opened: 0
+-
+  project: calm
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 815
+  acus_in_window: 11.198665
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 89
+  actions_capped: false
+  prs_opened: 1
+-
+  project: ros2architecture
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 660
+  acus_in_window: 6.625399
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 65
+  actions_capped: false
+  prs_opened: 2
+-
+  project: certified-learned-surrogates
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 534
+  acus_in_window: 0.000000
+  acus_spilling: 20.298012
+  acus_older: 0.000000
+  actions: 84
+  actions_capped: false
+  prs_opened: 1
+-
+  project: (Devin environment)
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 65
+  acus_in_window: 1.471105
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 8
+  actions_capped: false
+  prs_opened: 0

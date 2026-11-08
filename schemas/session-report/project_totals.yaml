@@ -1,0 +1,15 @@
+%YAML 1.2
+---
+table: project_totals
+description: One row per project (repository name; forks and mirrors merge), sorted by working time.
+row:
+  project:          { type: "!!str", description: Repository name, or a parenthesised pseudo-project such as "(no repository)". }
+  sessions:         { type: "!!int", description: Sessions of this project active in the window. }
+  sessions_created: { type: "!!int", description: Of those, sessions created inside the window. }
+  working_seconds:  { type: "!!int", description: Sum of the sessions' working time inside the window. }
+  acus_in_window:   { type: "!!float", description: Lifetime ACUs of sessions created and finished inside the window. }
+  acus_spilling:    { type: "!!float", description: Lifetime ACUs of sessions created inside the window but still active after it (not attributable to the window alone). }
+  acus_older:       { type: "!!float", description: Lifetime ACUs of sessions created before the window (not attributable to it). }
+  actions:          { type: "!!int", description: Shell + edit + read + git + mcp + devin-message + web events inside the window. }
+  actions_capped:   { type: "!!bool", description: true when at least one session hit the event-page cap, so actions is a lower bound. }
+  prs_opened:       { type: "!!int", description: Pull requests opened inside the window. }

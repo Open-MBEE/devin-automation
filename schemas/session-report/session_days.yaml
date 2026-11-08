@@ -1,0 +1,18 @@
+%YAML 1.2
+---
+table: session_days
+description: One row per (session, day) with working time, actions or PRs. Action fields as in sessions.
+row:
+  day:             { type: "!!str", format: date }
+  session_id:      { type: "!!str" }
+  project:         { type: "!!str" }
+  working_seconds: { type: "!!int" }
+  shell:           { type: "!!int" }
+  edits:           { type: "!!int" }
+  reads:           { type: "!!int" }
+  git:             { type: "!!int" }
+  mcp:             { type: "!!int" }
+  devin_messages:  { type: "!!int" }
+  user_messages:   { type: "!!int" }
+  web:             { type: "!!int" }
+  prs_opened:      { type: "!!int", description: Number of PRs opened that day. }
