@@ -113,11 +113,13 @@ structure Ctx where
   start : Int
   «end» : Int
   now : Int
+  /-- When the raw data was read from the Devin API (`Raw.Data.collected`), the report's provenance. -/
+  collected : Int
   days : Array String
   label : String
   slug : String
 
-def Ctx.make (cfg : Config) : IO Ctx := do
+def Ctx.make (cfg : Config) (collected : Int) : IO Ctx := do
   let zr ← Time.zoneRules cfg.tz
   let start := Time.midnight zr cfg.first
   let «end» := Time.midnight zr cfg.last
@@ -131,7 +133,7 @@ def Ctx.make (cfg : Config) : IO Ctx := do
     | .daily => Time.isoDate cfg.first
     | .weekly => s!"{Time.isoDate cfg.first}-week"
     | .monthly => cfg.first.format "uuuu-MM"
-  return { cfg, zr, start, «end», now := min «end» cfg.now, days, label, slug }
+  return { cfg, zr, start, «end», now := min «end» cfg.now, collected, days, label, slug }
 
 -- ---------------------------------------------------------------- small helpers
 
@@ -324,7 +326,7 @@ def tables (ctx : Ctx) (rs : Array Row) : Tables :=
   let iso := Time.isoDateTime ctx.zr
   let acts (a : Acts) := a
   { report := { kind := ctx.cfg.kind, label := ctx.label, who := ctx.cfg.who, timezone := ctx.cfg.tz, start := iso ctx.start,
-                «end» := iso ctx.«end», generated := iso ctx.now, days := ctx.days, sessions := rs.size, projects := byp.size }
+                «end» := iso ctx.«end», generated := iso ctx.collected, days := ctx.days, sessions := rs.size, projects := byp.size }
     project_totals := byp.map fun (p, g) =>
       { project := p, sessions := g.size, sessions_created := (g.filter (·.createdInWindow)).size,
         working_seconds := (sumW g allDays).toNat, acus_in_window := sumAcus g .inWindow, acus_spilling := sumAcus g .spills,

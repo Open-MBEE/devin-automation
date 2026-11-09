@@ -138,7 +138,7 @@ def buildCmd (args : List String) : IO UInt32 := do
     | .ok d => pure d
   unless data.search_complete do
     throw (IO.userError s!"{raw}: the session search was cut short (failed page or page cap), so sessions are missing; collect again")
-  let ctx ← Build.Ctx.make cfg
+  let ctx ← Build.Ctx.make cfg data.collected
   let rows := Build.rows ctx data
   IO.FS.createDirAll out
   IO.FS.writeFile (out / s!"devin-report-{ctx.slug}.md") (Build.markdown ctx rows)
