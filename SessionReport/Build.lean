@@ -378,7 +378,7 @@ def tablesJson (t : Tables) : Json :=
   let kind := match h.kind with | .daily => "daily" | .weekly => "weekly" | .monthly => "monthly"
   let scope := fun | AcusScope.inWindow => "inWindow" | .spillsPast => "spillsPast" | .older => "older"
   Json.mkObj [
-    ("report", Json.mkObj [("kind", kind), ("label", h.label), ("who", h.who), ("timezone", h.timezone), ("start", h.start),
+    ("report", Json.mkObj [("kind", kind), ("slug", Lean.toJson h.slug), ("label", h.label), ("who", h.who), ("timezone", h.timezone), ("start", h.start),
       ("end", h.«end»), ("generated", h.generated), ("days", Lean.toJson h.days), ("sessions", h.sessions), ("projects", h.projects)]),
     ("project_totals", Json.arr (t.project_totals.map fun p => Json.mkObj [("project", p.project), ("sessions", p.sessions),
       ("sessions_created", p.sessions_created), ("working_seconds", p.working_seconds), ("acus_in_window", Lean.toJson p.acus_in_window),
@@ -387,7 +387,7 @@ def tablesJson (t : Tables) : Json :=
     ("working_by_day", Json.arr (t.working_by_day.map fun w => Json.mkObj [("project", w.project), ("day", w.day), ("working_seconds", w.working_seconds)])),
     ("sessions", Json.arr (t.sessions.map fun s => Json.mkObj (([("session_id", s.session_id), ("url", s.url), ("title", s.title),
       ("project", s.project), ("repos", Lean.toJson s.repos), ("origin", s.origin), ("parent_session_id", Lean.toJson s.parent_session_id),
-      ("mode", Lean.toJson s.mode), ("status", s.status), ("created", s.created), ("created_in_window", s.created_in_window),
+      ("mode", Lean.toJson s.mode), ("category", Lean.toJson s.category), ("status", s.status), ("created", s.created), ("created_in_window", s.created_in_window),
       ("acus", Lean.toJson s.acus), ("acus_scope", scope s.acus_scope), ("working_seconds", s.working_seconds)] : List (String × Json)) ++
       Acts.toJsonTable { shell := s.shell, edits := s.edits, reads := s.reads, git := s.git, mcp := s.mcp, devinMsgs := s.devin_messages, userMsgs := s.user_messages, web := s.web } ++
       [("actions_capped", Lean.toJson s.actions_capped),
