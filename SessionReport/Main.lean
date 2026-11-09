@@ -1,6 +1,7 @@
 module
 
 public import SessionReport.Build
+public import SessionReport.Filter
 public import SessionReport.Http
 public import L4YAML.Schema.Dump
 
@@ -33,11 +34,13 @@ def usage : String :=
   "session-report " ++ version ++ "\n" ++
   "usage: session-report build --kind daily|weekly|monthly --start YYYY-MM-DD --end YYYY-MM-DD(exclusive)\n" ++
   "                            [--raw FILE] [--out DIR] [--tz ZONE] [--who NAME] [--base-url URL] [--group name|repo] [--owners a,b]\n" ++
+  "       session-report filter --projects a,b,... --in <reports/slug dir | tables.json> [--out DIR] [--name NAME]\n" ++
+  "                              the same artifacts as build, over the sessions of those projects only (slug <slug>-NAME)\n" ++
   "       session-report yaml <tables.json> <out-dir>   re-export the five tables of a tables JSON as YAML\n" ++
   "       session-report check <table.yaml>...          parse exported tables back (schema check)\n" ++
   "       session-report -V | --version | -h | --help\n" ++
   "tables: report project_totals working_by_day sessions session_days\n" ++
-  "defaults: --raw ~/report/raw.json --out ~/report --tz $TZ (else UTC) --who $USER --group name\n" ++
+  "defaults: --raw ~/report/raw.json --out ~/report --tz $TZ (else UTC) --who $USER --group name --name filtered\n" ++
   "          --base-url https://app.devin.ai/sessions/ --owners (none: only PRs and @repos: name a project)"
 
 def directives : Array Directive := #[.yaml "1.2"]
@@ -149,6 +152,44 @@ def buildCmd (args : List String) : IO UInt32 := do
   IO.println s!"wrote {out}/devin-report-{ctx.slug}.md, report-{ctx.slug}.json and tables-{ctx.slug}.json: {rows.size} sessions"
   return 0
 
+/-- The five tables of a published report directory (`reports/<slug>/*.yaml`) or of a `tables-<slug>.json`. -/
+def readTables (p : System.FilePath) : IO Tables := do
+  if p.extension == some "json" then
+    match parseAs ReportFile (← IO.FS.readFile p) with
+    | .error e => throw (IO.userError s!"{p}: not a tables JSON of the session-report schema: {e}")
+    | .ok f => return f.tables
+  let table {α : Type} [FromYaml α] (name : String) : IO α := do
+    let f := p / (name ++ ".yaml")
+    match parseAs α (← IO.FS.readFile f) with
+    | .error e => throw (IO.userError s!"{f}: {e}")
+    | .ok v => pure v
+  return { report := ← table "report", project_totals := ← table "project_totals", working_by_day := ← table "working_by_day",
+           sessions := ← table "sessions", session_days := ← table "session_days" }
+
+def writeReport (out : System.FilePath) (ctx : Build.Ctx) (rows : Array Build.Row) : IO Unit := do
+  IO.FS.createDirAll out
+  IO.FS.writeFile (out / s!"devin-report-{ctx.slug}.md") (Build.markdown ctx rows)
+  let tables := Build.tables ctx rows
+  IO.FS.writeFile (out / s!"report-{ctx.slug}.json") ((Build.reportJson ctx rows).pretty ++ "\n")
+  IO.FS.writeFile (out / s!"tables-{ctx.slug}.json") ((Build.tablesFileJson tables).pretty ++ "\n")
+  writeTables (out / "yaml" / ctx.slug) tables
+  IO.println s!"wrote {out}/devin-report-{ctx.slug}.md, report-{ctx.slug}.json and tables-{ctx.slug}.json: {rows.size} sessions"
+
+def filterCmd (args : List String) : IO UInt32 := do
+  let home := (← IO.getEnv "HOME").getD "."
+  let projects := ((opt args "--projects").getD "").splitOn "," |>.map String.trimWs |>.filter (!·.isEmpty) |>.toArray
+  if projects.isEmpty then throw (IO.userError "--projects a,b,... is required")
+  let some input := opt args "--in" | throw (IO.userError "--in <reports/<slug> directory | tables-<slug>.json> is required")
+  let out : System.FilePath := (opt args "--out").getD s!"{home}/report"
+  let name := (opt args "--name").getD "filtered"
+  let t ← readTables input
+  let r ← Filter.run t projects name
+  unless r.unmatched.isEmpty do
+    IO.eprintln s!"no project named {String.intercalate ", " r.unmatched.toList}; the report has: {String.intercalate ", " (t.project_totals.map (·.project)).toList}"
+  if r.rows.isEmpty then throw (IO.userError "no session matched --projects; nothing written")
+  writeReport out r.ctx r.rows
+  return 0
+
 end SessionReport
 
 open SessionReport in
@@ -158,6 +199,7 @@ public def main (args : List String) : IO UInt32 := do
     | ["-V"] | ["--version"] => IO.println version; return 0
     | [] | ["-h"] | ["--help"] => IO.println usage; return 0
     | "build" :: rest => buildCmd rest
+    | "filter" :: rest => filterCmd rest
     | "yaml" :: [input, outDir] => yamlCmd input outDir
     | "check" :: files => checkCmd files
     | ["api-get", path] => apiGetCmd path
