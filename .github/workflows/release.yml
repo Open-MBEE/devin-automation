@@ -24,7 +24,7 @@ jobs:
       - name: Smoke test
         run: |
           .lake/build/bin/session-report --version
-          .lake/build/bin/session-report check reports/2026-11-08/*.yaml
+          .lake/build/bin/session-report check reports/2026-11-02-week/*.yaml
       - name: Package
         run: |
           mkdir -p dist

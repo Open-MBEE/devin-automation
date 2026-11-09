@@ -126,7 +126,7 @@ document written by L4YAML's verified dumper and re-readable with
 ### Release a new binary
 
 Tag the commit (`git tag v0.2.0 && git push --tags`): the workflow builds the exe,
-smoke-tests it against `reports/2026-11-08`, and attaches
+smoke-tests it against `reports/2026-11-02-week`, and attaches
 `session-report-linux-x86_64` (+ `.sha256`) to the release. Bump
 `SessionReport.version` in `SessionReport/Main.lean` in the same commit.
 
