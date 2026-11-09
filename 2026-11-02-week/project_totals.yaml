@@ -1,0 +1,200 @@
+%YAML 1.2
+---
+-
+  project: OpenSysML
+  sessions: 2
+  sessions_created: 1
+  working_seconds: 423659
+  acus_in_window: 0.000000
+  acus_spilling: 56.419763
+  acus_older: 2782.854557
+  actions: 11556
+  actions_capped: false
+  prs_opened: 51
+-
+  project: fprime-lean-sysmlv2-example
+  sessions: 25
+  sessions_created: 25
+  working_seconds: 276698
+  acus_in_window: 1353.762643
+  acus_spilling: 421.863307
+  acus_older: 0.000000
+  actions: 7867
+  actions_capped: false
+  prs_opened: 39
+-
+  project: L4YAML
+  sessions: 6
+  sessions_created: 3
+  working_seconds: 220337
+  acus_in_window: 175.141425
+  acus_spilling: 686.609449
+  acus_older: 4609.350069
+  actions: 6990
+  actions_capped: false
+  prs_opened: 68
+-
+  project: mars.lean
+  sessions: 4
+  sessions_created: 3
+  working_seconds: 125715
+  acus_in_window: 128.583279
+  acus_spilling: 0.000000
+  acus_older: 3526.159273
+  actions: 9445
+  actions_capped: false
+  prs_opened: 102
+-
+  project: soil-moisture-model
+  sessions: 6
+  sessions_created: 5
+  working_seconds: 120460
+  acus_in_window: 269.829676
+  acus_spilling: 0.000000
+  acus_older: 216.924742
+  actions: 6554
+  actions_capped: false
+  prs_opened: 62
+-
+  project: soil-moisture-workflows
+  sessions: 5
+  sessions_created: 5
+  working_seconds: 38133
+  acus_in_window: 560.379586
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 3130
+  actions_capped: false
+  prs_opened: 25
+-
+  project: git-remote-sync.lean
+  sessions: 1
+  sessions_created: 0
+  working_seconds: 8755
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 649.878890
+  actions: 656
+  actions_capped: false
+  prs_opened: 9
+-
+  project: devin-automation
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 7112
+  acus_in_window: 0.000000
+  acus_spilling: 102.189435
+  acus_older: 0.000000
+  actions: 7072
+  actions_capped: false
+  prs_opened: 3
+-
+  project: engineering-foundation-architecture
+  sessions: 4
+  sessions_created: 4
+  working_seconds: 6790
+  acus_in_window: 81.745877
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 360
+  actions_capped: false
+  prs_opened: 7
+-
+  project: PropertyKindCalculus
+  sessions: 8
+  sessions_created: 8
+  working_seconds: 4781
+  acus_in_window: 21.548724
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 91
+  actions_capped: false
+  prs_opened: 1
+-
+  project: soil-moisture-dps
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 4173
+  acus_in_window: 59.727436
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 358
+  actions_capped: false
+  prs_opened: 3
+-
+  project: (Devin environment)
+  sessions: 2
+  sessions_created: 2
+  working_seconds: 1853
+  acus_in_window: 16.710507
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 77
+  actions_capped: false
+  prs_opened: 0
+-
+  project: (no repository)
+  sessions: 4
+  sessions_created: 4
+  working_seconds: 927
+  acus_in_window: 19.242047
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 580
+  actions_capped: false
+  prs_opened: 0
+-
+  project: pacti.lean
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 649
+  acus_in_window: 10.127633
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 41
+  actions_capped: false
+  prs_opened: 1
+-
+  project: certified-learned-surrogates
+  sessions: 1
+  sessions_created: 0
+  working_seconds: 573
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 20.298012
+  actions: 97
+  actions_capped: false
+  prs_opened: 4
+-
+  project: calm
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 557
+  acus_in_window: 9.027172
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 86
+  actions_capped: false
+  prs_opened: 1
+-
+  project: (Devin housekeeping)
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 545
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 153
+  actions_capped: false
+  prs_opened: 0
+-
+  project: fcheck
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 363
+  acus_in_window: 4.421631
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 29
+  actions_capped: false
+  prs_opened: 1
