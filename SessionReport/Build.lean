@@ -65,7 +65,8 @@ def toJson (a : Acts) : Json :=
 end Acts
 
 structure Pr where
-  ts : Int
+  /-- Unix seconds of the `pr_created` event; unknown (`none`) when the row was rebuilt from the published tables. -/
+  ts : Option Int
   day : String
   url : String
   repo : String
@@ -281,7 +282,7 @@ def row (ctx : Ctx) (s : Raw.Session) : Option Row := do
   let prs := (events s.prs).filterMap fun e =>
     if e.type != "pr_created" || e.ts < ctx.start || e.ts ≥ ctx.«end» then none else
     (firstUrl e.summary).map fun url =>
-      { ts := e.ts, day := Time.isoDate (Time.localDate ctx.zr e.ts), url, repo := (prRepo url).getD "?", num := prNum url,
+      { ts := some e.ts, day := Time.isoDate (Time.localDate ctx.zr e.ts), url, repo := (prRepo url).getD "?", num := prNum url,
         state := lookup states url "?" : Pr }
   let createdInWindow := ctx.start ≤ m.created && m.created < ctx.«end»
   let scope := if m.created < ctx.start then Scope.older
@@ -325,7 +326,7 @@ def tables (ctx : Ctx) (rs : Array Row) : Tables :=
   let byp := groupedBy rs allDays
   let iso := Time.isoDateTime ctx.zr
   let acts (a : Acts) := a
-  { report := { kind := ctx.cfg.kind, label := ctx.label, who := ctx.cfg.who, timezone := ctx.cfg.tz, start := iso ctx.start,
+  { report := { kind := ctx.cfg.kind, slug := some ctx.slug, label := ctx.label, who := ctx.cfg.who, timezone := ctx.cfg.tz, start := iso ctx.start,
                 «end» := iso ctx.«end», generated := iso ctx.collected, days := ctx.days, sessions := rs.size, projects := byp.size }
     project_totals := byp.map fun (p, g) =>
       { project := p, sessions := g.size, sessions_created := (g.filter (·.createdInWindow)).size,
@@ -339,7 +340,7 @@ def tables (ctx : Ctx) (rs : Array Row) : Tables :=
     sessions := rs.map fun r =>
       let a := acts (r.asum allDays)
       { session_id := r.id, url := r.url, title := r.title, project := r.project, repos := r.repos, origin := r.origin,
-        parent_session_id := r.parent, mode := r.mode, status := r.status, created := iso r.created,
+        parent_session_id := r.parent, mode := r.mode, category := r.category, status := r.status, created := iso r.created,
         created_in_window := r.createdInWindow, acus := r.acus, acus_scope := r.scope.schema,
         working_seconds := (r.wsum allDays).toNat, shell := a.shell, edits := a.edits, reads := a.reads, git := a.git, mcp := a.mcp,
         devin_messages := a.devinMsgs, user_messages := a.userMsgs, web := a.web, actions_capped := r.capped,
@@ -348,7 +349,7 @@ def tables (ctx : Ctx) (rs : Array Row) : Tables :=
       let a := r.asum (oneDay d)
       let w := r.workingOn d
       let n := (r.prsIn (oneDay d)).size
-      if w ≥ 1 || a.total > 0 || n > 0 then
+      if w ≥ 1 || a.total > 0 || a.userMsgs > 0 || n > 0 then
         some { day := d, session_id := r.id, project := r.project, working_seconds := w.toNat, shell := a.shell, edits := a.edits,
                reads := a.reads, git := a.git, mcp := a.mcp, devin_messages := a.devinMsgs, user_messages := a.userMsgs, web := a.web,
                prs_opened := n }
@@ -358,13 +359,13 @@ def tables (ctx : Ctx) (rs : Array Row) : Tables :=
 
 def Row.toJson (r : Row) : Json :=
   Json.mkObj [
-    ("id", r.id), ("url", r.url), ("title", r.title), ("project", r.project), ("pr_repos", Lean.toJson r.prRepos),
+    ("id", r.id), ("url", r.url), ("title", r.title), ("project", r.project),
     ("repos", Lean.toJson r.repos), ("origin", r.origin), ("mode", Lean.toJson r.mode), ("parent", Lean.toJson r.parent),
     ("category", Lean.toJson r.category), ("status", r.status), ("created", r.created), ("created_in_window", r.createdInWindow),
     ("acus", Lean.toJson r.acus), ("acus_scope", r.scope.key),
     ("working", Json.mkObj (r.working.toList.map fun (k, v) => (k, Lean.toJson v))),
     ("actions_by_day", Json.mkObj (r.actions.toList.map fun (k, v) => (k, v.toJson))),
-    ("prs_created", Json.arr (r.prs.map fun p => Json.mkObj [("ts", p.ts), ("day", p.day), ("url", p.url), ("repo", p.repo), ("num", p.num), ("state", p.state)])),
+    ("prs_created", Json.arr (r.prs.map fun p => Json.mkObj [("ts", Lean.toJson p.ts), ("day", p.day), ("url", p.url), ("repo", p.repo), ("num", p.num), ("state", p.state)])),
     ("actions_capped", r.capped)]
 
 def Acts.toJsonTable (a : Acts) : List (String × Json) :=
@@ -377,7 +378,7 @@ def tablesJson (t : Tables) : Json :=
   let kind := match h.kind with | .daily => "daily" | .weekly => "weekly" | .monthly => "monthly"
   let scope := fun | AcusScope.inWindow => "inWindow" | .spillsPast => "spillsPast" | .older => "older"
   Json.mkObj [
-    ("report", Json.mkObj [("kind", kind), ("label", h.label), ("who", h.who), ("timezone", h.timezone), ("start", h.start),
+    ("report", Json.mkObj [("kind", kind), ("slug", Lean.toJson h.slug), ("label", h.label), ("who", h.who), ("timezone", h.timezone), ("start", h.start),
       ("end", h.«end»), ("generated", h.generated), ("days", Lean.toJson h.days), ("sessions", h.sessions), ("projects", h.projects)]),
     ("project_totals", Json.arr (t.project_totals.map fun p => Json.mkObj [("project", p.project), ("sessions", p.sessions),
       ("sessions_created", p.sessions_created), ("working_seconds", p.working_seconds), ("acus_in_window", Lean.toJson p.acus_in_window),
@@ -386,7 +387,7 @@ def tablesJson (t : Tables) : Json :=
     ("working_by_day", Json.arr (t.working_by_day.map fun w => Json.mkObj [("project", w.project), ("day", w.day), ("working_seconds", w.working_seconds)])),
     ("sessions", Json.arr (t.sessions.map fun s => Json.mkObj (([("session_id", s.session_id), ("url", s.url), ("title", s.title),
       ("project", s.project), ("repos", Lean.toJson s.repos), ("origin", s.origin), ("parent_session_id", Lean.toJson s.parent_session_id),
-      ("mode", Lean.toJson s.mode), ("status", s.status), ("created", s.created), ("created_in_window", s.created_in_window),
+      ("mode", Lean.toJson s.mode), ("category", Lean.toJson s.category), ("status", s.status), ("created", s.created), ("created_in_window", s.created_in_window),
       ("acus", Lean.toJson s.acus), ("acus_scope", scope s.acus_scope), ("working_seconds", s.working_seconds)] : List (String × Json)) ++
       Acts.toJsonTable { shell := s.shell, edits := s.edits, reads := s.reads, git := s.git, mcp := s.mcp, devinMsgs := s.devin_messages, userMsgs := s.user_messages, web := s.web } ++
       [("actions_capped", Lean.toJson s.actions_capped),

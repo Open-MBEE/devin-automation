@@ -4,6 +4,7 @@ table: report
 description: The window the report covers and its provenance. One mapping (not a sequence).
 fields:
   kind:       { type: "!!str", enum: [daily, weekly, monthly], description: Window kind. }
+  slug:       { type: ["!!str", "!!null"], description: Directory name of the report, e.g. "2026-11-02-week" ("2026-11-02-week-lean" once filtered); null in reports written before the field existed. }
   label:      { type: "!!str", description: Human label of the window, e.g. "week 2026-11-02 → 2026-11-08". }
   who:        { type: "!!str", description: Display name of the user whose sessions are reported. }
   timezone:   { type: "!!str", description: IANA timezone the days and timestamps are expressed in. }

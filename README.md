@@ -8,7 +8,7 @@ time, action counts, PRs opened and ACUs.
 | Path | What |
 |---|---|
 | `SessionReport/Collect.lean` | `session-report collect`: pages the Devin REST API (`/organizations/<org>/sessions` and the session event listings) over leanCurl with `DEVIN_API_KEY` from the environment and writes `raw.json`, with a completeness flag per listing (an incomplete session search makes `build` refuse to run). |
-| `SessionReport/*.lean` | `session-report`, a Lean 4 exe on [nasa-jpl/L4YAML](https://github.com/nasa-jpl/L4YAML): `build` turns `raw.json` into the Markdown report, the report JSON for the HTML, a tables JSON, and the five YAML tables (typed, schema-checked); `yaml` re-exports a tables JSON; `check` re-reads exported tables. |
+| `SessionReport/*.lean` | `session-report`, a Lean 4 exe on [nasa-jpl/L4YAML](https://github.com/nasa-jpl/L4YAML): `build` turns `raw.json` into the Markdown report, the report JSON for the HTML, a tables JSON, and the five YAML tables (typed, schema-checked); `filter` renders the same artifacts for a subset of the projects from a published report's tables (no `raw.json` needed); `yaml` re-exports a tables JSON; `check` re-reads exported tables. |
 | `schemas/session-report/` | The table schemas, human-readable (`SessionReport/Schema.lean` is their executable form). |
 | `session-report/body.html` | Interactive HTML report body, compiled with Devin's `html_artifact_compile` over the report JSON. |
 | `session-report/playbook.md` | The playbook a scheduled session follows. |
@@ -122,6 +122,26 @@ flat rows meant for pandas/DuckDB/jq: `project_totals`, `working_by_day`,
 `sessions`, `session_days`, plus a `report` header. Every file is a YAML 1.2.2
 document written by L4YAML's verified dumper and re-readable with
 `session-report check`.
+
+### Filter a report by project
+
+`session-report filter` rebuilds a published report over a list of projects only — the same
+Markdown, report JSON (for the HTML), tables JSON and five YAML tables, every total recomputed
+over the kept sessions — from the tables alone, so it works on any `reports/<slug>/` of this
+repository (or on a `tables-<slug>.json` of `build`) without the raw data:
+
+```sh
+session-report filter --projects L4YAML,mars.lean,PropertyKindCalculus --in reports/2026-11-02-week --out ~/report --name lean
+#  → ~/report/devin-report-2026-11-02-week-lean.md, report-2026-11-02-week-lean.json, tables-2026-11-02-week-lean.json, yaml/2026-11-02-week-lean/*.yaml
+# HTML as for build: html_artifact_compile body_path=session-report/body.html data_path=~/report/report-2026-11-02-week-lean.json
+```
+
+A name matches a project by its full name or its last path segment (`nasa-jpl/L4YAML` ≡ `L4YAML`);
+names that match nothing are reported on stderr together with the projects the report has. The
+slug of the filtered report is `<slug>-<name>` (`--name` defaults to `filtered`), and its label
+carries the selection. Filtering with every project of a report reproduces `sessions`, `session_days`
+and `working_by_day` byte for byte; the ACU sums of `project_totals` are re-added from the six
+decimals printed per session, so they can differ from the original in the last digit.
 
 ### Release a new binary
 
