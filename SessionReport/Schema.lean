@@ -29,6 +29,8 @@ inductive AcusScope | inWindow | spillsPast | older
 /-- Table `report`: the window and its provenance. -/
 structure Header where
   kind : Kind
+  /-- Directory name of the report (`2026-11-02-week`, `2026-11-02-week-lean` once filtered); absent in reports written before it existed. -/
+  slug : Option String
   label : String
   who : String
   timezone : String
@@ -80,6 +82,8 @@ structure Session where
   origin : String
   parent_session_id : Option String
   mode : Option String
+  /-- The session's category as reported by the API, when it has one. -/
+  category : Option String
   status : String
   created : String
   created_in_window : Bool
