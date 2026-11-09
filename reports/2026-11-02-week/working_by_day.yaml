@@ -10,32 +10,20 @@
   working_seconds: 545
 -
   project: (no repository)
-  day: 2026-11-02
-  working_seconds: 26
--
-  project: (no repository)
   day: 2026-11-03
-  working_seconds: 311
+  working_seconds: 280
 -
   project: (no repository)
   day: 2026-11-04
-  working_seconds: 812
+  working_seconds: 127
 -
   project: (no repository)
   day: 2026-11-05
-  working_seconds: 267
--
-  project: (no repository)
-  day: 2026-11-06
-  working_seconds: 673
--
-  project: (no repository)
-  day: 2026-11-07
-  working_seconds: 21
+  working_seconds: 241
 -
   project: (no repository)
   day: 2026-11-08
-  working_seconds: 301
+  working_seconds: 279
 -
   project: L4YAML
   day: 2026-11-02
@@ -47,7 +35,7 @@
 -
   project: L4YAML
   day: 2026-11-04
-  working_seconds: 24499
+  working_seconds: 25158
 -
   project: L4YAML
   day: 2026-11-05
@@ -55,7 +43,7 @@
 -
   project: L4YAML
   day: 2026-11-06
-  working_seconds: 46521
+  working_seconds: 47175
 -
   project: L4YAML
   day: 2026-11-07
@@ -94,8 +82,32 @@
   working_seconds: 96185
 -
   project: PropertyKindCalculus
+  day: 2026-11-02
+  working_seconds: 26
+-
+  project: PropertyKindCalculus
+  day: 2026-11-03
+  working_seconds: 31
+-
+  project: PropertyKindCalculus
+  day: 2026-11-04
+  working_seconds: 26
+-
+  project: PropertyKindCalculus
+  day: 2026-11-05
+  working_seconds: 26
+-
+  project: PropertyKindCalculus
   day: 2026-11-06
-  working_seconds: 4610
+  working_seconds: 4629
+-
+  project: PropertyKindCalculus
+  day: 2026-11-07
+  working_seconds: 21
+-
+  project: PropertyKindCalculus
+  day: 2026-11-08
+  working_seconds: 22
 -
   project: calm
   day: 2026-11-06

@@ -24,13 +24,13 @@
   prs_opened: 39
 -
   project: L4YAML
-  sessions: 5
-  sessions_created: 2
-  working_seconds: 219024
-  acus_in_window: 165.371255
+  sessions: 6
+  sessions_created: 3
+  working_seconds: 220337
+  acus_in_window: 175.141425
   acus_spilling: 686.609449
   acus_older: 4609.350069
-  actions: 6950
+  actions: 6990
   actions_capped: false
   prs_opened: 68
 -
@@ -101,13 +101,13 @@
   prs_opened: 7
 -
   project: PropertyKindCalculus
-  sessions: 1
-  sessions_created: 1
-  working_seconds: 4610
-  acus_in_window: 12.478133
+  sessions: 8
+  sessions_created: 8
+  working_seconds: 4781
+  acus_in_window: 21.548724
   acus_spilling: 0.000000
   acus_older: 0.000000
-  actions: 65
+  actions: 91
   actions_capped: false
   prs_opened: 1
 -
@@ -122,17 +122,6 @@
   actions_capped: false
   prs_opened: 3
 -
-  project: (no repository)
-  sessions: 12
-  sessions_created: 12
-  working_seconds: 2411
-  acus_in_window: 38.082808
-  acus_spilling: 0.000000
-  acus_older: 0.000000
-  actions: 646
-  actions_capped: false
-  prs_opened: 0
--
   project: (Devin environment)
   sessions: 2
   sessions_created: 2
@@ -141,6 +130,17 @@
   acus_spilling: 0.000000
   acus_older: 0.000000
   actions: 77
+  actions_capped: false
+  prs_opened: 0
+-
+  project: (no repository)
+  sessions: 4
+  sessions_created: 4
+  working_seconds: 927
+  acus_in_window: 19.242047
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 580
   actions_capped: false
   prs_opened: 0
 -

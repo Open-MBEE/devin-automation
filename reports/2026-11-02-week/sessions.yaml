@@ -82,33 +82,6 @@
   prs_opened:
     []
 -
-  session_id: 92bd1b953ac248de8df35275701e4c80
-  url: https://nasa-jpl-demo.devinenterprise.com/sessions/92bd1b953ac248de8df35275701e4c80
-  title: Review L4YAML PR 232
-  project: (no repository)
-  repos:
-    []
-  origin: webapp
-  parent_session_id: null
-  mode: ultra
-  status: suspended (inactivity)
-  created: 2026-11-04T14:35:25-08:00
-  created_in_window: true
-  acus: 9.770170
-  acus_scope: inWindow
-  working_seconds: 1313
-  shell: 26
-  edits: 0
-  reads: 5
-  git: 5
-  mcp: 0
-  devin_messages: 4
-  user_messages: 2
-  web: 0
-  actions_capped: false
-  prs_opened:
-    []
--
   session_id: dc4f7902f00f4772859b88cffb38546b
   url: https://nasa-jpl-demo.devinenterprise.com/sessions/dc4f7902f00f4772859b88cffb38546b
   title: Draft Strategic Lessons-Learned Message
@@ -210,195 +183,6 @@
   reads: 2
   git: 0
   mcp: 0
-  devin_messages: 2
-  user_messages: 1
-  web: 0
-  actions_capped: false
-  prs_opened:
-    []
--
-  session_id: 02b9ba2534ec43adb82a7a12f9fdae67
-  url: https://nasa-jpl-demo.devinenterprise.com/sessions/02b9ba2534ec43adb82a7a12f9fdae67
-  title: Remediate PropertyKindCalculus Findings
-  project: (no repository)
-  repos:
-    []
-  origin: automation
-  parent_session_id: null
-  mode: ultra
-  status: suspended (inactivity)
-  created: 2026-11-04T06:01:48-08:00
-  created_in_window: true
-  acus: 1.469240
-  acus_scope: inWindow
-  working_seconds: 26
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 2
-  devin_messages: 2
-  user_messages: 1
-  web: 0
-  actions_capped: false
-  prs_opened:
-    []
--
-  session_id: 54e653be46324440b1fe73c07fc27198
-  url: https://nasa-jpl-demo.devinenterprise.com/sessions/54e653be46324440b1fe73c07fc27198
-  title: Remediate PropertyKindCalculus Scan Findings
-  project: (no repository)
-  repos:
-    []
-  origin: automation
-  parent_session_id: null
-  mode: ultra
-  status: suspended (inactivity)
-  created: 2026-11-03T06:01:40-08:00
-  created_in_window: true
-  acus: 1.383112
-  acus_scope: inWindow
-  working_seconds: 31
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 2
-  devin_messages: 2
-  user_messages: 1
-  web: 0
-  actions_capped: false
-  prs_opened:
-    []
--
-  session_id: 02ac1c1f6af5404a927639bad3182191
-  url: https://nasa-jpl-demo.devinenterprise.com/sessions/02ac1c1f6af5404a927639bad3182191
-  title: Remediate PropertyKindCalculus Findings
-  project: (no repository)
-  repos:
-    []
-  origin: automation
-  parent_session_id: null
-  mode: ultra
-  status: suspended (inactivity)
-  created: 2026-11-02T06:01:43-08:00
-  created_in_window: true
-  acus: 1.350702
-  acus_scope: inWindow
-  working_seconds: 26
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 2
-  devin_messages: 2
-  user_messages: 1
-  web: 0
-  actions_capped: false
-  prs_opened:
-    []
--
-  session_id: f371196f62954d02803e61912eb2a8c7
-  url: https://nasa-jpl-demo.devinenterprise.com/sessions/f371196f62954d02803e61912eb2a8c7
-  title: Remediate PropertyKindCalculus Findings
-  project: (no repository)
-  repos:
-    []
-  origin: automation
-  parent_session_id: null
-  mode: ultra
-  status: suspended (inactivity)
-  created: 2026-11-05T06:01:47-08:00
-  created_in_window: true
-  acus: 1.327887
-  acus_scope: inWindow
-  working_seconds: 26
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 2
-  devin_messages: 2
-  user_messages: 1
-  web: 0
-  actions_capped: false
-  prs_opened:
-    []
--
-  session_id: 70040b2df480453f90c4e2e8f87bacc5
-  url: https://nasa-jpl-demo.devinenterprise.com/sessions/70040b2df480453f90c4e2e8f87bacc5
-  title: Remediate PropertyKindCalculus Findings
-  project: (no repository)
-  repos:
-    []
-  origin: automation
-  parent_session_id: null
-  mode: ultra
-  status: suspended (inactivity)
-  created: 2026-11-06T06:01:42-08:00
-  created_in_window: true
-  acus: 1.260950
-  acus_scope: inWindow
-  working_seconds: 19
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 2
-  devin_messages: 2
-  user_messages: 1
-  web: 0
-  actions_capped: false
-  prs_opened:
-    []
--
-  session_id: 667f2029c4d1433193fe6d47ec605751
-  url: https://nasa-jpl-demo.devinenterprise.com/sessions/667f2029c4d1433193fe6d47ec605751
-  title: Remediate PropertyKindCalculus Findings
-  project: (no repository)
-  repos:
-    []
-  origin: automation
-  parent_session_id: null
-  mode: ultra
-  status: suspended (inactivity)
-  created: 2026-11-07T06:01:38-08:00
-  created_in_window: true
-  acus: 1.201168
-  acus_scope: inWindow
-  working_seconds: 21
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 1
-  devin_messages: 2
-  user_messages: 1
-  web: 0
-  actions_capped: false
-  prs_opened:
-    []
--
-  session_id: 85b1ad601c9c433fa0e50cf98797ca68
-  url: https://nasa-jpl-demo.devinenterprise.com/sessions/85b1ad601c9c433fa0e50cf98797ca68
-  title: Remediate PropertyKindCalculus scan findings
-  project: (no repository)
-  repos:
-    []
-  origin: automation
-  parent_session_id: null
-  mode: ultra
-  status: suspended (inactivity)
-  created: 2026-11-08T06:01:43-08:00
-  created_in_window: true
-  acus: 1.077532
-  acus_scope: inWindow
-  working_seconds: 22
-  shell: 0
-  edits: 0
-  reads: 0
-  git: 0
-  mcp: 1
   devin_messages: 2
   user_messages: 1
   web: 0
@@ -945,6 +729,33 @@
       state: merged
       day: 2026-11-08
 -
+  session_id: 92bd1b953ac248de8df35275701e4c80
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/92bd1b953ac248de8df35275701e4c80
+  title: Review L4YAML PR 232
+  project: L4YAML
+  repos:
+    - nasa-jpl/L4YAML
+  origin: webapp
+  parent_session_id: null
+  mode: ultra
+  status: suspended (inactivity)
+  created: 2026-11-04T14:35:25-08:00
+  created_in_window: true
+  acus: 9.770170
+  acus_scope: inWindow
+  working_seconds: 1313
+  shell: 26
+  edits: 0
+  reads: 5
+  git: 5
+  mcp: 0
+  devin_messages: 4
+  user_messages: 2
+  web: 0
+  actions_capped: false
+  prs_opened:
+    []
+-
   session_id: 18ad47adf36f44e9b6824a4472f9678d
   url: https://nasa-jpl-demo.devinenterprise.com/sessions/18ad47adf36f44e9b6824a4472f9678d
   title: Plan SysMLv2 QVTS Language and Workflows
@@ -1338,6 +1149,195 @@
       state: merged
       day: 2026-11-06
 -
+  session_id: 02b9ba2534ec43adb82a7a12f9fdae67
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/02b9ba2534ec43adb82a7a12f9fdae67
+  title: Remediate PropertyKindCalculus Findings
+  project: PropertyKindCalculus
+  repos:
+    - nasa-jpl/PropertyKindCalculus
+  origin: automation
+  parent_session_id: null
+  mode: ultra
+  status: suspended (inactivity)
+  created: 2026-11-04T06:01:48-08:00
+  created_in_window: true
+  acus: 1.469240
+  acus_scope: inWindow
+  working_seconds: 26
+  shell: 0
+  edits: 0
+  reads: 0
+  git: 0
+  mcp: 2
+  devin_messages: 2
+  user_messages: 1
+  web: 0
+  actions_capped: false
+  prs_opened:
+    []
+-
+  session_id: 54e653be46324440b1fe73c07fc27198
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/54e653be46324440b1fe73c07fc27198
+  title: Remediate PropertyKindCalculus Scan Findings
+  project: PropertyKindCalculus
+  repos:
+    - nasa-jpl/PropertyKindCalculus
+  origin: automation
+  parent_session_id: null
+  mode: ultra
+  status: suspended (inactivity)
+  created: 2026-11-03T06:01:40-08:00
+  created_in_window: true
+  acus: 1.383112
+  acus_scope: inWindow
+  working_seconds: 31
+  shell: 0
+  edits: 0
+  reads: 0
+  git: 0
+  mcp: 2
+  devin_messages: 2
+  user_messages: 1
+  web: 0
+  actions_capped: false
+  prs_opened:
+    []
+-
+  session_id: 02ac1c1f6af5404a927639bad3182191
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/02ac1c1f6af5404a927639bad3182191
+  title: Remediate PropertyKindCalculus Findings
+  project: PropertyKindCalculus
+  repos:
+    - nasa-jpl/PropertyKindCalculus
+  origin: automation
+  parent_session_id: null
+  mode: ultra
+  status: suspended (inactivity)
+  created: 2026-11-02T06:01:43-08:00
+  created_in_window: true
+  acus: 1.350702
+  acus_scope: inWindow
+  working_seconds: 26
+  shell: 0
+  edits: 0
+  reads: 0
+  git: 0
+  mcp: 2
+  devin_messages: 2
+  user_messages: 1
+  web: 0
+  actions_capped: false
+  prs_opened:
+    []
+-
+  session_id: f371196f62954d02803e61912eb2a8c7
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/f371196f62954d02803e61912eb2a8c7
+  title: Remediate PropertyKindCalculus Findings
+  project: PropertyKindCalculus
+  repos:
+    - nasa-jpl/PropertyKindCalculus
+  origin: automation
+  parent_session_id: null
+  mode: ultra
+  status: suspended (inactivity)
+  created: 2026-11-05T06:01:47-08:00
+  created_in_window: true
+  acus: 1.327887
+  acus_scope: inWindow
+  working_seconds: 26
+  shell: 0
+  edits: 0
+  reads: 0
+  git: 0
+  mcp: 2
+  devin_messages: 2
+  user_messages: 1
+  web: 0
+  actions_capped: false
+  prs_opened:
+    []
+-
+  session_id: 70040b2df480453f90c4e2e8f87bacc5
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/70040b2df480453f90c4e2e8f87bacc5
+  title: Remediate PropertyKindCalculus Findings
+  project: PropertyKindCalculus
+  repos:
+    - nasa-jpl/PropertyKindCalculus
+  origin: automation
+  parent_session_id: null
+  mode: ultra
+  status: suspended (inactivity)
+  created: 2026-11-06T06:01:42-08:00
+  created_in_window: true
+  acus: 1.260950
+  acus_scope: inWindow
+  working_seconds: 19
+  shell: 0
+  edits: 0
+  reads: 0
+  git: 0
+  mcp: 2
+  devin_messages: 2
+  user_messages: 1
+  web: 0
+  actions_capped: false
+  prs_opened:
+    []
+-
+  session_id: 667f2029c4d1433193fe6d47ec605751
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/667f2029c4d1433193fe6d47ec605751
+  title: Remediate PropertyKindCalculus Findings
+  project: PropertyKindCalculus
+  repos:
+    - nasa-jpl/PropertyKindCalculus
+  origin: automation
+  parent_session_id: null
+  mode: ultra
+  status: suspended (inactivity)
+  created: 2026-11-07T06:01:38-08:00
+  created_in_window: true
+  acus: 1.201168
+  acus_scope: inWindow
+  working_seconds: 21
+  shell: 0
+  edits: 0
+  reads: 0
+  git: 0
+  mcp: 1
+  devin_messages: 2
+  user_messages: 1
+  web: 0
+  actions_capped: false
+  prs_opened:
+    []
+-
+  session_id: 85b1ad601c9c433fa0e50cf98797ca68
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/85b1ad601c9c433fa0e50cf98797ca68
+  title: Remediate PropertyKindCalculus scan findings
+  project: PropertyKindCalculus
+  repos:
+    - nasa-jpl/PropertyKindCalculus
+  origin: automation
+  parent_session_id: null
+  mode: ultra
+  status: suspended (inactivity)
+  created: 2026-11-08T06:01:43-08:00
+  created_in_window: true
+  acus: 1.077532
+  acus_scope: inWindow
+  working_seconds: 22
+  shell: 0
+  edits: 0
+  reads: 0
+  git: 0
+  mcp: 1
+  devin_messages: 2
+  user_messages: 1
+  web: 0
+  actions_capped: false
+  prs_opened:
+    []
+-
   session_id: 085325f0a0a249ba8c7a59b8514d1fae
   url: https://nasa-jpl-demo.devinenterprise.com/sessions/085325f0a0a249ba8c7a59b8514d1fae
   title: Read valid modes from config.yaml
@@ -1551,6 +1551,7 @@
   title: Plan SysMLv2 SBVR Tooling
   project: engineering-foundation-architecture
   repos:
+    - Open-MBEE/SBVR.lean
     - Open-MBEE/engineering-foundation-architecture
   origin: webapp
   parent_session_id: null
@@ -2612,6 +2613,7 @@
   title: Formalize Mars Model in Lean
   project: mars.lean
   repos:
+    - Open-MBEE/mars
     - Open-MBEE/mars.lean
     - Open-MBEE/pacti.lean
     - nasa-jpl/PropertyKindCalculus
@@ -3407,6 +3409,7 @@
   title: Document Soil Moisture Algorithm Modules
   project: soil-moisture-model
   repos:
+    - Open-MBEE/sm-smap-nisar-demo
     - Open-MBEE/soil-moisture-dps
     - Open-MBEE/soil-moisture-model
     - Open-MBEE/soil-moisture-workflows
