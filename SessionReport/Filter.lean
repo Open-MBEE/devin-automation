@@ -34,7 +34,6 @@ def rowOf (days : Array SessionDay) (s : Session) : Row :=
   let prs := s.prs_opened.map fun p =>
     { ts := none, day := p.day, url := p.url, repo := p.repo, num := p.number, state := p.state }
   { id := s.session_id, url := s.url, title := s.title, project := s.project,
-    prRepos := prs.foldl (fun acc p => if acc.contains p.repo then acc else acc.push p.repo) #[],
     repos := s.repos, origin := s.origin, mode := s.mode, parent := s.parent_session_id, category := s.category,
     status := s.status, created := (parseIso s.created).getD 0, createdInWindow := s.created_in_window,
     acus := s.acus, scope := scopeOf s.acus_scope,
