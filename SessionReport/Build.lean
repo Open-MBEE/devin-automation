@@ -89,7 +89,6 @@ structure Row where
   url : String
   title : String
   project : String
-  prRepos : Array String
   repos : Array String
   origin : String
   mode : Option String
@@ -293,7 +292,7 @@ def row (ctx : Ctx) (s : Raw.Session) : Option Row := do
   let wsum : Int := working.foldl (fun a (_, v) => a + v) 0
   let anyAct := actions.any fun (_, a) => a.total > 0
   guard (createdInWindow || wsum ≥ 60 || anyAct || !prs.isEmpty)
-  return { id := m.id, url := ctx.cfg.baseUrl ++ m.id, title := m.title, project := prim, prRepos, repos,
+  return { id := m.id, url := ctx.cfg.baseUrl ++ m.id, title := m.title, project := prim, repos,
            origin := m.origin.getD "unknown", mode := m.mode, parent := m.parent, category := m.category, status := m.status,
            created := m.created, createdInWindow, acus := m.acus, scope, working, actions, prs, capped }
 
@@ -325,7 +324,6 @@ def sumAcus (g : Array Row) (sc : Scope) : Float := g.foldl (fun s r => if r.sco
 def tables (ctx : Ctx) (rs : Array Row) : Tables :=
   let byp := groupedBy rs allDays
   let iso := Time.isoDateTime ctx.zr
-  let acts (a : Acts) := a
   { report := { kind := ctx.cfg.kind, slug := some ctx.slug, label := ctx.label, who := ctx.cfg.who, timezone := ctx.cfg.tz, start := iso ctx.start,
                 «end» := iso ctx.«end», generated := iso ctx.collected, days := ctx.days, sessions := rs.size, projects := byp.size }
     project_totals := byp.map fun (p, g) =>
@@ -338,7 +336,7 @@ def tables (ctx : Ctx) (rs : Array Row) : Tables :=
         let w := g.foldl (fun s r => s + r.workingOn d) 0
         if w ≥ 1 then some { project := p, day := d, working_seconds := w.toNat } else none
     sessions := rs.map fun r =>
-      let a := acts (r.asum allDays)
+      let a := r.asum allDays
       { session_id := r.id, url := r.url, title := r.title, project := r.project, repos := r.repos, origin := r.origin,
         parent_session_id := r.parent, mode := r.mode, category := r.category, status := r.status, created := iso r.created,
         created_in_window := r.createdInWindow, acus := r.acus, acus_scope := r.scope.schema,
