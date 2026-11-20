@@ -1,0 +1,112 @@
+%YAML 1.2
+---
+-
+  project: OpenSysML
+  sessions: 1
+  sessions_created: 0
+  working_seconds: 49063
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 4868.386263
+  actions: 882
+  actions_capped: true
+  prs_opened: 6
+-
+  project: qvts
+  sessions: 10
+  sessions_created: 5
+  working_seconds: 20080
+  acus_in_window: 135.789235
+  acus_spilling: 39.837251
+  acus_older: 412.954963
+  actions: 1196
+  actions_capped: false
+  prs_opened: 7
+-
+  project: fprime-lean-sysmlv2-example
+  sessions: 3
+  sessions_created: 0
+  working_seconds: 11553
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 936.295524
+  actions: 221
+  actions_capped: false
+  prs_opened: 1
+-
+  project: L4YAML
+  sessions: 3
+  sessions_created: 0
+  working_seconds: 8955
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 2156.279919
+  actions: 287
+  actions_capped: false
+  prs_opened: 3
+-
+  project: SBVR.lean
+  sessions: 2
+  sessions_created: 0
+  working_seconds: 3463
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 2252.634017
+  actions: 243
+  actions_capped: false
+  prs_opened: 5
+-
+  project: prov.lean
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 3429
+  acus_in_window: 0.000000
+  acus_spilling: 863.066307
+  acus_older: 0.000000
+  actions: 173
+  actions_capped: false
+  prs_opened: 1
+-
+  project: engineering-foundation-architecture
+  sessions: 2
+  sessions_created: 2
+  working_seconds: 3162
+  acus_in_window: 28.625690
+  acus_spilling: 20.680373
+  acus_older: 0.000000
+  actions: 198
+  actions_capped: false
+  prs_opened: 2
+-
+  project: soil-moisture-model
+  sessions: 1
+  sessions_created: 0
+  working_seconds: 780
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 225.911543
+  actions: 2
+  actions_capped: false
+  prs_opened: 0
+-
+  project: (no repository)
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 169
+  acus_in_window: 1.808496
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 468
+  actions_capped: false
+  prs_opened: 0
+-
+  project: PropertyKindCalculus
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 31
+  acus_in_window: 1.174170
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 4
+  actions_capped: false
+  prs_opened: 0

@@ -1,0 +1,1094 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content="Devin artifact kit" />
+    <meta name="artifact-built-at" content="2026-11-20T00:01:08Z" />
+    <title>Artifact</title>
+    <script>
+      // A network that blocks the kit's host (or hands back a block page for it) leaves the page blank; say so instead. Styled like the
+      // ds error alert card (ChatAlertCard variant="error", no bar), values hardcoded: the kit CSS is what failed.
+      function artifactKitFailed() {
+        function show() {
+          if (document.getElementById("artifact-kit-notice")) return;
+          document.documentElement.style.colorScheme = "light";
+          var notice = document.createElement("div");
+          notice.id = "artifact-kit-notice";
+          notice.setAttribute("role", "alert");
+          notice.style.cssText =
+            "box-sizing:border-box;display:flex;align-items:flex-start;gap:6px;max-width:960px;margin:0 auto;padding:32px 24px 0;" +
+            "font:13px/18px Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:-0.005em;color:rgb(25 25 25)";
+          var ns = "http://www.w3.org/2000/svg";
+          var icon = document.createElementNS(ns, "svg");
+          icon.setAttribute("viewBox", "0 0 24 24");
+          icon.setAttribute("fill", "rgb(245 59 58)");
+          icon.setAttribute("aria-hidden", "true");
+          icon.style.cssText = "width:14px;height:14px;flex-shrink:0;margin-top:2px";
+          var path = document.createElementNS(ns, "path");
+          path.setAttribute("fill-rule", "evenodd");
+          path.setAttribute("clip-rule", "evenodd");
+          path.setAttribute(
+            "d",
+            "M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15ZM12 7C11.5858 7 11.25 7.33579 11.25 7.75V12.25C11.25 12.6642 11.5858 13 12 13C12.4142 13 12.75 12.6642 12.75 12.25V7.75C12.75 7.33579 12.4142 7 12 7Z"
+          );
+          icon.appendChild(path);
+          var text = document.createElement("span");
+          text.textContent = "This page could not load Devin's artifact kit.";
+          notice.appendChild(icon);
+          notice.appendChild(text);
+          document.body.prepend(notice);
+        }
+        if (document.body) show();
+        else document.addEventListener("DOMContentLoaded", show);
+      }
+    </script>
+    <link rel="stylesheet" href="https://static.devin.ai/artifact-kit/cc8965d841fb2ec5/ds-kit.css" onerror="artifactKitFailed()" />
+    <style>
+    .mt-3 {
+        margin-top: 0.75rem
+    }
+    .flex {
+        display: flex
+    }
+    .w-full {
+        width: 100%
+    }
+    .min-w-\[260px\] {
+        min-width: 260px
+    }
+    .min-w-\[300px\] {
+        min-width: 300px
+    }
+    .cursor-pointer {
+        cursor: pointer
+    }
+    .flex-col {
+        flex-direction: column
+    }
+    .flex-wrap {
+        flex-wrap: wrap
+    }
+    .items-center {
+        align-items: center
+    }
+    .justify-between {
+        justify-content: space-between
+    }
+    .gap-0\.5 {
+        gap: 0.125rem
+    }
+    .gap-1 {
+        gap: 0.25rem
+    }
+    .gap-3 {
+        gap: 0.75rem
+    }
+    .gap-4 {
+        gap: 1rem
+    }
+    .whitespace-nowrap {
+        white-space: nowrap
+    }
+    .pt-4 {
+        padding-top: 1rem
+    }
+    .font-mono {
+        font-family: var(--font-code, Devin Mono), SF Mono, Roboto Mono, ui-monospace, monospace
+    }
+    .text-secondary {
+        color: rgb(var(--text-secondary))
+    }
+    .filter {
+        filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+    }
+    @keyframes enter {
+        from {
+            opacity: var(--tw-enter-opacity, 1);
+            transform: translate3d(var(--tw-enter-translate-x, 0), var(--tw-enter-translate-y, 0), 0) scale3d(var(--tw-enter-scale, 1), var(--tw-enter-scale, 1), var(--tw-enter-scale, 1)) rotate(var(--tw-enter-rotate, 0))
+        }
+    }
+    @keyframes exit {
+        to {
+            opacity: var(--tw-exit-opacity, 1);
+            transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0) scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0))
+        }
+    }
+    .running {
+        animation-play-state: running
+    }
+    </style>
+  </head>
+  <body>
+    <script src="https://static.devin.ai/artifact-kit/cc8965d841fb2ec5/ds-kit.js" onerror="artifactKitFailed()"></script>
+    <script>
+      if (!window.DS) artifactKitFailed();
+    </script>
+    <main data-artifact-shell class="mx-auto flex max-w-[960px] flex-col gap-6 px-6 py-8">
+<script type="application/json" id="artifact-data">{"who": "Nicolas Rouquette",
+ "tz": "America/Los_Angeles",
+ "start": 1794816000,
+ "rows":
+ [{"working": {"2026-11-16": 307},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/4ee3059bc32d4a7895697d4f0ad8dd6d",
+   "title": "Generate Weekly Devin Session Report",
+   "status": "suspended (inactivity)",
+   "repos": [],
+   "prs_created": [],
+   "project": "(no repository)",
+   "parent": null,
+   "origin": "automation",
+   "mode": "ultra",
+   "id": "4ee3059bc32d4a7895697d4f0ad8dd6d",
+   "created_in_window": true,
+   "created": 1794816586,
+   "category": "data_and_automation",
+   "acus_scope": "in",
+   "acus": 1.936789,
+   "actions_capped": false,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 0,
+     "user_msgs": 1,
+     "shell": 3,
+     "reads": 0,
+     "mcp": 1374,
+     "git": 0,
+     "edits": 0,
+     "devin_msgs": 2}}},
+  {"working": {"2026-11-16": 207},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/c81e1c3f2280459287802f8df41fd26e",
+   "title": "Generate Daily Devin Session Report",
+   "status": "suspended (inactivity)",
+   "repos": [],
+   "prs_created": [],
+   "project": "(no repository)",
+   "parent": null,
+   "origin": "automation",
+   "mode": "ultra",
+   "id": "c81e1c3f2280459287802f8df41fd26e",
+   "created_in_window": true,
+   "created": 1794816345,
+   "category": "data_and_automation",
+   "acus_scope": "in",
+   "acus": 1.813417,
+   "actions_capped": false,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 0,
+     "user_msgs": 1,
+     "shell": 3,
+     "reads": 0,
+     "mcp": 547,
+     "git": 0,
+     "edits": 0,
+     "devin_msgs": 2}}},
+  {"working": {"2026-11-16": 231},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/d26d0b63cf634519b5e45cd1b974ec7e",
+   "title": "Harden L4YAML Fork PR Security",
+   "status": "suspended (inactivity)",
+   "repos": ["nasa-jpl/L4YAML"],
+   "prs_created":
+   [{"url": "https://github.com/nasa-jpl/L4YAML/pull/346",
+     "ts": 1794854517,
+     "state": "merged",
+     "repo": "nasa-jpl/L4YAML",
+     "num": 346,
+     "day": "2026-11-16"}],
+   "project": "L4YAML",
+   "parent": null,
+   "origin": "webapp",
+   "mode": "ultra",
+   "id": "d26d0b63cf634519b5e45cd1b974ec7e",
+   "created_in_window": true,
+   "created": 1794854345,
+   "category": "security",
+   "acus_scope": "in",
+   "acus": 5.109657,
+   "actions_capped": false,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 0,
+     "user_msgs": 2,
+     "shell": 12,
+     "reads": 1,
+     "mcp": 0,
+     "git": 1,
+     "edits": 3,
+     "devin_msgs": 5}}},
+  {"working": {"2026-11-16": 48222},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/18ad47adf36f44e9b6824a4472f9678d",
+   "title": "Plan SysMLv2 QVTS Language and Workflows",
+   "status": "suspended (inactivity)",
+   "repos":
+   ["Open-MBEE/OpenSysML",
+    "Open-MBEE/OpenSysML-Extensions-Library",
+    "Open-MBEE/engineering-foundation-architecture",
+    "Open-MBEE/qvts"],
+   "prs_created": [],
+   "project": "OpenSysML",
+   "parent": null,
+   "origin": "webapp",
+   "mode": "ultra",
+   "id": "18ad47adf36f44e9b6824a4472f9678d",
+   "created_in_window": false,
+   "created": 1793042933,
+   "category": "bug_fixing",
+   "acus_scope": "older",
+   "acus": 4868.386263,
+   "actions_capped": true,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 0,
+     "user_msgs": 12,
+     "shell": 489,
+     "reads": 4,
+     "mcp": 3,
+     "git": 23,
+     "edits": 56,
+     "devin_msgs": 43}}},
+  {"working": {"2026-11-16": 6269},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/9eae7d55903746d1a212b6005ae0e586",
+   "title": "Make compliance row 28-name-resolution:81 faithful",
+   "status": "suspended (inactivity) [archived]",
+   "repos": ["Open-MBEE/OpenSysML"],
+   "prs_created": [],
+   "project": "OpenSysML",
+   "parent": "18ad47adf36f44e9b6824a4472f9678d",
+   "origin": "api",
+   "mode": "ultra",
+   "id": "9eae7d55903746d1a212b6005ae0e586",
+   "created_in_window": false,
+   "created": 1794753861,
+   "category": "bug_fixing",
+   "acus_scope": "older",
+   "acus": 48.507738,
+   "actions_capped": false,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 0,
+     "user_msgs": 3,
+     "shell": 51,
+     "reads": 3,
+     "mcp": 1,
+     "git": 9,
+     "edits": 7,
+     "devin_msgs": 7}}},
+  {"working": {"2026-11-16": 850},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/49d0e2e74ead418995773a1f6a0403a1",
+   "title": "Make compliance row 17-expression-evaluation:25 faithful",
+   "status": "suspended (user_request) [archived]",
+   "repos": ["Open-MBEE/OpenSysML"],
+   "prs_created":
+   [{"url": "https://github.com/Open-MBEE/OpenSysML/pull/2326",
+     "ts": 1794846783,
+     "state": "merged",
+     "repo": "Open-MBEE/OpenSysML",
+     "num": 2326,
+     "day": "2026-11-16"}],
+   "project": "OpenSysML",
+   "parent": "18ad47adf36f44e9b6824a4472f9678d",
+   "origin": "api",
+   "mode": "ultra",
+   "id": "49d0e2e74ead418995773a1f6a0403a1",
+   "created_in_window": false,
+   "created": 1794753856,
+   "category": "bug_fixing",
+   "acus_scope": "older",
+   "acus": 37.481811,
+   "actions_capped": false,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 0,
+     "user_msgs": 1,
+     "shell": 17,
+     "reads": 1,
+     "mcp": 0,
+     "git": 3,
+     "edits": 6,
+     "devin_msgs": 3}}},
+  {"working": {},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/e7e976d3e710492d80dc96a4af63d60b",
+   "title": "Make compliance row 26-usage-prefixes:8 faithful",
+   "status": "suspended (inactivity) [archived]",
+   "repos": ["Open-MBEE/OpenSysML"],
+   "prs_created": [],
+   "project": "OpenSysML",
+   "parent": "18ad47adf36f44e9b6824a4472f9678d",
+   "origin": "api",
+   "mode": "ultra",
+   "id": "e7e976d3e710492d80dc96a4af63d60b",
+   "created_in_window": false,
+   "created": 1794753858,
+   "category": "bug_fixing",
+   "acus_scope": "older",
+   "acus": 32.750969,
+   "actions_capped": false,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 0,
+     "user_msgs": 0,
+     "shell": 16,
+     "reads": 0,
+     "mcp": 0,
+     "git": 6,
+     "edits": 2,
+     "devin_msgs": 1}}},
+  {"working": {"2026-11-16": 795},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/5d48c28b9d274256bebd689770f7a4c3",
+   "title": "Make compliance row 23-static-typing:29 faithful",
+   "status": "suspended (inactivity)",
+   "repos": ["Open-MBEE/OpenSysML"],
+   "prs_created": [],
+   "project": "OpenSysML",
+   "parent": "18ad47adf36f44e9b6824a4472f9678d",
+   "origin": "api",
+   "mode": "ultra",
+   "id": "5d48c28b9d274256bebd689770f7a4c3",
+   "created_in_window": false,
+   "created": 1794753857,
+   "category": "research_and_exploration",
+   "acus_scope": "older",
+   "acus": 25.92705,
+   "actions_capped": false,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 0,
+     "user_msgs": 11,
+     "shell": 37,
+     "reads": 8,
+     "mcp": 4,
+     "git": 0,
+     "edits": 2,
+     "devin_msgs": 17}}},
+  {"working": {"2026-11-16": 2551},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/127f7be0f3b5458cbcf2b6eedaa5f862",
+   "title": "Make compliance row 15-state-machine:94 faithful",
+   "status": "suspended (inactivity) [archived]",
+   "repos": ["Open-MBEE/OpenSysML"],
+   "prs_created": [],
+   "project": "OpenSysML",
+   "parent": "18ad47adf36f44e9b6824a4472f9678d",
+   "origin": "api",
+   "mode": "ultra",
+   "id": "127f7be0f3b5458cbcf2b6eedaa5f862",
+   "created_in_window": false,
+   "created": 1794753855,
+   "category": "bug_fixing",
+   "acus_scope": "older",
+   "acus": 23.122954,
+   "actions_capped": false,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 0,
+     "user_msgs": 1,
+     "shell": 10,
+     "reads": 5,
+     "mcp": 6,
+     "git": 4,
+     "edits": 3,
+     "devin_msgs": 2}}},
+  {"working": {"2026-11-16": 302},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/7e4ab05d47b540e8b7877c492a54e615",
+   "title": "Make compliance row 08-instantiation:23 faithful",
+   "status": "suspended (inactivity)",
+   "repos": ["Open-MBEE/OpenSysML"],
+   "prs_created": [],
+   "project": "OpenSysML",
+   "parent": "18ad47adf36f44e9b6824a4472f9678d",
+   "origin": "api",
+   "mode": "ultra",
+   "id": "7e4ab05d47b540e8b7877c492a54e615",
+   "created_in_window": false,
+   "created": 1794753854,
+   "category": "research_and_exploration",
+   "acus_scope": "older",
+   "acus": 18.607603,
+   "actions_capped": false,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 0,
+     "user_msgs": 3,
+     "shell": 18,
+     "reads": 3,
+     "mcp": 0,
+     "git": 0,
+     "edits": 2,
+     "devin_msgs": 6}}},
+  {"working": {"2026-11-16": 40},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/065154dfbba74c60b442cce1243fed73",
+   "title": "Remediate PropertyKindCalculus Findings",
+   "status": "suspended (inactivity)",
+   "repos": ["nasa-jpl/PropertyKindCalculus"],
+   "prs_created": [],
+   "project": "PropertyKindCalculus",
+   "parent": null,
+   "origin": "automation",
+   "mode": "ultra",
+   "id": "065154dfbba74c60b442cce1243fed73",
+   "created_in_window": true,
+   "created": 1794837695,
+   "category": "data_and_automation",
+   "acus_scope": "in",
+   "acus": 1.339963,
+   "actions_capped": false,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 0,
+     "user_msgs": 1,
+     "shell": 1,
+     "reads": 0,
+     "mcp": 1,
+     "git": 0,
+     "edits": 0,
+     "devin_msgs": 1}}},
+  {"working": {"2026-11-16": 18},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/6130c0278b22490f97ac13ac80b69e13",
+   "title": "SBVR Remaining Work",
+   "status": "suspended (inactivity)",
+   "repos":
+   ["Open-MBEE/SBVR.lean",
+    "Open-MBEE/engineering-foundation-architecture",
+    "Open-MBEE/face.lean",
+    "Open-MBEE/fprime",
+    "Open-MBEE/fprime-lean-sysmlv2-example",
+    "Open-MBEE/html-to-pdf.lean",
+    "Open-MBEE/leanCurl",
+    "Open-MBEE/mars.lean",
+    "Open-MBEE/prov.lean",
+    "nasa-jpl/PropertyKindCalculus"],
+   "prs_created": [],
+   "project": "SBVR.lean",
+   "parent": null,
+   "origin": "webapp",
+   "mode": "ultra",
+   "id": "6130c0278b22490f97ac13ac80b69e13",
+   "created_in_window": false,
+   "created": 1792780413,
+   "category": "feature_development",
+   "acus_scope": "older",
+   "acus": 2191.008624,
+   "actions_capped": false,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 0,
+     "user_msgs": 0,
+     "shell": 0,
+     "reads": 0,
+     "mcp": 0,
+     "git": 0,
+     "edits": 0,
+     "devin_msgs": 1}}},
+  {"working": {"2026-11-16": 3920},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/5b6b278b67a846b9a835146ce5796fd5",
+   "title": "Clarify AI Readiness Purpose",
+   "status": "suspended (inactivity)",
+   "repos": ["Open-MBEE/engineering-foundation-architecture"],
+   "prs_created":
+   [{"url":
+     "https://github.com/Open-MBEE/engineering-foundation-architecture/pull/86",
+     "ts": 1794849748,
+     "state": "merged",
+     "repo": "Open-MBEE/engineering-foundation-architecture",
+     "num": 86,
+     "day": "2026-11-16"}],
+   "project": "engineering-foundation-architecture",
+   "parent": null,
+   "origin": "webapp",
+   "mode": "ultra",
+   "id": "5b6b278b67a846b9a835146ce5796fd5",
+   "created_in_window": false,
+   "created": 1794791996,
+   "category": "ci_cd_and_devops",
+   "acus_scope": "older",
+   "acus": 73.854929,
+   "actions_capped": false,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 0,
+     "user_msgs": 8,
+     "shell": 147,
+     "reads": 45,
+     "mcp": 23,
+     "git": 11,
+     "edits": 44,
+     "devin_msgs": 28}}},
+  {"working": {"2026-11-16": 3126},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/bbe86616453249d8a0677d78203a76d3",
+   "title": "Plan SysMLv2 SBVR Tooling",
+   "status": "suspended (inactivity)",
+   "repos":
+   ["Open-MBEE/SBVR.lean", "Open-MBEE/engineering-foundation-architecture"],
+   "prs_created":
+   [{"url":
+     "https://github.com/Open-MBEE/engineering-foundation-architecture/pull/88",
+     "ts": 1794858754,
+     "state": "merged",
+     "repo": "Open-MBEE/engineering-foundation-architecture",
+     "num": 88,
+     "day": "2026-11-16"},
+    {"url":
+     "https://github.com/Open-MBEE/engineering-foundation-architecture/pull/95",
+     "ts": 1794874469,
+     "state": "merged",
+     "repo": "Open-MBEE/engineering-foundation-architecture",
+     "num": 95,
+     "day": "2026-11-16"}],
+   "project": "engineering-foundation-architecture",
+   "parent": null,
+   "origin": "webapp",
+   "mode": "ultra",
+   "id": "bbe86616453249d8a0677d78203a76d3",
+   "created_in_window": false,
+   "created": 1793736397,
+   "category": "research_and_exploration",
+   "acus_scope": "older",
+   "acus": 54.605315,
+   "actions_capped": false,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 0,
+     "user_msgs": 16,
+     "shell": 59,
+     "reads": 12,
+     "mcp": 0,
+     "git": 8,
+     "edits": 7,
+     "devin_msgs": 25}}},
+  {"working": {"2026-11-16": 2733},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/1fc7119c103f48f3afc23ae7aa02d30f",
+   "title": "Add cyber-security chapter to AI readiness blueprint",
+   "status": "suspended (inactivity)",
+   "repos": ["Open-MBEE/engineering-foundation-architecture"],
+   "prs_created":
+   [{"url":
+     "https://github.com/Open-MBEE/engineering-foundation-architecture/pull/87",
+     "ts": 1794856698,
+     "state": "merged",
+     "repo": "Open-MBEE/engineering-foundation-architecture",
+     "num": 87,
+     "day": "2026-11-16"}],
+   "project": "engineering-foundation-architecture",
+   "parent": "5b6b278b67a846b9a835146ce5796fd5",
+   "origin": "api",
+   "mode": "ultra",
+   "id": "1fc7119c103f48f3afc23ae7aa02d30f",
+   "created_in_window": true,
+   "created": 1794855806,
+   "category": "documentation_and_content",
+   "acus_scope": "in",
+   "acus": 45.437223,
+   "actions_capped": false,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 0,
+     "user_msgs": 13,
+     "shell": 89,
+     "reads": 25,
+     "mcp": 35,
+     "git": 3,
+     "edits": 5,
+     "devin_msgs": 43}}},
+  {"working": {"2026-11-16": 1254},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/0d42a400ee984ad2800a4fec67538857",
+   "title": "Show provenance across the stack and explain its benefits",
+   "status": "suspended (inactivity)",
+   "repos": ["Open-MBEE/engineering-foundation-architecture"],
+   "prs_created":
+   [{"url":
+     "https://github.com/Open-MBEE/engineering-foundation-architecture/pull/98",
+     "ts": 1794874993,
+     "state": "merged",
+     "repo": "Open-MBEE/engineering-foundation-architecture",
+     "num": 98,
+     "day": "2026-11-16"}],
+   "project": "engineering-foundation-architecture",
+   "parent": "1fc7119c103f48f3afc23ae7aa02d30f",
+   "origin": "api",
+   "mode": "ultra",
+   "id": "0d42a400ee984ad2800a4fec67538857",
+   "created_in_window": true,
+   "created": 1794873808,
+   "category": "documentation_and_content",
+   "acus_scope": "spills",
+   "acus": 19.994381,
+   "actions_capped": false,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 0,
+     "user_msgs": 2,
+     "shell": 71,
+     "reads": 34,
+     "mcp": 0,
+     "git": 1,
+     "edits": 9,
+     "devin_msgs": 3}}},
+  {"working": {"2026-11-16": 2097},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/544325604dd745e7826016a87bb559dd",
+   "title": "Add the whitepaper to the site header bar",
+   "status": "suspended (inactivity)",
+   "repos": ["Open-MBEE/engineering-foundation-architecture"],
+   "prs_created":
+   [{"url":
+     "https://github.com/Open-MBEE/engineering-foundation-architecture/pull/97",
+     "ts": 1794874921,
+     "state": "merged",
+     "repo": "Open-MBEE/engineering-foundation-architecture",
+     "num": 97,
+     "day": "2026-11-16"}],
+   "project": "engineering-foundation-architecture",
+   "parent": "1fc7119c103f48f3afc23ae7aa02d30f",
+   "origin": "api",
+   "mode": "ultra",
+   "id": "544325604dd745e7826016a87bb559dd",
+   "created_in_window": true,
+   "created": 1794873494,
+   "category": "feature_development",
+   "acus_scope": "spills",
+   "acus": 19.795648,
+   "actions_capped": false,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 34,
+     "user_msgs": 1,
+     "shell": 41,
+     "reads": 13,
+     "mcp": 0,
+     "git": 2,
+     "edits": 4,
+     "devin_msgs": 3}}},
+  {"working": {"2026-11-16": 816},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/6aaa4b30920f4849a8fb31a0330db7b4",
+   "title": "Configure Install Script for Multiple GitHub Hosts",
+   "status": "suspended (inactivity)",
+   "repos": ["Open-MBEE/engineering-foundation-architecture"],
+   "prs_created":
+   [{"url":
+     "https://github.com/Open-MBEE/engineering-foundation-architecture/pull/89",
+     "ts": 1794862005,
+     "state": "merged",
+     "repo": "Open-MBEE/engineering-foundation-architecture",
+     "num": 89,
+     "day": "2026-11-16"},
+    {"url":
+     "https://github.com/Open-MBEE/engineering-foundation-architecture/pull/90",
+     "ts": 1794862127,
+     "state": "merged",
+     "repo": "Open-MBEE/engineering-foundation-architecture",
+     "num": 90,
+     "day": "2026-11-16"},
+    {"url":
+     "https://github.com/Open-MBEE/engineering-foundation-architecture/pull/91",
+     "ts": 1794862309,
+     "state": "merged",
+     "repo": "Open-MBEE/engineering-foundation-architecture",
+     "num": 91,
+     "day": "2026-11-16"},
+    {"url":
+     "https://github.com/Open-MBEE/engineering-foundation-architecture/pull/92",
+     "ts": 1794868074,
+     "state": "merged",
+     "repo": "Open-MBEE/engineering-foundation-architecture",
+     "num": 92,
+     "day": "2026-11-16"}],
+   "project": "engineering-foundation-architecture",
+   "parent": null,
+   "origin": "webapp",
+   "mode": "ultra",
+   "id": "6aaa4b30920f4849a8fb31a0330db7b4",
+   "created_in_window": true,
+   "created": 1794860511,
+   "category": "ci_cd_and_devops",
+   "acus_scope": "in",
+   "acus": 12.439867,
+   "actions_capped": false,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 0,
+     "user_msgs": 8,
+     "shell": 24,
+     "reads": 2,
+     "mcp": 3,
+     "git": 11,
+     "edits": 7,
+     "devin_msgs": 18}}},
+  {"working": {"2026-11-16": 1050},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/5d86ec802cf64c62aa53bdad3430a1fe",
+   "title": "Rephrase \"says what it does not know\" as provenance",
+   "status": "suspended (inactivity)",
+   "repos": ["Open-MBEE/engineering-foundation-architecture"],
+   "prs_created":
+   [{"url":
+     "https://github.com/Open-MBEE/engineering-foundation-architecture/pull/94",
+     "ts": 1794871626,
+     "state": "merged",
+     "repo": "Open-MBEE/engineering-foundation-architecture",
+     "num": 94,
+     "day": "2026-11-16"}],
+   "project": "engineering-foundation-architecture",
+   "parent": "1fc7119c103f48f3afc23ae7aa02d30f",
+   "origin": "api",
+   "mode": "ultra",
+   "id": "5d86ec802cf64c62aa53bdad3430a1fe",
+   "created_in_window": true,
+   "created": 1794870649,
+   "category": "documentation_and_content",
+   "acus_scope": "in",
+   "acus": 9.17714,
+   "actions_capped": false,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 0,
+     "user_msgs": 7,
+     "shell": 38,
+     "reads": 18,
+     "mcp": 0,
+     "git": 1,
+     "edits": 7,
+     "devin_msgs": 8}}},
+  {"working": {"2026-11-16": 1283},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/c2aae4e4cb5647ec988fcd2c833c4c9c",
+   "title": "Explain kinds of quantity and PKC in 1.3.3",
+   "status": "suspended (inactivity)",
+   "repos": ["Open-MBEE/engineering-foundation-architecture"],
+   "prs_created":
+   [{"url":
+     "https://github.com/Open-MBEE/engineering-foundation-architecture/pull/96",
+     "ts": 1794874578,
+     "state": "merged",
+     "repo": "Open-MBEE/engineering-foundation-architecture",
+     "num": 96,
+     "day": "2026-11-16"}],
+   "project": "engineering-foundation-architecture",
+   "parent": "1fc7119c103f48f3afc23ae7aa02d30f",
+   "origin": "api",
+   "mode": "ultra",
+   "id": "c2aae4e4cb5647ec988fcd2c833c4c9c",
+   "created_in_window": true,
+   "created": 1794873331,
+   "category": "documentation_and_content",
+   "acus_scope": "in",
+   "acus": 8.060963,
+   "actions_capped": false,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 0,
+     "user_msgs": 1,
+     "shell": 26,
+     "reads": 9,
+     "mcp": 0,
+     "git": 1,
+     "edits": 1,
+     "devin_msgs": 2}}},
+  {"working": {"2026-11-16": 1004},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/bc36e21847854f32ba8d942e8b6a4445",
+   "title": "Fix the site's whitepaper link and placement",
+   "status": "suspended (inactivity)",
+   "repos": ["Open-MBEE/engineering-foundation-architecture"],
+   "prs_created":
+   [{"url":
+     "https://github.com/Open-MBEE/engineering-foundation-architecture/pull/93",
+     "ts": 1794871526,
+     "state": "merged",
+     "repo": "Open-MBEE/engineering-foundation-architecture",
+     "num": 93,
+     "day": "2026-11-16"}],
+   "project": "engineering-foundation-architecture",
+   "parent": "1fc7119c103f48f3afc23ae7aa02d30f",
+   "origin": "api",
+   "mode": "ultra",
+   "id": "bc36e21847854f32ba8d942e8b6a4445",
+   "created_in_window": true,
+   "created": 1794870550,
+   "category": "bug_fixing",
+   "acus_scope": "in",
+   "acus": 5.754725,
+   "actions_capped": false,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 0,
+     "user_msgs": 1,
+     "shell": 24,
+     "reads": 4,
+     "mcp": 0,
+     "git": 2,
+     "edits": 5,
+     "devin_msgs": 3}}},
+  {"working": {"2026-11-16": 1521},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/b81ba6680c244d51835408ac51b01045",
+   "title": "State R9 in tier 4's one-sentence summary",
+   "status": "suspended (inactivity)",
+   "repos": ["Open-MBEE/engineering-foundation-architecture"],
+   "prs_created":
+   [{"url":
+     "https://github.com/Open-MBEE/engineering-foundation-architecture/pull/99",
+     "ts": 1794874994,
+     "state": "merged",
+     "repo": "Open-MBEE/engineering-foundation-architecture",
+     "num": 99,
+     "day": "2026-11-16"}],
+   "project": "engineering-foundation-architecture",
+   "parent": "1fc7119c103f48f3afc23ae7aa02d30f",
+   "origin": "api",
+   "mode": "ultra",
+   "id": "b81ba6680c244d51835408ac51b01045",
+   "created_in_window": true,
+   "created": 1794873493,
+   "category": "documentation_and_content",
+   "acus_scope": "spills",
+   "acus": 4.94065,
+   "actions_capped": false,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 0,
+     "user_msgs": 1,
+     "shell": 14,
+     "reads": 6,
+     "mcp": 0,
+     "git": 1,
+     "edits": 3,
+     "devin_msgs": 2}}},
+  {"working": {"2026-11-16": 5646},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/4cf276f055ad4d8b859f8bfd5b38f5e6",
+   "title": "Define Packet Buffer Algebra Module",
+   "status": "suspended (inactivity)",
+   "repos": ["Open-MBEE/fprime-lean-sysmlv2-example"],
+   "prs_created":
+   [{"url": "https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/122",
+     "ts": 1794887812,
+     "state": "merged",
+     "repo": "Open-MBEE/fprime-lean-sysmlv2-example",
+     "num": 122,
+     "day": "2026-11-16"}],
+   "project": "fprime-lean-sysmlv2-example",
+   "parent": null,
+   "origin": "webapp",
+   "mode": "ultra",
+   "id": "4cf276f055ad4d8b859f8bfd5b38f5e6",
+   "created_in_window": true,
+   "created": 1794865032,
+   "category": "documentation_and_content",
+   "acus_scope": "spills",
+   "acus": 33.811021,
+   "actions_capped": false,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 0,
+     "user_msgs": 13,
+     "shell": 114,
+     "reads": 34,
+     "mcp": 0,
+     "git": 3,
+     "edits": 22,
+     "devin_msgs": 20}}},
+  {"working": {"2026-11-16": 175},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/269fec9073a148178cf67f89a18189ae",
+   "title": "Support Current Branch Default",
+   "status": "suspended (inactivity)",
+   "repos": ["Open-MBEE/git-remote-sync.lean"],
+   "prs_created": [],
+   "project": "git-remote-sync.lean",
+   "parent": null,
+   "origin": "webapp",
+   "mode": "ultra",
+   "id": "269fec9073a148178cf67f89a18189ae",
+   "created_in_window": false,
+   "created": 1794791435,
+   "category": "feature_development",
+   "acus_scope": "older",
+   "acus": 25.746086,
+   "actions_capped": false,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 0,
+     "user_msgs": 1,
+     "shell": 8,
+     "reads": 1,
+     "mcp": 4,
+     "git": 0,
+     "edits": 2,
+     "devin_msgs": 5}}},
+  {"working": {"2026-11-16": 4947},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/1a082cb6299b40e98f26087c72a4acdb",
+   "title": "Evaluate GR(1) contract support and examples",
+   "status": "suspended (inactivity)",
+   "repos": ["Open-MBEE/mars.lean", "Open-MBEE/pacti.lean"],
+   "prs_created":
+   [{"url": "https://github.com/Open-MBEE/pacti.lean/pull/31",
+     "ts": 1794853204,
+     "state": "merged",
+     "repo": "Open-MBEE/pacti.lean",
+     "num": 31,
+     "day": "2026-11-16"},
+    {"url": "https://github.com/Open-MBEE/pacti.lean/pull/32",
+     "ts": 1794888677,
+     "state": "merged",
+     "repo": "Open-MBEE/pacti.lean",
+     "num": 32,
+     "day": "2026-11-16"}],
+   "project": "pacti.lean",
+   "parent": null,
+   "origin": "webapp",
+   "mode": "ultra",
+   "id": "1a082cb6299b40e98f26087c72a4acdb",
+   "created_in_window": false,
+   "created": 1794627980,
+   "category": "ci_cd_and_devops",
+   "acus_scope": "older",
+   "acus": 204.214413,
+   "actions_capped": false,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 0,
+     "user_msgs": 4,
+     "shell": 33,
+     "reads": 6,
+     "mcp": 2,
+     "git": 7,
+     "edits": 10,
+     "devin_msgs": 13}}},
+  {"working": {"2026-11-16": 103},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/8ed3105b93b0433ea1c59a0baab863bf",
+   "title": "Add SMT-LIB gr1_machine section to GR(1) JSON",
+   "status": "suspended (inactivity)",
+   "repos": ["Open-MBEE/pacti.lean"],
+   "prs_created": [],
+   "project": "pacti.lean",
+   "parent": "1a082cb6299b40e98f26087c72a4acdb",
+   "origin": "api",
+   "mode": "ultra",
+   "id": "8ed3105b93b0433ea1c59a0baab863bf",
+   "created_in_window": false,
+   "created": 1794805973,
+   "category": "feature_development",
+   "acus_scope": "older",
+   "acus": 22.41109,
+   "actions_capped": false,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 0,
+     "user_msgs": 1,
+     "shell": 7,
+     "reads": 0,
+     "mcp": 0,
+     "git": 2,
+     "edits": 3,
+     "devin_msgs": 2}}},
+  {"working": {"2026-11-16": 3302},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/4699594c5c194e649e2117ef272ed589",
+   "title": "Prove GR(1) integer split never falls back",
+   "status": "suspended (inactivity)",
+   "repos": ["Open-MBEE/pacti.lean"],
+   "prs_created":
+   [{"url": "https://github.com/Open-MBEE/pacti.lean/pull/33",
+     "ts": 1794888703,
+     "state": "merged",
+     "repo": "Open-MBEE/pacti.lean",
+     "num": 33,
+     "day": "2026-11-16"}],
+   "project": "pacti.lean",
+   "parent": "1a082cb6299b40e98f26087c72a4acdb",
+   "origin": "api",
+   "mode": "ultra",
+   "id": "4699594c5c194e649e2117ef272ed589",
+   "created_in_window": false,
+   "created": 1794805972,
+   "category": "bug_fixing",
+   "acus_scope": "older",
+   "acus": 19.003673,
+   "actions_capped": false,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 0,
+     "user_msgs": 2,
+     "shell": 29,
+     "reads": 9,
+     "mcp": 0,
+     "git": 3,
+     "edits": 6,
+     "devin_msgs": 4}}},
+  {"working": {"2026-11-16": 444},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/3ed80fb1860a447286307ff974f8707a",
+   "title": "Review pacti.lean PR #20",
+   "status": "suspended (inactivity)",
+   "repos": ["Open-MBEE/pacti.lean"],
+   "prs_created": [],
+   "project": "pacti.lean",
+   "parent": "58f12c5014384468bf409d36f326059b",
+   "origin": "webapp",
+   "mode": "ultra",
+   "id": "3ed80fb1860a447286307ff974f8707a",
+   "created_in_window": false,
+   "created": 1794719007,
+   "category": "bug_fixing",
+   "acus_scope": "older",
+   "acus": 17.136396,
+   "actions_capped": false,
+   "actions_by_day": {}},
+  {"working": {"2026-11-16": 195},
+   "url":
+   "https://nasa-jpl-demo.devinenterprise.com/sessions/f40ced3704e14378b9163fb0bee3a72d",
+   "title": "Open-MBEE/prov.lean project",
+   "status": "suspended (inactivity)",
+   "repos": ["Open-MBEE/prov.lean"],
+   "prs_created": [],
+   "project": "prov.lean",
+   "parent": null,
+   "origin": "webapp",
+   "mode": "ultra",
+   "id": "f40ced3704e14378b9163fb0bee3a72d",
+   "created_in_window": false,
+   "created": 1794461610,
+   "category": "feature_development",
+   "acus_scope": "older",
+   "acus": 863.066307,
+   "actions_capped": false,
+   "actions_by_day":
+   {"2026-11-16":
+    {"web": 0,
+     "user_msgs": 4,
+     "shell": 9,
+     "reads": 0,
+     "mcp": 0,
+     "git": 0,
+     "edits": 2,
+     "devin_msgs": 6}}}],
+ "now": 1794902400,
+ "label": "Monday 2026-11-16",
+ "kind": "daily",
+ "end": 1794902400,
+ "days": ["2026-11-16"]}</script>
+<script>var data = JSON.parse(document.getElementById("artifact-data").textContent);</script>
+<div id="root"></div>
+<script>DSRun("\nconst rows = data.rows;\nconst DAYS = data.days;\nconst KIND = data.kind || \"weekly\";\nconst TODAY = DAYS[DAYS.length - 1];\nconst TZ = data.tz || \"America/Los_Angeles\";\nconst PERIOD = KIND === \"monthly\" ? \"month\" : KIND === \"weekly\" ? \"week\" : \"day\";\nconst fmtTime = (t) => new Date(t * 1000).toLocaleString(\"en-US\", { timeZone: TZ, month: \"2-digit\", day: \"2-digit\", hour: \"2-digit\", minute: \"2-digit\", hour12: false });\nconst hms = (s) => { const m = Math.round(s / 60); const h = Math.floor(m / 60); return h ? `${h}h${String(m % 60).padStart(2, \"0\")}` : `${m}m`; };\nconst hrs = (s) => Math.round(s / 360) / 10;\nconst dayLabel = (iso) => new Date(iso + \"T12:00:00Z\").toLocaleDateString(\"en-US\", { weekday: \"short\", month: \"short\", day: \"numeric\", timeZone: \"UTC\" });\nconst sum = (xs) => xs.reduce((a, b) => a + b, 0);\nconst wsum = (r) => sum(Object.values(r.working));\nconst actsIn = (r, day) => { const out = { shell: 0, edits: 0, reads: 0, git: 0, mcp: 0, devin_msgs: 0, user_msgs: 0, web: 0 }; for (const [d, a] of Object.entries(r.actions_by_day)) { if (!day || d === day) for (const k in out) out[k] += a[k] || 0; } return out; };\nconst actsTotal = (a) => a.shell + a.edits + a.reads + a.git + a.mcp + a.devin_msgs + a.web;\nconst actsStr = (a) => `${a.shell} sh · ${a.edits} ed · ${a.reads} rd · ${a.git} git · ${a.mcp} mcp · ${a.devin_msgs}+${a.user_msgs} msg`;\nconst kind = (r) => (r.parent ? `child of ${r.parent.slice(0, 8)}` : r.origin);\nconst groupBy = (rs, f) => { const m = new Map(); for (const r of rs) { const k = f(r); if (!m.has(k)) m.set(k, []); m.get(k).push(r); } return m; };\nconst prState = (s) => s === \"merged\" ? \"success\" : s === \"open\" ? \"blue\" : \"default\";\n\nconst projects = [...groupBy(rows, (r) => r.project).entries()]\n  .map(([p, rs]) => ({ project: p, rows: rs, working: sum(rs.map(wsum)), acusNew: sum(rs.filter((r) => r.acus_scope === \"in\").map((r) => r.acus)), acusSpill: sum(rs.filter((r) => r.acus_scope === \"spills\").map((r) => r.acus)), acusOld: sum(rs.filter((r) => r.acus_scope === \"older\").map((r) => r.acus)), prs: sum(rs.map((r) => r.prs_created.length)), actions: sum(rs.map((r) => actsTotal(actsIn(r)))), capped: rs.some((r) => r.actions_capped) }))\n  .sort((a, b) => b.working - a.working);\nconst topProjects = projects.filter((p) => p.working > 1800).slice(0, 8).map((p) => p.project);\nconst shortDay = (iso) => new Date(iso + \"T12:00:00Z\").toLocaleDateString(\"en-US\", KIND === \"monthly\" ? { day: \"numeric\", timeZone: \"UTC\" } : { weekday: \"short\", month: \"short\", day: \"numeric\", timeZone: \"UTC\" });\nconst series = Object.fromEntries(topProjects.map((p, i) => [p, { label: p.replace(/^(Open-MBEE|nasa-jpl)\\//, \"\"), color: chartColors[i % chartColors.length] }]));\nseries.other = { label: \"Other\", color: chartColors[8] };\nconst chartRows = DAYS.map((d) => { const o = { day: shortDay(d), other: 0 }; for (const p of projects) { const h = hrs(sum(p.rows.map((r) => r.working[d] || 0))); if (topProjects.includes(p.project)) o[p.project] = h; else o.other += h; } o.other = Math.round(o.other * 10) / 10; return o; });\n\nfunction PrLinks({ prs, project }) {\n  if (!prs.length) return React.createElement(Text, { size: 12, className: \"text-secondary\",}, \"—\");\n  return React.createElement('div', { className: \"flex flex-wrap gap-1\"  ,}, prs.map((p) => (\n    React.createElement(ExternalLink, { key: p.url, href: p.url,}, React.createElement(Badge, { variant: prState(p.state), size: \"sm\",}, p.repo === project ? \"\" : p.repo.split(\"/\")[1] + \" \", \"#\", p.num, \" \" , p.state))\n  )));\n}\n\nfunction SessionRow({ r, day, project }) {\n  const a = actsIn(r, day);\n  const prs = day ? r.prs_created.filter((p) => p.day === day) : r.prs_created;\n  const w = day ? (r.working[day] || 0) : wsum(r);\n  return (\n    React.createElement(TableRow, null\n      , React.createElement(TableCell, null, React.createElement('div', { className: \"flex flex-col gap-0.5\"  ,}, React.createElement(ExternalLink, { href: r.url,}, r.title), React.createElement(Text, { size: 11, className: \"text-secondary\",}, kind(r), \" · \"  , r.mode, \" · \"  , r.status, \" · created \"   , fmtTime(r.created), r.repos && r.repos.length ? \" · \" + r.repos.join(\", \") : \"\")))\n      , React.createElement(TableCell, { className: \"whitespace-nowrap\",}, hms(w))\n      , React.createElement(TableCell, { className: \"whitespace-nowrap\",}, r.acus.toFixed(1), r.acus_scope === \"older\" ? \" †\" : r.acus_scope === \"spills\" ? \" ‡\" : \"\")\n      , React.createElement(TableCell, { className: \"min-w-[260px]\",}, React.createElement(Text, { size: 11, className: \"font-mono\",}, r.actions_capped ? \"≥ \" : \"\", actsStr(a)))\n      , React.createElement(TableCell, { className: \"min-w-[300px]\",}, React.createElement(PrLinks, { prs: prs, project: project,} ))\n    )\n  );\n}\n\nfunction ProjectTable({ project, rs, day }) {\n  const sorted = [...rs].sort((x, y) => ((day ? (y.working[day] || 0) : wsum(y)) - (day ? (x.working[day] || 0) : wsum(x))));\n  return (\n    React.createElement(Table, null\n      , React.createElement(TableHeader, null, React.createElement(TableRow, null, React.createElement(TableHead, null, \"Session\"), React.createElement(TableHead, null, \"Working\"), React.createElement(TableHead, null, \"ACUs\"), React.createElement(TableHead, null, \"Actions (\" , day ? \"day\" : PERIOD, \")\"), React.createElement(TableHead, null, \"PRs opened (\"  , day ? \"day\" : PERIOD, \")\")))\n      , React.createElement(TableBody, null, sorted.map((r) => React.createElement(SessionRow, { key: r.id, r: r, day: day, project: project,} )))\n    )\n  );\n}\n\nfunction ProjectSection({ project, rs, day, defaultOpen }) {\n  const [open, setOpen] = useState(defaultOpen);\n  const w = sum(rs.map((r) => (day ? (r.working[day] || 0) : wsum(r))));\n  const prs = sum(rs.map((r) => (day ? r.prs_created.filter((p) => p.day === day) : r.prs_created).length));\n  return (\n    React.createElement(CollapsibleRoot, { open: open, onOpenChange: setOpen,}\n      , React.createElement(CardContent, null\n        , React.createElement(CardBody, null\n          , React.createElement(CollapsibleTrigger, { className: \"w-full\", caretPosition: \"left\",}\n            , React.createElement('div', { className: \"flex items-center justify-between gap-3 cursor-pointer\"    ,}\n              , React.createElement(Text, { size: 14, weight: \"semibold\",}, project)\n              , React.createElement(Text, { size: 12, className: \"text-secondary\",}, rs.length, \" session\" , rs.length === 1 ? \"\" : \"s\", \" · \"  , hms(w), \" working · \"   , prs, \" PR\" , prs === 1 ? \"\" : \"s\")\n            )\n          )\n          , React.createElement(CollapsiblePanel, null, React.createElement('div', { className: \"mt-3\",}, React.createElement(ProjectTable, { project: project, rs: rs, day: day,} )))\n        )\n      )\n    )\n  );\n}\n\nfunction Daily() {\n  const [day, setDay] = useState(TODAY);\n  const rs = rows.filter((r) => (r.working[day] || 0) >= 60 || actsTotal(actsIn(r, day)) > 0 || r.prs_created.some((p) => p.day === day));\n  const groups = [...groupBy(rs, (r) => r.project).entries()].sort((a, b) => sum(b[1].map((r) => r.working[day] || 0)) - sum(a[1].map((r) => r.working[day] || 0)));\n  const w = sum(rs.map((r) => r.working[day] || 0));\n  const prs = sum(rs.map((r) => r.prs_created.filter((p) => p.day === day).length));\n  return (\n    React.createElement('div', { className: \"flex flex-col gap-4\"  ,}\n      , DAYS.length > 1 && React.createElement('div', { className: \"flex items-center gap-3\"  ,}, React.createElement(Text, { size: 12, className: \"text-secondary\",}, \"Day\"), React.createElement(SimpleSelect, { options: DAYS.map((d) => ({ value: d, label: dayLabel(d) })), value: day, onValueChange: setDay,} ))\n      , React.createElement(StatsRow, null\n        , React.createElement(StatCard, { label: \"Sessions active\" ,}, React.createElement(StatCardValue, null, rs.length))\n        , React.createElement(StatCard, { label: \"Projects\",}, React.createElement(StatCardValue, null, groups.length))\n        , React.createElement(StatCard, { label: \"Working time\" ,}, React.createElement(StatCardValue, null, hms(w)))\n        , React.createElement(StatCard, { label: \"PRs opened\" ,}, React.createElement(StatCardValue, null, prs))\n      )\n      , groups.length === 0 && React.createElement(Text, { size: 13, className: \"text-secondary\",}, \"No session activity on this day.\"     )\n      , groups.map(([p, g]) => React.createElement(ProjectSection, { key: p + day, project: p, rs: g, day: day, defaultOpen: true,} ))\n    )\n  );\n}\n\nfunction Weekly() {\n  const [sortKey, setSortKey] = useState(\"working\");\n  const sorted = [...projects].sort((a, b) => b[sortKey] - a[sortKey]);\n  return (\n    React.createElement('div', { className: \"flex flex-col gap-4\"  ,}\n      , React.createElement(StatsRow, null\n        , React.createElement(StatCard, { label: \"Sessions active\" ,}, React.createElement(StatCardValue, null, rows.length), React.createElement(StatCardCaption, null, rows.filter((r) => r.created_in_window).length, \" created this \"   , PERIOD))\n        , React.createElement(StatCard, { label: \"Projects\",}, React.createElement(StatCardValue, null, projects.length))\n        , React.createElement(StatCard, { label: \"Working time\" ,}, React.createElement(StatCardValue, null, hms(sum(rows.map(wsum)))), React.createElement(StatCardCaption, null, \"VM time while Devin was running\"     ))\n        , React.createElement(StatCard, { label: \"PRs opened\" ,}, React.createElement(StatCardValue, null, sum(rows.map((r) => r.prs_created.length))))\n        , React.createElement(StatCard, { label: `ACUs, sessions fully in this ${PERIOD}`,}, React.createElement(StatCardValue, null, Math.round(sum(rows.filter((r) => r.acus_scope === \"in\").map((r) => r.acus)))), React.createElement(StatCardCaption, null, Math.round(sum(rows.filter((r) => r.acus_scope !== \"in\").map((r) => r.acus))), \" more in sessions that span the boundary (†/‡)\"        ))\n      )\n      , React.createElement(Text, { size: 14, weight: \"semibold\",}, \"Working hours per day, by project\"     )\n      , React.createElement(ChartContainer, { config: series, style: { height: 280, width: \"100%\" },}\n        , React.createElement(BarChart, { data: chartRows,}\n          , React.createElement(ChartGrid, null )\n          , React.createElement(ChartXAxis, { dataKey: \"day\",} )\n          , React.createElement(ChartYAxis, { title: \"hours\",} )\n          , React.createElement(ChartTooltip, { content: React.createElement(ChartTooltipContent, null ),} )\n          , React.createElement(ChartLegend, { content: React.createElement(ChartLegendContent, null ),} )\n          , topProjects.map((p, i) => React.createElement(ChartBar, { key: p, dataKey: p, stackId: \"a\", radius: 0,} ))\n          , React.createElement(ChartBar, { dataKey: \"other\", stackId: \"a\",} )\n        )\n      )\n      , React.createElement(Text, { size: 14, weight: \"semibold\",}, \"Per-project totals\" )\n      , React.createElement(Table, null\n        , React.createElement(TableHeader, null, React.createElement(TableRow, null\n          , React.createElement(TableHead, null, \"Project\")\n          , React.createElement(TableHead, null, \"Sessions (new)\" )\n          , React.createElement(SortableTableHead, { sort: sortKey === \"working\" ? \"desc\" : undefined, onSort: () => setSortKey(\"working\"),}, \"Working\")\n          , React.createElement(SortableTableHead, { sort: sortKey === \"acusNew\" ? \"desc\" : undefined, onSort: () => setSortKey(\"acusNew\"),}, \"ACUs (fully in window)\"   )\n          , React.createElement(SortableTableHead, { sort: sortKey === \"acusSpill\" ? \"desc\" : undefined, onSort: () => setSortKey(\"acusSpill\"),}, \"ACUs ‡ (spill past window)\"    )\n          , React.createElement(SortableTableHead, { sort: sortKey === \"acusOld\" ? \"desc\" : undefined, onSort: () => setSortKey(\"acusOld\"),}, \"ACUs † (older sessions)\"   )\n          , React.createElement(SortableTableHead, { sort: sortKey === \"actions\" ? \"desc\" : undefined, onSort: () => setSortKey(\"actions\"),}, \"Actions\")\n          , React.createElement(SortableTableHead, { sort: sortKey === \"prs\" ? \"desc\" : undefined, onSort: () => setSortKey(\"prs\"),}, \"PRs opened\" )\n        ))\n        , React.createElement(TableBody, null, sorted.map((p) => (\n          React.createElement(TableRow, { key: p.project,}\n            , React.createElement(TableCell, null, React.createElement(Text, { size: 13, weight: \"medium\",}, p.project))\n            , React.createElement(TableCell, null, p.rows.length, \" (\" , p.rows.filter((r) => r.created_in_window).length, \")\")\n            , React.createElement(TableCell, null, hms(p.working))\n            , React.createElement(TableCell, null, p.acusNew ? p.acusNew.toFixed(1) : \"—\")\n            , React.createElement(TableCell, null, p.acusSpill ? p.acusSpill.toFixed(1) : \"—\")\n            , React.createElement(TableCell, null, p.acusOld ? p.acusOld.toFixed(1) : \"—\")\n            , React.createElement(TableCell, null, p.capped ? \"≥ \" : \"\", p.actions.toLocaleString())\n            , React.createElement(TableCell, null, p.prs)\n          )\n        )))\n      )\n      , React.createElement(Text, { size: 14, weight: \"semibold\",}, \"Sessions by project\"  )\n      , projects.map((p, i) => React.createElement(ProjectSection, { key: p.project, project: p.project, rs: p.rows, day: null, defaultOpen: i < 3,} ))\n    )\n  );\n}\n\nfunction Report() {\n  const start = new Date(data.start * 1000).toLocaleString(\"en-US\", { timeZone: TZ, weekday: \"short\", month: \"short\", day: \"numeric\" });\n  const end = new Date(data.now * 1000).toLocaleString(\"en-US\", { timeZone: TZ, weekday: \"short\", month: \"short\", day: \"numeric\", hour: \"2-digit\", minute: \"2-digit\", hour12: false });\n  return (\n    React.createElement(PageLayout, { title: `Devin sessions by project — ${data.label}`, subtitle: `${data.who}'s sessions, ${start} – ${end} (${TZ}).`, themeToggle: true,}\n      , React.createElement(TabsRoot, { defaultValue: KIND === \"daily\" ? \"daily\" : \"period\",}\n        , React.createElement(TabsList, null, React.createElement(Tab, { value: \"period\",}, KIND === \"daily\" ? \"Day\" : KIND === \"weekly\" ? \"Week\" : \"Month\"), KIND !== \"daily\" && React.createElement(Tab, { value: \"daily\",}, \"Day by day\"  ))\n        , React.createElement(TabsPanel, { value: \"period\",}, React.createElement('div', { className: \"pt-4\",}, KIND === \"daily\" ? React.createElement(Daily, null ) : React.createElement(Weekly, null )))\n        , KIND !== \"daily\" && React.createElement(TabsPanel, { value: \"daily\",}, React.createElement('div', { className: \"pt-4\",}, React.createElement(Daily, null )))\n      )\n      , React.createElement(Footnote, null, \"Source: Devin session API (session search + per-session event timeline), read on \"\n                    , end, \" PT. Working time = intervals from a \\\"status: working\\\" event to the next blocked/finished/suspended event, clipped to the window and split at local midnight; it excludes time the session slept or waited for you. Actions = event counts (sh shell commands, ed file-edit batches, rd file-read batches, git PR/CI operations, mcp MCP/Devin-API calls, msg Devin+user messages), bucketed by local day. ACUs are session-lifetime totals from the API (no per-day breakdown exists): † marks sessions created before the window and ‡ sessions created in it but still active after it; neither is attributable to the window alone. Projects group forks/mirrors of a repository under its name; each session lists the repositories it touched. The API does not expose VM size or performance class; \\\"mode\\\" is the agent mode.\"\n      )\n    )\n  );\n}\nrender(React.createElement(Report, null ));\n")</script>
+    </main>
+  </body>
+</html>

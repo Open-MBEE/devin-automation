@@ -1,0 +1,134 @@
+%YAML 1.2
+---
+-
+  project: SBVR.lean
+  sessions: 12
+  sessions_created: 11
+  working_seconds: 60949
+  acus_in_window: 184.972332
+  acus_spilling: 333.900719
+  acus_older: 2191.008624
+  actions: 2699
+  actions_capped: false
+  prs_opened: 11
+-
+  project: qvts
+  sessions: 13
+  sessions_created: 12
+  working_seconds: 36961
+  acus_in_window: 135.170828
+  acus_spilling: 38.805877
+  acus_older: 101.486101
+  actions: 1161
+  actions_capped: false
+  prs_opened: 11
+-
+  project: L4YAML
+  sessions: 3
+  sessions_created: 1
+  working_seconds: 11374
+  acus_in_window: 2.061638
+  acus_spilling: 0.000000
+  acus_older: 2193.120670
+  actions: 209
+  actions_capped: false
+  prs_opened: 2
+-
+  project: prov.lean
+  sessions: 8
+  sessions_created: 7
+  working_seconds: 9154
+  acus_in_window: 122.251602
+  acus_spilling: 0.000000
+  acus_older: 109.501672
+  actions: 593
+  actions_capped: false
+  prs_opened: 7
+-
+  project: engineering-foundation-architecture
+  sessions: 4
+  sessions_created: 4
+  working_seconds: 7821
+  acus_in_window: 7.426092
+  acus_spilling: 35.004303
+  acus_older: 0.000000
+  actions: 246
+  actions_capped: false
+  prs_opened: 4
+-
+  project: tasktree.lean
+  sessions: 3
+  sessions_created: 2
+  working_seconds: 4501
+  acus_in_window: 18.661949
+  acus_spilling: 38.474986
+  acus_older: 105.197536
+  actions: 546
+  actions_capped: false
+  prs_opened: 6
+-
+  project: PropertyKindCalculus
+  sessions: 2
+  sessions_created: 2
+  working_seconds: 3212
+  acus_in_window: 0.000000
+  acus_spilling: 27.103779
+  acus_older: 0.000000
+  actions: 112
+  actions_capped: false
+  prs_opened: 1
+-
+  project: face.lean
+  sessions: 2
+  sessions_created: 2
+  working_seconds: 2506
+  acus_in_window: 28.544813
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 126
+  actions_capped: false
+  prs_opened: 2
+-
+  project: OpenSysML
+  sessions: 1
+  sessions_created: 0
+  working_seconds: 2271
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 4868.386263
+  actions: 25
+  actions_capped: true
+  prs_opened: 0
+-
+  project: tls-server.lean
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 1124
+  acus_in_window: 0.000000
+  acus_spilling: 25.209353
+  acus_older: 0.000000
+  actions: 139
+  actions_capped: false
+  prs_opened: 4
+-
+  project: nfr.workboard
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 665
+  acus_in_window: 0.000000
+  acus_spilling: 39.742477
+  acus_older: 0.000000
+  actions: 66
+  actions_capped: false
+  prs_opened: 2
+-
+  project: (no repository)
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 246
+  acus_in_window: 0.000000
+  acus_spilling: 2.498708
+  acus_older: 0.000000
+  actions: 592
+  actions_capped: false
+  prs_opened: 0

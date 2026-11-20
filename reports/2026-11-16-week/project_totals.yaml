@@ -1,0 +1,211 @@
+%YAML 1.2
+---
+-
+  project: qvts
+  sessions: 33
+  sessions_created: 32
+  working_seconds: 159422
+  acus_in_window: 378.937986
+  acus_spilling: 266.171142
+  acus_older: 21.541446
+  actions: 3529
+  actions_capped: false
+  prs_opened: 35
+-
+  project: OpenSysML
+  sessions: 15
+  sessions_created: 7
+  working_seconds: 138551
+  acus_in_window: 110.847769
+  acus_spilling: 61.747630
+  acus_older: 5064.292071
+  actions: 2302
+  actions_capped: true
+  prs_opened: 7
+-
+  project: SBVR.lean
+  sessions: 17
+  sessions_created: 16
+  working_seconds: 109683
+  acus_in_window: 702.851021
+  acus_spilling: 74.345111
+  acus_older: 2191.008624
+  actions: 4345
+  actions_capped: false
+  prs_opened: 26
+-
+  project: L4YAML
+  sessions: 8
+  sessions_created: 4
+  working_seconds: 55838
+  acus_in_window: 26.207507
+  acus_spilling: 0.000000
+  acus_older: 6373.439232
+  actions: 1232
+  actions_capped: false
+  prs_opened: 12
+-
+  project: prov.lean
+  sessions: 26
+  sessions_created: 25
+  working_seconds: 36647
+  acus_in_window: 557.802893
+  acus_spilling: 44.651198
+  acus_older: 863.066307
+  actions: 2769
+  actions_capped: false
+  prs_opened: 30
+-
+  project: engineering-foundation-architecture
+  sessions: 15
+  sessions_created: 12
+  working_seconds: 27911
+  acus_in_window: 168.030992
+  acus_spilling: 0.000000
+  acus_older: 203.453329
+  actions: 1310
+  actions_capped: false
+  prs_opened: 18
+-
+  project: pacti.lean
+  sessions: 4
+  sessions_created: 0
+  working_seconds: 9737
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 262.765571
+  actions: 136
+  actions_capped: false
+  prs_opened: 3
+-
+  project: fprime-lean-sysmlv2-example
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 7601
+  acus_in_window: 33.811021
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 193
+  actions_capped: false
+  prs_opened: 1
+-
+  project: git-remote-sync.lean
+  sessions: 5
+  sessions_created: 4
+  working_seconds: 7448
+  acus_in_window: 79.912304
+  acus_spilling: 0.000000
+  acus_older: 25.746086
+  actions: 621
+  actions_capped: false
+  prs_opened: 7
+-
+  project: tasktree.lean
+  sessions: 3
+  sessions_created: 3
+  working_seconds: 6769
+  acus_in_window: 162.334472
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 874
+  actions_capped: false
+  prs_opened: 6
+-
+  project: PropertyKindCalculus
+  sessions: 5
+  sessions_created: 5
+  working_seconds: 3701
+  acus_in_window: 30.761360
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 136
+  actions_capped: false
+  prs_opened: 2
+-
+  project: face.lean
+  sessions: 2
+  sessions_created: 2
+  working_seconds: 2506
+  acus_in_window: 28.544813
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 126
+  actions_capped: false
+  prs_opened: 2
+-
+  project: (no repository)
+  sessions: 7
+  sessions_created: 7
+  working_seconds: 2122
+  acus_in_window: 24.949660
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 3461
+  actions_capped: false
+  prs_opened: 0
+-
+  project: nfr.workboard
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 1609
+  acus_in_window: 39.742477
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 204
+  actions_capped: false
+  prs_opened: 3
+-
+  project: tls-server.lean
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 1133
+  acus_in_window: 25.209353
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 140
+  actions_capped: false
+  prs_opened: 4
+-
+  project: devin-automation
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 699
+  acus_in_window: 0.000000
+  acus_spilling: 3.292249
+  acus_older: 0.000000
+  actions: 61
+  actions_capped: false
+  prs_opened: 0
+-
+  project: (Devin housekeeping)
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 342
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 91
+  actions_capped: false
+  prs_opened: 0
+-
+  project: (Devin environment)
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 260
+  acus_in_window: 3.428543
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 22
+  actions_capped: false
+  prs_opened: 0
+-
+  project: mars.lean
+  sessions: 1
+  sessions_created: 0
+  working_seconds: 36
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 3588.746934
+  actions: 4
+  actions_capped: false
+  prs_opened: 0
