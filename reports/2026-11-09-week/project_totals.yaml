@@ -1,0 +1,222 @@
+%YAML 1.2
+---
+-
+  project: OpenSysML
+  sessions: 17
+  sessions_created: 15
+  working_seconds: 495466
+  acus_in_window: 137.559132
+  acus_spilling: 248.759722
+  acus_older: 5051.198565
+  actions: 10180
+  actions_capped: true
+  prs_opened: 59
+-
+  project: L4YAML
+  sessions: 16
+  sessions_created: 11
+  working_seconds: 300444
+  acus_in_window: 69.682623
+  acus_spilling: 299.737955
+  acus_older: 8021.741471
+  actions: 8773
+  actions_capped: false
+  prs_opened: 62
+-
+  project: fprime-lean-sysmlv2-example
+  sessions: 8
+  sessions_created: 6
+  working_seconds: 146453
+  acus_in_window: 772.720869
+  acus_spilling: 0.000000
+  acus_older: 632.381315
+  actions: 2952
+  actions_capped: false
+  prs_opened: 11
+-
+  project: qvts
+  sessions: 13
+  sessions_created: 12
+  working_seconds: 127046
+  acus_in_window: 468.039390
+  acus_spilling: 232.435487
+  acus_older: 313.523903
+  actions: 17860
+  actions_capped: false
+  prs_opened: 35
+-
+  project: pacti.lean
+  sessions: 22
+  sessions_created: 22
+  working_seconds: 79506
+  acus_in_window: 381.130931
+  acus_spilling: 291.781691
+  acus_older: 0.000000
+  actions: 2972
+  actions_capped: false
+  prs_opened: 24
+-
+  project: prov.lean
+  sessions: 2
+  sessions_created: 2
+  working_seconds: 41497
+  acus_in_window: 13.043879
+  acus_spilling: 863.066307
+  acus_older: 0.000000
+  actions: 2635
+  actions_capped: false
+  prs_opened: 15
+-
+  project: SBVR.lean
+  sessions: 2
+  sessions_created: 1
+  working_seconds: 23438
+  acus_in_window: 0.000000
+  acus_spilling: 61.625393
+  acus_older: 2191.008624
+  actions: 1756
+  actions_capped: false
+  prs_opened: 20
+-
+  project: soil-moisture-workflows
+  sessions: 2
+  sessions_created: 1
+  working_seconds: 21941
+  acus_in_window: 0.000000
+  acus_spilling: 410.970020
+  acus_older: 425.096903
+  actions: 1336
+  actions_capped: false
+  prs_opened: 24
+-
+  project: engineering-foundation-architecture
+  sessions: 6
+  sessions_created: 6
+  working_seconds: 11940
+  acus_in_window: 91.512089
+  acus_spilling: 169.528388
+  acus_older: 0.000000
+  actions: 817
+  actions_capped: false
+  prs_opened: 8
+-
+  project: mars.lean
+  sessions: 6
+  sessions_created: 5
+  working_seconds: 11359
+  acus_in_window: 95.543743
+  acus_spilling: 0.000000
+  acus_older: 3588.746934
+  actions: 543
+  actions_capped: false
+  prs_opened: 3
+-
+  project: git-remote-sync.lean
+  sessions: 5
+  sessions_created: 4
+  working_seconds: 7255
+  acus_in_window: 39.618482
+  acus_spilling: 56.210889
+  acus_older: 705.119297
+  actions: 598
+  actions_capped: false
+  prs_opened: 7
+-
+  project: soil-moisture-model
+  sessions: 4
+  sessions_created: 3
+  working_seconds: 5351
+  acus_in_window: 9.172891
+  acus_spilling: 10.802293
+  acus_older: 225.911543
+  actions: 153
+  actions_capped: false
+  prs_opened: 2
+-
+  project: html-to-pdf.lean
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 3324
+  acus_in_window: 13.840448
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 88
+  actions_capped: false
+  prs_opened: 1
+-
+  project: devin-automation
+  sessions: 1
+  sessions_created: 0
+  working_seconds: 2563
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 123.179874
+  actions: 1207
+  actions_capped: false
+  prs_opened: 3
+-
+  project: (no repository)
+  sessions: 9
+  sessions_created: 9
+  working_seconds: 2047
+  acus_in_window: 17.568697
+  acus_spilling: 5.106011
+  acus_older: 0.000000
+  actions: 4253
+  actions_capped: false
+  prs_opened: 0
+-
+  project: (Devin housekeeping)
+  sessions: 2
+  sessions_created: 2
+  working_seconds: 1385
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 306
+  actions_capped: false
+  prs_opened: 0
+-
+  project: mars
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 976
+  acus_in_window: 0.000000
+  acus_spilling: 21.019813
+  acus_older: 0.000000
+  actions: 114
+  actions_capped: false
+  prs_opened: 1
+-
+  project: soil-moisture-dps
+  sessions: 1
+  sessions_created: 0
+  working_seconds: 413
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 70.920176
+  actions: 56
+  actions_capped: false
+  prs_opened: 0
+-
+  project: PropertyKindCalculus
+  sessions: 7
+  sessions_created: 7
+  working_seconds: 222
+  acus_in_window: 9.670448
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 23
+  actions_capped: false
+  prs_opened: 0
+-
+  project: face.lean
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 104
+  acus_in_window: 2.074904
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 17
+  actions_capped: false
+  prs_opened: 0

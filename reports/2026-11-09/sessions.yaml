@@ -1,0 +1,1238 @@
+%YAML 1.2
+---
+-
+  session_id: f33bed3778e34258bce772c42fb1f43b
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/f33bed3778e34258bce772c42fb1f43b
+  title: Nightly memory refinement
+  project: (Devin housekeeping)
+  repos:
+    []
+  origin: webapp
+  parent_session_id: null
+  mode: normal
+  category: data_and_automation
+  status: suspended
+  created: 2026-11-09T14:32:04-08:00
+  created_in_window: true
+  acus: 0.000000
+  acus_scope: inWindow
+  working_seconds: 775
+  shell: 60
+  edits: 18
+  reads: 4
+  git: 0
+  mcp: 96
+  devin_messages: 5
+  user_messages: 4
+  web: 0
+  actions_capped: false
+  prs_opened:
+    []
+-
+  session_id: ce85f16734894a2d8f6f7b7e754aadae
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/ce85f16734894a2d8f6f7b7e754aadae
+  title: Produce Daily Devin Session Report
+  project: (no repository)
+  repos:
+    []
+  origin: automation
+  parent_session_id: null
+  mode: ultra
+  category: data_and_automation
+  status: suspended (inactivity)
+  created: 2026-11-09T00:05:43-08:00
+  created_in_window: true
+  acus: 3.475067
+  acus_scope: inWindow
+  working_seconds: 348
+  shell: 7
+  edits: 0
+  reads: 0
+  git: 0
+  mcp: 476
+  devin_messages: 3
+  user_messages: 1
+  web: 0
+  actions_capped: false
+  prs_opened:
+    []
+-
+  session_id: 17a9dcc27f434f16a64096768a488837
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/17a9dcc27f434f16a64096768a488837
+  title: Weekly Devin Session Report
+  project: (no repository)
+  repos:
+    []
+  origin: automation
+  parent_session_id: null
+  mode: ultra
+  category: data_and_automation
+  status: suspended (inactivity)
+  created: 2026-11-09T00:09:49-08:00
+  created_in_window: true
+  acus: 3.440408
+  acus_scope: inWindow
+  working_seconds: 401
+  shell: 8
+  edits: 0
+  reads: 1
+  git: 0
+  mcp: 1091
+  devin_messages: 3
+  user_messages: 1
+  web: 0
+  actions_capped: false
+  prs_opened:
+    []
+-
+  session_id: 49750a06a48d41b1852199f560a0d9fc
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/49750a06a48d41b1852199f560a0d9fc
+  title: "L4YAML 7.7 stream R12: Row 12 item 344 flip (then [82], [210]/[211])"
+  project: L4YAML
+  repos:
+    - nasa-jpl/L4YAML
+  origin: api
+  parent_session_id: 24a21977a04949ee91f5ae4088aa3058
+  mode: ultra
+  category: feature_development
+  status: suspended (inactivity)
+  created: 2026-10-23T10:34:56-07:00
+  created_in_window: false
+  acus: 4151.596318
+  acus_scope: older
+  working_seconds: 5671
+  shell: 101
+  edits: 8
+  reads: 2
+  git: 6
+  mcp: 5
+  devin_messages: 6
+  user_messages: 3
+  web: 0
+  actions_capped: false
+  prs_opened:
+    -
+      url: https://github.com/nasa-jpl/L4YAML/pull/283
+      repo: nasa-jpl/L4YAML
+      number: 283
+      state: merged
+      day: 2026-11-09
+-
+  session_id: 6661ae5b28ed42c8aa23bc799e21b980
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/6661ae5b28ed42c8aa23bc799e21b980
+  title: Prove S3 scanner-output obligations for parse_iff_grammar
+  project: L4YAML
+  repos:
+    - nasa-jpl/L4YAML
+  origin: api
+  parent_session_id: 24a21977a04949ee91f5ae4088aa3058
+  mode: ultra
+  category: unit_test_generation
+  status: suspended (inactivity)
+  created: 2026-11-05T09:31:54-08:00
+  created_in_window: false
+  acus: 2060.795161
+  acus_scope: older
+  working_seconds: 19864
+  shell: 358
+  edits: 54
+  reads: 3
+  git: 13
+  mcp: 14
+  devin_messages: 38
+  user_messages: 6
+  web: 0
+  actions_capped: false
+  prs_opened:
+    -
+      url: https://github.com/nasa-jpl/L4YAML/pull/276
+      repo: nasa-jpl/L4YAML
+      number: 276
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/nasa-jpl/L4YAML/pull/277
+      repo: nasa-jpl/L4YAML
+      number: 277
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/nasa-jpl/L4YAML/pull/278
+      repo: nasa-jpl/L4YAML
+      number: 278
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/nasa-jpl/L4YAML/pull/281
+      repo: nasa-jpl/L4YAML
+      number: 281
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/nasa-jpl/L4YAML/pull/286
+      repo: nasa-jpl/L4YAML
+      number: 286
+      state: merged
+      day: 2026-11-09
+-
+  session_id: 24a21977a04949ee91f5ae4088aa3058
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/24a21977a04949ee91f5ae4088aa3058
+  title: Complete parse_iff_grammar proof
+  project: L4YAML
+  repos:
+    - nasa-jpl/L4YAML
+  origin: webapp
+  parent_session_id: fb0431c82e0f4dbfb588da010e461b90
+  mode: ultra
+  category: feature_development
+  status: suspended (inactivity)
+  created: 2026-10-23T08:56:22-07:00
+  created_in_window: false
+  acus: 898.842759
+  acus_scope: older
+  working_seconds: 324
+  shell: 10
+  edits: 2
+  reads: 0
+  git: 1
+  mcp: 21
+  devin_messages: 7
+  user_messages: 2
+  web: 0
+  actions_capped: false
+  prs_opened:
+    []
+-
+  session_id: 12a32597e3554be1aeeb264f49263290
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/12a32597e3554be1aeeb264f49263290
+  title: "Land [211] explicit-only in L4YAML (Row 19)"
+  project: L4YAML
+  repos:
+    - nasa-jpl/L4YAML
+  origin: api
+  parent_session_id: 24a21977a04949ee91f5ae4088aa3058
+  mode: ultra
+  category: feature_development
+  status: suspended (inactivity)
+  created: 2026-11-06T09:50:30-08:00
+  created_in_window: false
+  acus: 331.840215
+  acus_scope: older
+  working_seconds: 14814
+  shell: 149
+  edits: 44
+  reads: 2
+  git: 12
+  mcp: 4
+  devin_messages: 8
+  user_messages: 4
+  web: 0
+  actions_capped: false
+  prs_opened:
+    -
+      url: https://github.com/nasa-jpl/L4YAML/pull/282
+      repo: nasa-jpl/L4YAML
+      number: 282
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/nasa-jpl/L4YAML/pull/285
+      repo: nasa-jpl/L4YAML
+      number: 285
+      state: merged
+      day: 2026-11-09
+-
+  session_id: bfb0071aeaab4aa58b50b413bca12aba
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/bfb0071aeaab4aa58b50b413bca12aba
+  title: Add metagraph experiment documentation
+  project: L4YAML
+  repos:
+    - nasa-jpl/L4YAML
+  origin: webapp
+  parent_session_id: null
+  mode: ultra
+  category: research_and_exploration
+  status: suspended (inactivity)
+  created: 2026-11-09T18:15:06-08:00
+  created_in_window: true
+  acus: 55.647159
+  acus_scope: spillsPast
+  working_seconds: 3197
+  shell: 111
+  edits: 19
+  reads: 32
+  git: 19
+  mcp: 7
+  devin_messages: 21
+  user_messages: 8
+  web: 0
+  actions_capped: false
+  prs_opened:
+    -
+      url: https://github.com/nasa-jpl/L4YAML/pull/279
+      repo: nasa-jpl/L4YAML
+      number: 279
+      state: closed
+      day: 2026-11-09
+    -
+      url: https://github.com/nasa-jpl/L4YAML/pull/280
+      repo: nasa-jpl/L4YAML
+      number: 280
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/nasa-jpl/L4YAML/pull/284
+      repo: nasa-jpl/L4YAML
+      number: 284
+      state: merged
+      day: 2026-11-09
+-
+  session_id: ac39e286391042c5abec6e4fa1ae29a4
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/ac39e286391042c5abec6e4fa1ae29a4
+  title: Clarify YAML Grammar Ambiguity
+  project: L4YAML
+  repos:
+    - nasa-jpl/L4YAML
+  origin: webapp
+  parent_session_id: null
+  mode: ultra
+  category: code_review
+  status: suspended (inactivity)
+  created: 2026-11-09T21:33:38-08:00
+  created_in_window: true
+  acus: 3.483784
+  acus_scope: spillsPast
+  working_seconds: 129
+  shell: 9
+  edits: 0
+  reads: 2
+  git: 1
+  mcp: 0
+  devin_messages: 2
+  user_messages: 1
+  web: 0
+  actions_capped: false
+  prs_opened:
+    []
+-
+  session_id: 18ad47adf36f44e9b6824a4472f9678d
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/18ad47adf36f44e9b6824a4472f9678d
+  title: Plan SysMLv2 QVTS Language and Workflows
+  project: OpenSysML
+  repos:
+    - Open-MBEE/OpenSysML
+    - Open-MBEE/OpenSysML-Extensions-Library
+    - Open-MBEE/engineering-foundation-architecture
+    - Open-MBEE/qvts
+  origin: webapp
+  parent_session_id: null
+  mode: ultra
+  category: bug_fixing
+  status: suspended (inactivity)
+  created: 2026-10-26T12:28:53-07:00
+  created_in_window: false
+  acus: 4868.386263
+  acus_scope: older
+  working_seconds: 23472
+  shell: 423
+  edits: 67
+  reads: 4
+  git: 32
+  mcp: 19
+  devin_messages: 18
+  user_messages: 4
+  web: 0
+  actions_capped: true
+  prs_opened:
+    -
+      url: https://github.com/Open-MBEE/qvts/pull/57
+      repo: Open-MBEE/qvts
+      number: 57
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/OpenSysML/pull/2070
+      repo: Open-MBEE/OpenSysML
+      number: 2070
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/qvts/pull/58
+      repo: Open-MBEE/qvts
+      number: 58
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/OpenSysML/pull/2088
+      repo: Open-MBEE/OpenSysML
+      number: 2088
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/OpenSysML/pull/2091
+      repo: Open-MBEE/OpenSysML
+      number: 2091
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/OpenSysML/pull/2093
+      repo: Open-MBEE/OpenSysML
+      number: 2093
+      state: merged
+      day: 2026-11-09
+-
+  session_id: 4eac7d670b61499ea2a95a5babd91b78
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/4eac7d670b61499ea2a95a5babd91b78
+  title: Add comment serialization support in OpenSysML
+  project: OpenSysML
+  repos:
+    - Open-MBEE/OpenSysML
+  origin: webapp
+  parent_session_id: null
+  mode: ultra
+  category: feature_development
+  status: suspended (inactivity)
+  created: 2026-11-08T11:00:01-08:00
+  created_in_window: false
+  acus: 182.812302
+  acus_scope: older
+  working_seconds: 17895
+  shell: 270
+  edits: 35
+  reads: 77
+  git: 20
+  mcp: 8
+  devin_messages: 18
+  user_messages: 10
+  web: 0
+  actions_capped: false
+  prs_opened:
+    -
+      url: https://github.com/Open-MBEE/OpenSysML/pull/2071
+      repo: Open-MBEE/OpenSysML
+      number: 2071
+      state: merged
+      day: 2026-11-09
+-
+  session_id: c18ad5bff7bd466b8460db005afd0a1e
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/c18ad5bff7bd466b8460db005afd0a1e
+  title: Honor position-only sysx:Note edits on source-backed text
+  project: OpenSysML
+  repos:
+    - Open-MBEE/OpenSysML
+  origin: api
+  parent_session_id: 4eac7d670b61499ea2a95a5babd91b78
+  mode: ultra
+  category: bug_fixing
+  status: suspended (inactivity)
+  created: 2026-11-09T20:15:46-08:00
+  created_in_window: true
+  acus: 33.382831
+  acus_scope: spillsPast
+  working_seconds: 13452
+  shell: 114
+  edits: 18
+  reads: 26
+  git: 20
+  mcp: 9
+  devin_messages: 2
+  user_messages: 1
+  web: 0
+  actions_capped: false
+  prs_opened:
+    -
+      url: https://github.com/Open-MBEE/OpenSysML/pull/2090
+      repo: Open-MBEE/OpenSysML
+      number: 2090
+      state: merged
+      day: 2026-11-09
+-
+  session_id: 35fe61f8565a40429b37c892ce4b1a2e
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/35fe61f8565a40429b37c892ce4b1a2e
+  title: Leave sysx:-typed nodes uncarried in sysml -sync
+  project: OpenSysML
+  repos:
+    - Open-MBEE/OpenSysML
+  origin: api
+  parent_session_id: 4eac7d670b61499ea2a95a5babd91b78
+  mode: ultra
+  category: bug_fixing
+  status: suspended (inactivity)
+  created: 2026-11-09T20:15:47-08:00
+  created_in_window: true
+  acus: 21.869215
+  acus_scope: inWindow
+  working_seconds: 8778
+  shell: 88
+  edits: 11
+  reads: 32
+  git: 19
+  mcp: 9
+  devin_messages: 3
+  user_messages: 1
+  web: 0
+  actions_capped: false
+  prs_opened:
+    -
+      url: https://github.com/Open-MBEE/OpenSysML/pull/2089
+      repo: Open-MBEE/OpenSysML
+      number: 2089
+      state: merged
+      day: 2026-11-09
+-
+  session_id: 21d888e3f4914a51bbf855217cd9ef77
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/21d888e3f4914a51bbf855217cd9ef77
+  title: Remediate PropertyKindCalculus Findings
+  project: PropertyKindCalculus
+  repos:
+    - nasa-jpl/PropertyKindCalculus
+  origin: automation
+  parent_session_id: null
+  mode: ultra
+  category: code_review
+  status: suspended (inactivity)
+  created: 2026-11-09T06:01:46-08:00
+  created_in_window: true
+  acus: 1.298763
+  acus_scope: inWindow
+  working_seconds: 20
+  shell: 0
+  edits: 0
+  reads: 0
+  git: 0
+  mcp: 2
+  devin_messages: 2
+  user_messages: 1
+  web: 0
+  actions_capped: false
+  prs_opened:
+    []
+-
+  session_id: 6130c0278b22490f97ac13ac80b69e13
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/6130c0278b22490f97ac13ac80b69e13
+  title: SBVR Remaining Work
+  project: SBVR.lean
+  repos:
+    - Open-MBEE/SBVR.lean
+    - Open-MBEE/engineering-foundation-architecture
+    - Open-MBEE/face.lean
+    - Open-MBEE/fprime
+    - Open-MBEE/fprime-lean-sysmlv2-example
+    - Open-MBEE/html-to-pdf.lean
+    - Open-MBEE/leanCurl
+    - Open-MBEE/mars.lean
+    - Open-MBEE/prov.lean
+    - nasa-jpl/PropertyKindCalculus
+  origin: webapp
+  parent_session_id: null
+  mode: ultra
+  category: feature_development
+  status: suspended (inactivity)
+  created: 2026-10-23T11:33:33-07:00
+  created_in_window: false
+  acus: 2191.008624
+  acus_scope: older
+  working_seconds: 1202
+  shell: 48
+  edits: 17
+  reads: 10
+  git: 11
+  mcp: 3
+  devin_messages: 16
+  user_messages: 5
+  web: 0
+  actions_capped: false
+  prs_opened:
+    -
+      url: https://github.com/Open-MBEE/prov.lean/pull/18
+      repo: Open-MBEE/prov.lean
+      number: 18
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/nasa-jpl/PropertyKindCalculus/pull/110
+      repo: nasa-jpl/PropertyKindCalculus
+      number: 110
+      state: merged
+      day: 2026-11-09
+-
+  session_id: 438880735ee9439eb71a124cbe26cd23
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/438880735ee9439eb71a124cbe26cd23
+  title: Daily and Weekly Session Reports
+  project: devin-automation
+  repos:
+    - Open-MBEE/devin-automation
+  origin: webapp
+  parent_session_id: null
+  mode: ultra
+  category: data_and_automation
+  status: suspended (inactivity)
+  created: 2026-11-08T12:39:50-08:00
+  created_in_window: false
+  acus: 123.179874
+  acus_scope: older
+  working_seconds: 2562
+  shell: 47
+  edits: 15
+  reads: 14
+  git: 11
+  mcp: 1096
+  devin_messages: 24
+  user_messages: 12
+  web: 0
+  actions_capped: false
+  prs_opened:
+    -
+      url: https://github.com/Open-MBEE/devin-automation/pull/4
+      repo: Open-MBEE/devin-automation
+      number: 4
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/devin-automation/pull/5
+      repo: Open-MBEE/devin-automation
+      number: 5
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/devin-automation/pull/6
+      repo: Open-MBEE/devin-automation
+      number: 6
+      state: merged
+      day: 2026-11-09
+-
+  session_id: a8a1adef279a4c009e8e3cd7e4a0a115
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/a8a1adef279a4c009e8e3cd7e4a0a115
+  title: Plan fprime-lean-sysmlv2-example structure
+  project: fprime-lean-sysmlv2-example
+  repos:
+    - Open-MBEE/fprime-lean-sysmlv2-example
+  origin: webapp
+  parent_session_id: null
+  mode: ultra
+  category: feature_development
+  status: suspended (inactivity)
+  created: 2026-11-02T20:18:15-08:00
+  created_in_window: false
+  acus: 562.614094
+  acus_scope: older
+  working_seconds: 539
+  shell: 12
+  edits: 4
+  reads: 0
+  git: 0
+  mcp: 8
+  devin_messages: 12
+  user_messages: 4
+  web: 0
+  actions_capped: false
+  prs_opened:
+    []
+-
+  session_id: c4fe0be598084357b14813fd5326e998
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/c4fe0be598084357b14813fd5326e998
+  title: Add Downlink M0 Architecture Diagram
+  project: fprime-lean-sysmlv2-example
+  repos:
+    - Open-MBEE/fprime-lean-sysmlv2-example
+  origin: webapp
+  parent_session_id: null
+  mode: ultra
+  category: documentation_and_content
+  status: suspended (inactivity)
+  created: 2026-11-09T12:13:38-08:00
+  created_in_window: true
+  acus: 127.275310
+  acus_scope: spillsPast
+  working_seconds: 25894
+  shell: 260
+  edits: 62
+  reads: 56
+  git: 15
+  mcp: 4
+  devin_messages: 28
+  user_messages: 14
+  web: 0
+  actions_capped: false
+  prs_opened:
+    -
+      url: https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/111
+      repo: Open-MBEE/fprime-lean-sysmlv2-example
+      number: 111
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/112
+      repo: Open-MBEE/fprime-lean-sysmlv2-example
+      number: 112
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/113
+      repo: Open-MBEE/fprime-lean-sysmlv2-example
+      number: 113
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/115
+      repo: Open-MBEE/fprime-lean-sysmlv2-example
+      number: 115
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/117
+      repo: Open-MBEE/fprime-lean-sysmlv2-example
+      number: 117
+      state: merged
+      day: 2026-11-09
+-
+  session_id: 2429c2384b5c4be298f161cb4b7530ed
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/2429c2384b5c4be298f161cb4b7530ed
+  title: M1 order factorisation lemmas; fidelity-limit record (step 3′)
+  project: fprime-lean-sysmlv2-example
+  repos:
+    - Open-MBEE/fprime-lean-sysmlv2-example
+  origin: api
+  parent_session_id: a8a1adef279a4c009e8e3cd7e4a0a115
+  mode: ultra
+  category: feature_development
+  status: suspended (inactivity)
+  created: 2026-11-09T19:56:54-08:00
+  created_in_window: true
+  acus: 114.194392
+  acus_scope: spillsPast
+  working_seconds: 13769
+  shell: 162
+  edits: 33
+  reads: 25
+  git: 3
+  mcp: 4
+  devin_messages: 5
+  user_messages: 1
+  web: 0
+  actions_capped: false
+  prs_opened:
+    -
+      url: https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/116
+      repo: Open-MBEE/fprime-lean-sysmlv2-example
+      number: 116
+      state: merged
+      day: 2026-11-09
+-
+  session_id: 9762b7a9801b472598539ce3b5e2f325
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/9762b7a9801b472598539ce3b5e2f325
+  title: "M1 facts: simulate once, check over trace literals (step 1)"
+  project: fprime-lean-sysmlv2-example
+  repos:
+    - Open-MBEE/fprime-lean-sysmlv2-example
+  origin: api
+  parent_session_id: a8a1adef279a4c009e8e3cd7e4a0a115
+  mode: ultra
+  category: refactoring_and_optimization
+  status: suspended (inactivity)
+  created: 2026-11-08T16:59:42-08:00
+  created_in_window: false
+  acus: 69.767220
+  acus_scope: older
+  working_seconds: 6181
+  shell: 28
+  edits: 5
+  reads: 3
+  git: 1
+  mcp: 7
+  devin_messages: 4
+  user_messages: 3
+  web: 0
+  actions_capped: false
+  prs_opened:
+    []
+-
+  session_id: 07afd2af868d456d856260d372a79b6b
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/07afd2af868d456d856260d372a79b6b
+  title: "M1 refinement theorem: fine verdict from coarse (step 3)"
+  project: fprime-lean-sysmlv2-example
+  repos:
+    - Open-MBEE/fprime-lean-sysmlv2-example
+  origin: api
+  parent_session_id: a8a1adef279a4c009e8e3cd7e4a0a115
+  mode: ultra
+  category: feature_development
+  status: suspended (inactivity)
+  created: 2026-11-09T11:08:22-08:00
+  created_in_window: true
+  acus: 46.979665
+  acus_scope: inWindow
+  working_seconds: 16756
+  shell: 151
+  edits: 31
+  reads: 19
+  git: 1
+  mcp: 8
+  devin_messages: 4
+  user_messages: 1
+  web: 0
+  actions_capped: false
+  prs_opened:
+    -
+      url: https://github.com/Open-MBEE/fprime-lean-sysmlv2-example/pull/114
+      repo: Open-MBEE/fprime-lean-sysmlv2-example
+      number: 114
+      state: merged
+      day: 2026-11-09
+-
+  session_id: f2f5f981cea9449b9406434c84f4a2fa
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/f2f5f981cea9449b9406434c84f4a2fa
+  title: Synchronize Repositories Across Remotes
+  project: git-remote-sync.lean
+  repos:
+    - Open-MBEE/git-remote-sync.lean
+    - Open-MBEE/integration
+  origin: webapp
+  parent_session_id: null
+  mode: ultra
+  category: feature_development
+  status: suspended (inactivity)
+  created: 2026-10-19T22:04:50-07:00
+  created_in_window: false
+  acus: 705.119297
+  acus_scope: older
+  working_seconds: 1328
+  shell: 52
+  edits: 18
+  reads: 31
+  git: 4
+  mcp: 6
+  devin_messages: 24
+  user_messages: 8
+  web: 0
+  actions_capped: false
+  prs_opened:
+    -
+      url: https://github.com/Open-MBEE/git-remote-sync.lean/pull/60
+      repo: Open-MBEE/git-remote-sync.lean
+      number: 60
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/git-remote-sync.lean/pull/61
+      repo: Open-MBEE/git-remote-sync.lean
+      number: 61
+      state: merged
+      day: 2026-11-09
+-
+  session_id: cb242389d6be4d27ae8b09c26f81b416
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/cb242389d6be4d27ae8b09c26f81b416
+  title: Recover deleted evidence branch
+  project: git-remote-sync.lean
+  repos:
+    - Open-MBEE/fprime-lean-sysmlv2-example
+    - Open-MBEE/git-remote-sync.lean
+  origin: webapp
+  parent_session_id: null
+  mode: ultra
+  category: feature_development
+  status: suspended (inactivity)
+  created: 2026-11-09T12:31:52-08:00
+  created_in_window: true
+  acus: 33.877953
+  acus_scope: spillsPast
+  working_seconds: 1393
+  shell: 75
+  edits: 19
+  reads: 36
+  git: 3
+  mcp: 0
+  devin_messages: 7
+  user_messages: 4
+  web: 0
+  actions_capped: false
+  prs_opened:
+    -
+      url: https://github.com/Open-MBEE/git-remote-sync.lean/pull/64
+      repo: Open-MBEE/git-remote-sync.lean
+      number: 64
+      state: merged
+      day: 2026-11-09
+-
+  session_id: 54a6071a70944d8ea7c5b31ecd9dbf62
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/54a6071a70944d8ea7c5b31ecd9dbf62
+  title: Fix the Python MARS Endurance example at HEAD
+  project: mars
+  repos:
+    - Open-MBEE/mars
+  origin: api
+  parent_session_id: 1fbba99fbf8446d3a9ffe2110715fac4
+  mode: ultra
+  category: bug_fixing
+  status: suspended (inactivity)
+  created: 2026-11-09T18:20:10-08:00
+  created_in_window: true
+  acus: 21.019813
+  acus_scope: spillsPast
+  working_seconds: 976
+  shell: 62
+  edits: 10
+  reads: 26
+  git: 3
+  mcp: 4
+  devin_messages: 9
+  user_messages: 3
+  web: 0
+  actions_capped: false
+  prs_opened:
+    -
+      url: https://github.com/Open-MBEE/mars/pull/1
+      repo: Open-MBEE/mars
+      number: 1
+      state: merged
+      day: 2026-11-09
+-
+  session_id: 1fbba99fbf8446d3a9ffe2110715fac4
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/1fbba99fbf8446d3a9ffe2110715fac4
+  title: Formalize Mars Model in Lean
+  project: mars.lean
+  repos:
+    - Open-MBEE/mars
+    - Open-MBEE/mars.lean
+    - Open-MBEE/pacti.lean
+    - nasa-jpl/PropertyKindCalculus
+  origin: webapp
+  parent_session_id: null
+  mode: ultra
+  category: feature_development
+  status: suspended (inactivity)
+  created: 2026-10-21T20:06:39-07:00
+  created_in_window: false
+  acus: 3588.746934
+  acus_scope: older
+  working_seconds: 308
+  shell: 12
+  edits: 0
+  reads: 0
+  git: 0
+  mcp: 6
+  devin_messages: 14
+  user_messages: 4
+  web: 0
+  actions_capped: false
+  prs_opened:
+    []
+-
+  session_id: aca360f11d9941809015ca233a35bfef
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/aca360f11d9941809015ca233a35bfef
+  title: Check the Python MARS simulator's own log against the contracts
+  project: mars.lean
+  repos:
+    - Open-MBEE/mars.lean
+  origin: api
+  parent_session_id: 1fbba99fbf8446d3a9ffe2110715fac4
+  mode: ultra
+  category: feature_development
+  status: suspended (inactivity)
+  created: 2026-11-09T10:52:53-08:00
+  created_in_window: true
+  acus: 39.004049
+  acus_scope: inWindow
+  working_seconds: 3208
+  shell: 80
+  edits: 22
+  reads: 32
+  git: 6
+  mcp: 9
+  devin_messages: 3
+  user_messages: 1
+  web: 0
+  actions_capped: false
+  prs_opened:
+    -
+      url: https://github.com/Open-MBEE/mars.lean/pull/330
+      repo: Open-MBEE/mars.lean
+      number: 330
+      state: merged
+      day: 2026-11-09
+-
+  session_id: 56cef766932f4de3b168db27a375294e
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/56cef766932f4de3b168db27a375294e
+  title: Make retimedSimH hold for every tie-break order (route A)
+  project: mars.lean
+  repos:
+    - Open-MBEE/mars.lean
+  origin: api
+  parent_session_id: 1fbba99fbf8446d3a9ffe2110715fac4
+  mode: ultra
+  category: feature_development
+  status: suspended (inactivity)
+  created: 2026-11-09T18:20:09-08:00
+  created_in_window: true
+  acus: 31.064161
+  acus_scope: spillsPast
+  working_seconds: 5581
+  shell: 90
+  edits: 15
+  reads: 39
+  git: 2
+  mcp: 3
+  devin_messages: 4
+  user_messages: 1
+  web: 0
+  actions_capped: false
+  prs_opened:
+    -
+      url: https://github.com/Open-MBEE/mars.lean/pull/331
+      repo: Open-MBEE/mars.lean
+      number: 331
+      state: merged
+      day: 2026-11-09
+-
+  session_id: bbbc7b98295d44bb815c9292bd5c43a3
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/bbbc7b98295d44bb815c9292bd5c43a3
+  title: Prove PremH for all H.netH runs and settle navH_sa_open
+  project: mars.lean
+  repos:
+    - Open-MBEE/mars.lean
+  origin: api
+  parent_session_id: 1fbba99fbf8446d3a9ffe2110715fac4
+  mode: ultra
+  category: feature_development
+  status: suspended (inactivity)
+  created: 2026-11-09T10:52:52-08:00
+  created_in_window: true
+  acus: 18.298549
+  acus_scope: inWindow
+  working_seconds: 1542
+  shell: 73
+  edits: 16
+  reads: 22
+  git: 2
+  mcp: 0
+  devin_messages: 4
+  user_messages: 2
+  web: 0
+  actions_capped: false
+  prs_opened:
+    -
+      url: https://github.com/Open-MBEE/mars.lean/pull/329
+      repo: Open-MBEE/mars.lean
+      number: 329
+      state: merged
+      day: 2026-11-09
+-
+  session_id: ff906ec875c14d87a95d3e41422ca547
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/ff906ec875c14d87a95d3e41422ca547
+  title: Assess Lean/Verso QVTS Readiness
+  project: qvts
+  repos:
+    - Open-MBEE/qvts
+  origin: webapp
+  parent_session_id: null
+  mode: fusion
+  category: documentation_and_content
+  status: suspended (inactivity)
+  created: 2026-10-30T17:01:04-07:00
+  created_in_window: false
+  acus: 313.523903
+  acus_scope: older
+  working_seconds: 47067
+  shell: 6284
+  edits: 1032
+  reads: 2549
+  git: 13
+  mcp: 0
+  devin_messages: 24
+  user_messages: 1
+  web: 0
+  actions_capped: false
+  prs_opened:
+    -
+      url: https://github.com/Open-MBEE/qvts/pull/59
+      repo: Open-MBEE/qvts
+      number: 59
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/qvts/pull/60
+      repo: Open-MBEE/qvts
+      number: 60
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/qvts/pull/61
+      repo: Open-MBEE/qvts
+      number: 61
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/qvts/pull/62
+      repo: Open-MBEE/qvts
+      number: 62
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/qvts/pull/63
+      repo: Open-MBEE/qvts
+      number: 63
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/qvts/pull/64
+      repo: Open-MBEE/qvts
+      number: 64
+      state: merged
+      day: 2026-11-09
+-
+  session_id: 949f5b59507e4e7d99ee2ffd4b56f213
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/949f5b59507e4e7d99ee2ffd4b56f213
+  title: Continue soil-moisture-dps work
+  project: soil-moisture-workflows
+  repos:
+    - Open-MBEE/soil-moisture-dps
+    - Open-MBEE/soil-moisture-model
+    - Open-MBEE/soil-moisture-workflows
+  origin: webapp
+  parent_session_id: null
+  mode: ultra
+  category: migrations_and_upgrades
+  status: suspended (inactivity)
+  created: 2026-11-06T19:48:41-08:00
+  created_in_window: false
+  acus: 425.096903
+  acus_scope: older
+  working_seconds: 73
+  shell: 8
+  edits: 3
+  reads: 1
+  git: 1
+  mcp: 0
+  devin_messages: 2
+  user_messages: 1
+  web: 0
+  actions_capped: false
+  prs_opened:
+    -
+      url: https://github.com/Open-MBEE/soil-moisture-dps/pull/13
+      repo: Open-MBEE/soil-moisture-dps
+      number: 13
+      state: merged
+      day: 2026-11-09
+-
+  session_id: a3a98b66aaba486384ce1ee9109622e7
+  url: https://nasa-jpl-demo.devinenterprise.com/sessions/a3a98b66aaba486384ce1ee9109622e7
+  title: Fix soil-moisture CI workflow
+  project: soil-moisture-workflows
+  repos:
+    - Open-MBEE/git-remote-sync.lean
+    - Open-MBEE/html-to-pdf.lean
+    - Open-MBEE/prov.lean
+    - Open-MBEE/soil-moisture-dps
+    - Open-MBEE/soil-moisture-model
+    - Open-MBEE/soil-moisture-workflows
+  origin: webapp
+  parent_session_id: null
+  mode: ultra
+  category: refactoring_and_optimization
+  status: suspended (inactivity)
+  created: 2026-11-09T08:53:58-08:00
+  created_in_window: true
+  acus: 410.970020
+  acus_scope: spillsPast
+  working_seconds: 6380
+  shell: 261
+  edits: 70
+  reads: 57
+  git: 24
+  mcp: 52
+  devin_messages: 55
+  user_messages: 25
+  web: 0
+  actions_capped: false
+  prs_opened:
+    -
+      url: https://github.com/Open-MBEE/soil-moisture-workflows/pull/43
+      repo: Open-MBEE/soil-moisture-workflows
+      number: 43
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/soil-moisture-workflows/pull/44
+      repo: Open-MBEE/soil-moisture-workflows
+      number: 44
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/soil-moisture-model/pull/46
+      repo: Open-MBEE/soil-moisture-model
+      number: 46
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/soil-moisture-dps/pull/14
+      repo: Open-MBEE/soil-moisture-dps
+      number: 14
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/soil-moisture-dps/pull/15
+      repo: Open-MBEE/soil-moisture-dps
+      number: 15
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/soil-moisture-dps/pull/16
+      repo: Open-MBEE/soil-moisture-dps
+      number: 16
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/html-to-pdf.lean/pull/1
+      repo: Open-MBEE/html-to-pdf.lean
+      number: 1
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/soil-moisture-model/pull/47
+      repo: Open-MBEE/soil-moisture-model
+      number: 47
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/prov.lean/pull/19
+      repo: Open-MBEE/prov.lean
+      number: 19
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/git-remote-sync.lean/pull/62
+      repo: Open-MBEE/git-remote-sync.lean
+      number: 62
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/html-to-pdf.lean/pull/2
+      repo: Open-MBEE/html-to-pdf.lean
+      number: 2
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/git-remote-sync.lean/pull/63
+      repo: Open-MBEE/git-remote-sync.lean
+      number: 63
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/soil-moisture-workflows/pull/45
+      repo: Open-MBEE/soil-moisture-workflows
+      number: 45
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/soil-moisture-model/pull/48
+      repo: Open-MBEE/soil-moisture-model
+      number: 48
+      state: merged
+      day: 2026-11-09
+    -
+      url: https://github.com/Open-MBEE/soil-moisture-dps/pull/17
+      repo: Open-MBEE/soil-moisture-dps
+      number: 17
+      state: merged
+      day: 2026-11-09

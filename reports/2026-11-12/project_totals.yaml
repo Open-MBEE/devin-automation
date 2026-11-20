@@ -1,0 +1,90 @@
+%YAML 1.2
+---
+-
+  project: OpenSysML
+  sessions: 2
+  sessions_created: 0
+  working_seconds: 61528
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 4893.831247
+  actions: 1085
+  actions_capped: true
+  prs_opened: 8
+-
+  project: L4YAML
+  sessions: 7
+  sessions_created: 6
+  working_seconds: 26563
+  acus_in_window: 0.000000
+  acus_spilling: 254.835763
+  acus_older: 2060.795161
+  actions: 1315
+  actions_capped: false
+  prs_opened: 5
+-
+  project: SBVR.lean
+  sessions: 2
+  sessions_created: 0
+  working_seconds: 8487
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 2252.634017
+  actions: 663
+  actions_capped: false
+  prs_opened: 7
+-
+  project: qvts
+  sessions: 2
+  sessions_created: 1
+  working_seconds: 7211
+  acus_in_window: 0.000000
+  acus_spilling: 105.577980
+  acus_older: 21.541446
+  actions: 555
+  actions_capped: false
+  prs_opened: 4
+-
+  project: prov.lean
+  sessions: 1
+  sessions_created: 0
+  working_seconds: 7013
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 863.066307
+  actions: 339
+  actions_capped: false
+  prs_opened: 4
+-
+  project: engineering-foundation-architecture
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 1951
+  acus_in_window: 0.000000
+  acus_spilling: 74.993086
+  acus_older: 0.000000
+  actions: 168
+  actions_capped: false
+  prs_opened: 3
+-
+  project: (no repository)
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 197
+  acus_in_window: 1.643921
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 410
+  actions_capped: false
+  prs_opened: 0
+-
+  project: PropertyKindCalculus
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 16
+  acus_in_window: 1.440078
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 2
+  actions_capped: false
+  prs_opened: 0

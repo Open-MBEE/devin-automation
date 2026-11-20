@@ -1,0 +1,198 @@
+%YAML 1.2
+---
+-
+  project: (Devin environment)
+  day: 2026-11-17
+  working_seconds: 260
+-
+  project: (Devin housekeeping)
+  day: 2026-11-17
+  working_seconds: 342
+-
+  project: (no repository)
+  day: 2026-11-16
+  working_seconds: 514
+-
+  project: (no repository)
+  day: 2026-11-17
+  working_seconds: 368
+-
+  project: (no repository)
+  day: 2026-11-18
+  working_seconds: 246
+-
+  project: (no repository)
+  day: 2026-11-19
+  working_seconds: 994
+-
+  project: L4YAML
+  day: 2026-11-16
+  working_seconds: 231
+-
+  project: L4YAML
+  day: 2026-11-17
+  working_seconds: 30065
+-
+  project: L4YAML
+  day: 2026-11-18
+  working_seconds: 11374
+-
+  project: L4YAML
+  day: 2026-11-19
+  working_seconds: 14168
+-
+  project: OpenSysML
+  day: 2026-11-16
+  working_seconds: 58989
+-
+  project: OpenSysML
+  day: 2026-11-17
+  working_seconds: 20263
+-
+  project: OpenSysML
+  day: 2026-11-18
+  working_seconds: 2271
+-
+  project: OpenSysML
+  day: 2026-11-19
+  working_seconds: 57028
+-
+  project: PropertyKindCalculus
+  day: 2026-11-16
+  working_seconds: 40
+-
+  project: PropertyKindCalculus
+  day: 2026-11-17
+  working_seconds: 16
+-
+  project: PropertyKindCalculus
+  day: 2026-11-18
+  working_seconds: 3212
+-
+  project: PropertyKindCalculus
+  day: 2026-11-19
+  working_seconds: 433
+-
+  project: SBVR.lean
+  day: 2026-11-16
+  working_seconds: 18
+-
+  project: SBVR.lean
+  day: 2026-11-17
+  working_seconds: 6867
+-
+  project: SBVR.lean
+  day: 2026-11-18
+  working_seconds: 60949
+-
+  project: SBVR.lean
+  day: 2026-11-19
+  working_seconds: 41849
+-
+  project: devin-automation
+  day: 2026-11-19
+  working_seconds: 699
+-
+  project: engineering-foundation-architecture
+  day: 2026-11-16
+  working_seconds: 18804
+-
+  project: engineering-foundation-architecture
+  day: 2026-11-17
+  working_seconds: 1286
+-
+  project: engineering-foundation-architecture
+  day: 2026-11-18
+  working_seconds: 7821
+-
+  project: face.lean
+  day: 2026-11-18
+  working_seconds: 2506
+-
+  project: fprime-lean-sysmlv2-example
+  day: 2026-11-16
+  working_seconds: 5646
+-
+  project: fprime-lean-sysmlv2-example
+  day: 2026-11-17
+  working_seconds: 1955
+-
+  project: git-remote-sync.lean
+  day: 2026-11-16
+  working_seconds: 175
+-
+  project: git-remote-sync.lean
+  day: 2026-11-17
+  working_seconds: 2645
+-
+  project: git-remote-sync.lean
+  day: 2026-11-19
+  working_seconds: 4628
+-
+  project: mars.lean
+  day: 2026-11-19
+  working_seconds: 36
+-
+  project: nfr.workboard
+  day: 2026-11-18
+  working_seconds: 665
+-
+  project: nfr.workboard
+  day: 2026-11-19
+  working_seconds: 944
+-
+  project: pacti.lean
+  day: 2026-11-16
+  working_seconds: 8796
+-
+  project: pacti.lean
+  day: 2026-11-17
+  working_seconds: 941
+-
+  project: prov.lean
+  day: 2026-11-16
+  working_seconds: 195
+-
+  project: prov.lean
+  day: 2026-11-17
+  working_seconds: 2048
+-
+  project: prov.lean
+  day: 2026-11-18
+  working_seconds: 9154
+-
+  project: prov.lean
+  day: 2026-11-19
+  working_seconds: 25250
+-
+  project: qvts
+  day: 2026-11-17
+  working_seconds: 5709
+-
+  project: qvts
+  day: 2026-11-18
+  working_seconds: 36961
+-
+  project: qvts
+  day: 2026-11-19
+  working_seconds: 116752
+-
+  project: tasktree.lean
+  day: 2026-11-17
+  working_seconds: 2262
+-
+  project: tasktree.lean
+  day: 2026-11-18
+  working_seconds: 4501
+-
+  project: tasktree.lean
+  day: 2026-11-19
+  working_seconds: 6
+-
+  project: tls-server.lean
+  day: 2026-11-18
+  working_seconds: 1124
+-
+  project: tls-server.lean
+  day: 2026-11-19
+  working_seconds: 9

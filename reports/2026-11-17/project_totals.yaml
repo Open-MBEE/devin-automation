@@ -1,0 +1,156 @@
+%YAML 1.2
+---
+-
+  project: L4YAML
+  sessions: 3
+  sessions_created: 0
+  working_seconds: 30065
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 6344.716988
+  actions: 725
+  actions_capped: false
+  prs_opened: 7
+-
+  project: OpenSysML
+  sessions: 3
+  sessions_created: 0
+  working_seconds: 20263
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 4926.401684
+  actions: 295
+  actions_capped: true
+  prs_opened: 0
+-
+  project: SBVR.lean
+  sessions: 1
+  sessions_created: 0
+  working_seconds: 6867
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 2191.008624
+  actions: 390
+  actions_capped: false
+  prs_opened: 7
+-
+  project: qvts
+  sessions: 3
+  sessions_created: 2
+  working_seconds: 5709
+  acus_in_window: 14.309389
+  acus_spilling: 101.486101
+  acus_older: 21.541446
+  actions: 175
+  actions_capped: false
+  prs_opened: 5
+-
+  project: git-remote-sync.lean
+  sessions: 2
+  sessions_created: 2
+  working_seconds: 2645
+  acus_in_window: 28.121779
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 282
+  actions_capped: false
+  prs_opened: 3
+-
+  project: tasktree.lean
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 2262
+  acus_in_window: 0.000000
+  acus_spilling: 105.197536
+  acus_older: 0.000000
+  actions: 326
+  actions_capped: false
+  prs_opened: 0
+-
+  project: prov.lean
+  sessions: 2
+  sessions_created: 2
+  working_seconds: 2046
+  acus_in_window: 5.216016
+  acus_spilling: 109.501672
+  acus_older: 0.000000
+  actions: 234
+  actions_capped: false
+  prs_opened: 5
+-
+  project: fprime-lean-sysmlv2-example
+  sessions: 1
+  sessions_created: 0
+  working_seconds: 1955
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 33.811021
+  actions: 0
+  actions_capped: false
+  prs_opened: 0
+-
+  project: engineering-foundation-architecture
+  sessions: 2
+  sessions_created: 0
+  working_seconds: 1286
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 94.788733
+  actions: 0
+  actions_capped: false
+  prs_opened: 0
+-
+  project: pacti.lean
+  sessions: 1
+  sessions_created: 0
+  working_seconds: 941
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 19.003673
+  actions: 0
+  actions_capped: false
+  prs_opened: 0
+-
+  project: (no repository)
+  sessions: 2
+  sessions_created: 2
+  working_seconds: 368
+  acus_in_window: 1.840295
+  acus_spilling: 4.490784
+  acus_older: 0.000000
+  actions: 416
+  actions_capped: false
+  prs_opened: 0
+-
+  project: (Devin housekeeping)
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 342
+  acus_in_window: 0.000000
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 91
+  actions_capped: false
+  prs_opened: 0
+-
+  project: (Devin environment)
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 260
+  acus_in_window: 3.428543
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 22
+  actions_capped: false
+  prs_opened: 0
+-
+  project: PropertyKindCalculus
+  sessions: 1
+  sessions_created: 1
+  working_seconds: 16
+  acus_in_window: 1.177229
+  acus_spilling: 0.000000
+  acus_older: 0.000000
+  actions: 2
+  actions_capped: false
+  prs_opened: 0
